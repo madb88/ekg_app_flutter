@@ -5,5 +5,5 @@
 .pub/
 
 build/
-.andoird
+.android
 .flutter-plugins
