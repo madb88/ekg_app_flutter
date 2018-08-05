@@ -8,4 +8,4 @@ build/
 .flutter-plugins
 
 .android
-/google-service.json
+/google-services.json
