@@ -5,5 +5,5 @@
 .pub/
 
 build/
-
+.andoird
 .flutter-plugins
