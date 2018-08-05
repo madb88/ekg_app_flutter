@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "49409347734",
+    "firebase_url": "https://ekgapp-919d2.firebaseio.com",
+    "project_id": "ekgapp-919d2",
+    "storage_bucket": "ekgapp-919d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49409347734:android:d4d66231b5dbdfb3",
+        "android_client_info": {
+          "package_name": "com.example.ekgcardsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49409347734-b807e2v3mvhimllikiletie58pstu2ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTe0gMAJdsGJ4HXZTf8y3iQWpmwXrwTVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

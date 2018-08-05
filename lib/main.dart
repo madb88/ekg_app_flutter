@@ -3,10 +3,35 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import './card_list.dart';
 import './category_list.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(EkgApp());
 
-class MyApp extends StatelessWidget {
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return new MaterialApp(
+//       theme: new ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       home: new MyHomePage(),
+//     );
+//   }
+// }
+
+class EkgApp extends StatefulWidget {
+  @override
+  _EkgAppState createState() => _EkgAppState();
+}
+
+class _EkgAppState extends State<EkgApp> {
+
+  @override
+    void initState() {
+      // FirebaseAdMob.instance.initialize(appId: appId);
+      super.initState();
+    }
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

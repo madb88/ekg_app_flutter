@@ -21,25 +21,25 @@ class DetailPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           new InkWell(
-              onTap: () {
-                  Navigator.pop(context);
-              },
-              child: new Container(
-                width: 100.0,
-                height: 50.0,
-                decoration: new BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: new Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: new BorderRadius.circular(10.0),
-                ),
-                child: new Center(
-                  child: new Text(
-                    'Back',
-                    style: new TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: new Container(
+              width: 100.0,
+              height: 50.0,
+              decoration: new BoxDecoration(
+                color: Colors.blueAccent,
+                border: new Border.all(color: Colors.white, width: 2.0),
+                borderRadius: new BorderRadius.circular(10.0),
+              ),
+              child: new Center(
+                child: new Text(
+                  'Back',
+                  style: new TextStyle(fontSize: 18.0, color: Colors.white),
                 ),
               ),
             ),
+          ),
           // new RaisedButton(
           //   child: const Text('BACK'),
           //   color: Colors.white,
@@ -54,15 +54,29 @@ class DetailPage extends StatelessWidget {
     );
 
     return new Scaffold(
-        appBar: new AppBar(
+        body: CustomScrollView(
+      slivers: <Widget>[
+        new SliverAppBar(
           title: new Text(sendedCard['title']),
         ),
-        body: ListView(
-          children: <Widget>[
-            descriptionSection,
-            new Divider(),
-            buttonSection,
-          ],
-        ));
+        new SliverList(
+          delegate: new SliverChildBuilderDelegate(
+            (BuildContext context, int index) {
+              return new Column(
+                children: <Widget>[
+                  descriptionSection,
+                  new Divider(),
+                  buttonSection
+                ],
+              );
+            },
+            childCount: 1,
+          ),
+        ),
+      ],
+    ));
   }
 }
+// descriptionSection,
+//                   new Divider(),
+//                 buttonSection,
