@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class DetailPage extends StatelessWidget {
   final sendedCard;
 
@@ -21,15 +20,35 @@ class DetailPage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          new RaisedButton(
-            child: const Text('BACK'),
-            color: Colors.white,
-            elevation: 4.0,
-            splashColor: Colors.blueGrey,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+          new InkWell(
+              onTap: () {
+                  Navigator.pop(context);
+              },
+              child: new Container(
+                width: 100.0,
+                height: 50.0,
+                decoration: new BoxDecoration(
+                  color: Colors.blueAccent,
+                  border: new Border.all(color: Colors.white, width: 2.0),
+                  borderRadius: new BorderRadius.circular(10.0),
+                ),
+                child: new Center(
+                  child: new Text(
+                    'Back',
+                    style: new TextStyle(fontSize: 18.0, color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+          // new RaisedButton(
+          //   child: const Text('BACK'),
+          //   color: Colors.white,
+          //   elevation: 4.0,
+          //   splashColor: Colors.blueGrey,
+          //   onPressed: () {
+          //     Navigator.pop(context);
+          //   },
+          // ),
         ],
       ),
     );
@@ -41,6 +60,7 @@ class DetailPage extends StatelessWidget {
         body: ListView(
           children: <Widget>[
             descriptionSection,
+            new Divider(),
             buttonSection,
           ],
         ));

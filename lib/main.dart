@@ -4,14 +4,12 @@ import 'package:flutter/cupertino.dart';
 import './card_list.dart';
 import './category_list.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: "EKG APP",
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -26,22 +24,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   AppBar buildAppBar(BuildContext context) {
     return new AppBar(
-      title: new Text('EKG APP'),
+      title: new Text('EKG APP ver: 0.1.0'),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(title: new Text("EKG APP")),
+      appBar: new AppBar(title: new Text("EKG APP ver: 0.1.0")),
       body: new CategoryList(),
     );
   }
 }
-
-
-
-
