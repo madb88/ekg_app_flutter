@@ -28,13 +28,12 @@ class CardList extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(title: new Text(category)),
       body: new Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            
             new Expanded(
             child: FutureBuilder(
               future: DefaultAssetBundle
@@ -76,15 +75,15 @@ class CardList extends StatelessWidget {
               },
             ),
             ),
-            new Column(
-              children: <Widget>[
+            new Container(
+              height: 50.0,
+              child: 
                 new InkWell(
                   onTap: () {
                     Navigator.pop(context);
                   },
                   child: new Container(
-                    width: 100.0,
-                    height: 50.0,
+                    height: 5.0,
                     decoration: new BoxDecoration(
                       color: Colors.blueAccent,
                       border: new Border.all(color: Colors.white, width: 2.0),
@@ -99,7 +98,7 @@ class CardList extends StatelessWidget {
                     ),
                   ),
                 ),
-              ],
+              
             ),
           ],
         ),

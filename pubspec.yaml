@@ -40,6 +40,8 @@ flutter:
    - data_repo/category6.json
    - data_repo/category7.json
    - data_repo/category8.json
+   - images/logo.png
+   - images/ekg_images/
   #  - load_json/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
