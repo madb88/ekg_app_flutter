@@ -5,32 +5,32 @@ import './card_list.dart';
 import './category_list.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 
-void main() => runApp(EkgApp());
+void main() => runApp(MyApp());
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return new MaterialApp(
-//       theme: new ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: new MyHomePage(),
-//     );
-//   }
-// }
-
-class EkgApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  _EkgAppState createState() => _EkgAppState();
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: new MyHomePage(),
+    );
+  }
 }
 
-class _EkgAppState extends State<EkgApp> {
+// class EkgApp extends StatefulWidget {
+//   @override
+//   _EkgAppState createState() => _EkgAppState();
+// }
 
-  @override
-    void initState() {
-      // FirebaseAdMob.instance.initialize(appId: appId);
-      super.initState();
-    }
+// class _EkgAppState extends State<EkgApp> {
+
+//   @override
+//     void initState() {
+//       // FirebaseAdMob.instance.initialize(appId: appId);
+//       super.initState();
+//     }
 
   @override
   Widget build(BuildContext context) {

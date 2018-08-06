@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './detail_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
+import 'dart:convert';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -32,6 +33,46 @@ class CardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            // new FutureBuilder(
+            //   future: DefaultAssetBundle
+            //   .of(context)
+            //   .loadString('data_repo/category1.json'),
+            //   builder: (context, snapshot) {
+                // var newItem = JSON.decode(snapshot.data.toString());
+                // print(newItem);
+                // return new ListView.builder(
+                //   itemBuilder: (BuildContext context, int index){
+                //     return new Card(
+                //       child: new Column(
+                //         crossAxisAlignment: CrossAxisAlignment.stretch,
+                //         children: <Widget>[
+                //           new ListTile(
+                //             onTap: () {
+                //               final sendedCard = newItem;
+                //               Navigator.push(
+                //                 context,
+                //                 new MyCustomRoute(
+                //                     builder: (context) =>
+                //                         new DetailPage(sendedCard)),
+                //               );
+                //             },
+                //             title: new Text(
+                //               newItem[index]['title'],
+                //               style: new TextStyle(fontWeight: FontWeight.bold),
+                //             ), // ...
+                //           ),
+                //           new Divider(
+                //             height: 2.0,
+                //           ),
+                //       ],
+                //       ), 
+                //       );
+                //   },
+                //   itemCount: newItem == null ? 0 : newItem.length,
+
+                // );
+              // },
+            // ),
             new Expanded(
               child: new StreamBuilder<QuerySnapshot>(
                 stream: Firestore.instance
