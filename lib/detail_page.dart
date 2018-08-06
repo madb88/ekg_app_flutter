@@ -40,15 +40,6 @@ class DetailPage extends StatelessWidget {
               ),
             ),
           ),
-          // new RaisedButton(
-          //   child: const Text('BACK'),
-          //   color: Colors.white,
-          //   elevation: 4.0,
-          //   splashColor: Colors.blueGrey,
-          //   onPressed: () {
-          //     Navigator.pop(context);
-          //   },
-          // ),
         ],
       ),
     );
@@ -57,6 +48,7 @@ class DetailPage extends StatelessWidget {
         body: CustomScrollView(
       slivers: <Widget>[
         new SliverAppBar(
+          pinned: true,
           title: new Text(sendedCard['title']),
         ),
         new SliverList(
@@ -77,6 +69,3 @@ class DetailPage extends StatelessWidget {
     ));
   }
 }
-// descriptionSection,
-//                   new Divider(),
-//                 buttonSection,

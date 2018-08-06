@@ -24,6 +24,7 @@ class CardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return new Scaffold(
       appBar: new AppBar(title: new Text(category)),
       body: new Container(
@@ -33,88 +34,47 @@ class CardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // new FutureBuilder(
-            //   future: DefaultAssetBundle
-            //   .of(context)
-            //   .loadString('data_repo/category1.json'),
-            //   builder: (context, snapshot) {
-                // var newItem = JSON.decode(snapshot.data.toString());
-                // print(newItem);
-                // return new ListView.builder(
-                //   itemBuilder: (BuildContext context, int index){
-                //     return new Card(
-                //       child: new Column(
-                //         crossAxisAlignment: CrossAxisAlignment.stretch,
-                //         children: <Widget>[
-                //           new ListTile(
-                //             onTap: () {
-                //               final sendedCard = newItem;
-                //               Navigator.push(
-                //                 context,
-                //                 new MyCustomRoute(
-                //                     builder: (context) =>
-                //                         new DetailPage(sendedCard)),
-                //               );
-                //             },
-                //             title: new Text(
-                //               newItem[index]['title'],
-                //               style: new TextStyle(fontWeight: FontWeight.bold),
-                //             ), // ...
-                //           ),
-                //           new Divider(
-                //             height: 2.0,
-                //           ),
-                //       ],
-                //       ), 
-                //       );
-                //   },
-                //   itemCount: newItem == null ? 0 : newItem.length,
-
-                // );
-              // },
-            // ),
+            
             new Expanded(
-              child: new StreamBuilder<QuerySnapshot>(
-                stream: Firestore.instance
-                    .collection('cards')
-                    .where("category", isEqualTo: categoryNumber)
-                    .orderBy('title', descending: false)
-                    .snapshots(),
-                builder: (BuildContext context,
-                    AsyncSnapshot<QuerySnapshot> snapshot) {
-                  if (!snapshot.hasData)
-                    return new Align(
-                      child: CircularProgressIndicator(),
-                    );
-                  return new ListView(
-                    children: snapshot.data.documents
-                        .map((DocumentSnapshot document) {
-                      return new Column(
+            child: FutureBuilder(
+              future: DefaultAssetBundle
+              .of(context)
+              .loadString('data_repo/category$categoryNumber.json'),
+              builder: (context, snapshot) {
+                var newItem = JSON.decode(snapshot.data.toString());
+                return new ListView.builder(
+                  itemBuilder: (BuildContext context, int index){
+                    return new Card(
+                      child: new Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
                           new ListTile(
                             onTap: () {
-                              final sendedCard = document;
+                              final sendedCard = newItem;
                               Navigator.push(
                                 context,
                                 new MyCustomRoute(
                                     builder: (context) =>
-                                        new DetailPage(sendedCard)),
+                                        new DetailPage(sendedCard[index])),
                               );
                             },
                             title: new Text(
-                              document['title'],
+                              newItem[index]['title'],
                               style: new TextStyle(fontWeight: FontWeight.bold),
                             ), // ...
                           ),
                           new Divider(
                             height: 2.0,
                           ),
-                        ],
+                      ],
+                      ), 
                       );
-                    }).toList(),
-                  );
-                },
-              ),
+                  },
+                  itemCount: newItem == null ? 0 : newItem.length,
+
+                );
+              },
+            ),
             ),
             new Column(
               children: <Widget>[
