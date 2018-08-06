@@ -105,7 +105,7 @@ startTime() async {
                     padding: EdgeInsets.only(top: 20.0),
                     ),
                     new Text(
-                  'ver: 0.1.3',
+                  'ver: 0.1.4',
                   style: new TextStyle(fontSize: 18.0, color: Colors.black),
                 ),
                 ],
