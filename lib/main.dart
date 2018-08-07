@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import './category_list.dart';
+import './home_page.dart';
 import 'dart:async';
 import 'package:firebase_admob/firebase_admob.dart';
 
@@ -39,9 +40,6 @@ class _EkgAppState extends State<EkgApp> {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(),
-    //    routes: <String, WidgetBuilder>{
-    //   '/HomeScreen': (BuildContext context) => new CategoryList()
-    // },
     );
   }
 }
@@ -52,25 +50,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-// startTime() async {
-//     var _duration = new Duration(seconds: 2);
-//     return new Timer(_duration, navigationPage);
-//   }
-
-//   void navigationPage() {
-//     Navigator.of(context).pushReplacementNamed('/HomeScreen');
-//   }
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     startTime();
-//   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CategoryList(),
+      body: HomePageList(),
     );
   }
 }

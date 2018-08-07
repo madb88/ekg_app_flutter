@@ -26,7 +26,57 @@ class CategoryList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Drawer drawer = Drawer(
+      child: ListView(
+        children: <Widget>[
+          ExpansionTile(
+            title: Text("Kategoria1"),
+            children: <Widget>[
+              ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MyCustomRoute(
+                          builder: (context) => CardList(_category1, 1)),
+                    );
+                  },
+                  selected: false,
+                  title: Text('Zawal')),
+              ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MyCustomRoute(
+                          builder: (context) => CardList(_category1, 1)),
+                    );
+                  },
+                  selected: false,
+                  title: Text('Tachykardia')),
+                  
+            ],
+            
+          ),
+          ExpansionTile(
+                    title: Text("Kategoria 2"),
+                    children: <Widget>[
+                       ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MyCustomRoute(
+                          builder: (context) => CardList(_category1, 1)),
+                    );
+                  },
+                  selected: false,
+                  title: Text('Zawal 3')),
+                    ],
+                  )
+        ],
+      ),
+    );
+
     return new Scaffold(
+      drawer: drawer,
       appBar: new AppBar(title: new Text("EKG Fiszki")),
       body: new Container(
         padding: const EdgeInsets.all(20.0),
@@ -36,7 +86,6 @@ class CategoryList extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-          
             new InkWell(
               onTap: () {
                 Navigator.push(
@@ -109,7 +158,7 @@ class CategoryList extends StatelessWidget {
               ),
             ),
             new Divider(),
-           new InkWell(
+            new InkWell(
               onTap: () {
                 Navigator.push(
                   context,
@@ -205,7 +254,7 @@ class CategoryList extends StatelessWidget {
               ),
             ),
             new Divider(),
-           new InkWell(
+            new InkWell(
               onTap: () {
                 Navigator.push(
                   context,
