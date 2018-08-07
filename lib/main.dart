@@ -39,9 +39,9 @@ class _EkgAppState extends State<EkgApp> {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(),
-       routes: <String, WidgetBuilder>{
-      '/HomeScreen': (BuildContext context) => new CategoryList()
-    },
+    //    routes: <String, WidgetBuilder>{
+    //   '/HomeScreen': (BuildContext context) => new CategoryList()
+    // },
     );
   }
 }
@@ -52,68 +52,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-startTime() async {
-    var _duration = new Duration(seconds: 2);
-    return new Timer(_duration, navigationPage);
-  }
+// startTime() async {
+//     var _duration = new Duration(seconds: 2);
+//     return new Timer(_duration, navigationPage);
+//   }
 
-  void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/HomeScreen');
-  }
+//   void navigationPage() {
+//     Navigator.of(context).pushReplacementNamed('/HomeScreen');
+//   }
 
-  @override
-  void initState() {
-    super.initState();
-    startTime();
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     startTime();
+//   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      fit: StackFit.expand,
-      children: <Widget>[
-        Container(
-          decoration: BoxDecoration(color: Colors.white),
-        ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                  
-                    Image.asset('images/logo.png'),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10.0),
-                    ),
-                  
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  CircularProgressIndicator(),
-                  Padding(
-                    padding: EdgeInsets.only(top: 20.0),
-                    ),
-                    new Text(
-                  'ver: 0.1.4',
-                  style: new TextStyle(fontSize: 18.0, color: Colors.black),
-                ),
-                ],
-              ),
-            ),
-          ],
-        )
-      ],
-    ));
+      body: CategoryList(),
+    );
   }
 }
