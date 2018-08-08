@@ -89,7 +89,7 @@ class CategoryList extends StatelessWidget {
     return new Scaffold(
       drawer: drawer,
       appBar: new AppBar(
-        title: new Text("EKG Podstawy"),
+        title: new Text("EKG Fiszki"),
         actions: <Widget>[
           new IconButton(
             icon: new Icon(Icons.home),

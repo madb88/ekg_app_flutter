@@ -22,7 +22,7 @@ class HomePageList extends StatelessWidget {
   Widget build(BuildContext context) {
     var _onTap;
     return new Scaffold(
-      appBar: new AppBar(title: new Text("EKG Podstawy")),
+      appBar: new AppBar(title: new Text("EKG Fiszki")),
       body: new Container(
         padding: const EdgeInsets.all(20.0),
         margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),

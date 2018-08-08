@@ -71,10 +71,10 @@ class NestedCategoryList extends StatelessWidget {
     return new Scaffold(
       drawer: drawer,
       appBar: new AppBar(
-        title: new Text("EKG Podstawy"),
+        title: new Text("EKG Fiszki"),
         actions: <Widget>[
           new IconButton(
-            icon: new Icon(Icons.format_list_bulleted),
+            icon: new Icon(Icons.arrow_back),
             tooltip: 'Kategorie',
             onPressed: () {
               Navigator.push(

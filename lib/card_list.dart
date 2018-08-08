@@ -28,21 +28,10 @@ class CardList extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(category),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.format_list_bulleted),
-            tooltip: 'Kategorie',
-            onPressed: () {
-              Navigator.push(
-                context,
-                MyCustomRoute(builder: (context) => CategoryList()),
-              );
-            },
-          ),
-        ],
+        
       ),
       body: new Container(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(5.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -74,7 +63,7 @@ class CardList extends StatelessWidget {
                               title: new Text(
                                 newItem[index]['title'],
                                 style:
-                                    new TextStyle(fontWeight: FontWeight.bold),
+                                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                               ), // ...
                             ),
                             new Divider(
