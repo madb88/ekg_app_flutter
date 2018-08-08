@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'card_list.dart';
+import 'nested_category1.dart';
+import 'home_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -34,6 +36,7 @@ class CategoryList extends StatelessWidget {
             children: <Widget>[
               ListTile(
                   onTap: () {
+                    Navigator.of(context).pop();
                     Navigator.push(
                       context,
                       MyCustomRoute(
@@ -44,6 +47,7 @@ class CategoryList extends StatelessWidget {
                   title: Text('Zawal')),
               ListTile(
                   onTap: () {
+                    Navigator.of(context).pop();
                     Navigator.push(
                       context,
                       MyCustomRoute(
@@ -52,15 +56,14 @@ class CategoryList extends StatelessWidget {
                   },
                   selected: false,
                   title: Text('Tachykardia')),
-                  
             ],
-            
           ),
           ExpansionTile(
-                    title: Text("Kategoria 2"),
-                    children: <Widget>[
-                       ListTile(
+            title: Text("Kategoria 2"),
+            children: <Widget>[
+              ListTile(
                   onTap: () {
+                    Navigator.of(context).pop();
                     Navigator.push(
                       context,
                       MyCustomRoute(
@@ -69,15 +72,37 @@ class CategoryList extends StatelessWidget {
                   },
                   selected: false,
                   title: Text('Zawal 3')),
-                    ],
-                  )
+            ],
+          ),
+          Divider(),
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            title: Text("Zamknij"),
+            trailing: Icon(Icons.close),
+          )
         ],
       ),
     );
 
     return new Scaffold(
       drawer: drawer,
-      appBar: new AppBar(title: new Text("EKG Fiszki")),
+      appBar: new AppBar(
+        title: new Text("EKG Podstawy"),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.home),
+            tooltip: 'Menu',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MyCustomRoute(builder: (context) => HomePageList()),
+              );
+            },
+          ),
+        ],
+      ),
       body: new Container(
         padding: const EdgeInsets.all(20.0),
         margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
@@ -90,7 +115,7 @@ class CategoryList extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MyCustomRoute(builder: (context) => CardList(_category1, 1)),
+                  MyCustomRoute(builder: (context) => NestedCategoryList()),
                 );
               },
               child: new Container(
