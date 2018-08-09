@@ -20,7 +20,7 @@ class DetailPage extends StatelessWidget {
 
     Widget descriptionSection = Container(
       padding: const EdgeInsets.all(20.0),
-      child: new Text(
+      child: Text(
         sendedCard['description'],
         style: new TextStyle(fontSize: 20.0),
         textAlign: TextAlign.justify,

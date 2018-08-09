@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'card_list.dart';
 import 'category_list.dart';
+import 'calculator.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -54,15 +55,15 @@ class HomePageList extends StatelessWidget {
             new InkWell(
               onTap: () {
                 _onTap;
-                // Navigator.push(
-                //   context,
-                //   MyCustomRoute(builder: (context) => CategoryList()),
-                // );
+                Navigator.push(
+                  context,
+                  MyCustomRoute(builder: (context) => Calculator()),
+                );
               },
               child: new Container(
                 height: 100.0,
                 decoration: new BoxDecoration(
-                  color: Colors.grey,
+                  color: Colors.red,
                   border: new Border.all(color: Colors.white, width: 2.0),
                   borderRadius: new BorderRadius.circular(10.0),
                 ),
