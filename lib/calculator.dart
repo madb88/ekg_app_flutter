@@ -9,7 +9,7 @@ class Calculator extends StatefulWidget {
 
 class _CalculatorState extends State<Calculator> {
   var rightQt = 0.0,rr = 0.0,sum = 0.0, hr = 0.0;
-
+  var testColor;
   int fac = pow(10, 3);
 
   final TextEditingController t1 = new TextEditingController(text: "");
@@ -22,7 +22,13 @@ class _CalculatorState extends State<Calculator> {
         
         sum = rightQt * 0.04 / sqrt(rr * 0.04);
         sum = ((sum * fac).round() / fac) * 1000;
-        hr = 300 / rr;
+        hr = 300 / rr * 5;
+
+        if(hr > 200){
+          testColor = Colors.red;
+        } else {
+          testColor = Colors.blue;
+        }
       });
     }
 
@@ -30,7 +36,7 @@ class _CalculatorState extends State<Calculator> {
       this.setState((){
         sum = 0.0;
         hr = 0.0;
-
+        testColor = Colors.blue;
       });
     }
 
@@ -55,11 +61,23 @@ class _CalculatorState extends State<Calculator> {
                   ),
               ),
                Text(
-                "HR: $hr (przy tasmie 25 mm/s)",
+                "HR: $hr",
+                
+                style: TextStyle(
+                  fontSize: 25.0, 
+                  color: testColor,
+                  fontWeight: FontWeight.bold,
+                
+                  ),
+              ),
+               Text(
+                'Przesyl 25 mm/s',
+                
                 style: TextStyle(
                   fontSize: 25.0, 
                   color: Colors.blue,
-                  fontWeight: FontWeight.bold
+                  fontWeight: FontWeight.bold,
+                
                   ),
               ),
               TextField(
