@@ -79,7 +79,7 @@ class NestedCategoryList extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MyCustomRoute(builder: (context) => CategoryList()),
+                MyCustomRoute(builder: (context) => StudyCategoriesList()),
               );
             },
           ),

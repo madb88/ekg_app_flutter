@@ -16,24 +16,30 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 }
 
 class HomePageList extends StatelessWidget {
-  final _study = "Kategoria 1";
-  final _calculator = "Kategoria 2";
+  final _study = "Nauka";
+  final _calculator = "Kalkulator";
 
   @override
   Widget build(BuildContext context) {
     var _onTap;
     return new Scaffold(
-      appBar: new AppBar(title: new Text("EKG Fiszki")),
+      appBar: new AppBar(
+        leading: Icon(
+          Icons.settings
+          ),
+        title: new Text("EKG Fiszki")
+        ),
+        
       body: new Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-        child: ListView(
+        child: Column(
           children: <Widget>[
             new InkWell(
               onTap: () {
                 Navigator.push(
                   context,
-                  MyCustomRoute(builder: (context) => CategoryList()),
+                  MyCustomRoute(builder: (context) => StudyCategoriesList()),
                 );
               },
               child: new Container(
@@ -45,7 +51,7 @@ class HomePageList extends StatelessWidget {
                 ),
                 child: Center(
                   child: new Text(
-                    'Nauka',
+                     _study,
                     style: new TextStyle(fontSize: 38.0, color: Colors.white),
                   ),
                 ),
@@ -69,12 +75,21 @@ class HomePageList extends StatelessWidget {
                 ),
                 child: Center(
                   child: new Text(
-                    'Kalkulator',
+                    _calculator,
                     style: new TextStyle(fontSize: 38.0, color: Colors.white),
                   ),
                 ),
               ),
             ),
+            Expanded(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text('Wersja: 0.2.1'),
+              ],
+            ))
           ],
         ),
       ),
