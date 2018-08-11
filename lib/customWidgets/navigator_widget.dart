@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../card_list.dart';
+import '../customWidgets/list_element.dart';
 
 class NavigatorWidget extends StatelessWidget {
 
@@ -10,11 +11,23 @@ class NavigatorWidget extends StatelessWidget {
 
   final basicNestedCategories = [
     'Odprowadzenia',
-    'Os',
+    'Oś',
     'Cecha, szybkość przesuwu',
     'Częstość akcji',
     'Odcinek, odstęp',
     'Kiedy małe litery'
+  ];
+
+  final drainNestedCategories = [
+    'Lokalizacja',
+    'Odprowadzenia sąsiadujące'
+  ];
+
+  final axisNestedCategories = [
+    'II, III (+)',
+    'I, III oba skierowane w dół',
+    'I, III rozbierzne',
+    'I, III skierowane do siebie'
   ];
 
 
@@ -24,43 +37,32 @@ class NavigatorWidget extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           ExpansionTile(
-            title: Text(mainCategories[0]),
+            title: Text(mainCategories[0], style: TextStyle(fontWeight: FontWeight.bold),),
             children: <Widget>[
               ExpansionTile(
-                  title: Text(basicNestedCategories[0])
+                  title: Text(basicNestedCategories[0], style: TextStyle(fontWeight: FontWeight.bold)),
+                  children: <Widget>[
+                    ListElement(CardList(drainNestedCategories[0], 1), drainNestedCategories[0]),
+                    ListElement(CardList(drainNestedCategories[1], 2), drainNestedCategories[1]),
+                  ]
               ),
               ExpansionTile(
-                  title: Text(basicNestedCategories[1])
+                  title: Text(basicNestedCategories[1], style: TextStyle(fontWeight: FontWeight.bold)),
+                  children: <Widget>[
+                    ListElement(CardList(axisNestedCategories[0], 1), axisNestedCategories[0]),
+                    ListElement(CardList(axisNestedCategories[1], 2), axisNestedCategories[1]),
+                    ListElement(CardList(axisNestedCategories[2], 1), axisNestedCategories[2]),
+                    ListElement(CardList(axisNestedCategories[3], 2), axisNestedCategories[3]),
+                  ],
               ),
-              ListTile(
-                title: Text(basicNestedCategories[2]),
-              ),
-               ListTile(
-                title: Text(basicNestedCategories[3]),
-              ),
-               ListTile(
-                title: Text(basicNestedCategories[4]),
-              ),
-               ListTile(
-                title: Text(basicNestedCategories[5]),
-              ),
+              ListElement(CardList(basicNestedCategories[2], 1), basicNestedCategories[2]),
+              ListElement(CardList(basicNestedCategories[3], 1), basicNestedCategories[3]),
+              ListElement(CardList(basicNestedCategories[4], 1), basicNestedCategories[4]),
+              ListElement(CardList(basicNestedCategories[5], 1), basicNestedCategories[5]),
             ],
           ),
           ExpansionTile(
-            title: Text(mainCategories[1]),
-            children: <Widget>[
-              ListTile(
-                  onTap: () {
-                    Navigator.of(context).pop();
-                    Navigator.push(
-                      context,
-                      MyCustomRoute(
-                          builder: (context) => CardList('TESTES', 1)),
-                    );
-                  },
-                  selected: false,
-                  title: Text('Zawal 3')),
-            ],
+            title: Text(mainCategories[1])
           ),
           Divider(),
           ListTile(

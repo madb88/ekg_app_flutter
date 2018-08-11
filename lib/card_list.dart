@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import './detail_page.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'category_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -93,7 +91,7 @@ class CardList extends StatelessWidget {
                   ),
                   child: new Center(
                     child: new Text(
-                      'Back',
+                      'Wróć',
                       style: new TextStyle(fontSize: 18.0, color: Colors.white),
                     ),
                   ),

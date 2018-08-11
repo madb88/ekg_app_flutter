@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../home_page.dart';
 import '../../card_list.dart';
 import '../../category_list.dart';
+import './../../customWidgets/category_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -17,12 +18,9 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 }
 
 class AxisCategoriesList extends StatelessWidget {
-  
   final axisName;
 
-  AxisCategoriesList(
-    this.axisName
-  );
+  AxisCategoriesList(this.axisName);
 
   final categoryNames = [
     'II, III (+)',
@@ -33,7 +31,6 @@ class AxisCategoriesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return new Scaffold(
       appBar: AppBar(
         title: Text(axisName),
@@ -60,106 +57,18 @@ class AxisCategoriesList extends StatelessWidget {
           ),
         ],
       ),
-      body:  Container(
+      body: Container(
         padding: const EdgeInsets.all(20.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MyCustomRoute(builder: (context) => CardList(categoryNames[0], 1)),
-                );
-              },
-              child: Container(
-                //width: 100.0,
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Center(
-                  child: Text(
-                    categoryNames[0],
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
+            CategoryButton(CardList(categoryNames[0], 1), categoryNames[0]),
             Divider(),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MyCustomRoute(builder: (context) => CardList(categoryNames[1], 2)),
-                );
-              },
-              child: Container(
-                //width: 100.0,
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Center(
-                  child: Text(
-                    categoryNames[1],
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),    
+            CategoryButton(CardList(categoryNames[1], 2), categoryNames[1]),
             Divider(),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MyCustomRoute(builder: (context) => CardList(categoryNames[2], 2)),
-                );
-              },
-              child: Container(
-                //width: 100.0,
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Center(
-                  child: Text(
-                    categoryNames[2],
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),    
+            CategoryButton(CardList(categoryNames[2], 2), categoryNames[2]),
             Divider(),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MyCustomRoute(builder: (context) => CardList(categoryNames[3], 2)),
-                );
-              },
-              child: Container(
-                //width: 100.0,
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Center(
-                  child: Text(
-                    categoryNames[3],
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),          
+            CategoryButton(CardList(categoryNames[3], 2), categoryNames[3]),
           ],
         ),
       ),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'card_list.dart';
-import 'nested_category1.dart';
 import 'home_page.dart';
 import './nested_categories/basic_category.dart';
 import './customWidgets/navigator_widget.dart';

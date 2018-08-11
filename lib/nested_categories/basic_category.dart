@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../nested_category1.dart';
 import '../home_page.dart';
 import './drain_categories/drain_categories.dart';
 import './axis_categories/axis_categories.dart';
@@ -68,7 +67,13 @@ class BasicCategoryList extends StatelessWidget {
             Divider(),
             CategoryButton(AxisCategoriesList(categoriesName[1]), categoriesName[1]),           
             Divider(),
-            CategoryButton(CardList(categoriesName[2],2), categoriesName[2]),           
+            CategoryButton(CardList(categoriesName[2],2), categoriesName[2]),    
+            Divider(),
+            CategoryButton(CardList(categoriesName[3],2), categoriesName[3]),       
+            Divider(),
+            CategoryButton(CardList(categoriesName[4],2), categoriesName[4]),   
+            Divider(),
+            CategoryButton(CardList(categoriesName[5],2), categoriesName[5]),   
           ],
         ),
       ),

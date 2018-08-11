@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../nested_category1.dart';
 import '../../home_page.dart';
-import '../../customWidgets/navigator_widget.dart';
-import '.././drain_categories/drain_categories.dart';
 import '../../card_list.dart';
 import '../../category_list.dart';
+import './../../customWidgets/category_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -65,53 +63,9 @@ class DrainCategoriesList extends StatelessWidget {
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MyCustomRoute(builder: (context) => CardList(categoryNames[0], 1)),
-                );
-              },
-              child: Container(
-                //width: 100.0,
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Center(
-                  child: Text(
-                    categoryNames[0],
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
+            CategoryButton(CardList(categoryNames[0], 1), categoryNames[0]),
             Divider(),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MyCustomRoute(builder: (context) => CardList(categoryNames[1], 2)),
-                );
-              },
-              child: Container(
-                //width: 100.0,
-                height: 80.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Center(
-                  child: Text(
-                    categoryNames[1],
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),      
+            CategoryButton(CardList(categoryNames[1], 2), categoryNames[1]),
           ],
         ),
       ),
