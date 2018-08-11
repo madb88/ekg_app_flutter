@@ -1,1 +1,1 @@
-# ekg_app_flutter
+EKG App
