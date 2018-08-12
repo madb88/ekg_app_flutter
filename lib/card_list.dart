@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './detail_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
+import 'special_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -18,8 +19,8 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 
 class CardList extends StatelessWidget {
   final category;
-  final categoryNumber;
-  CardList(this.category, this.categoryNumber);
+  final categoryName;
+  CardList(this.category, this.categoryName);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class CardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/category$categoryNumber.json'),
+                    .loadString('data_repo/$categoryName.json'),
                 builder: (context, snapshot) {
                   var newItem = JSON.decode(snapshot.data.toString());
                   return new ListView.builder(
@@ -55,7 +56,7 @@ class CardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          new DetailPage(sendedCard[index])),
+                                          category == 'Lokalizacja'? SpecialDetailPage(sendedCard[index]): DetailPage(sendedCard[index])),
                                 );
                               },
                               title: new Text(

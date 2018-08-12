@@ -63,7 +63,7 @@ class DrainCategoriesList extends StatelessWidget {
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            CategoryButton(CardList(categoryNames[0], 1), categoryNames[0]),
+            CategoryButton(CardList(categoryNames[0], 'odprowadzenia_lokalizacja'), categoryNames[0]),
             Divider(),
             CategoryButton(CardList(categoryNames[1], 2), categoryNames[1]),
           ],
