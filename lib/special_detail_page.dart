@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './customWidgets/color_text.dart';
+import './customWidgets/normal_text.dart';
 
 class SpecialDetailPage extends StatelessWidget {
   final sendedCard;
@@ -22,11 +23,7 @@ class SpecialDetailPage extends StatelessWidget {
     Widget subtitleOneSection = Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(
-          sendedCard['subtitle1'],
-          style: new TextStyle(fontSize: 20.0),
-          textAlign: TextAlign.justify,
-        ),
+        NormalText(sendedCard['subtitle1'], FontWeight.bold),
       ],
     );
 
@@ -70,6 +67,24 @@ class SpecialDetailPage extends StatelessWidget {
       ],
     );
 
+     Widget normalText = Row(
+      children: <Widget>[
+        Text(
+          sendedCard['normalText'],
+          style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.justify,
+        ),
+      ],
+    );
+
+  Widget subtitlTwoSection = Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        NormalText(sendedCard['subtitle2'], FontWeight.bold),
+      ],
+    );
+
+
     Widget buttonSection = Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -110,7 +125,9 @@ class SpecialDetailPage extends StatelessWidget {
             (BuildContext context, int index) {
               return Container(
                 padding: EdgeInsets.all(10.0),
-                child: Column(
+                child: 
+                
+                Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
@@ -119,6 +136,34 @@ class SpecialDetailPage extends StatelessWidget {
                     yellowText,
                     greenText,
                     blackText,
+                    normalText,
+                    subtitlTwoSection,
+                    Row(
+                      children: <Widget>[
+                        ColoredText(Colors.red, sendedCard['redTitle2']),
+                        NormalText(sendedCard['redText2'], FontWeight.normal),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        ColoredText(Colors.yellow[800], sendedCard['yellowTitle2']),
+                        NormalText(sendedCard['yellowText2'], FontWeight.normal),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        ColoredText(Colors.green, sendedCard['greenTitle2']),
+                        NormalText(sendedCard['greenText2'], FontWeight.normal),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                          child: NormalText(sendedCard['normalText2'], FontWeight.normal),
+                          )
+                      ],
+                    ),
                     Divider(),
                     imageSection,
                     Divider(),

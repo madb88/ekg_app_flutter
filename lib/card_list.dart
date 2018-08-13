@@ -56,7 +56,7 @@ class CardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          category == 'Lokalizacja'? SpecialDetailPage(sendedCard[index]): DetailPage(sendedCard[index])),
+                                          DetailPage(sendedCard[index])),
                                 );
                               },
                               title: new Text(
