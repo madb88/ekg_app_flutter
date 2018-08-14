@@ -26,47 +26,7 @@ class SpecialDetailPage extends StatelessWidget {
         NormalText(sendedCard['subtitle1'], FontWeight.bold),
       ],
     );
-
-    Widget redText = Row(
-      children: <Widget>[
-        ColoredText(Colors.red, sendedCard['redTitle']),
-        ColoredText(Colors.black, sendedCard['redText']),
-      ],
-    );
-
-    Widget yellowText = Row(
-      children: <Widget>[
-        ColoredText(Colors.yellow[800], sendedCard['yellowTitle']),
-        Text(
-          sendedCard['yellowText'],
-          style: new TextStyle(fontSize: 20.0),
-          textAlign: TextAlign.justify,
-        ),
-      ],
-    );
-
-    Widget greenText = Row(
-      children: <Widget>[
-        ColoredText(Colors.green, sendedCard['greenTitle']),
-        Text(
-          sendedCard['greenText'],
-          style: new TextStyle(fontSize: 20.0),
-          textAlign: TextAlign.justify,
-        ),
-      ],
-    );
-
-    Widget blackText = Row(
-      children: <Widget>[
-        ColoredText(Colors.black, sendedCard['blackTitle']),
-        Text(
-          sendedCard['blackText'],
-          style: new TextStyle(fontSize: 20.0),
-          textAlign: TextAlign.justify,
-        ),
-      ],
-    );
-
+    
      Widget normalText = Row(
       children: <Widget>[
         Text(
@@ -132,36 +92,61 @@ class SpecialDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     subtitleOneSection,
-                    redText,
-                    yellowText,
-                    greenText,
-                    blackText,
-                    normalText,
-                    subtitlTwoSection,
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        ColoredText(Colors.red, sendedCard['redTitle2']),
-                        NormalText(sendedCard['redText2'], FontWeight.normal),
+                        ColoredText(Colors.red, sendedCard['redTitle']),
+                        Flexible(child: NormalText(sendedCard['redText'], FontWeight.normal)),
                       ],
                     ),
-                    Row(
+                   Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        ColoredText(Colors.yellow[800], sendedCard['yellowTitle2']),
-                        NormalText(sendedCard['yellowText2'], FontWeight.normal),
-                      ],
-                    ),
-                    Row(
-                      children: <Widget>[
-                        ColoredText(Colors.green, sendedCard['greenTitle2']),
-                        NormalText(sendedCard['greenText2'], FontWeight.normal),
+                        ColoredText(Colors.yellow[800], sendedCard['yellowTitle']),
+                        Flexible(child: NormalText(sendedCard['yellowText'], FontWeight.normal)),
                       ],
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(
-                          child: NormalText(sendedCard['normalText2'], FontWeight.normal),
-                          )
+                        ColoredText(Colors.green, sendedCard['greenTitle']),
+                        Flexible(child: NormalText(sendedCard['greenText'], FontWeight.normal)),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.black, sendedCard['blackTitle']),
+                        Flexible(child: NormalText(sendedCard['blackText'], FontWeight.normal)),
+                      ],
+                    ),
+                    normalText,
+                    subtitlTwoSection,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.red, sendedCard['redTitle2']),
+                        Flexible(child: NormalText(sendedCard['redText2'], FontWeight.normal)),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.yellow[800], sendedCard['yellowTitle2']),
+                        Flexible(child: NormalText(sendedCard['yellowText2'], FontWeight.normal)),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.green, sendedCard['greenTitle2']),
+                        Flexible(child: NormalText(sendedCard['greenText2'], FontWeight.normal)),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(child: NormalText(sendedCard['normalText2'], FontWeight.normal),)
                       ],
                     ),
                     Divider(),

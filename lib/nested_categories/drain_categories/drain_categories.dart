@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import '../../home_page.dart';
-import '../../card_list.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
 import './../../special_detail_page.dart';

@@ -62,11 +62,11 @@ class AxisCategoriesList extends StatelessWidget {
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            CategoryButton(CardList(categoryNames[0], 1), categoryNames[0]),
+            CategoryButton(CardList(categoryNames[0], 'category2'), categoryNames[0]),
             Divider(),
-            CategoryButton(CardList(categoryNames[1], 2), categoryNames[1]),
+            CategoryButton(CardList(categoryNames[1], 'category3'), categoryNames[1]),
             Divider(),
-            CategoryButton(CardList(categoryNames[2], 2), categoryNames[2]),
+            CategoryButton(CardList(categoryNames[2], 'category3'), categoryNames[2]),
             Divider(),
             CategoryButton(CardList(categoryNames[3], 2), categoryNames[3]),
           ],

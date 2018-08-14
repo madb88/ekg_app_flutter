@@ -23,7 +23,6 @@ class DetailPage extends StatelessWidget {
       child: Text(
         sendedCard['description'],
         style: new TextStyle(fontSize: 20.0),
-        textAlign: TextAlign.justify,
       ),
     );
 
@@ -66,9 +65,9 @@ class DetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return new Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                
+                // mainAxisSize: MainAxisSize.max,
+                // mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   descriptionSection,
                   Divider(),
