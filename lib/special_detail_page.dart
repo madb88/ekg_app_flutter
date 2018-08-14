@@ -26,7 +26,7 @@ class SpecialDetailPage extends StatelessWidget {
         NormalText(sendedCard['subtitle1'], FontWeight.bold),
       ],
     );
-    
+
      Widget normalText = Row(
       children: <Widget>[
         Text(
@@ -146,7 +146,36 @@ class SpecialDetailPage extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(child: NormalText(sendedCard['normalText2'], FontWeight.normal),)
+                        ColoredText(Colors.brown, sendedCard['brownTitle']),
+                        Flexible(child: NormalText(sendedCard['brownText'], FontWeight.normal),)
+                      ],
+                    ),
+                   Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.black, sendedCard['blackTitle2']),
+                        Flexible(child: NormalText(sendedCard['blackText2'], FontWeight.normal),)
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.purple, sendedCard['purpleTitle']),
+                        Flexible(child: NormalText(sendedCard['purpleText'], FontWeight.normal),)
+                      ],
+                    ),
+                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.grey[500], sendedCard['greyTitle']),
+                        Flexible(child: NormalText(sendedCard['greyText'], FontWeight.normal),)
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        ColoredText(Colors.grey[300], sendedCard['lightGreyTitle']),
+                        Flexible(child: NormalText(sendedCard['lightGreyText'], FontWeight.normal),)
                       ],
                     ),
                     Divider(),

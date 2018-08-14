@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './detail_page.dart';
+import '../../detail_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'special_detail_page.dart';
+import '../../special_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -17,10 +17,10 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class CardList extends StatelessWidget {
+class DrainCardList extends StatelessWidget {
   final category;
   final categoryName;
-  CardList(this.category, this.categoryName);
+  DrainCardList(this.category, this.categoryName);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class CardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          DetailPage(sendedCard[index])),
+                                          sendedCard[index]['category'] == 1 ? SpecialDetailPage(sendedCard[index]):DetailPage(sendedCard[index])),
                                 );
                               },
                               title: new Text(

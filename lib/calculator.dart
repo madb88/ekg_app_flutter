@@ -7,7 +7,7 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  var rightQt = 0.0, rr = 0.0, sum = 0.0, hr = 0.0;
+  var rightQt = 0.0, rr = 0, sum = 0.0, hr = 0;
   var hrColor;
   int fac = pow(10, 3);
   var transmition;
@@ -25,19 +25,21 @@ class _CalculatorState extends State<Calculator> {
   void calculateQt() {
     this.setState(() {
       rightQt = double.parse(t1.text);
-      rr = double.parse(t2.text);
+      rr = int.parse(t2.text);
 
       sum = rightQt * 0.04 / sqrt(rr * 0.04);
       sum = ((sum * fac).round() / fac) * 1000;
 
       if (transmition == 1) {
-        hr = 300 / rr * 5;
+        hr = (300 / rr * 5).round();
       } else if (transmition == 2) {
-        hr = 300 / rr * 10;
+        hr = (300 / rr * 10).round();
       }
 
       if (hr > 200) {
         hrColor = Colors.red;
+      } else if(hr < 0 || hr == 0) {
+        hrColor = Colors.red; 
       } else {
         hrColor = Colors.blue;
       }
@@ -47,7 +49,7 @@ class _CalculatorState extends State<Calculator> {
   void clearCalculator() {
     this.setState(() {
       sum = 0.0;
-      hr = 0.0;
+      hr = 0;
       hrColor = Colors.blue;
     });
   }
@@ -115,6 +117,8 @@ class _CalculatorState extends State<Calculator> {
                     onChanged: (value) => this.setState(() {
                           transmition = value;
                         }),
+                        
+                        
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

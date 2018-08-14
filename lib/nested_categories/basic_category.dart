@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../home_page.dart';
-import './drain_categories/drain_categories.dart';
+import './drain_categories/drain_card_list.dart';
 import './axis_categories/axis_categories.dart';
 import '../category_list.dart';
 import '../customWidgets/category_button.dart';
@@ -63,9 +63,9 @@ class BasicCategoryList extends StatelessWidget {
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            CategoryButton(DrainCategoriesList(categoriesName[0]), categoriesName[0]),
+            CategoryButton(DrainCardList(categoriesName[0], 'odprowadzenia'), categoriesName[0]),
             Divider(),
-            CategoryButton(AxisCategoriesList(categoriesName[1]), categoriesName[1]),           
+            CategoryButton(CardList(categoriesName[1],'axis_cards'), categoriesName[1]),           
             Divider(),
             CategoryButton(CardList(categoriesName[2],2), categoriesName[2]),    
             Divider(),
