@@ -26,8 +26,7 @@ class AxisCategoriesList extends StatelessWidget {
   final categoryNames = {
     'axisOne' : 'II, III dodatnie',
     'axisTwo': 'I, III oba skierowane w dół',
-    'axisThree': 'I, III rozbierzne',
-    'axisFourth': 'I, III skierowane do siebie'
+    'axisThree': 'I i III zwrócone do siebie'
   };
    
   
@@ -70,8 +69,7 @@ class AxisCategoriesList extends StatelessWidget {
             CategoryButton(CardList(categoryNames['axisTwo'], 'category3'), categoryNames['axisTwo']),
             Divider(),
             CategoryButton(CardList(categoryNames['axisThree'], 'category3'), categoryNames['axisThree']),
-            Divider(),
-            CategoryButton(CardList(categoryNames['axisFourth'], 2), categoryNames['axisFourth']),
+           
           ],
         ),
       ),

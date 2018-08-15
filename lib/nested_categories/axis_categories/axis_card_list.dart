@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import 'package:ekg_cards_app/detail_page.dart';
-import '../../detail_views/axis_first_card_detail_page.dart';
+import '../../detail_views/axis_cards/axis_first_card_detail_page.dart';
+import '../../detail_views/axis_cards/axis_third_card_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -29,6 +30,9 @@ class AxisCardList extends StatelessWidget {
         break;
       case 2:
         return AxisFirstCardDetailPage(categoryNumber);
+        break;
+      case 3: 
+        return AxisThirdCardDetailPage(categoryNumber);
         break;
     }
   }

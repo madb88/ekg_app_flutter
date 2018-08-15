@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html_view/flutter_html_view.dart';
 
 
 class InfoContainer extends StatelessWidget{
   final borderColor;
   final backgroundColor;
-  final text;
-  final textSize;
+  final String text;
+  final double textSize;
+  final bool useHtmlTags;
 
 
   InfoContainer(
     this.borderColor,
     this.backgroundColor,
     this.text,
-    this.textSize
+    this.textSize,
+    this.useHtmlTags
   );
 
   @override
@@ -24,7 +27,7 @@ class InfoContainer extends StatelessWidget{
             border: Border(left: BorderSide(color: borderColor, width: 5.0)),
             color: backgroundColor,
           ),
-          child: Text(text, style: TextStyle(fontSize: textSize), textAlign: TextAlign.justify,),
+          child: useHtmlTags == true ? HtmlView(data: text) : Text(text, style: TextStyle(fontSize: textSize), textAlign: TextAlign.justify),
         );
       return inforContainer;
     }

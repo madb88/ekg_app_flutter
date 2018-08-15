@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../customWidgets/normal_text.dart';
-import '../customWidgets/info_container.dart';
+import '../../customWidgets/normal_text.dart';
+import '../../customWidgets/info_container.dart';
 
 class AxisFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -52,17 +52,23 @@ class AxisFirstCardDetailPage extends StatelessWidget {
     );
 
     return new Scaffold(
-        appBar: AppBar(
+          body: CustomScrollView(
+      slivers: <Widget>[
+        new SliverAppBar(
           backgroundColor: Colors.blue[900],
-          title: Text("EKG Fiszki"),
+          pinned: true,
+          title: new Text(sendedCard['title']),
         ),
-        body: Column(
-          children: <Widget>[
-            Flexible(
-              child: Container(
-                padding: const EdgeInsets.all(16.0),
-                margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-                child: ListView(
+        new SliverList(
+          delegate: new SliverChildBuilderDelegate(
+            (BuildContext context, int index) {
+              return Container(
+                padding: EdgeInsets.all(15.0),
+                child: 
+                
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,7 +116,8 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                                 Colors.blue[800],
                                 Colors.blue[100],
                                 sendedCard['infoText'],
-                                19.0)),
+                                19.0,
+                                false)),
                       ],
                     ),
                     Divider(
@@ -166,38 +173,144 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement1'], FontWeight.normal),
+                     Divider(
+                      height: 10.0,
+                      color: Colors.white,
                     ),
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
-                          sendedCard['listElement2'], FontWeight.normal),
+                          sendedCard['listElement'][0], FontWeight.normal),
                     ),
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
-                          sendedCard['listElement3'], FontWeight.normal),
+                          sendedCard['listElement'][1], FontWeight.normal),
                     ),
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
-                          sendedCard['listElement4'], FontWeight.normal),
+                          sendedCard['listElement'][2], FontWeight.normal),
                     ),
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
-                          sendedCard['listElement5'], FontWeight.normal),
+                          sendedCard['listElement'][3], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement'][4], FontWeight.normal),
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                          child: NormalText(
+                              sendedCard['ListHeadLine2'], FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                      Divider(
+                      height: 10.0,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement2'][0], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement2'][1], FontWeight.normal),
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                          child: NormalText(
+                              sendedCard['ListHeadLine3'], FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                     Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                          child: NormalText(
+                              sendedCard['ListHeadLine4'], FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    
+                      Divider(
+                      height: 10.0,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement3'][0], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement3'][1], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement3'][2], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement3'][3], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement3'][4], FontWeight.normal),
+                    ),
+                  Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                          child: NormalText(
+                              sendedCard['ListHeadLine5'], FontWeight.bold),
+                        ),
+                      ],
                     ),
                     Divider(),
                     buttonSection
                   ],
                 ),
-              ),
-            ),
-          ],
-        ));
+              );
+            },
+            childCount: 1,
+          ),
+        ),
+      ]),
+    
+        );
   }
 }
+
+
