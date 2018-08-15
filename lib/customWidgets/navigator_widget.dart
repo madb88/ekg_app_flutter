@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import '../card_list.dart';
 import '../customWidgets/list_element.dart';
 import 'dart:convert';
-import 'package:ekg_cards_app/special_detail_page.dart';
-import 'package:ekg_cards_app/detail_page.dart';
+import './../nested_categories/drain_categories/drain_card_list.dart';
 
 class NavigatorWidget extends StatelessWidget {
   final mainCategories = ['Podstawy', 'EKG'];
@@ -43,29 +42,10 @@ class NavigatorWidget extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   children: <Widget>[
-                    ExpansionTile(
-                        title: Text(basicNestedCategories[0],
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        children: <Widget>[
-                          ListElement(SpecialDetailPage(data[0]),
-                              drainNestedCategories[0]),
-                          ListElement(
-                              DetailPage(data[1]), drainNestedCategories[1]),
-                        ]),
-                    ExpansionTile(
-                      title: Text(basicNestedCategories[1],
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      children: <Widget>[
-                        ListElement(CardList(axisNestedCategories[0], 1),
-                            axisNestedCategories[0]),
-                        ListElement(CardList(axisNestedCategories[1], 2),
-                            axisNestedCategories[1]),
-                        ListElement(CardList(axisNestedCategories[2], 1),
-                            axisNestedCategories[2]),
-                        ListElement(CardList(axisNestedCategories[3], 2),
-                            axisNestedCategories[3]),
-                      ],
-                    ),
+                    
+                    ListElement(DrainCardList(basicNestedCategories[0], 'odprowadzenia'),basicNestedCategories[0]),
+                    ListElement(DrainCardList(basicNestedCategories[1], 'axis_cards'),basicNestedCategories[1]),
+
                     ListElement(CardList(basicNestedCategories[2], 1),
                         basicNestedCategories[2]),
                     ListElement(CardList(basicNestedCategories[3], 1),

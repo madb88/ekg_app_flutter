@@ -69,6 +69,7 @@ class _CalculatorState extends State<Calculator> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue[900],
         title: Text('Kalkulator (wzór Bazetta)'),
       ),
       body: Container(
@@ -116,9 +117,9 @@ class _CalculatorState extends State<Calculator> {
                     hint: Text("Wybierz predkosc przesylu"),
                     onChanged: (value) => this.setState(() {
                           transmition = value;
-                        }),
-                        
-                        
+                    },
+                    ),
+   
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

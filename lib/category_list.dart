@@ -24,6 +24,7 @@ class StudyCategoriesList extends StatelessWidget {
     return new Scaffold(
       drawer: NavigatorWidget(),
       appBar: AppBar(
+        backgroundColor: Colors.blue[900],
         title: Text("EKG Fiszki"),
         actions: <Widget>[
           IconButton(

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import './customWidgets/color_text.dart';
-import './customWidgets/normal_text.dart';
+import '../customWidgets/color_text.dart';
+import '../customWidgets/normal_text.dart';
+
 
 class SpecialDetailPage extends StatelessWidget {
   final sendedCard;
+  final String imageAttribution = "By OpenStax College [CC BY 3.0  (https://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons";
   SpecialDetailPage(this.sendedCard);
 
   @override
@@ -12,7 +14,7 @@ class SpecialDetailPage extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
       child: sendedCard['image'].length > 0
-          ? Image.asset("images/ekg_images/${sendedCard['image']}")
+          ? Image.asset("images/${sendedCard['image']}", width: 450.0,)
           : new Text(
               'Brak zdjecia',
               style: new TextStyle(fontSize: 20.0),
@@ -57,7 +59,7 @@ class SpecialDetailPage extends StatelessWidget {
               height: 50.0,
               width: 150.0,
               decoration: new BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.blue[800],
                 border: new Border.all(color: Colors.white),
                 borderRadius: new BorderRadius.circular(10.0),
               ),
@@ -77,6 +79,7 @@ class SpecialDetailPage extends StatelessWidget {
         body: CustomScrollView(
       slivers: <Widget>[
         new SliverAppBar(
+          backgroundColor: Colors.blue[900],
           pinned: true,
           title: new Text(sendedCard['title']),
         ),
@@ -92,12 +95,20 @@ class SpecialDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     subtitleOneSection,
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         ColoredText(Colors.red, sendedCard['redTitle']),
                         Flexible(child: NormalText(sendedCard['redText'], FontWeight.normal)),
                       ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
                     ),
                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,12 +117,20 @@ class SpecialDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['yellowText'], FontWeight.normal)),
                       ],
                     ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         ColoredText(Colors.green, sendedCard['greenTitle']),
                         Flexible(child: NormalText(sendedCard['greenText'], FontWeight.normal)),
                       ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,14 +139,26 @@ class SpecialDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['blackText'], FontWeight.normal)),
                       ],
                     ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                     normalText,
                     subtitlTwoSection,
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         ColoredText(Colors.red, sendedCard['redTitle2']),
                         Flexible(child: NormalText(sendedCard['redText2'], FontWeight.normal)),
                       ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,12 +167,20 @@ class SpecialDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['yellowText2'], FontWeight.normal)),
                       ],
                     ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         ColoredText(Colors.green, sendedCard['greenTitle2']),
                         Flexible(child: NormalText(sendedCard['greenText2'], FontWeight.normal)),
                       ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,12 +189,20 @@ class SpecialDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['brownText'], FontWeight.normal),)
                       ],
                     ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         ColoredText(Colors.black, sendedCard['blackTitle2']),
                         Flexible(child: NormalText(sendedCard['blackText2'], FontWeight.normal),)
                       ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -164,12 +211,20 @@ class SpecialDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['purpleText'], FontWeight.normal),)
                       ],
                     ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
                      Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         ColoredText(Colors.grey[500], sendedCard['greyTitle']),
                         Flexible(child: NormalText(sendedCard['greyText'], FontWeight.normal),)
                       ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,8 +233,19 @@ class SpecialDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['lightGreyText'], FontWeight.normal),)
                       ],
                     ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(child: NormalText(sendedCard['normalText2'], FontWeight.normal),)
+                      ],
+                    ),
                     Divider(),
                     imageSection,
+                    Text(imageAttribution, textAlign: TextAlign.center),
                     Divider(),
                     buttonSection
                   ],

@@ -38,13 +38,13 @@ class DetailPage extends StatelessWidget {
               height: 50.0,
               width: 150.0,
               decoration: new BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.blue[800],
                 border: new Border.all(color: Colors.white),
                 borderRadius: new BorderRadius.circular(10.0),
               ),
               child: new Center(
                 child: new Text(
-                  'Back',
+                  'Wróć',
                   style: new TextStyle(fontSize: 18.0, color: Colors.white),
                 ),
               ),
@@ -58,6 +58,7 @@ class DetailPage extends StatelessWidget {
         body: CustomScrollView(
       slivers: <Widget>[
         new SliverAppBar(
+          backgroundColor: Colors.blue[900],
           pinned: true,
           title: new Text(sendedCard['title']),
         ),

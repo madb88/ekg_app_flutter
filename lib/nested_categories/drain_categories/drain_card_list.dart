@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import '../../detail_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../special_detail_page.dart';
+import './../../detail_views/special_detail_page.dart';
+import './../../detail_views/discharging_adjacent_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -26,6 +27,7 @@ class DrainCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.blue[900],
         title: new Text(category),
         
       ),
@@ -36,9 +38,7 @@ class DrainCardList extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
-          
           children: <Widget>[
-            
             new Expanded(
 
               child: FutureBuilder(
@@ -60,7 +60,7 @@ class DrainCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          sendedCard[index]['category'] == 1 ? SpecialDetailPage(sendedCard[index]):DetailPage(sendedCard[index])),
+                                          sendedCard[index]['category'] == 1 ? SpecialDetailPage(sendedCard[index]):DischargingAdjacentDetailPage(sendedCard[index])),
                                 );
                               },
                               title: new Text(
@@ -90,7 +90,7 @@ class DrainCardList extends StatelessWidget {
                 child: new Container(
                   height: 5.0,
                   decoration: new BoxDecoration(
-                    color: Colors.blueAccent,
+                    color: Colors.blue[800],
                     border: new Border.all(color: Colors.white, width: 2.0),
                     borderRadius: new BorderRadius.circular(10.0),
                   ),

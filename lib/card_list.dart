@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import './detail_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'special_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -26,8 +25,9 @@ class CardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.blue[900],
         title: new Text(category),
-        
+       
       ),
       body: new Container(
 
@@ -90,7 +90,7 @@ class CardList extends StatelessWidget {
                 child: new Container(
                   height: 5.0,
                   decoration: new BoxDecoration(
-                    color: Colors.blueAccent,
+                    color: Colors.blue[800],
                     border: new Border.all(color: Colors.white, width: 2.0),
                     borderRadius: new BorderRadius.circular(10.0),
                   ),

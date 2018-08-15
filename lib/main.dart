@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import './category_list.dart';
 import './home_page.dart';
 import 'dart:async';
 import 'package:firebase_admob/firebase_admob.dart';

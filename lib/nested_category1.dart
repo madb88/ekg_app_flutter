@@ -16,8 +16,6 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 }
 
 class NestedCategoryList extends StatelessWidget {
-  final _nestedCategory1 = "Nested Category 1";
-  final _nestedCategory2 = "Nested Category 2";
 
   @override
   Widget build(BuildContext context) {

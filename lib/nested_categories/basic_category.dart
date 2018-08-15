@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../home_page.dart';
 import './drain_categories/drain_card_list.dart';
-import './axis_categories/axis_categories.dart';
 import '../category_list.dart';
 import '../customWidgets/category_button.dart';
 import '../card_list.dart';
@@ -34,6 +33,7 @@ class BasicCategoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue[900],
         title: Text("Podstawy"),
         actions: <Widget>[
           IconButton(

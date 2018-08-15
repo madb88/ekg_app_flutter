@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../card_list.dart';
 
 class ColoredText extends StatelessWidget {
 
