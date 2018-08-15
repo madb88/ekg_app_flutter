@@ -3,7 +3,7 @@ import 'dart:convert';
 import '../../home_page.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
-import './../../special_detail_page.dart';
+import './../.././detail_views/special_detail_page.dart';
 import './../../detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -26,10 +26,13 @@ class DrainCategoriesList extends StatelessWidget {
     this.drainName
   );
 
-  final categoryNames = [
-    'Lokalizacja',
-    'Odprowadzenia sąsiadujące'
-  ];
+
+  final categoryNames = {
+    'localtion':'Lokalizacja',
+    'discharging':'Odprowadzenia sąsiadujące'
+  };
+    
+  
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +82,7 @@ class DrainCategoriesList extends StatelessWidget {
                       return new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-                            newItem[index]['category'] == 2 ? CategoryButton(DetailPage(newItem[index]),categoryNames[1]) : CategoryButton(SpecialDetailPage(newItem[index]),categoryNames[0]),
+                            newItem[index]['category'] == 2 ? CategoryButton(DetailPage(newItem[index]),categoryNames['discharging']) : CategoryButton(SpecialDetailPage(newItem[index]),categoryNames['location']),
                             Divider(),
                           ],
                       );

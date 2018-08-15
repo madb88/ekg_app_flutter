@@ -15,8 +15,12 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 }
 
 class HomePageList extends StatelessWidget {
-  final _study = "Nauka";
-  final _calculator = "Kalkulator";
+ 
+
+  final mainPageButton = {
+    "study" : "Nauka",
+    "calculator" : "Kalkulator"
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +55,7 @@ class HomePageList extends StatelessWidget {
                 ),
                 child: Center(
                   child: new Text(
-                     _study,
+                     mainPageButton['study'],
                     style: new TextStyle(fontSize: 38.0, color: Colors.white),
                   ),
                 ),
@@ -75,7 +79,7 @@ class HomePageList extends StatelessWidget {
                 ),
                 child: Center(
                   child: new Text(
-                    _calculator,
+                    mainPageButton['calculator'],
                     style: new TextStyle(fontSize: 38.0, color: Colors.white),
                   ),
                 ),
@@ -87,7 +91,7 @@ class HomePageList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text('Wersja: 0.2.7'),
+                Text('Wersja: 0.2.8'),
               ],
             ))
           ],

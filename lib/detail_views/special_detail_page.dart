@@ -87,7 +87,7 @@ class SpecialDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(15.0),
                 child: 
                 
                 Column(

@@ -4,6 +4,7 @@ import './drain_categories/drain_card_list.dart';
 import '../category_list.dart';
 import '../customWidgets/category_button.dart';
 import '../card_list.dart';
+import 'axis_categories/axis_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -20,14 +21,11 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 
 class BasicCategoryList extends StatelessWidget {
   
-  final categoriesName = [
-    'Odprowadzenia',
-    'Oś',
-    'Cecha, szybkość przesuwu',
-    'Częstość akcji',
-    'Odcinek, odstęp',
-    'Kiedy małe litery'
-  ];
+  final categoriesName = {
+    'drain' : 'Odprowadzenia',
+    'axis': 'Oś'
+  };
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -63,17 +61,17 @@ class BasicCategoryList extends StatelessWidget {
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            CategoryButton(DrainCardList(categoriesName[0], 'odprowadzenia'), categoriesName[0]),
+            CategoryButton(DrainCardList(categoriesName['drain'], 'odprowadzenia'), categoriesName['drain']),
             Divider(),
-            CategoryButton(CardList(categoriesName[1],'axis_cards'), categoriesName[1]),           
-            Divider(),
-            CategoryButton(CardList(categoriesName[2],2), categoriesName[2]),    
-            Divider(),
-            CategoryButton(CardList(categoriesName[3],2), categoriesName[3]),       
-            Divider(),
-            CategoryButton(CardList(categoriesName[4],2), categoriesName[4]),   
-            Divider(),
-            CategoryButton(CardList(categoriesName[5],2), categoriesName[5]),   
+            CategoryButton(AxisCardList(categoriesName['axis'],'axis_cards'), categoriesName['axis']),           
+            // Divider(),
+            // CategoryButton(CardList(categoriesName[2],2), categoriesName[2]),    
+            // Divider(),
+            // CategoryButton(CardList(categoriesName[3],2), categoriesName[3]),       
+            // Divider(),
+            // CategoryButton(CardList(categoriesName[4],2), categoriesName[4]),   
+            // Divider(),
+            // CategoryButton(CardList(categoriesName[5],2), categoriesName[5]),   
           ],
         ),
       ),

@@ -22,12 +22,15 @@ class AxisCategoriesList extends StatelessWidget {
 
   AxisCategoriesList(this.axisName);
 
-  final categoryNames = [
-    'II, III (+)',
-    'I, III oba skierowane w dół',
-    'I, III rozbierzne',
-    'I, III skierowane do siebie'
-  ];
+
+  final categoryNames = {
+    'axisOne' : 'II, III dodatnie',
+    'axisTwo': 'I, III oba skierowane w dół',
+    'axisThree': 'I, III rozbierzne',
+    'axisFourth': 'I, III skierowane do siebie'
+  };
+   
+  
 
   @override
   Widget build(BuildContext context) {
@@ -62,13 +65,13 @@ class AxisCategoriesList extends StatelessWidget {
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
-            CategoryButton(CardList(categoryNames[0], 'category2'), categoryNames[0]),
+            CategoryButton(CardList(categoryNames['axisOne'], 'category2'), categoryNames['axisOne']),
             Divider(),
-            CategoryButton(CardList(categoryNames[1], 'category3'), categoryNames[1]),
+            CategoryButton(CardList(categoryNames['axisTwo'], 'category3'), categoryNames['axisTwo']),
             Divider(),
-            CategoryButton(CardList(categoryNames[2], 'category3'), categoryNames[2]),
+            CategoryButton(CardList(categoryNames['axisThree'], 'category3'), categoryNames['axisThree']),
             Divider(),
-            CategoryButton(CardList(categoryNames[3], 2), categoryNames[3]),
+            CategoryButton(CardList(categoryNames['axisFourth'], 2), categoryNames['axisFourth']),
           ],
         ),
       ),

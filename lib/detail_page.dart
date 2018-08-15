@@ -20,9 +20,9 @@ class DetailPage extends StatelessWidget {
       );
 
     Widget descriptionSection = Container(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(5.0),
       child: 
-      HtmlView(data: sendedCard['description'])
+      sendedCard['useHtmlTags'] == true? HtmlView(data: sendedCard['description']): Text(sendedCard['description'])
     );
 
     Widget buttonSection = Container(

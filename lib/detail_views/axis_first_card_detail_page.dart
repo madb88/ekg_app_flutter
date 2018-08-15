@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import '../customWidgets/normal_text.dart';
+import '../customWidgets/info_container.dart';
 
-class DischargingAdjacentDetailPage extends StatelessWidget {
+class AxisFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
-  DischargingAdjacentDetailPage(this.sendedCard);
+  AxisFirstCardDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
@@ -51,46 +52,30 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
     );
 
     return new Scaffold(
-        body: CustomScrollView(
-      slivers: <Widget>[
-        new SliverAppBar(
+        appBar: AppBar(
           backgroundColor: Colors.blue[900],
-          pinned: true,
-          title: new Text(sendedCard['title']),
+          title: Text("EKG Fiszki"),
         ),
-        new SliverList(
-          delegate: new SliverChildBuilderDelegate(
-            (BuildContext context, int index) {
-              return Container(
-                padding: EdgeInsets.all(15.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
+        body: Column(
+          children: <Widget>[
+            Flexible(
+              child: Container(
+                padding: const EdgeInsets.all(16.0),
+                margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                child: ListView(
                   children: <Widget>[
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Flexible(
-                          child: NormalText(
-                              sendedCard['description'], FontWeight.normal),
-                        )
+                            child: Text(sendedCard['titleOne'],
+                                style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 30.0)))
                       ],
                     ),
                     Divider(
-                      height: 45.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                          child: NormalText(
-                              sendedCard['subtitle1'], FontWeight.bold),
-                        )
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
+                      height: 30.0,
                       color: Colors.white,
                     ),
                     Row(
@@ -98,7 +83,34 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       children: <Widget>[
                         Flexible(
                             child: NormalText(
-                                sendedCard['listelement1'], FontWeight.normal)),
+                                sendedCard['text1'], FontWeight.normal))
+                      ],
+                    ),
+                    Divider(
+                      height: 20.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                            child: NormalText(
+                                sendedCard['text2'], FontWeight.normal))
+                      ],
+                    ),
+                    Divider(
+                      height: 25.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                            child: InfoContainer(
+                                Colors.blue[800],
+                                Colors.blue[100],
+                                sendedCard['infoText'],
+                                19.0)),
                       ],
                     ),
                     Divider(
@@ -108,58 +120,25 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement2'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement3'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement4'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement5'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
+                        NormalText(sendedCard['text3'], FontWeight.bold),
                         Flexible(
                           child: NormalText(
-                              sendedCard['subtitle2'], FontWeight.bold),
-                        )
+                              sendedCard['text3a'], FontWeight.normal),
+                        ),
+                      ],
+                    ),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        NormalText(sendedCard['text4'], FontWeight.bold),
+                        Flexible(
+                          child: NormalText(
+                              sendedCard['text4a'], FontWeight.normal),
+                        ),
                       ],
                     ),
                     Divider(
@@ -171,7 +150,7 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       children: <Widget>[
                         Flexible(
                             child: NormalText(
-                                sendedCard['secondListElement1'], FontWeight.normal)),
+                                sendedCard['text5'], FontWeight.bold))
                       ],
                     ),
                     Divider(
@@ -182,20 +161,43 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Flexible(
-                            child: NormalText(
-                                sendedCard['secondListElement2'], FontWeight.normal)),
+                          child: NormalText(
+                              sendedCard['ListHeadLine'], FontWeight.bold),
+                        ),
                       ],
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement1'], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement2'], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement3'], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement4'], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listElement5'], FontWeight.normal),
                     ),
                     Divider(),
                     buttonSection
                   ],
                 ),
-              );
-            },
-            childCount: 1,
-          ),
-        ),
-      ],
-    ));
+              ),
+            ),
+          ],
+        ));
   }
 }

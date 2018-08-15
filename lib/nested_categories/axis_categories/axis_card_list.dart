@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import './../../detail_views/special_detail_page.dart';
-import './../../detail_views/discharging_adjacent_detail_page.dart';
+import 'package:ekg_cards_app/detail_page.dart';
+import '../../detail_views/axis_first_card_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -17,10 +17,21 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class DrainCardList extends StatelessWidget {
+class AxisCardList extends StatelessWidget {
   final category;
   final categoryName;
-  DrainCardList(this.category, this.categoryName);
+  AxisCardList(this.category, this.categoryName);
+
+  switchSection(categoryNumber){
+    switch(categoryNumber['category']){
+      case 1:
+        return DetailPage(categoryNumber);
+        break;
+      case 2:
+        return AxisFirstCardDetailPage(categoryNumber);
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +70,7 @@ class DrainCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          sendedCard[index]['category'] == 1 ? SpecialDetailPage(sendedCard[index]):DischargingAdjacentDetailPage(sendedCard[index])),
+                                          switchSection(sendedCard[index])),
                                 );
                               },
                               title: new Text(

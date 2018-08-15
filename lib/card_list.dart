@@ -47,6 +47,7 @@ class CardList extends StatelessWidget {
                     .loadString('data_repo/$categoryName.json'),
                 builder: (context, snapshot) {
                   var newItem = json.decode(snapshot.data.toString());
+                  
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
@@ -60,6 +61,7 @@ class CardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
+                                      
                                           DetailPage(sendedCard[index])),
                                 );
                               },
