@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html_view/flutter_html_view.dart';
 
 class DetailPage extends StatelessWidget {
   final sendedCard;
@@ -19,11 +20,9 @@ class DetailPage extends StatelessWidget {
       );
 
     Widget descriptionSection = Container(
-      padding: const EdgeInsets.all(20.0),
-      child: Text(
-        sendedCard['description'],
-        style: new TextStyle(fontSize: 20.0),
-      ),
+      padding: const EdgeInsets.all(10.0),
+      child: 
+      HtmlView(data: sendedCard['description'])
     );
 
     Widget buttonSection = Container(

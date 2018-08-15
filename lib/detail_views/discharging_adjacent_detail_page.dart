@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../customWidgets/color_text.dart';
 import '../customWidgets/normal_text.dart';
-import 'package:flutter_html_view/flutter_html_view.dart';
 
 class DischargingAdjacentDetailPage extends StatelessWidget {
   final sendedCard;
