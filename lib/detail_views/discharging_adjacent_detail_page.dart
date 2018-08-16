@@ -77,7 +77,7 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       ],
                     ),
                     Divider(
-                      height: 45.0,
+                      height: 25.0,
                       color: Colors.white,
                     ),
                     Row(
@@ -93,99 +93,78 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       height: 15.0,
                       color: Colors.white,
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement1'], FontWeight.normal)),
-                      ],
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listOne'][0], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listOne'][1], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listOne'][2], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listOne'][3], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['listOne'][4], FontWeight.normal),
                     ),
                     Divider(
                       height: 15.0,
                       color: Colors.white,
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
+                    Container(
+                        padding: EdgeInsets.all(15.0),
+                        decoration: BoxDecoration(
+                          border: Border(left: BorderSide(color: Colors.blue[800], width: 5.0)),
+                          color: Colors.blue[100],
+                        ),
+                        child: Column(children: <Widget>[
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Flexible(
                             child: NormalText(
-                                sendedCard['listelement2'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement3'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement4'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['listelement5'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                          child: NormalText(
-                              sendedCard['subtitle2'], FontWeight.bold),
-                        )
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['secondListElement1'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['secondListElement2'], FontWeight.normal)),
-                      ],
-                    ),
+                                sendedCard['subtitle2'], FontWeight.bold),
+                          )
+                        ],
+                      ),
+                      Divider(
+                        height: 15.0,
+                        color: Colors.blue[100],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Flexible(
+                              child: NormalText(
+                                  sendedCard['secondListElement1'],
+                                  FontWeight.normal)),
+                        ],
+                      ),
+                      Divider(
+                        height: 15.0,
+                        color: Colors.blue[100],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Flexible(
+                              child: NormalText(
+                                  sendedCard['secondListElement2'],
+                                  FontWeight.normal)),
+                        ],
+                      ),
+                    ])),
                     Divider(),
                     buttonSection
                   ],

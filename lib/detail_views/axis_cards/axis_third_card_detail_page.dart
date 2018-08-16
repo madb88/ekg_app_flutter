@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/flexible_row_normal_text.dart';
 
 class AxisThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -94,220 +95,118 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Flexible(
-                          child: InfoContainer(
-                              Colors.blue[800],
-                              Colors.blue[100],
-                              sendedCard['infoBlock'],
-                              19.0,
-                              false),
+                          child: Container(
+                            padding: EdgeInsets.all(15.0),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                  left: BorderSide(
+                                      color: Colors.blue[800], width: 5.0)),
+                              color: Colors.blue[100],
+                            ),
+                            child: Column(
+                              children: <Widget>[
+                                NormalText(
+                                    sendedCard['infoPart1'], FontWeight.bold),
+                                Divider(height: 10.0, color: Colors.blue[100]),
+                                Row(
+                                  children: <Widget>[
+                                    NormalText(sendedCard['infoPart2Title'],
+                                        FontWeight.bold),
+                                  ],
+                                ),
+                                NormalText(
+                                    sendedCard['infoPart2'], FontWeight.normal),
+                                Divider(height: 10.0, color: Colors.blue[100]),
+                                Row(
+                                  children: <Widget>[
+                                    NormalText(sendedCard['infoPart3Title'],
+                                        FontWeight.bold),
+                                  ],
+                                ),
+                                NormalText(
+                                    sendedCard['infoPart3'], FontWeight.normal),
+                              ],
+                            ),
+                          ),
                         )
                       ],
                     ),
-                    //   Divider(
-                    //     height: 20.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //           child: NormalText(
-                    //               sendedCard['text2'], FontWeight.normal))
-                    //     ],
-                    //   ),
-                    //   Divider(
-                    //     height: 25.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //           child: InfoContainer(
-                    //               Colors.blue[800],
-                    //               Colors.blue[100],
-                    //               sendedCard['infoText'],
-                    //               19.0)),
-                    //     ],
-                    //   ),
-                    //   Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       NormalText(sendedCard['text3'], FontWeight.bold),
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['text3a'], FontWeight.normal),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //   Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       NormalText(sendedCard['text4'], FontWeight.bold),
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['text4a'], FontWeight.normal),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //   Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //           child: NormalText(
-                    //               sendedCard['text5'], FontWeight.bold))
-                    //     ],
-                    //   ),
-                    //   Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['ListHeadLine'], FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //    Divider(
-                    //     height: 10.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement'][0], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement'][1], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement'][2], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement'][3], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement'][4], FontWeight.normal),
-                    //   ),
-                    //   Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['ListHeadLine2'], FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //     Divider(
-                    //     height: 10.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement2'][0], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement2'][1], FontWeight.normal),
-                    //   ),
-                    //   Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['ListHeadLine3'], FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //    Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['ListHeadLine4'], FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
+                    Divider(
+                      height: 20.0,
+                      color: Colors.white,
+                    ),
 
-                    //     Divider(
-                    //     height: 10.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement3'][0], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement3'][1], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement3'][2], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement3'][3], FontWeight.normal),
-                    //   ),
-                    //   ListTile(
-                    //     leading: Icon(Icons.chevron_right),
-                    //     title: NormalText(
-                    //         sendedCard['listElement3'][4], FontWeight.normal),
-                    //   ),
-                    // Divider(
-                    //     height: 15.0,
-                    //     color: Colors.white,
-                    //   ),
-                    //   Row(
-                    //     crossAxisAlignment: CrossAxisAlignment.start,
-                    //     children: <Widget>[
-                    //       Flexible(
-                    //         child: NormalText(
-                    //             sendedCard['ListHeadLine5'], FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
+                    FlexibleRowNormalText(
+                        sendedCard['listHead'], 20.0, FontWeight.bold),
+                    Divider(
+                      height: 5.0,
+                      color: Colors.white,
+                    ),
+                    FlexibleRowNormalText(
+                        sendedCard['listNestedHead'], 20.0, FontWeight.bold),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['firstList'][0], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['firstList'][1], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['firstList'][2], FontWeight.normal),
+                    ),
+                    Divider(
+                      height: 20.0,
+                      color: Colors.white,
+                    ),
+
+                    FlexibleRowNormalText(
+                        sendedCard['listNestedHead2'], 20.0, FontWeight.bold),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['secondList'][0], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['secondList'][1], FontWeight.normal),
+                    ),
+Divider(
+                      height: 20.0,
+                      color: Colors.white,
+                    ),
+
+                    FlexibleRowNormalText(
+                        sendedCard['listNestedHead3'], 20.0, FontWeight.bold),
+                        Divider(
+                      height: 20.0,
+                      color: Colors.white,
+                    ),
+
+                    FlexibleRowNormalText(
+                        sendedCard['listNestedHead4'], 20.0, FontWeight.bold),
+                        ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['thirdList'][0], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['thirdList'][1], FontWeight.normal),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: NormalText(
+                          sendedCard['thirdList'][2], FontWeight.normal),
+                    ),
+                    FlexibleRowNormalText(
+                        sendedCard['ListNestedHead5'], 20.0, FontWeight.bold),
                   ],
                 ),
               );

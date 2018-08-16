@@ -73,7 +73,7 @@ class HomePageList extends StatelessWidget {
               child: new Container(
                 height: 100.0,
                 decoration: new BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.red[700],
                   border: new Border.all(color: Colors.white, width: 2.0),
                   borderRadius: new BorderRadius.circular(10.0),
                 ),
@@ -91,7 +91,7 @@ class HomePageList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text('Wersja: 0.2.9'),
+                Text('Wersja: 0.2.10'),
               ],
             ))
           ],
