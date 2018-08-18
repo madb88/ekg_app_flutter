@@ -22,8 +22,9 @@ class CategoryButton extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 75.0,
+                height: 80.0,
                 decoration: BoxDecoration(
+                  
                   color: Colors.blue[800],
                   border: Border.all(color: Colors.white, width: 2.0),
                   borderRadius: BorderRadius.circular(10.0),
@@ -31,7 +32,7 @@ class CategoryButton extends StatelessWidget {
                 child: Center(
                   child: Text(
                     buttonText,
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    style: TextStyle(fontSize: 20.0, color: Colors.white),textAlign: TextAlign.center,
                   ),
                 ),
               ),

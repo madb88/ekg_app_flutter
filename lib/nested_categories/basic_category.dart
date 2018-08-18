@@ -5,6 +5,7 @@ import '../category_list.dart';
 import '../customWidgets/category_button.dart';
 import '../card_list.dart';
 import 'axis_categories/axis_card_list.dart';
+import 'feature_categories/feature_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -23,7 +24,8 @@ class BasicCategoryList extends StatelessWidget {
   
   final categoriesName = {
     'drain' : 'Odprowadzenia',
-    'axis': 'Oś'
+    'axis': 'Oś',
+    'feature' : 'Cecha, szybkość przesuwu i częstotliwość rytmu'
   };
  
 
@@ -60,18 +62,19 @@ class BasicCategoryList extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
+
           children: <Widget>[
-            CategoryButton(DrainCardList(categoriesName['drain'], 'odprowadzenia'), categoriesName['drain']),
-            Divider(),
-            CategoryButton(AxisCardList(categoriesName['axis'],'axis_cards'), categoriesName['axis']),           
-            // Divider(),
-            // CategoryButton(CardList(categoriesName[2],2), categoriesName[2]),    
-            // Divider(),
-            // CategoryButton(CardList(categoriesName[3],2), categoriesName[3]),       
-            // Divider(),
-            // CategoryButton(CardList(categoriesName[4],2), categoriesName[4]),   
-            // Divider(),
-            // CategoryButton(CardList(categoriesName[5],2), categoriesName[5]),   
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CategoryButton(DrainCardList(categoriesName['drain'], 'odprowadzenia'), categoriesName['drain']),
+                Divider(),
+                CategoryButton(AxisCardList(categoriesName['axis'],'axis_cards'), categoriesName['axis']),
+                Divider(),
+                CategoryButton(FeatureCardList(categoriesName['feature'],'feature_cards'), categoriesName['feature']),
+              ],
+            )
           ],
         ),
       ),

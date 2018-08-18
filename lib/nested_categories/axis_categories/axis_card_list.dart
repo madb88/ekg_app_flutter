@@ -77,6 +77,8 @@ class AxisCardList extends StatelessWidget {
                                           switchSection(sendedCard[index])),
                                 );
                               },
+                              trailing: Icon(Icons.description, color: Colors.blue[900]),
+
                               title: new Text(
                                 newItem[index]['title'],
                                 style:

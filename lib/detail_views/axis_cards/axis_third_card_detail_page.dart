@@ -5,6 +5,7 @@ import '../../customWidgets/flexible_row_normal_text.dart';
 
 class AxisThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
+
   AxisThirdCardDetailPage(this.sendedCard);
 
   @override
@@ -135,7 +136,6 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                       height: 20.0,
                       color: Colors.white,
                     ),
-
                     FlexibleRowNormalText(
                         sendedCard['listHead'], 20.0, FontWeight.bold),
                     Divider(
@@ -163,7 +163,6 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                       height: 20.0,
                       color: Colors.white,
                     ),
-
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead2'], 20.0, FontWeight.bold),
                     ListTile(
@@ -176,21 +175,19 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                       title: NormalText(
                           sendedCard['secondList'][1], FontWeight.normal),
                     ),
-Divider(
+                    Divider(
                       height: 20.0,
                       color: Colors.white,
                     ),
-
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead3'], 20.0, FontWeight.bold),
-                        Divider(
+                    Divider(
                       height: 20.0,
                       color: Colors.white,
                     ),
-
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead4'], 20.0, FontWeight.bold),
-                        ListTile(
+                    ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
                           sendedCard['thirdList'][0], FontWeight.normal),
@@ -207,6 +204,8 @@ Divider(
                     ),
                     FlexibleRowNormalText(
                         sendedCard['ListNestedHead5'], 20.0, FontWeight.bold),
+                    Divider(),
+                    buttonSection
                   ],
                 ),
               );

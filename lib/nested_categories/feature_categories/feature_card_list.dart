@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import './../../detail_views/special_detail_page.dart';
-import './../../detail_views/discharging_adjacent_detail_page.dart';
+import '../../detail_views/feature_cards/feature_first_card_detail_page.dart';
+import '../../detail_views/feature_cards/feature_second_card_detail_page.dart';
+import '../../detail_views/feature_cards/feature_third_card_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -17,10 +18,24 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class DrainCardList extends StatelessWidget {
+class FeatureCardList extends StatelessWidget {
   final category;
   final categoryName;
-  DrainCardList(this.category, this.categoryName);
+  FeatureCardList(this.category, this.categoryName);
+
+  switchSection(categoryNumber){
+    switch(categoryNumber['category']){
+      case 1:
+        return FeatureFirstCardDetailPage(categoryNumber);
+        break;
+      case 2:
+        return FeatureSecondCardDetailPage(categoryNumber);
+        break;
+      case 3:
+        return FeatureThirdCardDetailPage(categoryNumber);
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,13 +68,14 @@ class DrainCardList extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
                             new ListTile(
+                              
                               onTap: () {
                                 final sendedCard = newItem;
                                 Navigator.push(
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          sendedCard[index]['category'] == 1 ? SpecialDetailPage(sendedCard[index]):DischargingAdjacentDetailPage(sendedCard[index])),
+                                          switchSection(sendedCard[index])),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
