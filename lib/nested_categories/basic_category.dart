@@ -6,6 +6,7 @@ import '../customWidgets/category_button.dart';
 import '../card_list.dart';
 import 'axis_categories/axis_card_list.dart';
 import 'feature_categories/feature_card_list.dart';
+import 'other_concepts__categories/other_concepts_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -25,7 +26,8 @@ class BasicCategoryList extends StatelessWidget {
   final categoriesName = {
     'drain' : 'Odprowadzenia',
     'axis': 'Oś',
-    'feature' : 'Cecha, szybkość przesuwu i częstotliwość rytmu'
+    'feature' : 'Cecha, szybkość przesuwu i częstotliwość rytmu',
+    'basic_concepts' : 'Podstawowe pojęcia'
   };
  
 
@@ -73,6 +75,8 @@ class BasicCategoryList extends StatelessWidget {
                 CategoryButton(AxisCardList(categoriesName['axis'],'axis_cards'), categoriesName['axis']),
                 Divider(),
                 CategoryButton(FeatureCardList(categoriesName['feature'],'feature_cards'), categoriesName['feature']),
+                Divider(),
+                CategoryButton(OtherConceptsCardList(categoriesName['basic_concepts'],'other_concepts'), categoriesName['basic_concepts']),
               ],
             )
           ],

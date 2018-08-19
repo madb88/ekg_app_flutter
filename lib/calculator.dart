@@ -97,7 +97,7 @@ class _CalculatorState extends State<Calculator> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     labelStyle: TextStyle(fontSize: 15.0),
-                    labelText: "Qt (ilosc malych kwadratow)"),
+                    labelText: "QT (ilosc malych kwadratow)"),
                 controller: t1,
               ),
               TextField(

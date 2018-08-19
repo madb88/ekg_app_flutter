@@ -36,7 +36,7 @@ flutter:
    - data_repo/odprowadzenia.json
    - data_repo/axis_cards.json
    - data_repo/feature_cards.json
-   - data_repo/category4.json
+   - data_repo/other_concepts.json
    - data_repo/category5.json
    - data_repo/category6.json
    - data_repo/category7.json

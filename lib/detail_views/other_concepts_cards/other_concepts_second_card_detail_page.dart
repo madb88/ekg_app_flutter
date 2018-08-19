@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
+import '../../customWidgets/info_container.dart';
 import '../../customWidgets/flexible_row_normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
 
-class FeatureFirstCardDetailPage extends StatelessWidget {
+class OtherConceptsSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  FeatureFirstCardDetailPage(this.sendedCard);
+  OtherConceptsSecondCardDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +47,15 @@ class FeatureFirstCardDetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Flexible(
-                            child: Text(sendedCard['title'],
+                            child: Text(sendedCard['description'],
+                                textAlign: TextAlign.justify,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0))),
+
                       ],
                     ),
+                    Divider(),
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
@@ -63,44 +67,39 @@ class FeatureFirstCardDetailPage extends StatelessWidget {
                           sendedCard['list'][1], FontWeight.normal),
                     ),
                     Divider(
-                      height: 10.0,
                       color: Colors.white,
                     ),
-                    FlexibleRowNormalText(sendedCard['textOne'], 20.0, FontWeight.normal),
+                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoText'], 20.0, false),
+                    Divider(),
+                    FlexibleRowNormalText(sendedCard['textOne'], 18.0, FontWeight.normal),
+                    Divider(
+                      height: 15.0,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        border: Border(left: BorderSide(color: Colors.yellow[900], width: 5.0)),
+                        color: Colors.yellow[100],
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          NormalText(
+                              sendedCard['textHead'], FontWeight.bold
+                          ),
+                          Divider(
+                            height: 10.0,
+                            color: Colors.yellow[100],
+                          ),
+                          NormalText(
+                              sendedCard['textSecond'], FontWeight.normal),
+                        ],
+                      ),
+                    ),
                     Divider(
                       height: 10.0,
                       color: Colors.white,
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                          child: Container(
-                            padding: EdgeInsets.all(15.0),
-                            decoration: BoxDecoration(
-                              border: Border(
-                                  left: BorderSide(
-                                      color: Colors.blue[800], width: 5.0)),
-                              color: Colors.blue[100],
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                NormalText(
-                                  sendedCard['boldInfoText'], FontWeight.bold
-                                ),
-                                Divider(
-                                  height: 10.0,
-                                  color: Colors.blue[100],
-                                ),
-                                NormalText(
-                                    sendedCard['infoText'], FontWeight.normal),
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    Divider(),
                     BackCardButton('Wróć'),
                   ],
                 ),

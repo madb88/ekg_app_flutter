@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/back_card_button.dart';
 
 class AxisFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -21,34 +22,6 @@ class AxisFirstCardDetailPage extends StatelessWidget {
               style: new TextStyle(fontSize: 20.0),
               textAlign: TextAlign.justify,
             ),
-    );
-
-    Widget buttonSection = Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          new InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: new Container(
-              height: 50.0,
-              width: 150.0,
-              decoration: new BoxDecoration(
-                color: Colors.blue[800],
-                border: new Border.all(color: Colors.white),
-                borderRadius: new BorderRadius.circular(10.0),
-              ),
-              child: new Center(
-                child: new Text(
-                  'Wróć',
-                  style: new TextStyle(fontSize: 18.0, color: Colors.white),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
     );
 
     return new Scaffold(
@@ -299,7 +272,7 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     Divider(),
-                    buttonSection
+                    BackCardButton('Wróć'),
                   ],
                 ),
               );
