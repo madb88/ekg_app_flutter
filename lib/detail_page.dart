@@ -42,7 +42,7 @@ class DetailPage extends StatelessWidget {
                  mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
 
-                children: <Widget>[
+                 children: <Widget>[
                   descriptionSection,
                   Divider(),
                   imageSection,

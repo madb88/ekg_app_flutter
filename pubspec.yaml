@@ -37,8 +37,9 @@ flutter:
    - data_repo/axis_cards.json
    - data_repo/feature_cards.json
    - data_repo/other_concepts.json
-   - data_repo/category5.json
-   - data_repo/category6.json
+   - data_repo/components.json
+   - data_repo/components_incorrect.json
+   - data_repo/incorrect_wavelength.json
    - data_repo/category7.json
    - data_repo/category8.json
    - images/logo2.png
