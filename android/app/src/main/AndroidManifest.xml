@@ -14,7 +14,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="ekg_cards_app"
+        android:label="EKG Vademecum"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

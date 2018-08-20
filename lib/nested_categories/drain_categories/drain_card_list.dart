@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import './../../detail_views/special_detail_page.dart';
-import './../../detail_views/discharging_adjacent_detail_page.dart';
+import 'drain_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -58,8 +57,7 @@ class DrainCardList extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   new MyCustomRoute(
-                                      builder: (context) =>
-                                          sendedCard[index]['category'] == 1 ? SpecialDetailPage(sendedCard[index]):DischargingAdjacentDetailPage(sendedCard[index])),
+                                      builder: (context) => DrainViewController(index, newItem)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),

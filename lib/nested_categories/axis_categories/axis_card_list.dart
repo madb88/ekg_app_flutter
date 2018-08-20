@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'package:ekg_cards_app/detail_page.dart';
-import '../../detail_views/axis_cards/axis_first_card_detail_page.dart';
-import '../../detail_views/axis_cards/axis_third_card_detail_page.dart';
+import 'axis_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -22,20 +20,6 @@ class AxisCardList extends StatelessWidget {
   final category;
   final categoryName;
   AxisCardList(this.category, this.categoryName);
-
-  switchSection(categoryNumber){
-    switch(categoryNumber['category']){
-      case 1:
-        return DetailPage(categoryNumber);
-        break;
-      case 2:
-        return AxisFirstCardDetailPage(categoryNumber);
-        break;
-      case 3: 
-        return AxisThirdCardDetailPage(categoryNumber);
-        break;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +57,7 @@ class AxisCardList extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   new MyCustomRoute(
-                                      builder: (context) =>
-                                          switchSection(sendedCard[index])),
+                                      builder: (context) => AxisViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),

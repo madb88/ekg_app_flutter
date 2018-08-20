@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'package:ekg_cards_app/detail_page.dart';
-import '../../detail_views/other_concepts_cards/other_concepts_second_card_detail_page.dart';
+import 'other_concepts_view_controller.dart';
+
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -22,17 +22,6 @@ class OtherConceptsCardList extends StatelessWidget {
   final category;
   final categoryName;
   OtherConceptsCardList(this.category, this.categoryName);
-
-  switchSection(categoryNumber){
-    switch(categoryNumber['category']){
-      case 1:
-        return DetailPage(categoryNumber);
-        break;
-      case 2:
-        return OtherConceptsSecondCardDetailPage(categoryNumber);
-        break;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +61,7 @@ class OtherConceptsCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          switchSection(sendedCard[index])),
+                                          OtherConceptsViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),

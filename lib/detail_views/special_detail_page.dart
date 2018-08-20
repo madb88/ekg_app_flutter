@@ -54,13 +54,13 @@ class SpecialDetailPage extends StatelessWidget {
           pinned: true,
           title: new Text(sendedCard['title']),
         ),
-        new SliverList(
+        SliverList(
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
                 padding: EdgeInsets.all(15.0),
-                child: 
-                
+                child:
+
                 Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,

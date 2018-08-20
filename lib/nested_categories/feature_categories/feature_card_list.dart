@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../detail_views/feature_cards/feature_first_card_detail_page.dart';
-import '../../detail_views/feature_cards/feature_second_card_detail_page.dart';
-import '../../detail_views/feature_cards/feature_third_card_detail_page.dart';
+import 'feature_view_controller.dart';
+
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -23,19 +22,19 @@ class FeatureCardList extends StatelessWidget {
   final categoryName;
   FeatureCardList(this.category, this.categoryName);
 
-  switchSection(categoryNumber){
-    switch(categoryNumber['category']){
-      case 1:
-        return FeatureFirstCardDetailPage(categoryNumber);
-        break;
-      case 2:
-        return FeatureSecondCardDetailPage(categoryNumber);
-        break;
-      case 3:
-        return FeatureThirdCardDetailPage(categoryNumber);
-        break;
-    }
-  }
+//  switchSection(categoryNumber){
+//    switch(categoryNumber['category']){
+//      case 1:
+//        return FeatureFirstCardDetailPage(categoryNumber);
+//        break;
+//      case 2:
+//        return FeatureSecondCardDetailPage(categoryNumber);
+//        break;
+//      case 3:
+//        return FeatureThirdCardDetailPage(categoryNumber);
+//        break;
+//    }
+//  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +74,7 @@ class FeatureCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          switchSection(sendedCard[index])),
+                                         FeatureViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
