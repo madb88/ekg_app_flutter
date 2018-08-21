@@ -5,6 +5,7 @@ import 'package:ekg_cards_app/detail_page.dart';
 import '../../customWidgets/category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
+import 'ekg_component_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -28,14 +29,6 @@ class ComponentCardList extends StatelessWidget {
     'incorectWave':'Niewidoczny załamek P',
   };
 
-  switchSection(categoryNumber){
-    switch(categoryNumber['category']){
-      case 1:
-        return DetailPage(categoryNumber);
-        break;
-
-    }
-  }
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -73,7 +66,7 @@ class ComponentCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          switchSection(sendedCard[index])),
+                                          EkgComponentViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),

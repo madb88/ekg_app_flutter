@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
-import '../../customWidgets/info_container.dart';
 import '../../customWidgets/flexible_row_normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/info_container.dart';
 
-class OtherConceptsSecondCardDetailPage extends StatelessWidget {
+class IwThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  OtherConceptsSecondCardDetailPage(this.sendedCard);
+  IwThirdCardDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
               textAlign: TextAlign.justify,
             ),
     );
+
     return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[
@@ -46,17 +47,28 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Flexible(
-                            child: Text(sendedCard['description'],
-                                textAlign: TextAlign.justify,
+                            child: Text(sendedCard['subTitleOne'],
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0))),
-
+                      ],
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: Text(sendedCard['listElement'],style: TextStyle(fontSize: 20.0)),
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                            child: Text(sendedCard['subTitleSecond'],
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0))),
                       ],
                     ),
                     ListView.builder(
                       physics: ScrollPhysics(),
-                      shrinkWrap: true,
                       itemBuilder: (BuildContext context, int index) {
                         return ListTile(
                           leading: Icon(Icons.chevron_right),
@@ -64,40 +76,51 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
                         );
                       },
                       itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
+                      shrinkWrap: true,
                     ),
                     Divider(
-                      color: Colors.white,
+                      color: Colors.white
                     ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoText'], 20.0, false),
-                    Divider(),
-                    FlexibleRowNormalText(sendedCard['textOne'], 18.0, FontWeight.normal),
+
+                    Divider(
+                        height: 15.0,
+                        color: Colors.white
+                    ),
+                  Container(
+                    padding: EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                      border: Border(left: BorderSide(color: Colors.yellow[900], width: 5.0)),
+                      color: Colors.yellow[100],
+                    ),
+                    child:
+                        Column(
+                          
+                          children: <Widget>[
+                                Text(sendedCard['titleHead'],
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20.0)),
+                                ListView.builder(
+                                  physics: ScrollPhysics(),
+                                  itemBuilder: (BuildContext context, int index) {
+                                    return ListTile(
+                                      leading: Icon(Icons.chevron_right),
+                                      title: Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0)),
+                                    );
+                                  },
+                                  itemCount: sendedCard['secondList'] == null ? 0 : sendedCard['secondList'].length,
+                                  shrinkWrap: true,
+
+                             
+                            ),
+                          ],
+                        ),
+
+                  ),
+
                     Divider(
                       height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(15.0),
-                      decoration: BoxDecoration(
-                        border: Border(left: BorderSide(color: Colors.yellow[900], width: 5.0)),
-                        color: Colors.yellow[100],
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          NormalText(
-                              sendedCard['textHead'], FontWeight.bold
-                          ),
-                          Divider(
-                            height: 10.0,
-                            color: Colors.yellow[100],
-                          ),
-                          NormalText(
-                              sendedCard['textSecond'], FontWeight.normal),
-                        ],
-                      ),
-                    ),
-                    Divider(
-                      height: 10.0,
-                      color: Colors.white,
+                      color: Colors.white
                     ),
                     BackCardButton('Wróć'),
                   ],

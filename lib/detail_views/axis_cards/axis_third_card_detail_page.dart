@@ -113,25 +113,21 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                     FlexibleRowNormalText(
                         sendedCard['listHead'], 20.0, FontWeight.bold),
                     Divider(
-                      height: 5.0,
+                      height: 12.0,
                       color: Colors.white,
                     ),
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead'], 20.0, FontWeight.bold),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['firstList'][0], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['firstList'][1], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['firstList'][2], FontWeight.normal),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['firstList'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['firstList'] == null ? 0 : sendedCard['firstList'].length,
+                      shrinkWrap: true,
                     ),
                     Divider(
                       height: 20.0,
@@ -139,15 +135,18 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                     ),
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead2'], 20.0, FontWeight.bold),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['secondList'][0], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['secondList'][1], FontWeight.normal),
+
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0)),
+                          );
+                      },
+                      itemCount: sendedCard['secondList'] == null ? 0 : sendedCard['secondList'].length,
+
                     ),
                     Divider(
                       height: 20.0,
@@ -161,24 +160,27 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                     ),
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead4'], 20.0, FontWeight.bold),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['thirdList'][0], FontWeight.normal),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['thirdList'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['thirdList'] == null ? 0 : sendedCard['thirdList'].length,
                     ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['thirdList'][1], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['thirdList'][2], FontWeight.normal),
+                    Divider(
+                      height: 20.0,
+                      color: Colors.white,
                     ),
                     FlexibleRowNormalText(
                         sendedCard['ListNestedHead5'], 20.0, FontWeight.bold),
-                    Divider(),
+                    Divider(
+                      height: 20.0,
+                      color: Colors.white,
+                    ),
                     BackCardButton('Wróć'),
                   ],
                 ),

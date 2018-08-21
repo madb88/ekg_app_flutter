@@ -146,34 +146,16 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                     Divider(
-                      height: 10.0,
-                      color: Colors.white,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement'][0], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement'][1], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement'][2], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement'][3], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement'][4], FontWeight.normal),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['listElement'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['listElement'] == null ? 0 : sendedCard['listElement'].length,
                     ),
                     Divider(
                       height: 15.0,
@@ -188,19 +170,16 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                      Divider(
-                      height: 10.0,
-                      color: Colors.white,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement2'][0], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement2'][1], FontWeight.normal),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['listElement2'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['listElement2'] == null ? 0 : sendedCard['listElement2'].length,
                     ),
                     Divider(
                       height: 15.0,
@@ -228,35 +207,16 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    
-                      Divider(
-                      height: 10.0,
-                      color: Colors.white,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement3'][0], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement3'][1], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement3'][2], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement3'][3], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listElement3'][4], FontWeight.normal),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['listElement3'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['listElement3'] == null ? 0 : sendedCard['listElement3'].length,
                     ),
                   Divider(
                       height: 15.0,

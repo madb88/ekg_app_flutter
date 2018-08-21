@@ -22,20 +22,6 @@ class FeatureCardList extends StatelessWidget {
   final categoryName;
   FeatureCardList(this.category, this.categoryName);
 
-//  switchSection(categoryNumber){
-//    switch(categoryNumber['category']){
-//      case 1:
-//        return FeatureFirstCardDetailPage(categoryNumber);
-//        break;
-//      case 2:
-//        return FeatureSecondCardDetailPage(categoryNumber);
-//        break;
-//      case 3:
-//        return FeatureThirdCardDetailPage(categoryNumber);
-//        break;
-//    }
-//  }
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

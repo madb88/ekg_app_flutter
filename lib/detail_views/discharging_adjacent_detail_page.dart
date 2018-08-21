@@ -63,33 +63,19 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       ],
                     ),
                     Divider(
-                      height: 15.0,
+                      height: 5.0,
                       color: Colors.white,
                     ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listOne'][0], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listOne'][1], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listOne'][2], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listOne'][3], FontWeight.normal),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: NormalText(
-                          sendedCard['listOne'][4], FontWeight.normal),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['listOne'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['listOne'] == null ? 0 : sendedCard['listOne'].length,
+                      shrinkWrap: true,
                     ),
                     Divider(
                       height: 15.0,
