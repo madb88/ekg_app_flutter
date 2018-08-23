@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'package:ekg_cards_app/detail_page.dart';
+import 'iw_nested_component_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -20,15 +20,6 @@ class IncorrectWavelengthComponentCardList extends StatelessWidget {
   final category;
   final categoryName;
   IncorrectWavelengthComponentCardList(this.category, this.categoryName);
-
-  switchSection(categoryNumber){
-    switch(categoryNumber['category']){
-      case 1:
-        return DetailPage(categoryNumber);
-        break;
-
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +56,7 @@ class IncorrectWavelengthComponentCardList extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   new MyCustomRoute(
-                                      builder: (context) =>
-                                          switchSection(sendedCard[index])),
+                                      builder: (context) => IwNestedComponentViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
