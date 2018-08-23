@@ -12,8 +12,8 @@ class _CalculatorState extends State<Calculator> {
   int fac = pow(10, 3);
   var transmition;
 
-  final TextEditingController t1 = new TextEditingController(text: "");
-  final TextEditingController t2 = new TextEditingController(text: "");
+  TextEditingController t1 = new TextEditingController(text: "");
+  TextEditingController t2 = new TextEditingController(text: "");
 
   @override
   initState() {
@@ -51,6 +51,8 @@ class _CalculatorState extends State<Calculator> {
       sum = 0.0;
       hr = 0;
       hrColor = Colors.blue;
+      t1.text = "";
+      t2.text = "";
     });
   }
 

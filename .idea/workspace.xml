@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5566bcb-75f8-4961-9595-6596f1b5788f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_fourth_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_nested_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_six_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/iw_nested_component_view_controller.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/ekg_component_view_controller.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/ekg_component_view_controller.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/incorrect_wavelength_component_card_list.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/incorrect_wavelength_component_card_list.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/calculator.dart" afterPath="$PROJECT_DIR$/lib/calculator.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -28,7 +22,18 @@
     <favorites_list name="ekg_app_flutter" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="calculator.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/calculator.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -83,7 +88,6 @@
       <list>
         <option value="$PROJECT_DIR$/data_repo/feature_cards.json" />
         <option value="$PROJECT_DIR$/lib/nested_categories/basic_category.dart" />
-        <option value="$PROJECT_DIR$/lib/calculator.dart" />
         <option value="$PROJECT_DIR$/data_repo/other_concepts.json" />
         <option value="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart" />
@@ -130,6 +134,7 @@
         <option value="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_second_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_six_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_third_card_detail_page.dart" />
+        <option value="$PROJECT_DIR$/lib/calculator.dart" />
       </list>
     </option>
   </component>
@@ -228,7 +233,7 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="Deta&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/detail_page.dart" />
+    <property name="SearchEverywhereHistoryKey" value="calc&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/calculator.dart&#10;Deta&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/detail_page.dart" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -366,6 +371,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -383,7 +389,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13166311" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13166311" sideWeight="0.4943274" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -476,13 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/calculator.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="53" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -842,6 +841,14 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/calculator.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
