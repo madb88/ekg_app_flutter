@@ -20,10 +20,10 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class QrsTeamCardList extends StatelessWidget {
+class IncorrectWaveRCardList extends StatelessWidget {
   final category;
   final categoryName;
-  QrsTeamCardList(this.category, this.categoryName);
+  IncorrectWaveRCardList(this.category, this.categoryName);
 
   final categoryNames = {
     'qrsTeamFirstNested':'Załamek Q i zespół Qs',
@@ -93,9 +93,7 @@ class QrsTeamCardList extends StatelessWidget {
               ),
 
             ),
-
-            CategoryButtonColor(QrsTeamFirstNestedComponentCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[900]),
-            CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[900]),
+            
             Container(
                 height: 50.0,
                 child: new InkWell(

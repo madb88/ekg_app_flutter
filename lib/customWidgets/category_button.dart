@@ -26,9 +26,9 @@ class CategoryButton extends StatelessWidget {
                 height: 80.0,
                 decoration: BoxDecoration(
                   
-                  color: Colors.blue[800],
+                  color: Colors.blue[900],
                   border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
                 child: Center(
                   child: Text(
