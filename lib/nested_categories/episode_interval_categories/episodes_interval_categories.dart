@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import '../../home_page.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
-import './wavelength_categories.dart';
-import '../episode_interval_categories/episodes_interval_categories.dart';
-import '../qrs_team/qrs_team_card_list.dart';
+import './../../detail_views/episodes_interval_cards/episode_card_detail_page.dart';
+import 'dart:convert';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -16,23 +15,18 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
       Animation<double> secondaryAnimation, Widget child) {
     if (settings.isInitialRoute) return child;
     return child;
-    // return new FadeTransition(opacity: animation, child: child);
   }
 }
 
-class ComponentCategoriesList extends StatelessWidget {
+class EpisodesIntervalCategoriesList extends StatelessWidget {
   final componentName;
 
-  ComponentCategoriesList(
-    this.componentName
-  );
+  EpisodesIntervalCategoriesList(this.componentName);
 
   final categoryNames = {
-    'wavelength':'Załamek P',
-    'episodeAndInterval': 'Odcinek i odstęp PQ',
-    'qrsTeam' : 'Zespół QRS'
+    0: 'Odcinek PQ',
+    1: 'Odstęp PQ',
   };
-
 
   @override
   Widget build(BuildContext context) {
@@ -63,24 +57,28 @@ class ComponentCategoriesList extends StatelessWidget {
           ),
         ],
       ),
-      body:  Container(
+      body: Container(
         padding: const EdgeInsets.all(20.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-        child: ListView(
-          children: <Widget>[
-            Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                CategoryButton(WavelengthCategoriesList(categoryNames['wavelength']), categoryNames['wavelength']),
-                Divider(),
-                CategoryButton(EpisodesIntervalCategoriesList(categoryNames['episodeAndInterval']), categoryNames['episodeAndInterval']),
-                Divider(),
-                CategoryButton(QrsTeamCardList(categoryNames['qrsTeam'], 'qrs_team'), categoryNames['qrsTeam']),
-              ],
-            )
-          ],
-        ),
+        child: FutureBuilder(
+            future: DefaultAssetBundle
+                .of(context)
+                .loadString('data_repo/episode_interval.json'),
+            builder: (context, snapshot) {
+              var data = json.decode(snapshot.data.toString());
+              return new ListView.builder(
+                itemBuilder: (BuildContext context, int index) {
+                return Column(
+                  children: <Widget>[
+                    CategoryButton(EpisodeCardDetailPage(data[index]), categoryNames[index]),
+                    Divider(),
+                  ],
+                );
+                },
+                itemCount: data == null ? 0 : data.length,
+
+              );
+            }),
       ),
     );
   }

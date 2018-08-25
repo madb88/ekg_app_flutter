@@ -41,8 +41,9 @@ flutter:
    - data_repo/components.json
    - data_repo/components_incorrect.json
    - data_repo/incorrect_wavelength.json
-   - data_repo/category7.json
-   - data_repo/category8.json
+   - data_repo/qrs_team.json
+   - data_repo/qrs_team_first_nested.json
+   - data_repo/episode_interval.json
    - images/logo2.png
    - images/body.jpg
    - images/ekg_images/

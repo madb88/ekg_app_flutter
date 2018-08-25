@@ -67,8 +67,6 @@ class BasicCategoryList extends StatelessWidget {
 
           children: <Widget>[
             Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CategoryButton(DrainCardList(categoriesName['drain'], 'odprowadzenia'), categoriesName['drain']),
                 Divider(),

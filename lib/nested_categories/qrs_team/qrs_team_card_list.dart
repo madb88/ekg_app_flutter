@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'package:ekg_cards_app/detail_page.dart';
 import '../../customWidgets/category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
-import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
-import 'ekg_component_view_controller.dart';
+import 'qrs_tem_view_controller.dart';
+import 'qrs_team_first_nested_component_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -20,13 +19,14 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class ComponentCardList extends StatelessWidget {
+class QrsTeamCardList extends StatelessWidget {
   final category;
   final categoryName;
-  ComponentCardList(this.category, this.categoryName);
+  QrsTeamCardList(this.category, this.categoryName);
 
   final categoryNames = {
-    'incorectWave':'Niewidoczny załamek P',
+    'qrsTeamFirstNested':'Załamek Q i zespół Qs',
+    'qrsTeamSecondNested':'Załamek R',
 
   };
 
@@ -47,6 +47,7 @@ class ComponentCardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
             new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -60,6 +61,7 @@ class ComponentCardList extends StatelessWidget {
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
+
                             new ListTile(
                               onTap: () {
                                 final sendedCard = newItem;
@@ -67,7 +69,7 @@ class ComponentCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          EkgComponentViewController(index, sendedCard)),
+                                          QrsTeamViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
@@ -91,7 +93,8 @@ class ComponentCardList extends StatelessWidget {
 
             ),
 
-            CategoryButtonColor(IncorrectWavelengthComponentCardList(categoryNames['incorectWave'],'incorrect_wavelength'), categoryNames['incorectWave'],Colors.orange[900]),
+            CategoryButtonColor(QrsTeamFirstNestedComponentCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[900]),
+            CategoryButtonColor(QrsTeamFirstNestedComponentCardList(categoryNames['qrsTeamSecondNested'],'qrs_team_first_nested'), categoryNames['qrsTeamSecondNested'],Colors.orange[900]),
 
             Container(
                 height: 50.0,

@@ -35,11 +35,17 @@ class HomePageList extends StatelessWidget {
         ),
         
       body: new Container(
+
         padding: const EdgeInsets.all(10.0),
         margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+
             new InkWell(
+
               onTap: () {
                 Navigator.push(
                   context,
