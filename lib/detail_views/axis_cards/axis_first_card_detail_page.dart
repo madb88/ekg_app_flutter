@@ -90,7 +90,8 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                                 Colors.blue[100],
                                 sendedCard['infoText'],
                                 19.0,
-                                false)),
+                                false,
+                                FontWeight.normal)),
                       ],
                     ),
                     Divider(

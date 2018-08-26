@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../detail_page.dart';
-import '../../detail_views/ekg_incorrect_wavelength_cards/iw_nested_card_detail_page.dart';
+import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_first_nested_card_detail_page.dart';
+import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_list_nested_card_detail_page.dart';
+import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_list_with_route_nested_card_detail_page.dart';
+
 
 class QrsTeamFirstNestedViewController extends StatelessWidget {
 
@@ -23,7 +26,13 @@ class QrsTeamFirstNestedViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-//            IwNestedCardDetailPage(cardsCollection[0]),
+            DetailPage(cardsCollection[0]),
+            QrsFirstNestedCardDetailPage(cardsCollection[1]),
+            QrsListNestedCardDetailPage(cardsCollection[2]),
+            QrsListNestedCardDetailPage(cardsCollection[3]),
+            QrsListWithRouteNestedCardDetailPage(cardsCollection[4],cardsCollection[1]),
+
+
 //            IwNestedCardDetailPage(cardsCollection[1]),
 
           ],

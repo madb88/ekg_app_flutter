@@ -55,7 +55,7 @@ class FeatureThirdCardDetailPage extends StatelessWidget {
                       ],
                     ),
               Divider(),
-              InfoContainer(Colors.blue[900],Colors.blue[100],sendedCard['textOne'],20.0,false),
+              InfoContainer(Colors.blue[900],Colors.blue[100],sendedCard['textOne'],20.0,false, FontWeight.normal),
               Divider(),
                     new InkWell(
                       onTap: () {
@@ -97,7 +97,7 @@ class FeatureThirdCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     Divider(),
-                    InfoContainer(Colors.blue[900],Colors.blue[100],sendedCard['secondText'],20.0,false),
+                    InfoContainer(Colors.blue[900],Colors.blue[100],sendedCard['secondText'],20.0,false,FontWeight.normal),
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

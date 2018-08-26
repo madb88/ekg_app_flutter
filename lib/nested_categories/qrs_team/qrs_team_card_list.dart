@@ -4,8 +4,9 @@ import 'dart:convert';
 import '../../customWidgets/category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'qrs_tem_view_controller.dart';
-import 'qrs_team_first_nested_component_card_list.dart';
+import 'qrs_team_first_nested_view_controller.dart';
 import 'qrs_r_nested_categories.dart';
+import 'qrs_team_first_nested_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -94,7 +95,7 @@ class QrsTeamCardList extends StatelessWidget {
 
             ),
 
-            CategoryButtonColor(QrsTeamFirstNestedComponentCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[900]),
+            CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[900]),
             CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[900]),
             Container(
                 height: 50.0,

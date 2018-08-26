@@ -4,7 +4,6 @@ import 'dart:convert';
 import '../../customWidgets/category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'qrs_tem_view_controller.dart';
-import 'qrs_team_first_nested_component_card_list.dart';
 import 'qrs_r_nested_categories.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {

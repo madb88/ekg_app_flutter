@@ -14,16 +14,16 @@ class DetailPage extends StatelessWidget {
         margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child:
         sendedCard['image'].length > 0 ? Image.asset("images/ekg_images/${sendedCard['image']}"): new Text(
-        'Brak zdjecia',
+        '',
         style: new TextStyle(fontSize: 20.0),
         textAlign: TextAlign.justify,
       ),
       );
 
     Widget descriptionSection = Container(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(20.0),
       child:
-      sendedCard['useHtmlTags'] == true? HtmlView(data: sendedCard['description']): Text(sendedCard['description'])
+      sendedCard['useHtmlTags'] == true? HtmlView(data: sendedCard['description']): Text(sendedCard['description'], style: TextStyle(fontSize: 18.0),)
     );
 
     return new Scaffold(

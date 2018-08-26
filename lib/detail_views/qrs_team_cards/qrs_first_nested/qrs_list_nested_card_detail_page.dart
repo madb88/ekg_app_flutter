@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/normal_text.dart';
-import '../../customWidgets/flexible_row_normal_text.dart';
-import '../../customWidgets/back_card_button.dart';
-import '../../customWidgets/info_container.dart';
+import '../../../customWidgets/normal_text.dart';
+import '../../../customWidgets/category_button.dart';
+import '../../../customWidgets/back_card_button.dart';
 
-class IwFirstCardDetailPage extends StatelessWidget {
+class MyCustomRoute<T> extends MaterialPageRoute<T> {
+  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
+      : super(builder: builder, settings: settings);
+
+  @override
+  Widget buildTransitions(BuildContext context, Animation<double> animation,
+      Animation<double> secondaryAnimation, Widget child) {
+    if (settings.isInitialRoute) return child;
+    return child;
+    // return new FadeTransition(opacity: animation, child: child);
+  }
+}
+
+class QrsListNestedCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  IwFirstCardDetailPage(this.sendedCard);
+  QrsListNestedCardDetailPage(
+      this.sendedCard,
+
+    );
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +53,7 @@ class IwFirstCardDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -46,11 +61,7 @@ class IwFirstCardDetailPage extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(
-                            child: Text(sendedCard['subTitle'],
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0))),
+                        Flexible(child: NormalText(sendedCard['listHead'], FontWeight.bold)),
                       ],
                     ),
                     ListView.builder(
@@ -64,11 +75,13 @@ class IwFirstCardDetailPage extends StatelessWidget {
                       itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
                       shrinkWrap: true,
                     ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white
+                    ListTile(
+                      leading: sendedCard['boldListTile'] != "" ? Icon(Icons.chevron_right) : Text(''),
+                      title: Text(sendedCard['boldListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
                     ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal),
+
+
+
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

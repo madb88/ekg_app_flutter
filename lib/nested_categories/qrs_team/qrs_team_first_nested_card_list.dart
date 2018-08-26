@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'qrs_team_first__nested_view_controller.dart';
+import '../../customWidgets/category_button.dart';
+import '../../customWidgets/category_button_coloredit.dart';
+import 'qrs_tem_view_controller.dart';
+import 'qrs_team_first_nested_view_controller.dart';
+import 'qrs_r_nested_categories.dart';
+
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -16,10 +21,16 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class QrsTeamFirstNestedComponentCardList extends StatelessWidget {
+class QrsTeamFirstNestedCardList extends StatelessWidget {
   final category;
   final categoryName;
-  QrsTeamFirstNestedComponentCardList(this.category, this.categoryName);
+  QrsTeamFirstNestedCardList(this.category, this.categoryName);
+
+  final categoryNames = {
+    'qrsTeamFirstNested':'Załamek Q i zespół Qs',
+    'qrsTeamSecondNested':'Załamek R',
+
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -27,17 +38,19 @@ class QrsTeamFirstNestedComponentCardList extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-        
-      ),
-      body: new Container(
 
-        padding: const EdgeInsets.all(5.0),
+      ),
+      body:
+      new Container(
+
+        padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Expanded(
+
+            new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
@@ -50,14 +63,15 @@ class QrsTeamFirstNestedComponentCardList extends StatelessWidget {
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
+
                             new ListTile(
                               onTap: () {
                                 final sendedCard = newItem;
                                 Navigator.push(
                                   context,
                                   new MyCustomRoute(
-                                      builder: (context) => QrsTeamFirstNestedViewController(index, sendedCard))
-                                  ,
+                                      builder: (context) =>
+                                          QrsTeamFirstNestedViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
@@ -78,6 +92,7 @@ class QrsTeamFirstNestedComponentCardList extends StatelessWidget {
                   );
                 },
               ),
+
             ),
 
             Container(
@@ -87,7 +102,7 @@ class QrsTeamFirstNestedComponentCardList extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: new Container(
-                    height: 5.0,
+                    height: 1.0,
                     decoration: new BoxDecoration(
                       color: Colors.blue[800],
                       border: new Border.all(color: Colors.white, width: 2.0),

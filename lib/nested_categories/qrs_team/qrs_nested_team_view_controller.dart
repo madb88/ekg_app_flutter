@@ -6,12 +6,12 @@ import '../../detail_views/qrs_team_cards/qrs_five_card_detail_page.dart';
 
 
 
-class QrsTeamViewController extends StatelessWidget {
+class QrsNestedTeamViewController extends StatelessWidget {
 
   final index;
   final cardsCollection;
 
-  QrsTeamViewController(
+  QrsNestedTeamViewController(
       this.index,
       this.cardsCollection
     );
@@ -27,11 +27,11 @@ class QrsTeamViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-            QrsFirstCardDetailPage(cardsCollection[0]),
-            QrsSecondCardDetailPage(cardsCollection[1]),
-            QrsThirdCardDetailPage(cardsCollection[2]),
-            QrsThirdCardDetailPage(cardsCollection[3]),
-            QrsFiveCardDetailPage(cardsCollection[4]),
+//            QrsFirstCardDetailPage(cardsCollection[0]),
+//            QrsSecondCardDetailPage(cardsCollection[1]),
+//            QrsThirdCardDetailPage(cardsCollection[2]),
+//            QrsThirdCardDetailPage(cardsCollection[3]),
+//            QrsFiveCardDetailPage(cardsCollection[4]),
 
           ],
         ),

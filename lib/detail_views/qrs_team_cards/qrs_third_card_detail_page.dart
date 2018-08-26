@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
-import '../../customWidgets/info_container.dart';
 import '../../customWidgets/flexible_row_normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/info_container.dart';
 
-class OtherConceptsSecondCardDetailPage extends StatelessWidget {
+class QrsThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  OtherConceptsSecondCardDetailPage(this.sendedCard);
+  QrsThirdCardDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
               textAlign: TextAlign.justify,
             ),
     );
+
     return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[
@@ -37,7 +38,7 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -45,18 +46,11 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(
-                            child: Text(sendedCard['description'],
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0))),
-
+                        Flexible(child: NormalText(sendedCard['listOneHead'], FontWeight.bold)),
                       ],
                     ),
                     ListView.builder(
                       physics: ScrollPhysics(),
-                      shrinkWrap: true,
                       itemBuilder: (BuildContext context, int index) {
                         return ListTile(
                           leading: Icon(Icons.chevron_right),
@@ -64,41 +58,9 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
                         );
                       },
                       itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
+                      shrinkWrap: true,
                     ),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoText'], 20.0, false,FontWeight.normal),
                     Divider(),
-                    FlexibleRowNormalText(sendedCard['textOne'], 18.0, FontWeight.normal),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(15.0),
-                      decoration: BoxDecoration(
-                        border: Border(left: BorderSide(color: Colors.yellow[900], width: 5.0)),
-                        color: Colors.yellow[100],
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          NormalText(
-                              sendedCard['textHead'], FontWeight.bold
-                          ),
-                          Divider(
-                            height: 10.0,
-                            color: Colors.yellow[100],
-                          ),
-                          NormalText(
-                              sendedCard['textSecond'], FontWeight.normal),
-                        ],
-                      ),
-                    ),
-                    Divider(
-                      height: 10.0,
-                      color: Colors.white,
-                    ),
                     BackCardButton('Wróć'),
                   ],
                 ),

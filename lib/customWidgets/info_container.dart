@@ -8,6 +8,7 @@ class InfoContainer extends StatelessWidget{
   final String text;
   final double textSize;
   final bool useHtmlTags;
+  final fontWeight;
 
 
   InfoContainer(
@@ -15,8 +16,9 @@ class InfoContainer extends StatelessWidget{
     this.backgroundColor,
     this.text,
     this.textSize,
-    this.useHtmlTags
-  );
+    this.useHtmlTags,
+    this.fontWeight
+    );
 
   @override
     Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class InfoContainer extends StatelessWidget{
             border: Border(left: BorderSide(color: borderColor, width: 5.0)),
             color: backgroundColor,
           ),
-          child: useHtmlTags == true ? HtmlView(data: text) : Text(text, style: TextStyle(fontSize: textSize), textAlign: TextAlign.justify),
+          child: useHtmlTags == true ? HtmlView(data: text) : Text(text, style: TextStyle(fontSize: textSize, fontWeight: fontWeight), textAlign: TextAlign.justify),
         );
       return inforContainer;
     }

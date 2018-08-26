@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/normal_text.dart';
-import '../../customWidgets/flexible_row_normal_text.dart';
-import '../../customWidgets/back_card_button.dart';
-import '../../customWidgets/info_container.dart';
+import '../../../customWidgets/normal_text.dart';
+import '../../../customWidgets/flexible_row_normal_text.dart';
+import '../../../customWidgets/back_card_button.dart';
+import '../../../customWidgets/info_container.dart';
 
-class IwFirstCardDetailPage extends StatelessWidget {
+class QrsFirstNestedCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  IwFirstCardDetailPage(this.sendedCard);
+  QrsFirstNestedCardDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
@@ -38,21 +38,11 @@ class IwFirstCardDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: Text(sendedCard['subTitle'],
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0))),
-                      ],
-                    ),
                     ListView.builder(
                       physics: ScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
@@ -64,11 +54,36 @@ class IwFirstCardDetailPage extends StatelessWidget {
                       itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
                       shrinkWrap: true,
                     ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      padding: EdgeInsets.only(left: 15.0),
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.subdirectory_arrow_right),
+                          title: Text(sendedCard['listNested'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['listNested'] == null ? 0 : sendedCard['listNested'].length,
+
+                      shrinkWrap: true,
                     ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(child: NormalText(sendedCard['listHead'], FontWeight.bold)),
+                      ],
+                    ),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0)),
+                        );
+                      },
+                      itemCount: sendedCard['secondList'] == null ? 0 : sendedCard['secondList'].length,
+                      shrinkWrap: true,
+                    ),
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

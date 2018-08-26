@@ -81,7 +81,7 @@ class WaveLengthNormalCardDetailPage extends StatelessWidget {
                       height: 10.0,
                       color: Colors.white,
                     ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['description'], 20.0, false),
+                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['description'], 20.0, false,FontWeight.normal),
                     Divider(
                       height: 15.0,
                       color: Colors.white,

@@ -31,6 +31,7 @@ class HomePageList extends StatelessWidget {
         leading: Icon(
           Icons.settings
           ),
+
         title: new Text("EKG Fiszki")
         ),
         
@@ -97,7 +98,7 @@ class HomePageList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text('Wersja: 0.3.2'),
+                Text('Wersja: 0.4.0'),
               ],
             ))
           ],
