@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import 'other_concepts_view_controller.dart';
-
-
+import '../../customWidgets/back_category_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -54,7 +53,6 @@ class OtherConceptsCardList extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
                             new ListTile(
-                              
                               onTap: () {
                                 final sendedCard = newItem;
                                 Navigator.push(
@@ -83,28 +81,7 @@ class OtherConceptsCardList extends StatelessWidget {
                 },
               ),
             ),
-            new Container(
-              height: 50.0,
-              child: new InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: new Container(
-                  height: 5.0,
-                  decoration: new BoxDecoration(
-                    color: Colors.blue[800],
-                    border: new Border.all(color: Colors.white, width: 2.0),
-                    borderRadius: new BorderRadius.circular(10.0),
-                  ),
-                  child: new Center(
-                    child: new Text(
-                      'Wróć',
-                      style: new TextStyle(fontSize: 18.0, color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            BackCategoryButton("Wróc"),
           ],
         ),
       ),

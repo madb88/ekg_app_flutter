@@ -35,7 +35,18 @@ class NavigatorWidget extends StatelessWidget {
           builder: (context, snapshot) {
             var data = json.decode(snapshot.data.toString());
             return new ListView(
+              padding: EdgeInsets.zero,
               children: <Widget>[
+              Container(
+              height: 88.0,
+                child:
+                DrawerHeader(
+                  child: Text('Spis treści', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[900],
+                  ),
+                ),
+              ),
                 ExpansionTile(
                   title: Text(
                     mainCategories[0],

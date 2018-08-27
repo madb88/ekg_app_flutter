@@ -4,6 +4,7 @@ import 'dart:convert';
 import '../../customWidgets/category_button_coloredit.dart';
 import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
 import 'ekg_component_view_controller.dart';
+import '../../customWidgets/back_category_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -85,33 +86,9 @@ class ComponentCardList extends StatelessWidget {
                   );
                 },
               ),
-
             ),
-
             CategoryButtonColor(IncorrectWavelengthComponentCardList(categoryNames['incorectWave'],'incorrect_wavelength'), categoryNames['incorectWave'],Colors.orange[900]),
-
-            Container(
-                height: 50.0,
-                child: new InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: new Container(
-                    height: 1.0,
-                    decoration: new BoxDecoration(
-                      color: Colors.blue[800],
-                      border: new Border.all(color: Colors.white, width: 2.0),
-                      borderRadius: new BorderRadius.circular(10.0),
-                    ),
-                    child: new Center(
-                      child: new Text(
-                        'Wróć',
-                        style: new TextStyle(fontSize: 18.0, color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            BackCategoryButton("Wróc"),
           ],
         ),
       ),
