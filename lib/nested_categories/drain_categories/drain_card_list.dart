@@ -53,7 +53,6 @@ class DrainCardList extends StatelessWidget {
                           children: <Widget>[
                             new ListTile(
                               onTap: () {
-                                final sendedCard = newItem;
                                 Navigator.push(
                                   context,
                                   new MyCustomRoute(

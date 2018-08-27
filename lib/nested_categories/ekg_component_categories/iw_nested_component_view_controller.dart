@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../detail_page.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_nested_card_detail_page.dart';
 
 class IwNestedComponentViewController extends StatelessWidget {
-
   final index;
   final cardsCollection;
 
@@ -25,7 +23,6 @@ class IwNestedComponentViewController extends StatelessWidget {
           children: [
             IwNestedCardDetailPage(cardsCollection[0]),
             IwNestedCardDetailPage(cardsCollection[1]),
-
           ],
         ),
       ),

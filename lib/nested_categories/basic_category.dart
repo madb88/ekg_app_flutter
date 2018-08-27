@@ -3,7 +3,6 @@ import '../home_page.dart';
 import './drain_categories/drain_card_list.dart';
 import '../category_list.dart';
 import '../customWidgets/category_button.dart';
-import '../card_list.dart';
 import 'axis_categories/axis_card_list.dart';
 import 'feature_categories/feature_card_list.dart';
 import 'other_concepts__categories/other_concepts_card_list.dart';
@@ -17,7 +16,6 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
       Animation<double> secondaryAnimation, Widget child) {
     if (settings.isInitialRoute) return child;
     return child;
-    // return new FadeTransition(opacity: animation, child: child);
   }
 }
 
@@ -29,7 +27,6 @@ class BasicCategoryList extends StatelessWidget {
     'feature' : 'Cecha, szybkość przesuwu i częstotliwość rytmu',
     'basic_concepts' : 'Podstawowe pojęcia'
   };
- 
 
   @override
   Widget build(BuildContext context) {

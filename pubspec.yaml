@@ -45,6 +45,7 @@ flutter:
    - data_repo/qrs_team_first_nested.json
    - data_repo/incorrect_wave_r.json
    - data_repo/episode_interval.json
+   - data_repo/correct_r.json
    - images/logo2.png
    - images/body.jpg
    - images/ekg_images/

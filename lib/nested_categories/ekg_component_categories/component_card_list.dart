@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import 'package:ekg_cards_app/detail_page.dart';
-import '../../customWidgets/category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
 import 'ekg_component_view_controller.dart';
@@ -27,7 +25,6 @@ class ComponentCardList extends StatelessWidget {
 
   final categoryNames = {
     'incorectWave':'Niewidoczny załamek P',
-
   };
 
   @override

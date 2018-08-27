@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../customWidgets/normal_text.dart';
-import '../../../customWidgets/category_button.dart';
 import '../../../customWidgets/back_card_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -26,21 +25,6 @@ class QrsListNestedCardDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget imageSection = Container(
-      padding: const EdgeInsets.all(20.0),
-      margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-      child: sendedCard['image'].length > 0
-          ? Image.asset(
-              "images/${sendedCard['image']}",
-              width: 450.0,
-            )
-          : new Text(
-              'Brak zdjecia',
-              style: new TextStyle(fontSize: 20.0),
-              textAlign: TextAlign.justify,
-            ),
-    );
-
     return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[

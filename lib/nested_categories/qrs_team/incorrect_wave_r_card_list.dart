@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/category_button.dart';
-import '../../customWidgets/category_button_coloredit.dart';
-import 'qrs_tem_view_controller.dart';
-import 'qrs_r_nested_categories.dart';
+import 'incorrect_wave_r_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -69,7 +66,7 @@ class IncorrectWaveRCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          QrsTeamViewController(index, sendedCard)),
+                                          IncorrectWaveRViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'qrs_tem_view_controller.dart';
-import 'qrs_team_first_nested_view_controller.dart';
 import 'qrs_r_nested_categories.dart';
 import 'qrs_team_first_nested_card_list.dart';
 
@@ -29,7 +27,6 @@ class QrsTeamCardList extends StatelessWidget {
   final categoryNames = {
     'qrsTeamFirstNested':'Załamek Q i zespół Qs',
     'qrsTeamSecondNested':'Załamek R',
-
   };
 
   @override

@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import '../../home_page.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
-import './../../detail_views/wavelength_cards/wavelength_normal_card_detail_page.dart';
 import 'dart:convert';
-import 'incorrect_wave_r_view_controller.dart';
 import 'incorrect_wave_r_card_list.dart';
+import '../../detail_views/qrs_team_cards/wave_r/wave_r_card_detail_page.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -64,20 +63,16 @@ class QrsRNestedCategoriesList extends StatelessWidget {
         child: FutureBuilder(
             future: DefaultAssetBundle
                 .of(context)
-                .loadString('data_repo/components.json'),
+                .loadString('data_repo/correct_r.json'),
             builder: (context, snapshot) {
               var data = json.decode(snapshot.data.toString());
               return new ListView.builder(
                 itemBuilder: (BuildContext context, int index) {
                 return Column(
                   children: <Widget>[
-                    CategoryButton(WaveLengthNormalCardDetailPage(data[0]), categoryNames['wavelengthPlusR']),
+                    CategoryButton(WaveRCardDetailPage(data[0]), categoryNames['wavelengthPlusR']),
                     Divider(),
                     CategoryButton(IncorrectWaveRCardList(categoryNames['wavelengthMinusR'], 'incorrect_wave_r'), categoryNames['wavelengthMinusR']),
-
-//                    CategoryButton(WaveLengthNormalCardDetailPage(data[0]), categoryNames['wavelengthMinusR']),
-
-//                    CategoryButton(ComponentCardList(categoryNames['wavelengthMinus'], 'components_incorrect'), categoryNames['wavelengthMinus']),
                   ],
                 );
                 },

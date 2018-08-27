@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../detail_page.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_first_card_detail_page.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_second_card_detail_page.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_third_card_detail_page.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_fourth_card_detail_page.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_six_card_detail_page.dart';
-
-
 
 class EkgComponentViewController extends StatelessWidget {
 
