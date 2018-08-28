@@ -3,8 +3,9 @@ import '../../home_page.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
 import './wavelength_categories.dart';
-import '../episode_interval_categories/episodes_interval_categories.dart';
+import '../episode_interval_categories/episode_interval_card_list.dart';
 import '../qrs_team/qrs_team_card_list.dart';
+import '../stSection/st_section_card_list.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -16,7 +17,6 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
       Animation<double> secondaryAnimation, Widget child) {
     if (settings.isInitialRoute) return child;
     return child;
-    // return new FadeTransition(opacity: animation, child: child);
   }
 }
 
@@ -30,9 +30,9 @@ class ComponentCategoriesList extends StatelessWidget {
   final categoryNames = {
     'wavelength':'Załamek P',
     'episodeAndInterval': 'Odcinek i odstęp PQ',
-    'qrsTeam' : 'Zespół QRS'
+    'qrsTeam' : 'Zespół QRS',
+    'stSection': 'Odcinek ST'
   };
-
 
   @override
   Widget build(BuildContext context) {
@@ -74,9 +74,11 @@ class ComponentCategoriesList extends StatelessWidget {
               children: <Widget>[
                 CategoryButton(WavelengthCategoriesList(categoryNames['wavelength']), categoryNames['wavelength']),
                 Divider(),
-                CategoryButton(EpisodesIntervalCategoriesList(categoryNames['episodeAndInterval']), categoryNames['episodeAndInterval']),
+                CategoryButton(EpisodeIntervalCardList(categoryNames['episodeAndInterval'], 'episode_interval'), categoryNames['episodeAndInterval']),
                 Divider(),
                 CategoryButton(QrsTeamCardList(categoryNames['qrsTeam'], 'qrs_team'), categoryNames['qrsTeam']),
+                Divider(),
+                CategoryButton(StSectionCardList(categoryNames['stSection'], 'stFsection'), categoryNames['stSection']),
               ],
             )
           ],

@@ -46,6 +46,8 @@ flutter:
    - data_repo/incorrect_wave_r.json
    - data_repo/episode_interval.json
    - data_repo/correct_r.json
+   - data_repo/stFsection.json
+   - data_repo/st_section_elevation.json
    - images/logo3.png
    - images/body.jpg
    - images/ekg_images/
