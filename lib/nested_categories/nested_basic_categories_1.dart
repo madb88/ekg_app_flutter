@@ -27,7 +27,7 @@ class CategoryList extends StatelessWidget {
       drawer: NavigatorWidget(),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
-        title: Text("EKG Fiszki"),
+        title: Text("EKG Vademecum"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.home),

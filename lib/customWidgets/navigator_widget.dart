@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import '../card_list.dart';
-import '../customWidgets/list_element.dart';
+import '../customWidgets/navigation_list_element.dart';
 import 'dart:convert';
 import './../nested_categories/drain_categories/drain_card_list.dart';
+import './../nested_categories/axis_categories/axis_card_list.dart';
+import './../nested_categories/feature_categories/feature_card_list.dart';
+import './../nested_categories/other_concepts__categories/other_concepts_card_list.dart';
+import '../calculator.dart';
 
 class NavigatorWidget extends StatelessWidget {
   final mainCategories = ['Podstawy', 'EKG'];
@@ -10,10 +13,8 @@ class NavigatorWidget extends StatelessWidget {
   final basicNestedCategories = [
     'Odprowadzenia',
     'Oś',
-    'Cecha, szybkość przesuwu',
-    'Częstość akcji',
-    'Odcinek, odstęp',
-    'Kiedy małe litery'
+    'Cecha, szybkość przesuwu i częstotliwość rytmu',
+    'Podstawowe pojęcia',
   ];
 
   final drainNestedCategories = ['Lokalizacja', 'Odprowadzenia sąsiadujące'];
@@ -22,7 +23,6 @@ class NavigatorWidget extends StatelessWidget {
     'II, III (+)',
     'I, III oba skierowane w dół',
     'I, III rozbierzne',
-    'I, III skierowane do siebie'
   ];
 
   @override
@@ -50,24 +50,26 @@ class NavigatorWidget extends StatelessWidget {
                 ExpansionTile(
                   title: Text(
                     mainCategories[0],
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
                   ),
                   children: <Widget>[
-                    
-                    ListElement(DrainCardList(basicNestedCategories[0], 'odprowadzenia'),basicNestedCategories[0]),
-                    ListElement(DrainCardList(basicNestedCategories[1], 'axis_cards'),basicNestedCategories[1]),
-
-                    ListElement(CardList(basicNestedCategories[2], 1),
-                        basicNestedCategories[2]),
-                    ListElement(CardList(basicNestedCategories[3], 1),
-                        basicNestedCategories[3]),
-                    ListElement(CardList(basicNestedCategories[4], 1),
-                        basicNestedCategories[4]),
-                    ListElement(CardList(basicNestedCategories[5], 1),
-                        basicNestedCategories[5]),
+                    NavigationListElement(DrainCardList(basicNestedCategories[0], 'odprowadzenia'),basicNestedCategories[0],18.0),
+                    NavigationListElement(AxisCardList(basicNestedCategories[1], 'axis_cards'),basicNestedCategories[1],18.0),
+                    NavigationListElement(FeatureCardList(basicNestedCategories[2], 'feature_cards'),basicNestedCategories[2],18.0),
+                    NavigationListElement(OtherConceptsCardList(basicNestedCategories[3], 'other_concepts'),basicNestedCategories[3],18.0),
+//                    ListElement(CardList(basicNestedCategories[2], 1),
+//                        basicNestedCategories[2]),
+//                    ListElement(CardList(basicNestedCategories[3], 1),
+//                        basicNestedCategories[3]),
+//                    ListElement(CardList(basicNestedCategories[4], 1),
+//                        basicNestedCategories[4]),
+//                    ListElement(CardList(basicNestedCategories[5], 1),
+//                        basicNestedCategories[5]),
                   ],
                 ),
-                ExpansionTile(title: Text(mainCategories[1])),
+//                ExpansionTile(title: Text(mainCategories[1])),
+
+                NavigationListElement(Calculator(), 'Kalkulator', 18.0),
                 Divider(),
                 ListTile(
                   onTap: () {

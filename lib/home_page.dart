@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'category_list.dart';
 import 'calculator.dart';
+import 'customWidgets/navigator_widget.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -26,13 +27,12 @@ class HomePageList extends StatelessWidget {
   Widget build(BuildContext context) {
     var _onTap;
     return new Scaffold(
+      drawer: NavigatorWidget(),
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
-        leading: Icon(
-          Icons.settings
-          ),
 
-        title: new Text("EKG Fiszki")
+
+        title: new Text("EKG Vademecum")
         ),
         
       body: new Container(

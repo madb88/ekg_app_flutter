@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../home_page.dart';
 import '../category_list.dart';
 import '../customWidgets/category_button.dart';
+import '../customWidgets/navigator_widget.dart';
 import '../nested_categories/ekg_component_categories/component_categories.dart';
 
 
@@ -27,6 +28,7 @@ class EkgFirstNestedCategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      drawer: NavigatorWidget(),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
         title: Text("EKG"),

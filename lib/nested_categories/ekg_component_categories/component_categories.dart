@@ -6,6 +6,8 @@ import './wavelength_categories.dart';
 import '../episode_interval_categories/episode_interval_card_list.dart';
 import '../qrs_team/qrs_team_card_list.dart';
 import '../stSection/st_section_card_list.dart';
+import 'wavelength_card_list.dart';
+import './../../customWidgets/navigator_widget.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -37,6 +39,7 @@ class ComponentCategoriesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      drawer: NavigatorWidget(),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
         title: Text(componentName),
@@ -72,7 +75,7 @@ class ComponentCategoriesList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                CategoryButton(WavelengthCategoriesList(categoryNames['wavelength']), categoryNames['wavelength']),
+                CategoryButton(WaveLengthCardList(categoryNames['wavelength'],'components'), categoryNames['wavelength']),
                 Divider(),
                 CategoryButton(EpisodeIntervalCardList(categoryNames['episodeAndInterval'], 'episode_interval'), categoryNames['episodeAndInterval']),
                 Divider(),
