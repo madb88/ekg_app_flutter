@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import '../../home_page.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
-import './wavelength_categories.dart';
 import '../episode_interval_categories/episode_interval_card_list.dart';
 import '../qrs_team/qrs_team_card_list.dart';
 import '../stSection/st_section_card_list.dart';
 import 'wavelength_card_list.dart';
 import './../../customWidgets/navigator_widget.dart';
+import '../wavelengthT/wavelengthT_card_list.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -33,7 +33,8 @@ class ComponentCategoriesList extends StatelessWidget {
     'wavelength':'Załamek P',
     'episodeAndInterval': 'Odcinek i odstęp PQ',
     'qrsTeam' : 'Zespół QRS',
-    'stSection': 'Odcinek ST'
+    'stSection': 'Odcinek ST',
+    'wavelengthT' : 'Załamek T'
   };
 
   @override
@@ -82,6 +83,8 @@ class ComponentCategoriesList extends StatelessWidget {
                 CategoryButton(QrsTeamCardList(categoryNames['qrsTeam'], 'qrs_team'), categoryNames['qrsTeam']),
                 Divider(),
                 CategoryButton(StSectionCardList(categoryNames['stSection'], 'stFsection'), categoryNames['stSection']),
+                Divider(),
+                CategoryButton(WaveLengthTCardList(categoryNames['wavelengthT'], 'wavelengthT'), categoryNames['wavelengthT']),
               ],
             )
           ],
