@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../detail_views/episodes_interval_cards/episode_card_detail_page.dart';
 import '../../detail_views/wavelengthT/wavelengthT_list_card_detail_page.dart';
+import '../../detail_views/wavelengthT/wavelengthT_second_card_detail_page.dart';
 
 class WaveLengthTViewController extends StatelessWidget {
 
@@ -25,6 +25,9 @@ class WaveLengthTViewController extends StatelessWidget {
           children: [
             WavelengthTListCardDetailPage(cardsCollection[0]),
             WavelengthTListCardDetailPage(cardsCollection[1]),
+            WavelengthTSecondCardDetailPage(cardsCollection[2]),
+            WavelengthTListCardDetailPage(cardsCollection[3]),
+
           ],
         ),
       ),
