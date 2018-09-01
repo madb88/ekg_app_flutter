@@ -27,7 +27,6 @@ class WaveLengthTViewController extends StatelessWidget {
             WavelengthTListCardDetailPage(cardsCollection[1]),
             WavelengthTSecondCardDetailPage(cardsCollection[2]),
             WavelengthTListCardDetailPage(cardsCollection[3]),
-
           ],
         ),
       ),

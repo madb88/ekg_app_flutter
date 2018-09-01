@@ -8,6 +8,7 @@ import '../stSection/st_section_card_list.dart';
 import 'wavelength_card_list.dart';
 import './../../customWidgets/navigator_widget.dart';
 import '../wavelengthT/wavelengthT_card_list.dart';
+import '../qtSpace/qt_space_card_list.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -34,7 +35,8 @@ class ComponentCategoriesList extends StatelessWidget {
     'episodeAndInterval': 'Odcinek i odstęp PQ',
     'qrsTeam' : 'Zespół QRS',
     'stSection': 'Odcinek ST',
-    'wavelengthT' : 'Załamek T'
+    'wavelengthT' : 'Załamek T',
+    'qtSpace' : "Odstęp QT"
   };
 
   @override
@@ -85,6 +87,8 @@ class ComponentCategoriesList extends StatelessWidget {
                 CategoryButton(StSectionCardList(categoryNames['stSection'], 'stFsection'), categoryNames['stSection']),
                 Divider(),
                 CategoryButton(WaveLengthTCardList(categoryNames['wavelengthT'], 'wavelengthT'), categoryNames['wavelengthT']),
+                Divider(),
+                CategoryButton(QtSpaceCardList(categoryNames['qtSpace'], 'qtSpace'), categoryNames['qtSpace']),
               ],
             )
           ],
