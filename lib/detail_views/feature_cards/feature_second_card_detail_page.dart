@@ -72,7 +72,19 @@ class FeatureSecondCardDetailPage extends StatelessWidget {
                       title: NormalText(
                           sendedCard['secondList'][1], FontWeight.normal),
                     ),
-                    Divider(),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text('2/3')
+                      ],
+                    ),
+                    Divider(
+                      color: Colors.white,
+                    ),
                     BackCardButton('Wróć'),
                   ],
                 ),

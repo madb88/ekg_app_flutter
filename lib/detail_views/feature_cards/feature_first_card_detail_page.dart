@@ -6,7 +6,9 @@ import '../../customWidgets/back_card_button.dart';
 class FeatureFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  FeatureFirstCardDetailPage(this.sendedCard);
+  FeatureFirstCardDetailPage(
+    this.sendedCard,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,7 @@ class FeatureFirstCardDetailPage extends StatelessWidget {
           backgroundColor: Colors.blue[900],
           pinned: true,
           title: new Text(sendedCard['title']),
+
         ),
         new SliverList(
           delegate: new SliverChildBuilderDelegate(
@@ -85,7 +88,19 @@ class FeatureFirstCardDetailPage extends StatelessWidget {
                         )
                       ],
                     ),
-                    Divider(),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text('1/3')
+                      ],
+                    ),
+                    Divider(
+                      color: Colors.white,
+                    ),
                     BackCardButton('Wróć'),
                   ],
                 ),

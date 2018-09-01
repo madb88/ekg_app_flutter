@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5566bcb-75f8-4961-9595-6596f1b5788f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/customWidgets/calculator_button.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_first_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_card_list.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_view_controller.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart" afterPath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart" afterPath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart" />
       <change beforePath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart" afterPath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelength_t_view_controller.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelength_t_view_controller.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -43,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feature_third_card_detail_page.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="feature_third_card_detail_page.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="495">
+              <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="67" selection-end-line="64" selection-end-column="63" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -55,12 +50,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qtSpace.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="qtSpace.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_repo/qtSpace.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="261">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_view_controller.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_view_controller.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="back_card_button.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/customWidgets/back_card_button.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_first_card_detail_page.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="101" column="42" lean-forward="false" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="back_category_button.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/customWidgets/back_category_button.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_second_card_detail_page.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,57 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calculator_button.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/customWidgets/calculator_button.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qt_space_card_list.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_card_list.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="color_text.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/customWidgets/color_text.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qt_space_view_controller.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_view_controller.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MyCustomRoute</find>
       <find>EkgComponentViewController</find>
       <find>AxisCardList</find>
       <find>DrainViewController</find>
@@ -155,6 +169,7 @@
       <find>Kalkul</find>
       <find>Kalkulat</find>
       <find>Kalkula</find>
+      <find>Częstotli</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -175,9 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/detail_views/wavelength_cards/wavelength_normal_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/ekg_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/iw_nested_component_view_controller.dart" />
         <option value="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/incorrect_wave_r/first_r_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/lib/customWidgets/category_button.dart" />
         <option value="$PROJECT_DIR$/lib/card_list.dart" />
@@ -210,7 +222,6 @@
         <option value="$PROJECT_DIR$/lib/nested_categories/ekg_first_nested_categories.dart" />
         <option value="$PROJECT_DIR$/lib/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/customWidgets/navigator_widget.dart" />
-        <option value="$PROJECT_DIR$/lib/customWidgets/back_card_button.dart" />
         <option value="$PROJECT_DIR$/lib/customWidgets/back_category_button.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelengthT_card_list.dart" />
@@ -223,9 +234,13 @@
         <option value="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_view_controller.dart" />
         <option value="$PROJECT_DIR$/lib/customWidgets/calculator_button.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_first_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/data_repo/qtSpace.json" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart" />
+        <option value="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart" />
+        <option value="$PROJECT_DIR$/lib/customWidgets/back_card_button.dart" />
+        <option value="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart" />
       </list>
     </option>
   </component>
@@ -285,6 +300,13 @@
               <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="detail_views" type="462c0819:PsiDirectoryNode" />
+              <item name="feature_cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="detail_views" type="462c0819:PsiDirectoryNode" />
               <item name="qrs_team_cards" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -299,6 +321,13 @@
               <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="nested_categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="nested_categories" type="462c0819:PsiDirectoryNode" />
+              <item name="feature_categories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
@@ -556,37 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_third_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_second_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_fourth_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/stSection/st_section_card_list.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_category1.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1532">
@@ -701,14 +699,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/back_category_button.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,14 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/back_card_button.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/customWidgets/list_element.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -962,10 +944,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/data_repo/qtSpace.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="261">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -982,11 +972,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_repo/qtSpace.json">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_view_controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="340">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/customWidgets/back_category_button.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/customWidgets/back_card_button.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="101" column="42" lean-forward="false" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="67" selection-end-line="64" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

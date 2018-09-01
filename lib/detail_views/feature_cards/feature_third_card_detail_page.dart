@@ -57,7 +57,19 @@ class FeatureThirdCardDetailPage extends StatelessWidget {
                     ),
                     Divider(),
                     InfoContainer(Colors.blue[900],Colors.blue[100],sendedCard['secondText'],20.0,false,FontWeight.normal),
-                    Divider(),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text('3/3')
+                      ],
+                    ),
+                    Divider(
+                      color: Colors.white,
+                    ),
                     BackCardButton('Wróć'),
                   ],
                 ),
