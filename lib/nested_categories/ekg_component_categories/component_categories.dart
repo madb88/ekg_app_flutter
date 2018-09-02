@@ -9,6 +9,7 @@ import 'wavelength_card_list.dart';
 import './../../customWidgets/navigator_widget.dart';
 import '../wavelengthT/wavelengthT_card_list.dart';
 import '../qtSpace/qt_space_card_list.dart';
+import '../wavelengthU/wavelengthU_card_list.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -36,7 +37,8 @@ class ComponentCategoriesList extends StatelessWidget {
     'qrsTeam' : 'Zespół QRS',
     'stSection': 'Odcinek ST',
     'wavelengthT' : 'Załamek T',
-    'qtSpace' : "Odstęp QT"
+    'qtSpace' : "Odstęp QT",
+    'wavelengthU' : "Załamek U"
   };
 
   @override
@@ -70,7 +72,7 @@ class ComponentCategoriesList extends StatelessWidget {
         ],
       ),
       body:  Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
@@ -79,16 +81,30 @@ class ComponentCategoriesList extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CategoryButton(WaveLengthCardList(categoryNames['wavelength'],'components'), categoryNames['wavelength']),
-                Divider(),
+                Divider(
+                  height: 5.0,
+                ),
                 CategoryButton(EpisodeIntervalCardList(categoryNames['episodeAndInterval'], 'episode_interval'), categoryNames['episodeAndInterval']),
-                Divider(),
+                Divider(
+                  height: 5.0,
+                ),
                 CategoryButton(QrsTeamCardList(categoryNames['qrsTeam'], 'qrs_team'), categoryNames['qrsTeam']),
-                Divider(),
+                Divider(
+                  height: 5.0,
+                ),
                 CategoryButton(StSectionCardList(categoryNames['stSection'], 'stFsection'), categoryNames['stSection']),
-                Divider(),
+                Divider(
+                  height: 5.0,
+                ),
                 CategoryButton(WaveLengthTCardList(categoryNames['wavelengthT'], 'wavelengthT'), categoryNames['wavelengthT']),
-                Divider(),
+                Divider(
+                  height: 5.0,
+                ),
                 CategoryButton(QtSpaceCardList(categoryNames['qtSpace'], 'qtSpace'), categoryNames['qtSpace']),
+                Divider(
+                  height: 5.0,
+                ),
+                CategoryButton(WaveLengthUCardList(categoryNames['wavelengthU'], 'wavelengthU'), categoryNames['wavelengthU']),
               ],
             )
           ],

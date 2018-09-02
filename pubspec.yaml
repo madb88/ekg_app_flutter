@@ -48,6 +48,7 @@ flutter:
    - data_repo/stFsection.json
    - data_repo/st_section_elevation.json
    - data_repo/wavelengthT.json
+   - data_repo/wavelengthU.json
    - data_repo/qtSpace.json
    - images/logo3.png
    - images/body.jpg

@@ -56,7 +56,7 @@ class EkgFirstNestedCategoryList extends StatelessWidget {
         ],
       ),
       body:  Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
