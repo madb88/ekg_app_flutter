@@ -33,10 +33,10 @@ class QtSpaceCardList extends StatelessWidget {
       ),
       body:
       new Container(
-
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
+
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -50,6 +50,7 @@ class QtSpaceCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
@@ -68,7 +69,8 @@ class QtSpaceCardList extends StatelessWidget {
                                 newItem[index]['title'],
                                 style:
                                     new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
-                              ), // ...
+                              ),
+                              subtitle: Text(newItem[index]['subtitle'], style: TextStyle(fontSize: 15.0),),
                             ),
                             new Divider(
                               height: 2.0,
