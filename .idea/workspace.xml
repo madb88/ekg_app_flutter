@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5566bcb-75f8-4961-9595-6596f1b5788f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/wavelengthU/wavelengthU_first_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/wavelengthU/wavelengthU_second_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelengthU_card_list.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelength_u_view_controller.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_first_nested_categories.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_first_nested_categories.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" afterPath="$PROJECT_DIR$/lib/home_page.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -42,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="component_categories.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="component_categories.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="621">
@@ -50,6 +43,16 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_page.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,7 +207,6 @@
         <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_view_controller.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/basic_category.dart" />
-        <option value="$PROJECT_DIR$/lib/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/customWidgets/navigator_widget.dart" />
         <option value="$PROJECT_DIR$/lib/customWidgets/back_category_button.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" />
@@ -233,6 +235,7 @@
         <option value="$PROJECT_DIR$/data_repo/wavelengthU.json" />
         <option value="$PROJECT_DIR$/lib/nested_categories/ekg_first_nested_categories.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart" />
+        <option value="$PROJECT_DIR$/lib/home_page.dart" />
       </list>
     </option>
   </component>
@@ -564,16 +567,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1017,6 +1010,14 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

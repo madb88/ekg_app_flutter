@@ -98,7 +98,7 @@ class HomePageList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text('Wersja: 0.4.1'),
+                Text('Wersja: 0.5.0'),
               ],
             ))
           ],
