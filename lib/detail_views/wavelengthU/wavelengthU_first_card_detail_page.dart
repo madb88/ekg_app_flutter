@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/list_builder.dart';
 
 class WavelengthUFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -9,7 +10,7 @@ class WavelengthUFirstCardDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return new Scaffold(
+    return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[
         new SliverAppBar(
@@ -26,35 +27,28 @@ class WavelengthUFirstCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    sendedCard['listHead'] != null?
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(child: NormalText(sendedCard['listHead'], FontWeight.bold)),
-                      ],
-                    ) : Container(),
-
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
-                      shrinkWrap: true,
-                    ),
-                    Divider(
-                      color: Colors.white
-                    ),
-                    sendedCard['description'] != null?
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(child: NormalText(sendedCard['description'], FontWeight.bold)),
-                      ],
-                    ):Container(),
+                    sendedCard['listHead'] != null
+                        ? Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Flexible(
+                                  child: NormalText(
+                                      sendedCard['listHead'], FontWeight.bold)),
+                            ],
+                          )
+                        : Container(),
+                    ListBuilder(sendedCard['list']),
+                    Divider(color: Colors.white),
+                    sendedCard['description'] != null
+                        ? Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Flexible(
+                                  child: NormalText(sendedCard['description'],
+                                      FontWeight.bold)),
+                            ],
+                          )
+                        : Container(),
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

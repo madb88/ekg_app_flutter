@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/list_builder.dart';
 
 class WavelengthTSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -10,7 +11,7 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return new Scaffold(
+    return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[
         new SliverAppBar(
@@ -27,79 +28,46 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
-                      shrinkWrap: true,
-                    ),
-                    Divider(
-                        color: Colors.white
-                    ),
+                    ListBuilder(sendedCard['list']),
+                    Divider(color: Colors.white),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(child: NormalText(sendedCard['secondListHead'], FontWeight.bold)),
+                        Flexible(
+                            child: NormalText(
+                                sendedCard['secondListHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['secondList'] == null ? 0 : sendedCard['secondList'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['secondList']),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(child: NormalText(sendedCard['thirdListHead'], FontWeight.bold)),
+                        Flexible(
+                            child: NormalText(
+                                sendedCard['thirdListHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['thirdList'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['thirdList'] == null ? 0 : sendedCard['thirdList'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['thirdList']),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Flexible(child: NormalText(sendedCard['fourthListHead'], FontWeight.bold)),
+                        Flexible(
+                            child: NormalText(
+                                sendedCard['fourthListHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['fourthList'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['fourthList'] == null ? 0 : sendedCard['fourthList'].length,
-                      shrinkWrap: true,
-                    ),
-                    Divider(
-                      color: Colors.white
-                    ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoText'], 18.0, false, FontWeight.normal),
-                    Divider(
-                        color: Colors.white
-                    ),
-                    InfoContainer(Colors.yellow[900], Colors.yellow[100], sendedCard['infoText2'], 18.0, false, FontWeight.normal),
+                    ListBuilder(sendedCard['fourthList']),
+                    Divider(color: Colors.white),
+                    InfoContainer(Colors.blue[900], Colors.blue[100],
+                        sendedCard['infoText'], 18.0, false, FontWeight.normal),
+                    Divider(color: Colors.white),
+                    InfoContainer(
+                        Colors.yellow[900],
+                        Colors.yellow[100],
+                        sendedCard['infoText2'],
+                        18.0,
+                        false,
+                        FontWeight.normal),
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

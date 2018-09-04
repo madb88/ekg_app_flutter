@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/list_builder.dart';
 
 class QrsThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -32,17 +33,7 @@ class QrsThirdCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['listOneHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['list']),
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

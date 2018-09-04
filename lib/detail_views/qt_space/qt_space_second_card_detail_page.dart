@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/normal_text.dart';
+import '../../customWidgets/list_builder.dart';
 
 class QtSpaceSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -26,20 +27,7 @@ class QtSpaceSecondCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listOne'][index],
-                              style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listOne'] == null
-                          ? 0
-                          : sendedCard['listOne'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['listOne']),
                     Divider(height: 10.0, color: Colors.white),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,20 +37,7 @@ class QtSpaceSecondCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['secondList'][index],
-                              style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['secondList'] == null
-                          ? 0
-                          : sendedCard['secondList'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['secondList']),
                     Divider(height: 10.0, color: Colors.white),
                     BackCardButton('Wróć'),
                   ],

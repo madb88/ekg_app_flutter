@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/list_builder.dart';
 
 class AxisFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -132,17 +133,7 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listElement'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listElement'] == null ? 0 : sendedCard['listElement'].length,
-                    ),
+                    ListBuilder(sendedCard['listElement']),
                     Divider(
                       height: 15.0,
                       color: Colors.white,
@@ -156,17 +147,7 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listElement2'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listElement2'] == null ? 0 : sendedCard['listElement2'].length,
-                    ),
+                    ListBuilder(sendedCard['listElement2']),
                     Divider(
                       height: 15.0,
                       color: Colors.white,
@@ -193,17 +174,8 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listElement3'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listElement3'] == null ? 0 : sendedCard['listElement3'].length,
-                    ),
+                    ListBuilder(sendedCard['listElement3']),
+
                   Divider(
                       height: 15.0,
                       color: Colors.white,

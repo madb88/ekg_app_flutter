@@ -3,6 +3,7 @@ import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/flexible_row_normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/list_builder.dart';
 
 class OtherConceptsSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -41,17 +42,7 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
 
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
-                    ),
+                    ListBuilder(sendedCard['list']),
                     Divider(
                       color: Colors.white,
                     ),

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/calculator_button.dart';
-import '../../calculator.dart';
-import '../../card_list.dart';
 
 
 class FeatureThirdCardDetailPage extends StatelessWidget {

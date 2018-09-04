@@ -28,7 +28,6 @@ class StElevationFourthCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-
                     FlexibleRowNormalText(sendedCard['description'], 20.0, FontWeight.bold),
                     Divider(
                       color: Colors.white,
@@ -68,7 +67,6 @@ class StElevationFourthCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-
                     Divider(
                       color: Colors.white,
                     ),

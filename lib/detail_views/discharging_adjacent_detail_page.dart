@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import '../customWidgets/normal_text.dart';
 import '../customWidgets/back_card_button.dart';
+import '../customWidgets/list_builder.dart';
 
 class DischargingAdjacentDetailPage extends StatelessWidget {
   final sendedCard;
+
   DischargingAdjacentDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
-
     return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[
@@ -52,17 +53,7 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                       height: 5.0,
                       color: Colors.white,
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listOne'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listOne'] == null ? 0 : sendedCard['listOne'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['listOne']),
                     Divider(
                       height: 15.0,
                       color: Colors.white,
@@ -70,46 +61,48 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                     Container(
                         padding: EdgeInsets.all(15.0),
                         decoration: BoxDecoration(
-                          border: Border(left: BorderSide(color: Colors.blue[800], width: 5.0)),
+                          border: Border(
+                              left: BorderSide(
+                                  color: Colors.blue[800], width: 5.0)),
                           color: Colors.blue[100],
                         ),
                         child: Column(children: <Widget>[
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Flexible(
-                            child: NormalText(
-                                sendedCard['subtitle2'], FontWeight.bold),
-                          )
-                        ],
-                      ),
-                      Divider(
-                        height: 15.0,
-                        color: Colors.blue[100],
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Flexible(
-                              child: NormalText(
-                                  sendedCard['secondListElement1'],
-                                  FontWeight.normal)),
-                        ],
-                      ),
-                      Divider(
-                        height: 15.0,
-                        color: Colors.blue[100],
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Flexible(
-                              child: NormalText(
-                                  sendedCard['secondListElement2'],
-                                  FontWeight.normal)),
-                        ],
-                      ),
-                    ])),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Flexible(
+                                child: NormalText(
+                                    sendedCard['subtitle2'], FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          Divider(
+                            height: 15.0,
+                            color: Colors.blue[100],
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Flexible(
+                                  child: NormalText(
+                                      sendedCard['secondListElement1'],
+                                      FontWeight.normal)),
+                            ],
+                          ),
+                          Divider(
+                            height: 15.0,
+                            color: Colors.blue[100],
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Flexible(
+                                  child: NormalText(
+                                      sendedCard['secondListElement2'],
+                                      FontWeight.normal)),
+                            ],
+                          ),
+                        ])),
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

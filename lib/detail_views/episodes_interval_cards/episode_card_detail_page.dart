@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/list_builder.dart';
 
 class EpisodeCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -25,20 +26,7 @@ class EpisodeCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listOne'][index],
-                              style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listOne'] == null
-                          ? 0
-                          : sendedCard['listOne'].length,
-                    ),
+                    ListBuilder(sendedCard['listOne']),
                     Divider(
                       height: 30.0,
                       color: Colors.white,
@@ -51,20 +39,8 @@ class EpisodeCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead2'], FontWeight.bold))
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listTwo'][index],
-                              style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['listTwo'] == null
-                          ? 0
-                          : sendedCard['listTwo'].length,
-                    ),
+                    ListBuilder(sendedCard['listTwo']),
+
                     Divider(
                       height: 30.0,
                       color: Colors.white,
@@ -77,20 +53,8 @@ class EpisodeCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead3'], FontWeight.bold))
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['listThree'][index],
-                              style: TextStyle(fontSize: 20.0), textAlign: TextAlign.justify),
-                        );
-                      },
-                      itemCount: sendedCard['listThree'] == null
-                          ? 0
-                          : sendedCard['listThree'].length,
-                    ),
+                    ListBuilder(sendedCard['listThree']),
+
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -99,20 +63,8 @@ class EpisodeCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead4'], FontWeight.bold))
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list4'][index],
-                              style: TextStyle(fontSize: 20.0), textAlign: TextAlign.justify),
-                        );
-                      },
-                      itemCount: sendedCard['list4'] == null
-                          ? 0
-                          : sendedCard['list4'].length,
-                    ),
+                    ListBuilder(sendedCard['list4']),
+                    
                     Divider(),
                     BackCardButton('Wróć'),
                   ],

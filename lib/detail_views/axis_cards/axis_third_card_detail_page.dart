@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/flexible_row_normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
+import '../../customWidgets/list_builder.dart';
 
 class AxisThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -102,36 +103,15 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                     ),
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead'], 20.0, FontWeight.bold),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['firstList'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['firstList'] == null ? 0 : sendedCard['firstList'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['firstList']),
                     Divider(
                       height: 20.0,
                       color: Colors.white,
                     ),
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead2'], 20.0, FontWeight.bold),
+                    ListBuilder(sendedCard['secondList']),
 
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0)),
-                          );
-                      },
-                      itemCount: sendedCard['secondList'] == null ? 0 : sendedCard['secondList'].length,
-
-                    ),
                     Divider(
                       height: 20.0,
                       color: Colors.white,
@@ -144,17 +124,8 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                     ),
                     FlexibleRowNormalText(
                         sendedCard['listNestedHead4'], 20.0, FontWeight.bold),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['thirdList'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['thirdList'] == null ? 0 : sendedCard['thirdList'].length,
-                    ),
+                    ListBuilder(sendedCard['thirdList']),
+
                     Divider(
                       height: 20.0,
                       color: Colors.white,

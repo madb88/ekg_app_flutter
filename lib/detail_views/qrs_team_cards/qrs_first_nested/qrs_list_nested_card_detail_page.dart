@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../customWidgets/normal_text.dart';
 import '../../../customWidgets/back_card_button.dart';
+import '../../../customWidgets/list_builder.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -48,17 +49,8 @@ class QrsListNestedCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['listHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list'][index],style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['list'] == null ? 0 : sendedCard['list'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['list']),
+
                     ListTile(
                       leading: sendedCard['boldListTile'] != "" ? Icon(Icons.chevron_right) : Text(''),
                       title: Text(sendedCard['boldListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/list_builder.dart';
 
 class WavelengthUSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -35,20 +36,7 @@ class WavelengthUSecondCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListView.builder(
-                      physics: ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: Icon(Icons.chevron_right),
-                          title: Text(sendedCard['list'][index],
-                              style: TextStyle(fontSize: 20.0)),
-                        );
-                      },
-                      itemCount: sendedCard['list'] == null
-                          ? 0
-                          : sendedCard['list'].length,
-                      shrinkWrap: true,
-                    ),
+                    ListBuilder(sendedCard['list']),
                     Divider(color: Colors.white),
                     InfoContainer(Colors.blue[900], Colors.blue[100],
                         sendedCard['infoBox'], 20.0, false, FontWeight.bold),
