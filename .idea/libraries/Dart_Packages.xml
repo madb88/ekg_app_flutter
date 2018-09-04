@@ -261,6 +261,13 @@
             </list>
           </value>
         </entry>
+        <entry key="page_view_indicators">
+          <value>
+            <list>
+              <option value="E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/page_view_indicators-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="path">
           <value>
             <list>
@@ -509,6 +516,7 @@
       <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.4/lib" />
       <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-1.0.5/lib" />
       <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/package_resolver-1.0.4/lib" />
+      <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/page_view_indicators-1.1.0/lib" />
       <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.6.2/lib" />
       <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/lib" />
       <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/platform-2.2.0/lib" />

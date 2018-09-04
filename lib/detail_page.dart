@@ -9,17 +9,6 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  Widget imageSection = Container(
-        padding: const EdgeInsets.all(20.0),
-        margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-        child:
-        sendedCard['image'].length > 0 ? Image.asset("images/ekg_images/${sendedCard['image']}"): new Text(
-        '',
-        style: new TextStyle(fontSize: 20.0),
-        textAlign: TextAlign.justify,
-      ),
-      );
-
     Widget descriptionSection = Container(
       padding: const EdgeInsets.all(20.0),
       child:
@@ -44,8 +33,6 @@ class DetailPage extends StatelessWidget {
 
                  children: <Widget>[
                   descriptionSection,
-                  Divider(),
-                  imageSection,
                   Divider(),
                   BackCardButton('Wróć'),
                 ],
