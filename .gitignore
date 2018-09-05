@@ -10,3 +10,4 @@ build/
 .android
 google-services.json
 data_repo/
+.idea/

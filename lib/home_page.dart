@@ -68,7 +68,10 @@ class HomePageList extends StatelessWidget {
                 ),
               ),
             ),
-            Divider(),
+            Divider(
+              height: 20.0,
+              color: Colors.blue[900]
+            ),
             new InkWell(
               onTap: () {
                 _onTap;
