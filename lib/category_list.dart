@@ -4,6 +4,7 @@ import './nested_categories/basic_category.dart';
 import './customWidgets/navigator_widget.dart';
 import './customWidgets/category_button.dart';
 import './nested_categories/ekg_first_nested_categories.dart';
+import './nested_categories/ekg_component_categories/component_categories.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -19,6 +20,10 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 }
 
 class StudyCategoriesList extends StatelessWidget {
+
+  final categoriesName = {
+    'component' : 'EKG',
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +52,7 @@ class StudyCategoriesList extends StatelessWidget {
           children: <Widget>[
             CategoryButton(BasicCategoryList(), 'Podstawy'),
             Divider(),
-            CategoryButton(EkgFirstNestedCategoryList(), 'EKG'),
+            CategoryButton(ComponentCategoriesList(categoriesName['component']), categoriesName['component']),
           ],
         ),
       ),

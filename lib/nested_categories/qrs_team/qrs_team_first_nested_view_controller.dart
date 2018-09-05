@@ -31,10 +31,6 @@ class QrsTeamFirstNestedViewController extends StatelessWidget {
             QrsListNestedCardDetailPage(cardsCollection[2]),
             QrsListNestedCardDetailPage(cardsCollection[3]),
             QrsListWithRouteNestedCardDetailPage(cardsCollection[4],cardsCollection[1]),
-
-
-//            IwNestedCardDetailPage(cardsCollection[1]),
-
           ],
         ),
       ),
