@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5566bcb-75f8-4961-9595-6596f1b5788f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_card_list.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_view_controller.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" afterPath="$PROJECT_DIR$/lib/home_page.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -27,6 +23,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="home_page.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="101" column="42" lean-forward="true" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="category_list.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/category_list.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tachycardia_card_list.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tachycardia_card_list.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_card_list.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-210">
@@ -89,18 +95,6 @@
             <state relative-caret-position="464">
               <caret line="55" column="72" lean-forward="true" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="second_component_second_card_detail_page.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/detail_views/second_component_cards/second_component_second_card_detail_page.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="82" lean-forward="true" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -230,7 +224,6 @@
         <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_view_controller.dart" />
         <option value="$PROJECT_DIR$/data_repo/stFsection.json" />
         <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lib/category_list.dart" />
@@ -244,6 +237,7 @@
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart" />
         <option value="$PROJECT_DIR$/data_repo/tachycardia_cards.json" />
+        <option value="$PROJECT_DIR$/lib/home_page.dart" />
       </list>
     </option>
   </component>
@@ -759,14 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Programy/flutter/bin/cache/pkg/sky_engine/lib/core/set.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -978,6 +964,14 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="101" column="42" lean-forward="true" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
