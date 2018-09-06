@@ -3,8 +3,8 @@ import 'home_page.dart';
 import './nested_categories/basic_category.dart';
 import './customWidgets/navigator_widget.dart';
 import './customWidgets/category_button.dart';
-import './nested_categories/ekg_first_nested_categories.dart';
 import './nested_categories/ekg_component_categories/component_categories.dart';
+import './nested_categories/second_component_categories/second_component_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -23,6 +23,7 @@ class StudyCategoriesList extends StatelessWidget {
 
   final categoriesName = {
     'component' : 'EKG',
+    'secondComponent' : 'Rytm zatokowy i jego zaburzenia',
   };
 
   @override
@@ -53,6 +54,8 @@ class StudyCategoriesList extends StatelessWidget {
             CategoryButton(BasicCategoryList(), 'Podstawy'),
             Divider(),
             CategoryButton(ComponentCategoriesList(categoriesName['component']), categoriesName['component']),
+            Divider(),
+            CategoryButton(SecondComponentCardList(categoriesName['secondComponent']), categoriesName['secondComponent']),
           ],
         ),
       ),
