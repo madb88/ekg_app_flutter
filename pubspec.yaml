@@ -53,6 +53,7 @@ flutter:
    - data_repo/qtSpace.json
    - data_repo/st_lowering.json
    - data_repo/second_component_cards.json
+   - data_repo/tachycardia_cards.json
    - images/logo3.png
    - images/body.jpg
    - images/ekg_images/

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
-import '../stSection/st_section_elevation_card_list.dart';
-import '../stSection/st_section_lowering_card_list.dart';
-import '../../customWidgets/category_button_coloredit.dart';
-import 'second_component_view_controller.dart';
-import 'tachycardia/tachycardia_card_list.dart';
+import '../../../customWidgets/back_category_button.dart';
+import '../../../customWidgets/category_button_coloredit.dart';
+import 'tachycardia_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -21,15 +18,11 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class SecondComponentCardList extends StatelessWidget {
+class TachycardiaCardList extends StatelessWidget {
   final category;
-  SecondComponentCardList(this.category);
-
-  final categoryNames = {
-    'first':'Tachykardie zatokowe',
-    'second':'Niemiarowość zatokowa',
-    'third':'Blok zatokowo-przedsionkowy',
-  };
+  TachycardiaCardList(
+      this.category
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +46,7 @@ class SecondComponentCardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/second_component_cards.json'),
+                    .loadString('data_repo/tachycardia_cards.json'),
                 builder: (context, snapshot) {
                   var newItem = json.decode(snapshot.data.toString());
                   return new ListView.builder(
@@ -70,7 +63,7 @@ class SecondComponentCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          SecondComponentViewController(index, sendedCard)),
+                                          TachycardiaViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
@@ -94,9 +87,6 @@ class SecondComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(TachycardiaCardList(categoryNames['first']), categoryNames['first'],Colors.orange[900]),
-            CategoryButtonColor(StSectionLoweringCardList(categoryNames['second'], 'st_lowering'), categoryNames['second'],Colors.orange[900]),
-            CategoryButtonColor(StSectionLoweringCardList(categoryNames['third'], 'st_lowering'), categoryNames['third'],Colors.orange[900]),
             BackCategoryButton("Wróc"),
           ],
         ),
