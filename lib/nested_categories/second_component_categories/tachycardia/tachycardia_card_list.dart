@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../../customWidgets/back_category_button.dart';
-import '../../../customWidgets/category_button_coloredit.dart';
 import 'tachycardia_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -20,8 +19,11 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 
 class TachycardiaCardList extends StatelessWidget {
   final category;
+  final categoryName;
+
   TachycardiaCardList(
-      this.category
+      this.category,
+      this.categoryName,
       );
 
   @override
@@ -46,7 +48,7 @@ class TachycardiaCardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/tachycardia_cards.json'),
+                    .loadString('data_repo/$categoryName.json'),
                 builder: (context, snapshot) {
                   var newItem = json.decode(snapshot.data.toString());
                   return new ListView.builder(

@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
-import 'wavelength_t_view_controller.dart';
+import '../../customWidgets/category_button_coloredit.dart';
+import 'third_component_view_controller.dart';
+import 'shortcuts/shortcuts_card_list.dart';
+import 'supraventricular_stimulation/supraventricular_stimulation_card_list.dart';
+
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -17,10 +21,14 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class WaveLengthTCardList extends StatelessWidget {
+class ThirdComponentCardList extends StatelessWidget {
   final category;
-  final categoryName;
-  WaveLengthTCardList(this.category, this.categoryName);
+  ThirdComponentCardList(this.category);
+
+  final categoryNames = {
+    'first':'Na skróty',
+    'second':'Pobudzenia nadkomorowe',
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +47,12 @@ class WaveLengthTCardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
             new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/$categoryName.json'),
+                    .loadString('data_repo/third_component_cards.json'),
                 builder: (context, snapshot) {
                   var newItem = json.decode(snapshot.data.toString());
                   return new ListView.builder(
@@ -52,6 +61,7 @@ class WaveLengthTCardList extends StatelessWidget {
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
+
                             new ListTile(
                               onTap: () {
                                 final sendedCard = newItem;
@@ -59,7 +69,7 @@ class WaveLengthTCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          WaveLengthTViewController(index, sendedCard)),
+                                          ThirdComponentViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
@@ -67,7 +77,9 @@ class WaveLengthTCardList extends StatelessWidget {
                                 newItem[index]['title'],
                                 style:
                                     new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
-                              ), // ...
+                              ),
+                              subtitle: Text(newItem[index]['subtitle'], style: TextStyle(fontSize: 15.0),),
+// ...
                             ),
                             new Divider(
                               height: 2.0,
@@ -81,6 +93,9 @@ class WaveLengthTCardList extends StatelessWidget {
                 },
               ),
             ),
+            CategoryButtonColor(ShortcutsCardList(categoryNames['first'],'shortcuts_cards'), categoryNames['first'],Colors.orange[900]),
+            CategoryButtonColor(SupraventricularStimulationCardList(categoryNames['second'], 'supraventricular_stimulation_cards'), categoryNames['second'],Colors.orange[900]),
+//            CategoryButtonColor(StSectionLoweringCardList(categoryNames['third'], 'st_lowering'), categoryNames['third'],Colors.orange[900]),
             BackCategoryButton("Wróc"),
           ],
         ),

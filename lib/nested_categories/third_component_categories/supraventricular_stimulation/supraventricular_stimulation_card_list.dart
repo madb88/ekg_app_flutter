@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
-import 'wavelength_t_view_controller.dart';
+import '../../../customWidgets/back_category_button.dart';
+import '../../../customWidgets/category_button_coloredit.dart';
+import 'supraventricular_stimulation_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -17,10 +18,14 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class WaveLengthTCardList extends StatelessWidget {
+class SupraventricularStimulationCardList extends StatelessWidget {
   final category;
   final categoryName;
-  WaveLengthTCardList(this.category, this.categoryName);
+
+  SupraventricularStimulationCardList(
+      this.category,
+      this.categoryName
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +44,7 @@ class WaveLengthTCardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
             new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -52,6 +58,7 @@ class WaveLengthTCardList extends StatelessWidget {
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
+
                             new ListTile(
                               onTap: () {
                                 final sendedCard = newItem;
@@ -59,7 +66,7 @@ class WaveLengthTCardList extends StatelessWidget {
                                   context,
                                   new MyCustomRoute(
                                       builder: (context) =>
-                                          WaveLengthTViewController(index, sendedCard)),
+                                          SupraventricularStimulationViewController(index, sendedCard)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
@@ -67,7 +74,9 @@ class WaveLengthTCardList extends StatelessWidget {
                                 newItem[index]['title'],
                                 style:
                                     new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
-                              ), // ...
+                              ),
+                              subtitle: Text(newItem[index]['subtitle'], style: TextStyle(fontSize: 15.0),),
+// ...
                             ),
                             new Divider(
                               height: 2.0,

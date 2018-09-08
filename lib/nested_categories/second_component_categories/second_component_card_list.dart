@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
-import '../stSection/st_section_elevation_card_list.dart';
 import '../stSection/st_section_lowering_card_list.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'second_component_view_controller.dart';
 import 'tachycardia/tachycardia_card_list.dart';
+import 'arrhythmia/arrhythmia_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -94,8 +94,8 @@ class SecondComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(TachycardiaCardList(categoryNames['first']), categoryNames['first'],Colors.orange[900]),
-            CategoryButtonColor(StSectionLoweringCardList(categoryNames['second'], 'st_lowering'), categoryNames['second'],Colors.orange[900]),
+            CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[900]),
+            CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[900]),
             CategoryButtonColor(StSectionLoweringCardList(categoryNames['third'], 'st_lowering'), categoryNames['third'],Colors.orange[900]),
             BackCategoryButton("Wróc"),
           ],

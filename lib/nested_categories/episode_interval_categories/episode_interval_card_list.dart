@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/category_button_coloredit.dart';
-import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
 import '../../customWidgets/back_category_button.dart';
 import 'episode_interval_view_controller.dart';
 

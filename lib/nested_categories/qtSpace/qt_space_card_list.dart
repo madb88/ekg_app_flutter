@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/category_button_coloredit.dart';
 import '../../customWidgets/back_category_button.dart';
 import 'qt_space_view_controller.dart';
 

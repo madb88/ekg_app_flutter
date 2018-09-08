@@ -74,7 +74,6 @@ class HomePageList extends StatelessWidget {
             ),
             new InkWell(
               onTap: () {
-                _onTap;
                 Navigator.push(
                   context,
                   MyCustomRoute(builder: (context) => Calculator()),
