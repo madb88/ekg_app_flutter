@@ -22,63 +22,61 @@ class SupraventricularStimulationCardList extends StatelessWidget {
   final category;
   final categoryName;
 
-  SupraventricularStimulationCardList(
-      this.category,
-      this.categoryName
-      );
+  SupraventricularStimulationCardList(this.category, this.categoryName);
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.blue[900],
-        title: new Text(category),
-
+        title: Text(category),
       ),
-      body:
-      new Container(
-
+      body: Container(
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
-            new Flexible(
+            Flexible(
               child: FutureBuilder(
-                future: DefaultAssetBundle
-                    .of(context)
+                future: DefaultAssetBundle.of(context)
                     .loadString('data_repo/$categoryName.json'),
                 builder: (context, snapshot) {
                   var newItem = json.decode(snapshot.data.toString());
-                  return new ListView.builder(
+                  return ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
-                      return new Card(
-                        child: new Column(
+                      return Card(
+                        elevation: 2.0,
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-
-                            new ListTile(
+                            ListTile(
                               onTap: () {
                                 final sendedCard = newItem;
                                 Navigator.push(
                                   context,
-                                  new MyCustomRoute(
+                                  MyCustomRoute(
                                       builder: (context) =>
-                                          SupraventricularStimulationViewController(index, sendedCard)),
+                                          SupraventricularStimulationViewController(
+                                              index, sendedCard)),
                                 );
                               },
-                              trailing: Icon(Icons.description, color: Colors.blue[900]),
-                              title: new Text(
+                              trailing: Icon(Icons.description,
+                                  color: Colors.blue[900]),
+                              title: Text(
                                 newItem[index]['title'],
-                                style:
-                                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25.0),
                               ),
-                              subtitle: Text(newItem[index]['subtitle'], style: TextStyle(fontSize: 15.0),),
+                              subtitle: Text(
+                                newItem[index]['subtitle'],
+                                style: TextStyle(fontSize: 15.0),
+                              ),
 // ...
                             ),
-                            new Divider(
+                            Divider(
                               height: 2.0,
                             ),
                           ],

@@ -24,8 +24,8 @@ class DrainCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
+    return  Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
         
@@ -38,7 +38,7 @@ class DrainCardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Expanded(
+            Expanded(
 
               child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -46,28 +46,29 @@ class DrainCardList extends StatelessWidget {
                     .loadString('data_repo/$categoryName.json'),
                 builder: (context, snapshot) {
                   var newItem = json.decode(snapshot.data.toString());
-                  return new ListView.builder(
+                  return ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
-                      return new Card(
-                        child: new Column(
+                      return Card(
+                        elevation: 2.0,
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
                             new ListTile(
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  new MyCustomRoute(
+                                   MyCustomRoute(
                                       builder: (context) => DrainViewController(index, newItem)),
                                 );
                               },
                               trailing: Icon(Icons.description, color: Colors.blue[900]),
-                              title: new Text(
+                              title: Text(
                                 newItem[index]['title'],
                                 style:
-                                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                                TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                               ), // ...
                             ),
-                            new Divider(
+                             Divider(
                               height: 2.0,
                             ),
                           ],

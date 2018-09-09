@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../detail_views/second_component_cards/arrhythmia_cards/arrhytmia_first_card_detail_page.dart';
+import '../../../detail_views/third_component_cards/shortcuts/shortcuts_first_card_detail_page.dart';
+import '../../../detail_views/third_component_cards/shortcuts/shortcuts_second_card_detail_page.dart';
+import '../../../detail_views/third_component_cards/shortcuts/shortcuts_third_card_detail_page.dart';
 
 
 class ShortcutsViewController extends StatelessWidget {
@@ -23,9 +25,10 @@ class ShortcutsViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-//           ArrhythmiaFirstCardDetailPage(cardsCollection[0]),
-//           ArrhythmiaFirstCardDetailPage(cardsCollection[1]),
-//           ArrhythmiaFirstCardDetailPage(cardsCollection[2]),
+            ShortcutsFirstCardDetailPage(cardsCollection[0]),
+            ShortcutsSecondCardDetailPage(cardsCollection[1]),
+            ShortcutsFirstCardDetailPage(cardsCollection[2]),
+            ShortcutsThirdCardDetailPage(cardsCollection[3]),
           ],
         ),
       ),

@@ -48,7 +48,8 @@ class AxisCardList extends StatelessWidget {
                   var newItem = json.decode(snapshot.data.toString());
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
-                      return new Card(
+                      return Card(
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

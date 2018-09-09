@@ -61,10 +61,10 @@ class ShortcutsCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-
                             new ListTile(
                               onTap: () {
                                 final sendedCard = newItem;
