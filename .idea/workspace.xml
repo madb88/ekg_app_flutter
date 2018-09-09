@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5566bcb-75f8-4961-9595-6596f1b5788f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/second_component_second_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_first_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_second_card_detail_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_third_card_detail_page.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/customWidgets/info_container.dart" afterPath="$PROJECT_DIR$/lib/customWidgets/info_container.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_card_list.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_card_list.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_view_controller.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_view_controller.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" afterPath="$PROJECT_DIR$/lib/home_page.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -85,18 +75,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shortcuts_first_card_detail_page.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_first_card_detail_page.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="info_container.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/customWidgets/info_container.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,11 +95,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supraventricular_stimulation_view_controller.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="supraventricular_stimulation_view_controller.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_view_controller.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_page.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -224,7 +212,6 @@
         <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_view_controller.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_view_controller.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelengthT_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_view_controller.dart" />
         <option value="$PROJECT_DIR$/data_repo/third_component_cards.json" />
         <option value="$PROJECT_DIR$/lib/category_list.dart" />
@@ -244,6 +231,7 @@
         <option value="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_third_card_detail_page.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/home_page.dart" />
       </list>
     </option>
   </component>
@@ -307,21 +295,6 @@
               <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="nested_categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="nested_categories" type="462c0819:PsiDirectoryNode" />
-              <item name="third_component_categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="nested_categories" type="462c0819:PsiDirectoryNode" />
-              <item name="third_component_categories" type="462c0819:PsiDirectoryNode" />
-              <item name="supraventricular_stimulation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -737,14 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="86" column="62" lean-forward="false" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_repo/supraventricular_stimulation_cards.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -975,6 +940,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
           <folding />
         </state>
       </provider>
