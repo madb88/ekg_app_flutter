@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../../../detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_first_card_detail_page.dart';
+import '../../../../detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_second_card_detail_page.dart';
 
 
 class NestedShortcutsViewController extends StatelessWidget {
@@ -22,9 +24,8 @@ class NestedShortcutsViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-//           ArrhythmiaFirstCardDetailPage(cardsCollection[0]),
-//           ArrhythmiaFirstCardDetailPage(cardsCollection[1]),
-//           ArrhythmiaFirstCardDetailPage(cardsCollection[2]),
+            NestedShortcutsFirstCardDetailPage(cardsCollection[0]),
+            NestedShortcutsSecondCardDetailPage(cardsCollection[1])
           ],
         ),
       ),
