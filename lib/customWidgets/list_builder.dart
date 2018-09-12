@@ -11,6 +11,7 @@ class ListBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     ListView listBuilder = ListView.builder(
       physics: ScrollPhysics(),
+      padding: EdgeInsets.all(3.0),
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(

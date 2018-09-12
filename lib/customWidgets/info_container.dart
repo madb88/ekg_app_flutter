@@ -14,9 +14,9 @@ class InfoContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Container inforContainer = Container(
+    Container infoContainer = Container(
       alignment: AlignmentDirectional(0.0, 0.0),
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(5.0),
       decoration: BoxDecoration(
         border: Border(left: BorderSide(color: borderColor, width: 5.0)),
         color: backgroundColor,
@@ -28,6 +28,6 @@ class InfoContainer extends StatelessWidget {
               textAlign: TextAlign.justify,
               softWrap: true,),
     );
-    return inforContainer;
+    return infoContainer;
   }
 }

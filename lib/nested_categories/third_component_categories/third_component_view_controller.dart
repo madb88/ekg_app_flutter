@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../detail_views/third_component_cards/third_component_first_card_detail_page.dart';
 
 
 class ThirdComponentViewController extends StatelessWidget {
@@ -22,10 +23,9 @@ class ThirdComponentViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-//            SecondComponentFirstCardDetailPage(cardsCollection[0]),
-//            SecondComponentFirstCardDetailPage(cardsCollection[1]),
-//            SecondComponentFirstCardDetailPage(cardsCollection[2]),
-//            SecondComponentSecondCardDetailPage(cardsCollection[3])
+            ThirdComponentFirstCardDetailPage(cardsCollection[0]),
+            ThirdComponentFirstCardDetailPage(cardsCollection[1])
+
           ],
         ),
       ),
