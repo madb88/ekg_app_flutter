@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/normal_text.dart';
+import '../../customWidgets/category_button_coloredit.dart';
 
 class ThirdComponentFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -28,76 +30,130 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    Visibility(
+                      child: InfoContainer(Colors.blue[900], Colors.white,
+                          sendedCard['infoWithButton'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['infoWithButton'] != ""?true:false,
+                    ),
                     ListBuilder(sendedCard['list']),
                     Divider(height: 10.0, color: Colors.white),
-                    sendedCard['redText'] != ''?InfoContainer(Colors.red[900], Colors.red[200],
-                        sendedCard['redText'], 18.0, false, FontWeight.bold):Container(),
-                    Divider(height: 10.0, color: Colors.white),
-
-                    sendedCard['listHead'] != ''?InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['listHead'], 18.0, false, FontWeight.bold):Container(),
-                    sendedCard['secondList'] !=''?Container(
-                      decoration: BoxDecoration(
-                        border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                        color: Colors.yellow[100],
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          NormalText(sendedCard['eightHead'], FontWeight.bold),
+                          ListBuilder(sendedCard['eightList'])
+                        ],
                       ),
-                      child: ListBuilder(sendedCard['secondList']),
-                    ):Container(),
-
-                    Divider(
-                      color: Colors.white
+                      visible: sendedCard['eightHead'] != ''?true:false,
                     ),
-                    sendedCard['secondHead'] != ''?InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['secondHead'], 18.0, false, FontWeight.bold):Container(),
-                    sendedCard['thirdList'] != ''?Container(
-                      decoration: BoxDecoration(
-                        border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                        color: Colors.yellow[100],
-                      ),
-                      child: ListBuilder(sendedCard['thirdList']),
-                    ):Container(),
-                    sendedCard['thirdHead'] != ''?InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['thirdHead'], 18.0, false, FontWeight.bold):Container(),
-                    sendedCard['fourthList'] != ''?
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                        color: Colors.yellow[100],
-                      ),
-                      child: ListBuilder(sendedCard['fourthList'])
-                    ):Container(),
-                    sendedCard['fiveHead'] != ''?InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['fiveHead'], 18.0, false, FontWeight.bold):Container(),
-                    sendedCard['fiveList'] != ''?
-                    Container(
-                        decoration: BoxDecoration(
-                          border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                          color: Colors.yellow[100],
-                        ),
-                        child: ListBuilder(sendedCard['fiveList'])
-                    ):Container(),
-                    sendedCard['sixHead'] != ''?InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['sixHead'], 18.0, false, FontWeight.bold):Container(),
-                    sendedCard['sixList'] != ''?
-                    Container(
-                        decoration: BoxDecoration(
-                          border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                          color: Colors.yellow[100],
-                        ),
-                        child: ListBuilder(sendedCard['sixList'])
-                    ):Container(),
-                    sendedCard['sevenHead'] != ''?InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['sevenHead'], 18.0, false, FontWeight.bold):Container(),
-                    sendedCard['sevenList'] != ''?
-                    Container(
-                        decoration: BoxDecoration(
-                          border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                          color: Colors.yellow[100],
-                        ),
-                        child: ListBuilder(sendedCard['sevenList'])
-                    ):Container(),
+                    Visibility(
+                      child: InfoContainer(Colors.red[900], Colors.red[200],
+                          sendedCard['redText'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['redText'] != ''?true:false,
+                    ),
                     Divider(height: 10.0, color: Colors.white),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                              sendedCard['listHead'], 18.0, false, FontWeight.bold),
+                              Container(
+                                decoration: BoxDecoration(
+                                  border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                                  color: Colors.yellow[100],
+                                ),
+                                child: ListBuilder(sendedCard['secondList']),
+                              ),
+                        ],
+                        ),
+                      visible: sendedCard['listHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.red[900], Colors.red[200],
+                          sendedCard['redTextWithButton'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['redTextWithButton'] != ""?true:false,
+                    ),
 
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                              sendedCard['secondHead'], 18.0, false, FontWeight.bold),
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                              color: Colors.yellow[100],
+                            ),
+                            child: ListBuilder(sendedCard['thirdList']),
+                          ),
+                        ],
+                      ),
+                      visible: sendedCard['secondHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                          sendedCard['thirdHead'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['thirdHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                            color: Colors.yellow[100],
+                          ),
+                          child: ListBuilder(sendedCard['fourthList'])
+                      ),
+                      visible: sendedCard['fourthList'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                          sendedCard['fiveHead'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['fiveHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child:  Container(
+                          decoration: BoxDecoration(
+                            border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                            color: Colors.yellow[100],
+                          ),
+                          child: ListBuilder(sendedCard['fiveList'])
+                      ),
+                      visible: sendedCard['fiveList'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                          sendedCard['sixHead'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['sixHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child:  Container(
+                          decoration: BoxDecoration(
+                            border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                            color: Colors.yellow[100],
+                          ),
+                          child: ListBuilder(sendedCard['sixList'])
+                      ),
+                      visible:  sendedCard['sixList'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                          sendedCard['sevenHead'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['sevenHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                            color: Colors.yellow[100],
+                          ),
+                          child: ListBuilder(sendedCard['sevenList'])
+                      ),
+                      visible:  sendedCard['sevenList'] != ''?true:false,
+                    ),
+                    Divider(height: 10.0, color: Colors.white),
                     BackCardButton('Wróć'),
                   ],
                 ),
