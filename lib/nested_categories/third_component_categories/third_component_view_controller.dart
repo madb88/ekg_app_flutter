@@ -35,7 +35,10 @@ class ThirdComponentViewController extends StatelessWidget {
             ThirdComponentFirstCardDetailPage(cardsCollection[9]),
             ThirdComponentFirstCardDetailPage(cardsCollection[10]),
             ThirdComponentFirstCardDetailPage(cardsCollection[11]),
-            ThirdComponentFirstCardDetailPage(cardsCollection[12])
+            ThirdComponentFirstCardDetailPage(cardsCollection[12]),
+            ThirdComponentFirstCardDetailPage(cardsCollection[13]),
+            ThirdComponentFirstCardDetailPage(cardsCollection[14]),
+            ThirdComponentFirstCardDetailPage(cardsCollection[15])
 
 
           ],

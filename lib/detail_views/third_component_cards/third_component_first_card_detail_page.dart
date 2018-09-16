@@ -123,6 +123,19 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                       ),
                       visible: sendedCard['fiveList'] != ''?true:false,
                     ),
+                    Divider(
+                        color: Colors.white
+                    ),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          NormalText(sendedCard['nineHead'], FontWeight.bold),
+                          ListBuilder(sendedCard['nineList']),
+                        ],
+                      ),
+                      visible: sendedCard['secondHead'] != ''?true:false,
+                    ),
                     Visibility(
                       child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
                           sendedCard['sixHead'], 18.0, false, FontWeight.bold),
@@ -137,6 +150,19 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                           child: ListBuilder(sendedCard['sixList'])
                       ),
                       visible:  sendedCard['sixList'] != ''?true:false,
+                    ),
+                    Divider(
+                      color: Colors.white
+                    ),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          NormalText(sendedCard['tenHead'], FontWeight.bold),
+                          ListBuilder(sendedCard['tenList']),
+                        ],
+                      ),
+                      visible: sendedCard['secondHead'] != ''?true:false,
                     ),
                     Visibility(
                       child: InfoContainer(Colors.yellow[900], Colors.yellow[200],

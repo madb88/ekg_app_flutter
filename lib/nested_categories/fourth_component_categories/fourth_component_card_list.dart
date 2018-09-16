@@ -3,9 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
-import 'third_component_view_controller.dart';
-import 'shortcuts/shortcuts_card_list.dart';
-import 'supraventricular_stimulation/supraventricular_stimulation_card_list.dart';
+import 'fourth_component_view_controller.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -21,9 +19,9 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class ThirdComponentCardList extends StatelessWidget {
+class FourthComponentCardList extends StatelessWidget {
   final category;
-  ThirdComponentCardList(this.category);
+  FourthComponentCardList(this.category);
 
   final categoryNames = {
     'first':'Na skróty',
@@ -52,7 +50,7 @@ class ThirdComponentCardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/third_component_cards.json'),
+                    .loadString('data_repo/fourth_component_cards.json'),
                 builder: (context, snapshot) {
                   if(snapshot.data == null){
                     return Container(
@@ -64,8 +62,8 @@ class ThirdComponentCardList extends StatelessWidget {
                     var newItem = json.decode(snapshot.data.toString());
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
-                        return new Card(
-                          child: new Column(
+                        return Card(
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
 
@@ -74,25 +72,25 @@ class ThirdComponentCardList extends StatelessWidget {
                                   final sendedCard = newItem;
                                   Navigator.push(
                                     context,
-                                    new MyCustomRoute(
+                                     MyCustomRoute(
                                         builder: (context) =>
-                                            ThirdComponentViewController(
+                                            FourthComponentViewController(
                                                 index, sendedCard)),
                                   );
                                 },
                                 trailing: Icon(
                                     Icons.description, color: Colors.blue[900]),
-                                title: new Text(
+                                title: Text(
                                   newItem[index]['title'],
                                   style:
-                                  new TextStyle(fontWeight: FontWeight.bold,
+                                   TextStyle(fontWeight: FontWeight.bold,
                                       fontSize: 25.0),
                                 ),
                                 subtitle: Text(newItem[index]['subtitle'],
                                   style: TextStyle(fontSize: 15.0),),
 // ...
                               ),
-                              new Divider(
+                               Divider(
                                 height: 2.0,
                               ),
                             ],
@@ -105,9 +103,8 @@ class ThirdComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(ShortcutsCardList(categoryNames['first'],'shortcuts_cards'), categoryNames['first'],Colors.orange[900]),
-            CategoryButtonColor(SupraventricularStimulationCardList(categoryNames['second'], 'supraventricular_stimulation_cards'), categoryNames['second'],Colors.orange[900]),
-//            CategoryButtonColor(StSectionLoweringCardList(categoryNames['third'], 'st_lowering'), categoryNames['third'],Colors.orange[900]),
+//            CategoryButtonColor(ShortcutsCardList(categoryNames['first'],'shortcuts_cards'), categoryNames['first'],Colors.orange[900]),
+//            CategoryButtonColor(SupraventricularStimulationCardList(categoryNames['second'], 'supraventricular_stimulation_cards'), categoryNames['second'],Colors.orange[900]),
             BackCategoryButton("Wróc"),
           ],
         ),
