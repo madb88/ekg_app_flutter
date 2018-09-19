@@ -4,6 +4,7 @@ import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'fourth_component_view_controller.dart';
+import 'additional_ventricular/additional_ventricular_card_list.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -24,8 +25,8 @@ class FourthComponentCardList extends StatelessWidget {
   FourthComponentCardList(this.category);
 
   final categoryNames = {
-    'first':'Na skróty',
-    'second':'Pobudzenia nadkomorowe',
+    'first':'Dodatkowe pobudzenia komorowe',
+    'second':'Rytm komorowy',
   };
 
   @override
@@ -63,6 +64,7 @@ class FourthComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
+                          color: Colors.green[200],
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
@@ -79,12 +81,12 @@ class FourthComponentCardList extends StatelessWidget {
                                   );
                                 },
                                 trailing: Icon(
-                                    Icons.description, color: Colors.blue[900]),
+                                    Icons.description, color: Colors.black),
                                 title: Text(
                                   newItem[index]['title'],
                                   style:
                                    TextStyle(fontWeight: FontWeight.bold,
-                                      fontSize: 25.0),
+                                      fontSize: 22.0),
                                 ),
                                 subtitle: Text(newItem[index]['subtitle'],
                                   style: TextStyle(fontSize: 15.0),),
@@ -103,8 +105,8 @@ class FourthComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-//            CategoryButtonColor(ShortcutsCardList(categoryNames['first'],'shortcuts_cards'), categoryNames['first'],Colors.orange[900]),
-//            CategoryButtonColor(SupraventricularStimulationCardList(categoryNames['second'], 'supraventricular_stimulation_cards'), categoryNames['second'],Colors.orange[900]),
+            CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.green[300]),
+            CategoryButtonColor(AdditionalVentricularCardList(categoryNames['second'],'additional_ventricular'), categoryNames['second'],Colors.green[300]),
             BackCategoryButton("Wróc"),
           ],
         ),

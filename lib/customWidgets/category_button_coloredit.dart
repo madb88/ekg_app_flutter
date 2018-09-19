@@ -34,7 +34,7 @@ class CategoryButtonColor extends StatelessWidget {
                 child: Center(
                   child: Text(
                     buttonText,
-                    style: TextStyle(fontSize: 25.0, color: Colors.white),textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 25.0, color: Colors.black),textAlign: TextAlign.center,
                   ),
                 ),
               ),
