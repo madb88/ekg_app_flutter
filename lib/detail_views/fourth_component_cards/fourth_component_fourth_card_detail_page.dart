@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/back_card_button.dart';
-import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/normal_text.dart';
-import '../../customWidgets/category_button_coloredit.dart';
+import '../../customWidgets/list_builder.dart';
 
-class FourthComponentSecondCardDetailPage extends StatelessWidget {
+class FourthComponentFourthCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  FourthComponentSecondCardDetailPage(
+  FourthComponentFourthCardDetailPage(
       this.sendedCard);
 
   @override
@@ -25,7 +24,7 @@ class FourthComponentSecondCardDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(6.0),
+                padding: EdgeInsets.all(10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -47,33 +46,8 @@ class FourthComponentSecondCardDetailPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      visible: sendedCard['infoList'] != ''?true:false,
+                      visible: sendedCard['infoHead'] != ''?true:false,
                     ),
-                    Visibility(
-                      child:
-                      Column(
-                        children: <Widget>[
-                          InfoContainer(Colors.blue[900], Colors.blue[200],
-                              sendedCard['secondHead'], 18.0, false, FontWeight.bold),
-                          ListBuilder(sendedCard['secondList']),
-
-                        ],
-                      ),
-                      visible: sendedCard['secondList'] != ''?true:false,
-                    ),
-                    Visibility(
-                      child:
-                      Column(
-                        children: <Widget>[
-                          InfoContainer(Colors.blue[900], Colors.blue[200],
-                              sendedCard['thirdHead'], 18.0, false, FontWeight.bold),
-                          ListBuilder(sendedCard['thirdList']),
-
-                        ],
-                      ),
-                      visible: sendedCard['thirdList'] != ''?true:false,
-                    ),
-                    Divider(height: 10.0, color: Colors.white),
                     BackCardButton('Wróć'),
                   ],
                 ),

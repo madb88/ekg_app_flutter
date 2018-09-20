@@ -4,6 +4,7 @@ import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'fourth_component_view_controller.dart';
+import 'sinus_rhythm/sinus_rhythm_card_list.dart';
 import 'additional_ventricular/additional_ventricular_card_list.dart';
 
 
@@ -64,7 +65,7 @@ class FourthComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
-                          color: Colors.green[200],
+                          color: Colors.green[100],
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
@@ -105,8 +106,8 @@ class FourthComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.green[300]),
-            CategoryButtonColor(AdditionalVentricularCardList(categoryNames['second'],'additional_ventricular'), categoryNames['second'],Colors.green[300]),
+            CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.green[400]),
+            CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.green[400]),
             BackCategoryButton("Wróc"),
           ],
         ),
