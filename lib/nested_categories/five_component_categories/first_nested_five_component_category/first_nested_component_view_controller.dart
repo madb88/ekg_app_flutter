@@ -20,7 +20,10 @@ class FirstNestedComponentViewController extends StatelessWidget {
           ),
           children: [
             FiveComponentFirstNestedCardDetailPage(cardsCollection[0]),
-            FiveComponentSecondNestedCardDetailPage(cardsCollection[1])
+            FiveComponentSecondNestedCardDetailPage(cardsCollection[1]),
+            FiveComponentSecondNestedCardDetailPage(cardsCollection[2]),
+            FiveComponentSecondNestedCardDetailPage(cardsCollection[3])
+
           ],
         ),
       ),
