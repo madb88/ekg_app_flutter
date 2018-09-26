@@ -23,6 +23,7 @@ class FiveComponentViewController extends StatelessWidget {
             FiveComponentFirstCardDetailPage(cardsCollection[1]),
             SecondComponentSecondCardDetailPage(cardsCollection[2]),
             FiveComponentFirstCardDetailPage(cardsCollection[3]),
+            FiveComponentFirstCardDetailPage(cardsCollection[4])
           ],
         ),
       ),
