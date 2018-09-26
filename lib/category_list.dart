@@ -7,6 +7,8 @@ import './nested_categories/ekg_component_categories/component_categories.dart';
 import './nested_categories/second_component_categories/second_component_card_list.dart';
 import './nested_categories/third_component_categories/third_component_card_list.dart';
 import './nested_categories/fourth_component_categories/fourth_component_card_list.dart';
+import './nested_categories/five_component_categories/five_component_card_list.dart';
+import './nested_categories/five_component_categories/five_basic_component_categories.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -28,6 +30,7 @@ class StudyCategoriesList extends StatelessWidget {
     'secondComponent' : 'Rytm zatokowy i jego zaburzenia',
     'thirdComponent' : 'Arytmie nadkomorowe',
     'fourthComponent' : 'Komorowe zaburzenia rytmu',
+    'fiveComponent' : 'Zaburzenia automatyzmu i przewodzenia / stymulator',
   };
 
   @override
@@ -51,7 +54,7 @@ class StudyCategoriesList extends StatelessWidget {
         ],
       ),
       body:  Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(15.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
@@ -64,6 +67,8 @@ class StudyCategoriesList extends StatelessWidget {
             CategoryButton(ThirdComponentCardList(categoriesName['thirdComponent']), categoriesName['thirdComponent']),
             Divider(),
             CategoryButton(FourthComponentCardList(categoriesName['fourthComponent']), categoriesName['fourthComponent']),
+            Divider(),
+            CategoryButton(FiveBasicComponentCategoriesList(categoriesName['fiveComponent']), categoriesName['fiveComponent']),
           ],
         ),
       ),

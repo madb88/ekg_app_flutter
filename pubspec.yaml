@@ -61,7 +61,13 @@ flutter:
    - data_repo/nested_shortcuts_cards.json
    - data_repo/additional_ventricular.json
    - data_repo/fourth_component_cards.json
+   - data_repo/five_component_cards.json
+   - data_repo/five_second_component_cards.json
+   - data_repo/five_third_component_cards.json
+   - data_repo/second_nested_five_component_cards.json
+   - data_repo/third_nested_five_component_cards.json
    - data_repo/sinus_rhythm.json
+   - data_repo/first_nested_five_component.json
    - images/logo3.png
    - images/body.jpg
    - images/ekg_images/
