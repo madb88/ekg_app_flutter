@@ -5,6 +5,7 @@ import './../../customWidgets/category_button.dart';
 import './../../customWidgets/navigator_widget.dart';
 import 'five_component_card_list.dart';
 import 'five_second_component_card_list.dart';
+import 'five_third_component_card_list.dart';
 
 
 
@@ -30,6 +31,7 @@ class FiveBasicComponentCategoriesList extends StatelessWidget {
   final categoryNames = {
     'first':'Zaburzenia funkcji węzła zatokowego',
     'second':'Przewodzenie Przedsionkowo-komorowe',
+    'third':'Zaburzenia przewodzenia śródkomorowego'
   };
 
   @override
@@ -76,6 +78,10 @@ class FiveBasicComponentCategoriesList extends StatelessWidget {
                   height: 5.0,
                 ),
                 CategoryButton(FiveSecondComponentCardList(categoryNames['second']), categoryNames['second']),
+                Divider(
+                  height: 5.0,
+                ),
+                CategoryButton(FiveThirdComponentCardList(categoryNames['third']), categoryNames['third']),
                 Divider(
                   height: 5.0,
                 )

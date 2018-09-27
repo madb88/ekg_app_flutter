@@ -64,6 +64,7 @@ flutter:
    - data_repo/five_component_cards.json
    - data_repo/five_second_component_cards.json
    - data_repo/five_third_component_cards.json
+   - data_repo/five_third_nested_component_cards.json
    - data_repo/second_nested_five_component_cards.json
    - data_repo/third_nested_five_component_cards.json
    - data_repo/sinus_rhythm.json
