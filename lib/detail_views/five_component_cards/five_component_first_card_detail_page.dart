@@ -81,7 +81,7 @@ class FiveComponentFirstCardDetailPage extends StatelessWidget {
                               border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
                               color: Colors.yellow[100],
                             ),
-                            child: NormalText(sendedCard['text'], FontWeight.normal),
+                            child: sendedCard['text'] != ''?NormalText(sendedCard['text'], FontWeight.normal):Container(),
                           ),
                         ],
                       ),
