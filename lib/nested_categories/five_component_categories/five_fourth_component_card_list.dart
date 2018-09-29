@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
-import '../../customWidgets/category_button_coloredit.dart';
 import 'five_fourth_component_view_controller.dart';
-import 'fourth_nested_five_component_category/fourth_nested_component_card_list.dart';
-import 'five_nested_five_component_category/five_nested_component_card_list.dart';
-
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})

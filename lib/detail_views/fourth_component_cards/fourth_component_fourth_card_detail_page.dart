@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/info_container.dart';
-import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/list_builder.dart';
 
 class FourthComponentFourthCardDetailPage extends StatelessWidget {

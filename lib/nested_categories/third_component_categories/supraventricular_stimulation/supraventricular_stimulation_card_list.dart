@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../../customWidgets/back_category_button.dart';
-import '../../../customWidgets/category_button_coloredit.dart';
 import 'supraventricular_stimulation_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
