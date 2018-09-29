@@ -21,8 +21,9 @@ class FiveThirdComponentViewController extends StatelessWidget {
           ),
           children: [
             SuperaventricularFirstCardDetailPage(cardsCollection[0]),
-            FiveComponentSecondCardDetailPage(cardsCollection[1])
-
+            FiveComponentSecondCardDetailPage(cardsCollection[1]),
+            FiveComponentSecondCardDetailPage(cardsCollection[2]),
+            FiveComponentSecondCardDetailPage(cardsCollection[3])
           ],
         ),
       ),

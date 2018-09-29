@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../customWidgets/back_category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
-import 'five_third_component_view_controller.dart';
+import 'five_fourth_component_view_controller.dart';
 import 'fourth_nested_five_component_category/fourth_nested_component_card_list.dart';
 import 'five_nested_five_component_category/five_nested_component_card_list.dart';
 
@@ -21,14 +21,9 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class FiveThirdComponentCardList extends StatelessWidget {
+class FiveFourthComponentCardList extends StatelessWidget {
   final category;
-  FiveThirdComponentCardList(this.category);
-
-  final categoryNames = {
-    'first':'Blok lewej odnogi pęczka HISSA (LBBB)',
-    'second':'Blok prawej odnogi pęczka HISSA (RBBB)',
-  };
+  FiveFourthComponentCardList(this.category);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +47,7 @@ class FiveThirdComponentCardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/five_third_component_cards.json'),
+                    .loadString('data_repo/five_fourth_component_cards.json'),
                 builder: (context, snapshot) {
                   if(snapshot.data == null){
                     return Container(
@@ -77,7 +72,7 @@ class FiveThirdComponentCardList extends StatelessWidget {
                                     context,
                                      MyCustomRoute(
                                         builder: (context) =>
-                                            FiveThirdComponentViewController(
+                                            FiveFourthComponentViewController(
                                                 index, sendedCard)),
                                   );
                                 },
@@ -106,8 +101,6 @@ class FiveThirdComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(FourthNestedComponentCardList(categoryNames['first'],'five_third_nested_component_cards'), categoryNames['first'],Colors.green[400]),
-            CategoryButtonColor(FiveNestedComponentCardList(categoryNames['second'],'five_fourth_nested_component_cards'), categoryNames['second'],Colors.green[400]),
             BackCategoryButton("Wróc"),
           ],
         ),

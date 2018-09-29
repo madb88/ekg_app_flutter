@@ -5,10 +5,10 @@ import '../../customWidgets/info_container.dart';
 import '../../customWidgets/normal_text.dart';
 
 
-class FiveComponentSecondCardDetailPage extends StatelessWidget {
+class FiveComponentThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  FiveComponentSecondCardDetailPage(
+  FiveComponentThirdCardDetailPage(
       this.sendedCard);
 
   @override
@@ -30,10 +30,51 @@ class FiveComponentSecondCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                        sendedCard['listHead'], 18.0, false, FontWeight.bold),
-                    ListBuilder(sendedCard['list']),
-                    Divider(height: 10.0, color: Colors.white),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          NormalText(sendedCard['text'], FontWeight.normal),
+                        ],
+                      ),
+                      visible: sendedCard['text'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          ListBuilder(sendedCard['list2']),
+                        ],
+                      ),
+                      visible: sendedCard['list2'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            child:InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                                sendedCard['listHead'], 18.0, false, FontWeight.bold),
+                          ),
+                          ListBuilder(sendedCard['list']),
+
+                        ],
+                      ),
+                      visible: sendedCard['listHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            child:InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                                sendedCard['listHead2'], 18.0, false, FontWeight.bold),
+                          ),
+                          ListBuilder(sendedCard['secondList2']),
+                        ],
+                      ),
+                      visible: sendedCard['listHead2'] != ''?true:false,
+                    ),
                     Visibility(
                       child:
                       Column(
@@ -46,60 +87,6 @@ class FiveComponentSecondCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['listHead3'] != ''?true:false,
-                    ),
-                    Divider(height: 10.0, color: Colors.white),
-                    Visibility(
-                      child:
-                      Column(
-                        children: <Widget>[
-                          Container(
-                            child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                                sendedCard['listHead4'], 18.0, false, FontWeight.bold),
-                          ),
-                          ListBuilder(sendedCard['list4']),
-                        ],
-                      ),
-                      visible: sendedCard['listHead4'] != ''?true:false,
-                    ),
-                    Visibility(
-                      child:
-                      Column(
-                        children: <Widget>[
-                          Container(
-                            child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                                sendedCard['listHead2'], 18.0, false, FontWeight.bold),
-                          ),
-                          ListBuilder(sendedCard['list2']),
-                        ],
-                      ),
-                      visible: sendedCard['listHead2'] != ''?true:false,
-                    ),
-                    Visibility(
-                      child:
-                      Column(
-                        children: <Widget>[
-                          Container(
-                            child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
-                                sendedCard['infoText'], 18.0, false, FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      visible: sendedCard['infoText'] != ''?true:false,
-                    ),
-                    Visibility(
-                      child:
-                      Column(
-                        children: <Widget>[
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
-                              color: Colors.yellow[100],
-                            ),
-                            child: ListBuilder(sendedCard['list5']),
-                          ),
-                        ],
-                      ),
-                      visible: sendedCard['list5'] != ''?true:false,
                     ),
                     Divider(height: 10.0, color: Colors.white),
                     BackCardButton('Wróć'),
