@@ -3,7 +3,6 @@ import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/normal_text.dart';
-import '../../customWidgets/category_button_coloredit.dart';
 
 class FiveComponentFirstCardDetailPage extends StatelessWidget {
   final sendedCard;

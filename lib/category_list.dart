@@ -7,7 +7,6 @@ import './nested_categories/ekg_component_categories/component_categories.dart';
 import './nested_categories/second_component_categories/second_component_card_list.dart';
 import './nested_categories/third_component_categories/third_component_card_list.dart';
 import './nested_categories/fourth_component_categories/fourth_component_card_list.dart';
-import './nested_categories/five_component_categories/five_component_card_list.dart';
 import './nested_categories/five_component_categories/five_basic_component_categories.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
