@@ -8,6 +8,7 @@ import './nested_categories/second_component_categories/second_component_card_li
 import './nested_categories/third_component_categories/third_component_card_list.dart';
 import './nested_categories/fourth_component_categories/fourth_component_card_list.dart';
 import './nested_categories/five_component_categories/five_basic_component_categories.dart';
+import './nested_categories/six_component_categories/six_component_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -30,6 +31,7 @@ class StudyCategoriesList extends StatelessWidget {
     'thirdComponent' : 'Arytmie nadkomorowe',
     'fourthComponent' : 'Komorowe zaburzenia rytmu',
     'fiveComponent' : 'Zaburzenia automatyzmu i przewodzenia / stymulator',
+    'sixComponent' : 'Choroby',
   };
 
   @override
@@ -53,7 +55,7 @@ class StudyCategoriesList extends StatelessWidget {
         ],
       ),
       body:  Container(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(5.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
@@ -68,6 +70,8 @@ class StudyCategoriesList extends StatelessWidget {
             CategoryButton(FourthComponentCardList(categoriesName['fourthComponent']), categoriesName['fourthComponent']),
             Divider(),
             CategoryButton(FiveBasicComponentCategoriesList(categoriesName['fiveComponent']), categoriesName['fiveComponent']),
+            Divider(),
+            CategoryButton(SixComponentCardList(categoriesName['sixComponent']), categoriesName['sixComponent']),
           ],
         ),
       ),

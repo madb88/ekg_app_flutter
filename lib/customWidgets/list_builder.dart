@@ -4,7 +4,7 @@ class ListBuilder extends StatelessWidget {
   final list;
 
   ListBuilder(
-      this.list
+      this.list,
       );
 
   @override
