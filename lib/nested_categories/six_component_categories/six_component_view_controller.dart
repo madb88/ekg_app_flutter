@@ -23,7 +23,12 @@ class SixComponentViewController extends StatelessWidget {
             SixComponentFirstCardDetailPage(cardsCollection[1]),
             SixComponentFirstCardDetailPage(cardsCollection[2]),
             SixComponentFirstCardDetailPage(cardsCollection[3]),
-            SixComponentFirstCardDetailPage(cardsCollection[4])
+            SixComponentFirstCardDetailPage(cardsCollection[4]),
+            SixComponentFirstCardDetailPage(cardsCollection[5]),
+            SixComponentFirstCardDetailPage(cardsCollection[6]),
+            SixComponentFirstCardDetailPage(cardsCollection[7]),
+            SixComponentFirstCardDetailPage(cardsCollection[8]),
+            SixComponentFirstCardDetailPage(cardsCollection[9])
           ],
         ),
       ),

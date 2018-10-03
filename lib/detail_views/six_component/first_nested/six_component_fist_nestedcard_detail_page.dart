@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/back_card_button.dart';
-import '../../customWidgets/list_builder.dart';
-import '../../customWidgets/info_container.dart';
-import '../../customWidgets/normal_text.dart';
+import '../../../customWidgets/back_card_button.dart';
+import '../../../customWidgets/list_builder.dart';
+import '../../../customWidgets/info_container.dart';
+import '../../../customWidgets/normal_text.dart';
 
-class SixComponentFirstCardDetailPage extends StatelessWidget {
+class SixComponentFirstNestedCardDetailPage extends StatelessWidget {
   final sendedCard;
 
-  SixComponentFirstCardDetailPage(this.sendedCard);
+  SixComponentFirstNestedCardDetailPage(this.sendedCard);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Visibility(
-                      child: NormalText(sendedCard['text'], FontWeight.normal),
+                      child: NormalText(sendedCard['text'], FontWeight.bold),
                       visible: sendedCard['text'] != "" ? true : false,
                     ),
                     Divider(color: Colors.white),
@@ -65,20 +65,6 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                       visible: sendedCard['infoText'] != "" ? true : false,
                     ),
                     Visibility(
-                      child: InfoContainer(
-                          Colors.yellow[900],
-                          Colors.yellow[100],
-                          sendedCard['infoText3'],
-                          18.0,
-                          false,
-                          FontWeight.normal),
-                      visible: sendedCard['infoText3'] != "" ? true : false,
-                    ),
-                    Visibility(
-                      child: ListBuilder(sendedCard['list2']),
-                      visible: sendedCard['list2'] != "" ? true : false,
-                    ),
-                    Visibility(
                       child: Column(
                         children: <Widget>[
                           InfoContainer(
@@ -98,6 +84,22 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['infoTextHead2'] != "" || sendedCard['infoText2'] != ''? true : false,
+                    ),
+                    Divider(color: Colors.white),
+
+                    Visibility(
+                      child: InfoContainer(
+                          Colors.yellow[900],
+                          Colors.yellow[100],
+                          sendedCard['infoText3'],
+                          18.0,
+                          false,
+                          FontWeight.bold),
+                      visible: sendedCard['infoText3'] != "" ? true : false,
+                    ),
+                    Visibility(
+                      child: ListBuilder(sendedCard['list2']),
+                      visible: sendedCard['list2'] != "" ? true : false,
                     ),
                     Divider(color: Colors.white),
                     BackCardButton('Wróć'),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
-import '../../customWidgets/category_button_coloredit.dart';
-import 'six_component_view_controller.dart';
-import 'first_nested_category/first_nested_six_component_card_list.dart';
+import '../../../customWidgets/back_category_button.dart';
+import 'firs_nested_six_component_view_controller.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -20,13 +18,15 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class SixComponentCardList extends StatelessWidget {
+class FirstNestedSixComponentCardList extends StatelessWidget {
   final category;
-  SixComponentCardList(this.category);
+  final categoryName;
 
-  final categoryNames = {
-    'first':'Zaburzenia elektrolitowe',
-  };
+  FirstNestedSixComponentCardList(
+      this.category,
+      this.categoryName
+      );
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class SixComponentCardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/six_component.json'),
+                    .loadString('data_repo/$categoryName.json'),
                 builder: (context, snapshot) {
                   if(snapshot.data == null){
                     return Container(
@@ -75,7 +75,7 @@ class SixComponentCardList extends StatelessWidget {
                                     context,
                                      MyCustomRoute(
                                         builder: (context) =>
-                                            SixComponentViewController(
+                                            FirstNestedSixComponentViewController(
                                                 index, sendedCard)),
                                   );
                                 },
@@ -104,7 +104,6 @@ class SixComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.green[400]),
             BackCategoryButton("Wróc"),
           ],
         ),
