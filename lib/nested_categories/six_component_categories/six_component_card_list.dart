@@ -68,7 +68,7 @@ class SixComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
-                          color: Colors.green[100],
+                          shape: Border.all(color: Colors.blue[900]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
@@ -85,7 +85,7 @@ class SixComponentCardList extends StatelessWidget {
                                   );
                                 },
                                 trailing: Icon(
-                                    Icons.description, color: Colors.black),
+                                    Icons.description, color: Colors.blue[900]),
                                 title: Text(
                                   newItem[index]['title'],
                                   style:
@@ -110,12 +110,12 @@ class SixComponentCardList extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.green[600],
+              color: Colors.orange[600],
               child: ExpansionTile(
                 trailing: Icon(Icons.list, color: Colors.black),
                 title: Text('Podkategorie',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.black),
-
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                    textAlign: TextAlign.center
                 ),
                 children: <Widget>[
                   CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.green[400]),
