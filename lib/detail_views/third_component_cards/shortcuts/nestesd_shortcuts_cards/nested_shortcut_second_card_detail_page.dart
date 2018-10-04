@@ -26,11 +26,7 @@ class NestedShortcutsSecondCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    ListBuilder(sendedCard['list']),
-                    Divider(
-                      color: Colors.white
-                    ),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

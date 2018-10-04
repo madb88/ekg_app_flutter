@@ -42,10 +42,7 @@ class SixComponentSecondNestedCardDetailPage extends StatelessWidget {
                     Divider(color: Colors.white),
                     ListBuilder(sendedCard['list3']),
                     Divider(color: Colors.white),
-                    NormalText(sendedCard['text'], FontWeight.normal),
-                    Divider(color: Colors.white),
-
-                    BackCardButton('Wróć'),
+                    NormalText(sendedCard['text'], FontWeight.normal)
                   ],
                 ),
               );

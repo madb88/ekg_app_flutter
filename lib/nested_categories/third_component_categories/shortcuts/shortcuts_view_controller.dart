@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../detail_views/third_component_cards/shortcuts/shortcuts_first_card_detail_page.dart';
 import '../../../detail_views/third_component_cards/shortcuts/shortcuts_second_card_detail_page.dart';
 import '../../../detail_views/third_component_cards/shortcuts/shortcuts_third_card_detail_page.dart';
+import '../../../customWidgets/floating_custom_button.dart';
 
 
 class ShortcutsViewController extends StatelessWidget {
@@ -17,6 +18,12 @@ class ShortcutsViewController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Container(
         child: PageView(
           controller: PageController(

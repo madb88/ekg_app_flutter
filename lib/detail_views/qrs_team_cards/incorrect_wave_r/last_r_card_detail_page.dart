@@ -55,10 +55,7 @@ class LastRCardDetailPage extends StatelessWidget {
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['listElement'],style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
-                    ),
-
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/wavelengthU/wavelengthU_first_card_detail_page.dart';
 import '../../detail_views/wavelengthU/wavelengthU_second_card_detail_page.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 
 class WaveLengthUViewController extends StatelessWidget {
@@ -16,6 +17,12 @@ class WaveLengthUViewController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Container(
         child: PageView(
           controller: PageController(

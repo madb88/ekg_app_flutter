@@ -47,18 +47,7 @@ class IwFourthCardDetailPage extends StatelessWidget {
                                     fontSize: 20.0))),
                       ],
                     ),
-                    ListBuilder(sendedCard['list']),
-
-                    Divider(
-                      color: Colors.white
-                    ),
-
-
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white
-                    ),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

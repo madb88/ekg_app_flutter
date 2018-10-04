@@ -30,8 +30,6 @@ class StSectionCardDetailPage extends StatelessWidget {
                   children: <Widget>[
                     ListBuilder(sendedCard['list']),
                     InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoText'], 20.0, false, FontWeight.normal),
-                    Divider(),
-                    BackCardButton('Wróć'),
                   ],
                 ),
               );

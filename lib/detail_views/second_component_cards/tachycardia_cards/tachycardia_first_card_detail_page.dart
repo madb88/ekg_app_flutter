@@ -60,10 +60,7 @@ class TachycardiaFirstCardDetailPage extends StatelessWidget {
                             ListBuilder(sendedCard['thirdListColor']),
                           ],
                         )
-                    ):Container(),
-//                    sendedCard['infoBox'] != ''?InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoBox'], 20.0, false, FontWeight.normal):Container(),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    ):Container()
                   ],
                 ),
               );

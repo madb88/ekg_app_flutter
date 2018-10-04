@@ -72,12 +72,7 @@ class OtherConceptsSecondCardDetailPage extends StatelessWidget {
                               sendedCard['textSecond'], FontWeight.normal),
                         ],
                       ),
-                    ),
-                    Divider(
-                      height: 10.0,
-                      color: Colors.white,
-                    ),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

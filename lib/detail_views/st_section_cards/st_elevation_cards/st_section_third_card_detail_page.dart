@@ -33,11 +33,7 @@ class StElevationThirdCardDetailPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     FlexibleRowNormalText(sendedCard['subTitle'], 20.0, FontWeight.bold),
-                    ListBuilder(sendedCard['list']),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

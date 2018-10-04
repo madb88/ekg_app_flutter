@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/normal_text.dart';
@@ -34,6 +33,16 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                     ),
                     Divider(color: Colors.white),
                     ListBuilder(sendedCard['list']),
+                    Divider(color: Colors.white),
+                    Visibility(
+                      child: NormalText(sendedCard['text2'], FontWeight.normal),
+                      visible: sendedCard['text2'] != "" ? true : false,
+                    ),
+                    Divider(color: Colors.white),
+                    Visibility(
+                      child: ListBuilder(sendedCard['list3']),
+                      visible: sendedCard['list3'] != "" ? true : false,
+                    ),
                     Visibility(
                       child: Container(
                           padding: EdgeInsets.only(left: 15.0),
@@ -100,7 +109,6 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                       visible: sendedCard['infoTextHead2'] != "" || sendedCard['infoText2'] != ''? true : false,
                     ),
                     Divider(color: Colors.white),
-                    BackCardButton('Wróć'),
                   ],
                 ),
               );

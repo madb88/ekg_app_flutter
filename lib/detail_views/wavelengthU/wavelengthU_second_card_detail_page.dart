@@ -46,8 +46,7 @@ class WavelengthUSecondCardDetailPage extends StatelessWidget {
                       title: Text(sendedCard['list'][3],
                           style: TextStyle(
                               fontSize: 20.0, fontWeight: FontWeight.normal)),
-                    ),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

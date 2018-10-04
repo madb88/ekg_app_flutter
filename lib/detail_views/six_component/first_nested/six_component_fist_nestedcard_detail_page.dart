@@ -100,9 +100,7 @@ class SixComponentFirstNestedCardDetailPage extends StatelessWidget {
                     Visibility(
                       child: ListBuilder(sendedCard['list2']),
                       visible: sendedCard['list2'] != "" ? true : false,
-                    ),
-                    Divider(color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

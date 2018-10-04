@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../detail_views/third_component_cards/supraventricular_stimulation/supraventricular_stimulation_first_card_detail_page.dart';
+import '../../../detail_views/six_component/second_nested/second_nested_card_detail_page.dart';
 import '../../../customWidgets/floating_custom_button.dart';
 
-class SupraventricularStimulationViewController extends StatelessWidget {
-
+class SecondNestedSixComponentViewController extends StatelessWidget {
   final index;
   final cardsCollection;
 
-  SupraventricularStimulationViewController(
-      this.index,
-      this.cardsCollection
-    );
+  SecondNestedSixComponentViewController(this.index, this.cardsCollection);
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +25,8 @@ class SupraventricularStimulationViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-           SuperaventricularFirstCardDetailPage(cardsCollection[0]),
-           SuperaventricularFirstCardDetailPage(cardsCollection[1]),
-           SuperaventricularFirstCardDetailPage(cardsCollection[2]),
-           SuperaventricularFirstCardDetailPage(cardsCollection[3]),
-           SuperaventricularFirstCardDetailPage(cardsCollection[4])
+            SecondNestedCardDetailPage(cardsCollection[0]),
+            SecondNestedCardDetailPage(cardsCollection[1])
           ],
         ),
       ),

@@ -67,9 +67,8 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                         sendedCard['infoText2'],
                         18.0,
                         false,
-                        FontWeight.normal),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                        FontWeight.normal)
+
                   ],
                 ),
               );

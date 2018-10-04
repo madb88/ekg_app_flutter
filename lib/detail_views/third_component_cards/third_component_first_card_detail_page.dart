@@ -177,9 +177,7 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                           child: ListBuilder(sendedCard['sevenList'])
                       ),
                       visible:  sendedCard['sevenList'] != ''?true:false,
-                    ),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

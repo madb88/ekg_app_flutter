@@ -41,10 +41,7 @@ class StLoweringSecondCardDetailPage extends StatelessWidget {
                         color: Colors.white
                     ),
                     sendedCard['infoBox'] != ''?InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoBox'], 20.0, false, FontWeight.bold):Container(),
-                    Divider(
-                        color: Colors.white
-                    ),
-                    BackCardButton('Wróć'),
+
                   ],
                 ),
               );

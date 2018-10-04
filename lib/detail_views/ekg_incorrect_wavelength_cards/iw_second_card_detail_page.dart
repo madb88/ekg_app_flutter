@@ -36,14 +36,7 @@ class IwSecondCardDetailPage extends StatelessWidget {
                                     fontSize: 20.0))),
                       ],
                     ),
-                    ListBuilder(sendedCard['list']),
-
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white
-                    ),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

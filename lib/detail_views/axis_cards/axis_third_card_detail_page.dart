@@ -136,7 +136,6 @@ class AxisThirdCardDetailPage extends StatelessWidget {
                       height: 20.0,
                       color: Colors.white,
                     ),
-                    BackCardButton('Wróć'),
                   ],
                 ),
               );

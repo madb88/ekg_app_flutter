@@ -218,8 +218,7 @@ class QtSpaceThirdCardDetailPage extends StatelessWidget {
                           ? 0
                           : sendedCard['nestedList7'].length,
                       shrinkWrap: true,
-                    ),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

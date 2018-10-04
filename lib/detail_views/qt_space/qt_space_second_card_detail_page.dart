@@ -37,9 +37,7 @@ class QtSpaceSecondCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['secondList']),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['secondList'])
                   ],
                 ),
               );

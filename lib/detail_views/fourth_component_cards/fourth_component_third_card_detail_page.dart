@@ -46,10 +46,7 @@ class FourthComponentThirdCardDetailPage extends StatelessWidget {
                     Divider(height: 10.0, color: Colors.white),
                     InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['headFive'], 18.0, false, FontWeight.bold),
                     Divider(height: 5.0, color: Colors.white),
-                    NormalText(sendedCard['textFive'], FontWeight.normal),
-                    Divider(height: 10.0, color: Colors.white),
-
-                    BackCardButton('Wróć'),
+                    NormalText(sendedCard['textFive'], FontWeight.normal)
                   ],
                 ),
               );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../customWidgets/back_card_button.dart';
 
 
 class FiveComponentFirstNestedCardDetailPage extends StatelessWidget {
@@ -30,9 +29,7 @@ class FiveComponentFirstNestedCardDetailPage extends StatelessWidget {
                     Container(
                       child:  Text(sendedCard['text'], style: TextStyle(fontSize: 25.0)),
                       padding: EdgeInsets.all(5.0),
-                    ),
-                    Divider(height: 15.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

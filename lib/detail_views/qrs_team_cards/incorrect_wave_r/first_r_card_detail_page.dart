@@ -47,9 +47,7 @@ class FirstRCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['subTitle'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['list']),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

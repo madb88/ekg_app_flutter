@@ -3,6 +3,7 @@ import '../../detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_first_nested_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_list_nested_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_list_with_route_nested_card_detail_page.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 
 class QrsTeamFirstNestedViewController extends StatelessWidget {
@@ -18,6 +19,12 @@ class QrsTeamFirstNestedViewController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Container(
         child: PageView(
           controller: PageController(

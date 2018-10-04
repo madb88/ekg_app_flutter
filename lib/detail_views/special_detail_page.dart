@@ -217,8 +217,6 @@ class SpecialDetailPage extends StatelessWidget {
                     Divider(),
                     imageSection,
                     Text(imageAttribution, textAlign: TextAlign.center),
-                    Divider(),
-                    BackCardButton('Wróć'),
                   ],
                 ),
               );

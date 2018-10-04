@@ -44,12 +44,7 @@ class ShortcutsSecondCardDetailPage extends StatelessWidget {
                         ListBuilder(sendedCard['list5']),
                         Divider(),
                         InfoContainer(Colors.yellow[900], Colors.yellow[100], sendedCard['listHead6'], 20.0, false, FontWeight.bold),
-                        ListBuilder(sendedCard['list6']),
-                        Divider(
-                          color: Colors.white
-                        ),
-
-                        BackCardButton('Wróć'),
+                        ListBuilder(sendedCard['list6'])
                       ],
                     ),
                   );

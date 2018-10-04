@@ -49,9 +49,7 @@ class ArrhythmiaFirstCardDetailPage extends StatelessWidget {
                             ListBuilder(sendedCard['secondList']),
                           ],
                         )
-                    ):Container(),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    ):Container()
                   ],
                 ),
               );

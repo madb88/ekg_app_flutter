@@ -87,21 +87,7 @@ class FeatureFirstCardDetailPage extends StatelessWidget {
                           ),
                         )
                       ],
-                    ),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        Text('1/3')
-                      ],
-                    ),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

@@ -31,10 +31,7 @@ class StLoweringFirstCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     FlexibleRowNormalText(sendedCard['description'], 20.0, FontWeight.bold),
-                    ListBuilder(sendedCard['list']),
-
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

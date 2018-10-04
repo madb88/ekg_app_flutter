@@ -40,9 +40,7 @@ class QrsFirstCardDetailPage extends StatelessWidget {
                       itemCount: sendedCard['nestedList'] == null ? 0 : sendedCard['nestedList'].length,
 
                       shrinkWrap: true,
-                    ),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

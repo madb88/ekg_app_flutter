@@ -48,9 +48,7 @@ class WaveRCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['description'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['list']),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );

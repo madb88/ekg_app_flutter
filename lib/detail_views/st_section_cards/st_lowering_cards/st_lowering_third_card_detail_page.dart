@@ -36,11 +36,8 @@ class StLoweringThirdCardDetailPage extends StatelessWidget {
                     ),
                     FlexibleRowNormalText(sendedCard['listHead'], 20.0, FontWeight.bold),
 
-                    ListBuilder(sendedCard['list']),
-                    Divider(
-                        color: Colors.white
-                    ),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
+
                   ],
                 ),
               );

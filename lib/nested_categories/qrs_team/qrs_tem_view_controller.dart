@@ -3,8 +3,7 @@ import '../../detail_views/qrs_team_cards/qrs_first_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_second_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_third_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_five_card_detail_page.dart';
-
-
+import '../../customWidgets/floating_custom_button.dart';
 
 class QrsTeamViewController extends StatelessWidget {
 
@@ -19,6 +18,12 @@ class QrsTeamViewController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Container(
         child: PageView(
           controller: PageController(

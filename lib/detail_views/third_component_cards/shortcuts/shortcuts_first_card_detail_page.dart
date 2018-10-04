@@ -52,8 +52,7 @@ class ShortcutsFirstCardDetailPage extends StatelessWidget {
                             )
                           ],
                         )
-                    ):Container(),
-                    BackCardButton('Wróć'),
+                    ):Container()
                   ],
                 ),
               );

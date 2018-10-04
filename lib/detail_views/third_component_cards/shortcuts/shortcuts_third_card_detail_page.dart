@@ -42,10 +42,7 @@ class ShortcutsThirdCardDetailPage extends StatelessWidget {
                             color: Colors.blue[100]
                         ),
                         InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoBox'], 20.0, false, FontWeight.normal),
-                        Divider(
-                            color: Colors.white
-                        ),
-                        BackCardButton('Wróć'),
+
                       ],
                     ),
                   );

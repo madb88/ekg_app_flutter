@@ -65,8 +65,7 @@ class NestedShortcutsFirstCardDetailPage extends StatelessWidget {
                     ListBuilder(sendedCard['subList3']),
                     InfoContainer(Colors.yellow[900], Colors.yellow[200],
                         sendedCard['SubHead4'], 20.0, false, FontWeight.bold),
-                    ListBuilder(sendedCard['subList4']),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['subList4'])
                   ],
                 ),
               );

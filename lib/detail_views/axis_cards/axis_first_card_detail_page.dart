@@ -189,8 +189,6 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(),
-                    BackCardButton('Wróć'),
                   ],
                 ),
               );

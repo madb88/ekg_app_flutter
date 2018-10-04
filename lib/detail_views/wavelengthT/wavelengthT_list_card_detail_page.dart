@@ -49,9 +49,7 @@ class WavelengthTListCardDetailPage extends StatelessWidget {
                                       FontWeight.bold)),
                             ],
                           )
-                        : Container(),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                        : Container()
                   ],
                 ),
               );

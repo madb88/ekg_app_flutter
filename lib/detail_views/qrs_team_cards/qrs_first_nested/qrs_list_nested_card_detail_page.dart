@@ -54,12 +54,7 @@ class QrsListNestedCardDetailPage extends StatelessWidget {
                     ListTile(
                       leading: sendedCard['boldListTile'] != "" ? Icon(Icons.chevron_right) : Text(''),
                       title: Text(sendedCard['boldListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-                    ),
-
-
-
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

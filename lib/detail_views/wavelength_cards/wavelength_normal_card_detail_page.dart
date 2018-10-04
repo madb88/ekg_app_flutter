@@ -63,12 +63,7 @@ class WaveLengthNormalCardDetailPage extends StatelessWidget {
                         sendedCard['description'],
                         20.0,
                         false,
-                        FontWeight.normal),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    BackCardButton('Wróć'),
+                        FontWeight.normal)
                   ],
                 ),
               );

@@ -51,11 +51,7 @@ class StElevationSecondCardDetailPage extends StatelessWidget {
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['secondList'][2],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-                    ),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

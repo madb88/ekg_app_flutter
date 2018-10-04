@@ -48,9 +48,7 @@ class QrsFirstNestedCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['listHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['secondList']),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['secondList'])
                   ],
                 ),
               );

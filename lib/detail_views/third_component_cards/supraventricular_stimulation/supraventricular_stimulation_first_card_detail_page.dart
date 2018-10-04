@@ -52,11 +52,7 @@ class SuperaventricularFirstCardDetailPage extends StatelessWidget {
                         color: Colors.yellow[100],
                       ),
                       child: ListBuilder(sendedCard['secondList2']),
-                    ):Container(),
-                    Divider(
-                        color: Colors.white
-                    ),
-                    BackCardButton('Wróć'),
+                    ):Container()
                   ],
                 ),
               );

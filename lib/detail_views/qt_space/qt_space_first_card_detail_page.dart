@@ -38,12 +38,7 @@ class QtSpaceFirstCardDetailPage extends StatelessWidget {
                       height: 10.0,
                       color: Colors.white
                     ),
-                    CalculatorButton(),
-                    Divider(
-                      height: 10.0,
-                      color: Colors.white
-                    ),
-                    BackCardButton('Wróć'),
+                    CalculatorButton()
                   ],
                 ),
               );

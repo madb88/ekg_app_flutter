@@ -45,9 +45,7 @@ class StElevationFirstCardDetailPage extends StatelessWidget {
                     ListTile(
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['list'][2],style: TextStyle(fontSize: 20.0)),
-                    ),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

@@ -60,10 +60,7 @@ class SecondComponentSecondCardDetailPage extends StatelessWidget {
                             ListBuilder(sendedCard['thirdList']),
                           ],
                         )
-                    ),
-                    Divider(height: 10.0, color: Colors.white),
-
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

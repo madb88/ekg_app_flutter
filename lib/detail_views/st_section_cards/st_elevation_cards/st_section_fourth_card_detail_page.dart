@@ -66,11 +66,7 @@ class StElevationFourthCardDetailPage extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

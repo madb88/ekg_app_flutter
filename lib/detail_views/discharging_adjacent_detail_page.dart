@@ -103,8 +103,6 @@ class DischargingAdjacentDetailPage extends StatelessWidget {
                             ],
                           ),
                         ])),
-                    Divider(),
-                    BackCardButton('Wróć'),
                   ],
                 ),
               );

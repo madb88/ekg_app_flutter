@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/normal_text.dart';
@@ -87,9 +86,7 @@ class FiveComponentThirdCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['listHead3'] != ''?true:false,
-                    ),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

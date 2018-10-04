@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../customWidgets/back_card_button.dart';
 import '../../../customWidgets/list_builder.dart';
 import '../../../customWidgets/info_container.dart';
 import '../../../customWidgets/normal_text.dart';
@@ -50,9 +49,7 @@ class FiveComponentFourthNestedCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['infoHead'] != ''?true:false,
-                    ),
-                    Divider(height: 15.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

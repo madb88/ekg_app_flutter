@@ -88,10 +88,7 @@ class QrsListWithRouteNestedCardDetailPage extends StatelessWidget {
 
                         ),
                       ),
-                    ),
-
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

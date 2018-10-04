@@ -4,7 +4,7 @@ import 'dart:convert';
 import '../../customWidgets/category_button_coloredit.dart';
 import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
 import 'ekg_component_view_controller.dart';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -31,6 +31,12 @@ class ComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -87,8 +93,7 @@ class ComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(IncorrectWavelengthComponentCardList(categoryNames['incorectWave'],'incorrect_wavelength'), categoryNames['incorectWave'],Colors.orange[900]),
-            BackCategoryButton("Wróc"),
+            CategoryButtonColor(IncorrectWavelengthComponentCardList(categoryNames['incorectWave'],'incorrect_wavelength'), categoryNames['incorectWave'],Colors.orange[900])
           ],
         ),
       ),

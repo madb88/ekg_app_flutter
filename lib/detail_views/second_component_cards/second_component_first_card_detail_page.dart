@@ -31,8 +31,7 @@ class SecondComponentFirstCardDetailPage extends StatelessWidget {
                     ListBuilder(sendedCard['list']),
                     Divider(height: 10.0, color: Colors.white),
                     sendedCard['infoBox'] != ''?InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoBox'], 20.0, false, FontWeight.normal):Container(),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+
                   ],
                 ),
               );

@@ -70,9 +70,7 @@ class IwThirdCardDetailPage extends StatelessWidget {
                           ListBuilder(sendedCard['secondList']),
                         ],
                       ),
-                    ),
-                    Divider(height: 15.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/six_component/six_component_fist_card_detail_page.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 
 class SixComponentViewController extends StatelessWidget {
@@ -11,6 +12,12 @@ class SixComponentViewController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Container(
         child: PageView(
           controller: PageController(
@@ -28,7 +35,8 @@ class SixComponentViewController extends StatelessWidget {
             SixComponentFirstCardDetailPage(cardsCollection[6]),
             SixComponentFirstCardDetailPage(cardsCollection[7]),
             SixComponentFirstCardDetailPage(cardsCollection[8]),
-            SixComponentFirstCardDetailPage(cardsCollection[9])
+            SixComponentFirstCardDetailPage(cardsCollection[9]),
+            SixComponentFirstCardDetailPage(cardsCollection[10])
           ],
         ),
       ),

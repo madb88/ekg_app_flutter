@@ -37,8 +37,7 @@ class QrsSecondCardDetailPage extends StatelessWidget {
                                 sendedCard['listTwoHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['listTwo']),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['listTwo'])
                   ],
                 ),
               );

@@ -63,10 +63,7 @@ class EpisodeCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead4'], FontWeight.bold))
                       ],
                     ),
-                    ListBuilder(sendedCard['list4']),
-                    
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list4'])
                   ],
                 ),
               );

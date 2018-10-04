@@ -32,9 +32,7 @@ class DetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
 
                  children: <Widget>[
-                  descriptionSection,
-                  Divider(),
-                  BackCardButton('Wróć'),
+                  descriptionSection
                 ],
               );
             },

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../detail_page.dart';
 import '../.././detail_views/axis_cards/axis_first_card_detail_page.dart';
 import '../.././detail_views/axis_cards/axis_third_card_detail_page.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 class AxisViewController extends StatefulWidget {
 
@@ -32,6 +33,12 @@ class _AxisViewControllerState extends State<AxisViewController> {
     };
 
     return Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Stack(
         children: <Widget>[
           PageView.builder(

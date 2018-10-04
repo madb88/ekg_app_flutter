@@ -70,9 +70,7 @@ class FourthComponentSecondCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['thirdList'] != ''?true:false,
-                    ),
-                    Divider(height: 10.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    )
                   ],
                 ),
               );

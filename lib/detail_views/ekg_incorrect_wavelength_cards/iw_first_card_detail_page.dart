@@ -42,9 +42,7 @@ class IwFirstCardDetailPage extends StatelessWidget {
                       height: 15.0,
                       color: Colors.white
                     ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal),
-                    Divider(),
-                    BackCardButton('Wróć'),
+                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal)
                   ],
                 ),
               );

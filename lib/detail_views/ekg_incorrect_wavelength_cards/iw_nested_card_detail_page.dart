@@ -26,9 +26,7 @@ class IwNestedCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    ListBuilder(sendedCard['list']),
-                    Divider(height: 15.0, color: Colors.white),
-                    BackCardButton('Wróć'),
+                    ListBuilder(sendedCard['list'])
                   ],
                 ),
               );
