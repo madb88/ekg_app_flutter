@@ -118,11 +118,11 @@ class SixComponentCardList extends StatelessWidget {
                     textAlign: TextAlign.center
                 ),
                 children: <Widget>[
-                  CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.green[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['second'],'second_nested_six_component_cards'), categoryNames['second'],Colors.green[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['third'],'second_nested_six_component_cards'), categoryNames['third'],Colors.green[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['fourth'],'second_nested_six_component_cards'), categoryNames['fourth'],Colors.green[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['five'],'second_nested_six_component_cards'), categoryNames['five'],Colors.green[400]),
+                  CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.orange[400]),
+                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['second'],'second_nested_six_component_cards'), categoryNames['second'],Colors.orange[400]),
+                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['third'],'second_nested_six_component_cards'), categoryNames['third'],Colors.orange[400]),
+                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['fourth'],'second_nested_six_component_cards'), categoryNames['fourth'],Colors.orange[400]),
+                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['five'],'second_nested_six_component_cards'), categoryNames['five'],Colors.orange[400]),
                 ],
               ),
             ),

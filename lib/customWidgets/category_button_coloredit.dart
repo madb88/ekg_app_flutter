@@ -28,8 +28,8 @@ class CategoryButtonColor extends StatelessWidget {
                 height: 65.0,
                 decoration: BoxDecoration(
                   color: buttonColor,
-                  border: Border.all(color: Colors.green[900], width: 1.0),
-                  borderRadius: BorderRadius.circular(10.0),
+                  border: Border.all(color: Colors.black, width: 1.0),
+                  borderRadius: BorderRadius.circular(5.0),
                 ),
                 child: Center(
                   child: Text(
