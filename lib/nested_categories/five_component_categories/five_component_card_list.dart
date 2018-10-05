@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'five_component_view_controller.dart';
-//import 'sinus_rhythm/sinus_rhythm_card_list.dart';
 import 'first_nested_five_component_category/first_nested_component_card_list.dart';
 
 
@@ -33,6 +32,12 @@ class FiveComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -108,7 +113,6 @@ class FiveComponentCardList extends StatelessWidget {
             ),
             CategoryButtonColor(FirstNestedComponentCardList(categoryNames['first'],'first_nested_five_component'), categoryNames['first'],Colors.green[400]),
 //            CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.green[400]),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

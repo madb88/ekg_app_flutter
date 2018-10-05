@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 import 'st_section_view_controller.dart';
 import '../stSection/st_section_elevation_card_list.dart';
 import '../stSection/st_section_lowering_card_list.dart';
 import '../../customWidgets/category_button_coloredit.dart';
+
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -33,6 +34,12 @@ class StSectionCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -95,7 +102,6 @@ class StSectionCardList extends StatelessWidget {
             ),
             CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[900]),
             CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[900]),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

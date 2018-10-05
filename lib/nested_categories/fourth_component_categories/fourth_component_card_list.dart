@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'fourth_component_view_controller.dart';
 import 'sinus_rhythm/sinus_rhythm_card_list.dart';
@@ -33,6 +33,12 @@ class FourthComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -40,14 +46,12 @@ class FourthComponentCardList extends StatelessWidget {
       ),
       body:
       new Container(
-
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
             new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -106,9 +110,20 @@ class FourthComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.green[400]),
-            CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.green[400]),
-            BackCategoryButton("Wróc"),
+            Container(
+              color: Colors.orange[600],
+              child: ExpansionTile(
+                trailing: Icon(Icons.list, color: Colors.black),
+                title: Text('Podkategorie',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                    textAlign: TextAlign.left
+                ),
+                children: <Widget>[
+                  CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.orange[400]),
+                  CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.orange[400]),
+                ],
+              ),
+            ),
           ],
         ),
       ),

@@ -12,7 +12,7 @@ class FiveComponentViewController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      floatingActionButton: FloatingCustomButton(Colors.orange[900],'tag'),
       bottomNavigationBar: BottomAppBar(
           color: Colors.blue[900],
           child: Container(height: 40.0)

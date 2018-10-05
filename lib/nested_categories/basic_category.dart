@@ -3,6 +3,7 @@ import '../home_page.dart';
 import './drain_categories/drain_card_list.dart';
 import '../category_list.dart';
 import '../customWidgets/category_button.dart';
+import '../customWidgets/floating_custom_button.dart';
 import '../customWidgets/navigator_widget.dart';
 import 'axis_categories/axis_card_list.dart';
 import 'feature_categories/feature_card_list.dart';
@@ -32,6 +33,12 @@ class BasicCategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       drawer: NavigatorWidget(),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],

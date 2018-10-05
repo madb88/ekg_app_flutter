@@ -174,7 +174,8 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                             border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
                             color: Colors.yellow[100],
                           ),
-                          child: ListBuilder(sendedCard['sevenList'])
+                          child: ListBuilder(sendedCard['sevenList']),
+                          padding: EdgeInsets.only(bottom: 15.0),
                       ),
                       visible:  sendedCard['sevenList'] != ''?true:false,
                     )

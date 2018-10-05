@@ -5,7 +5,7 @@ import '../../customWidgets/category_button_coloredit.dart';
 import 'qrs_tem_view_controller.dart';
 import 'qrs_r_nested_categories.dart';
 import 'qrs_team_first_nested_card_list.dart';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -33,6 +33,12 @@ class QrsTeamCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -91,9 +97,20 @@ class QrsTeamCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[900]),
-            CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[900]),
-            BackCategoryButton("Wróc"),
+            Container(
+              color: Colors.orange[600],
+              child: ExpansionTile(
+                trailing: Icon(Icons.list, color: Colors.black),
+                title: Text('Podkategorie',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                    textAlign: TextAlign.left
+                ),
+                children: <Widget>[
+                  CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[400]),
+                  CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[400]),
+                ],
+              ),
+            ),
           ],
         ),
       ),

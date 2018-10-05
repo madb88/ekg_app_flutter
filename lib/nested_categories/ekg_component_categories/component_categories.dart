@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../home_page.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
+import './../../customWidgets/floating_custom_button.dart';
 import '../episode_interval_categories/episode_interval_card_list.dart';
 import '../qrs_team/qrs_team_card_list.dart';
 import '../stSection/st_section_card_list.dart';
@@ -44,6 +45,12 @@ class ComponentCategoriesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       drawer: NavigatorWidget(),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
@@ -72,7 +79,7 @@ class ComponentCategoriesList extends StatelessWidget {
         ],
       ),
       body:  Container(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(5.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[

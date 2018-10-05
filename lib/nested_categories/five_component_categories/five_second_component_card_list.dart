@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'five_second_component_view_controller.dart';
 import 'second_nested_five_component_category/second_nested_component_card_list.dart';
@@ -31,6 +31,12 @@ class FiveSecondComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -105,7 +111,6 @@ class FiveSecondComponentCardList extends StatelessWidget {
               ),
             ),
             CategoryButtonColor(SecondNestedComponentCardList(categoryNames['first'],'second_nested_five_component_cards'), categoryNames['first'],Colors.green[400]),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

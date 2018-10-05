@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 import 'st_section_lowering_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -21,14 +21,15 @@ class StSectionLoweringCardList extends StatelessWidget {
   final categoryName;
   StSectionLoweringCardList(this.category, this.categoryName);
 
-  final categoryNames = {
-    'stSectionElevation':'Uniesienie odcinka ST',
-    'stSectionReduction':'Obniżenie odcinka ST',
-  };
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -89,7 +90,6 @@ class StSectionLoweringCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

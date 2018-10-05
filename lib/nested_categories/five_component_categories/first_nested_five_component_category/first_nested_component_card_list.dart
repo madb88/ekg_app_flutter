@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../../customWidgets/back_category_button.dart';
+import '../../../customWidgets/floating_custom_button.dart';
 import 'first_nested_component_view_controller.dart';
 
 
@@ -31,6 +32,12 @@ class FirstNestedComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -104,7 +111,6 @@ class FirstNestedComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

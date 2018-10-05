@@ -38,12 +38,12 @@ class StudyCategoriesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      floatingActionButton: FloatingCustomButton(Colors.blue[800],'tag'),
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
       bottomNavigationBar: BottomAppBar(
           color: Colors.blue[900],
           child: Container(height: 40.0)
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       drawer: NavigatorWidget(),
       appBar: AppBar(
         backgroundColor: Colors.blue[900],

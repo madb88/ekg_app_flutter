@@ -26,7 +26,7 @@ class DrainCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      floatingActionButton: FloatingCustomButton(Colors.orange[900],'tag'),
       bottomNavigationBar: BottomAppBar(
           color: Colors.blue[900],
           child: Container(height: 40.0)
@@ -37,8 +37,7 @@ class DrainCardList extends StatelessWidget {
         title: new Text(category),
         
       ),
-      body: new Container(
-
+      body: Container(
         padding: const EdgeInsets.all(5.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(
@@ -46,7 +45,6 @@ class DrainCardList extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Expanded(
-
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
+import '../../customWidgets/floating_custom_button.dart';
 import '../stSection/st_section_lowering_card_list.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'second_component_view_controller.dart';
@@ -35,6 +35,12 @@ class SecondComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -95,10 +101,22 @@ class SecondComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[900]),
-            CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[900]),
-            CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[900]),
-            BackCategoryButton("Wróc"),
+            Container(
+              color: Colors.orange[600],
+              child: ExpansionTile(
+                trailing: Icon(Icons.list, color: Colors.black),
+                title: Text('Podkategorie',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                    textAlign: TextAlign.left
+                ),
+                children: <Widget>[
+                  CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[400]),
+                  CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[400]),
+                  CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[400]),
+                ],
+              ),
+            ),
+
           ],
         ),
       ),

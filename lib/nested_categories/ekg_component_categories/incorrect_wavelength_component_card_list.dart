@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import 'iw_nested_component_view_controller.dart';
+import '../../customWidgets/floating_custom_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -24,6 +25,12 @@ class IncorrectWavelengthComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue[900],
+          child: Container(height: 40.0)
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -78,29 +85,6 @@ class IncorrectWavelengthComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-
-            Container(
-                height: 50.0,
-                child: new InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: new Container(
-                    height: 5.0,
-                    decoration: new BoxDecoration(
-                      color: Colors.blue[800],
-                      border: new Border.all(color: Colors.white, width: 2.0),
-                      borderRadius: new BorderRadius.circular(10.0),
-                    ),
-                    child: new Center(
-                      child: new Text(
-                        'Wróć',
-                        style: new TextStyle(fontSize: 18.0, color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
           ],
         ),
       ),

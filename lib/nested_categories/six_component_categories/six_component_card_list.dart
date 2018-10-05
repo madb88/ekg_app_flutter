@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'six_component_view_controller.dart';
 import 'first_nested_category/first_nested_six_component_card_list.dart';
@@ -36,7 +35,6 @@ class SixComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -115,7 +113,7 @@ class SixComponentCardList extends StatelessWidget {
                 trailing: Icon(Icons.list, color: Colors.black),
                 title: Text('Podkategorie',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.center
+                    textAlign: TextAlign.left
                 ),
                 children: <Widget>[
                   CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.orange[400]),
@@ -126,9 +124,6 @@ class SixComponentCardList extends StatelessWidget {
                 ],
               ),
             ),
-
-
-//            BackCategoryButton("Wróc"),
           ],
         ),
       ),
