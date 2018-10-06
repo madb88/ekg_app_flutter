@@ -30,12 +30,6 @@ class EpisodeIntervalCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
-      bottomNavigationBar: BottomAppBar(
-          color: Colors.blue[900],
-          child: Container(height: 40.0)
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -43,7 +37,6 @@ class EpisodeIntervalCardList extends StatelessWidget {
       ),
       body:
       new Container(
-
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(

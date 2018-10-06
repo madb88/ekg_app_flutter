@@ -32,12 +32,6 @@ class FiveComponentCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
-      bottomNavigationBar: BottomAppBar(
-          color: Colors.blue[900],
-          child: Container(height: 40.0)
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -112,7 +106,6 @@ class FiveComponentCardList extends StatelessWidget {
               ),
             ),
             CategoryButtonColor(FirstNestedComponentCardList(categoryNames['first'],'first_nested_five_component'), categoryNames['first'],Colors.green[400]),
-//            CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.green[400]),
           ],
         ),
       ),

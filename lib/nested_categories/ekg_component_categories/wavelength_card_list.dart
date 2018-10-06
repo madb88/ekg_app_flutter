@@ -31,7 +31,6 @@ class WaveLengthCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -39,7 +38,6 @@ class WaveLengthCardList extends StatelessWidget {
       ),
       body:
       new Container(
-
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(

@@ -34,11 +34,9 @@ class AdditionalVentricularCardList extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-
       ),
       body:
       new Container(
-
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(

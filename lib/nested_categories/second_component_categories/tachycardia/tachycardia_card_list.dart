@@ -36,7 +36,6 @@ class TachycardiaCardList extends StatelessWidget {
       ),
       body:
       new Container(
-
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(

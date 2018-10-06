@@ -34,12 +34,6 @@ class StSectionCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      floatingActionButton: FloatingCustomButton(Colors.blue[900],'tag'),
-      bottomNavigationBar: BottomAppBar(
-          color: Colors.blue[900],
-          child: Container(height: 40.0)
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
@@ -100,8 +94,20 @@ class StSectionCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[900]),
-            CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[900]),
+            Container(
+              color: Colors.orange[600],
+              child: ExpansionTile(
+                trailing: Icon(Icons.list, color: Colors.black),
+                title: Text('Podkategorie',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                    textAlign: TextAlign.left
+                ),
+                children: <Widget>[
+                  CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[400]),
+                  CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[400]),
+                ],
+              ),
+            ),
           ],
         ),
       ),

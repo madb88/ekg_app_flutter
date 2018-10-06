@@ -83,7 +83,6 @@ class QtSpaceCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),
