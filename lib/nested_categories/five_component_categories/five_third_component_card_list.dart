@@ -47,7 +47,20 @@ class FiveThirdComponentCardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
+            Container(
+              color: Colors.orange[600],
+              child: ExpansionTile(
+                trailing: Icon(Icons.list, color: Colors.black),
+                title: Text('Blok lewej i prawej odnogi (HISSA)',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                    textAlign: TextAlign.left
+                ),
+                children: <Widget>[
+                  CategoryButtonColor(FourthNestedComponentCardList(categoryNames['first'],'five_third_nested_component_cards'), categoryNames['first'],Colors.orange[400]),
+                  CategoryButtonColor(FiveNestedComponentCardList(categoryNames['second'],'five_fourth_nested_component_cards'), categoryNames['second'],Colors.orange[400]),
+                ],
+              ),
+            ),
             new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -104,20 +117,6 @@ class FiveThirdComponentCardList extends StatelessWidget {
                     );
                   }
                 },
-              ),
-            ),
-            Container(
-              color: Colors.orange[600],
-              child: ExpansionTile(
-                trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.left
-                ),
-                children: <Widget>[
-                  CategoryButtonColor(FourthNestedComponentCardList(categoryNames['first'],'five_third_nested_component_cards'), categoryNames['first'],Colors.orange[400]),
-                  CategoryButtonColor(FiveNestedComponentCardList(categoryNames['second'],'five_fourth_nested_component_cards'), categoryNames['second'],Colors.orange[400]),
-                ],
               ),
             ),
           ],

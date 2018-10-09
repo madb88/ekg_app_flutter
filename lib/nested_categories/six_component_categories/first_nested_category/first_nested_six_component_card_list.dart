@@ -104,7 +104,6 @@ class FirstNestedSixComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

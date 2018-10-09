@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../detail_views/six_component/second_nested/second_nested_card_detail_page.dart';
-import '../../../customWidgets/floating_custom_button.dart';
 
 class SecondNestedSixComponentViewController extends StatelessWidget {
   final index;

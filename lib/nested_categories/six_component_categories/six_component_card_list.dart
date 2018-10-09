@@ -5,6 +5,8 @@ import '../../customWidgets/category_button_coloredit.dart';
 import 'six_component_view_controller.dart';
 import 'first_nested_category/first_nested_six_component_card_list.dart';
 import 'second_nested_category/second_nested_six_component_card_list.dart';
+import 'third_nested_category/third_nested_six_component_card_list.dart';
+import 'fourth_nested_category/fourth_nested_six_component_card_list.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -28,8 +30,9 @@ class SixComponentCardList extends StatelessWidget {
     'first':'Zaburzenia elektrolitowe',
     'second':'Zaburzenie funkcji tarczycy',
     'third':'Przerost',
-    'fourth':'OZW',
-    'five':'Błędy techniczne',
+    'fourth':'Opis martwicy',
+    'five':'OZW',
+    'six':'Błędy techniczne'
   };
 
   @override
@@ -118,9 +121,10 @@ class SixComponentCardList extends StatelessWidget {
                 children: <Widget>[
                   CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.orange[400]),
                   CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['second'],'second_nested_six_component_cards'), categoryNames['second'],Colors.orange[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['third'],'second_nested_six_component_cards'), categoryNames['third'],Colors.orange[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['fourth'],'second_nested_six_component_cards'), categoryNames['fourth'],Colors.orange[400]),
+                  CategoryButtonColor(ThirdNestedSixComponentCardList(categoryNames['third'],'third_nested_six_component_cards'), categoryNames['third'],Colors.orange[400]),
+                  CategoryButtonColor(FourthNestedSixComponentCardList(categoryNames['fourth'],'fourth_nested_six_component_cards'), categoryNames['fourth'],Colors.orange[400]),
                   CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['five'],'second_nested_six_component_cards'), categoryNames['five'],Colors.orange[400]),
+                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['six'],'second_nested_six_component_cards'), categoryNames['six'],Colors.orange[400]),
                 ],
               ),
             ),

@@ -74,6 +74,8 @@ flutter:
    - data_repo/second_nested_six_component_cards.json
    - data_repo/sinus_rhythm.json
    - data_repo/first_nested_five_component.json
+   - data_repo/third_nested_six_component_cards.json
+   - data_repo/fourth_nested_six_component_cards.json
    - images/logo3.png
    - images/body.jpg
    - images/ekg_images/

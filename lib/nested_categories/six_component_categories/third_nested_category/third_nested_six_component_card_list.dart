@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import '../../../customWidgets/back_category_button.dart';
-import 'second_nested_six_component_view_controller.dart';
+import 'third_nested_six_component_view_controller.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -18,11 +18,11 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class SecondNestedSixComponentCardList extends StatelessWidget {
+class ThirdNestedSixComponentCardList extends StatelessWidget {
   final category;
   final categoryName;
 
-  SecondNestedSixComponentCardList(
+  ThirdNestedSixComponentCardList(
       this.category,
       this.categoryName
       );
@@ -75,7 +75,7 @@ class SecondNestedSixComponentCardList extends StatelessWidget {
                                     context,
                                      MyCustomRoute(
                                         builder: (context) =>
-                                            SecondNestedSixComponentViewController(
+                                            ThirdNestedSixComponentViewController(
                                                 index, sendedCard)),
                                   );
                                 },
