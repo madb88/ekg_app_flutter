@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/category_button_coloredit.dart';
-import 'six_component_view_controller.dart';
-import 'first_nested_category/first_nested_six_component_card_list.dart';
-import 'second_nested_category/second_nested_six_component_card_list.dart';
-import 'third_nested_category/third_nested_six_component_card_list.dart';
-import 'fourth_nested_category/fourth_nested_six_component_card_list.dart';
-import 'six_nested_category/six_nested_cards_list.dart';
-
+import '../../../../customWidgets/floating_custom_button.dart';
+import 'ozw_first_component_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -23,18 +17,13 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class SixComponentCardList extends StatelessWidget {
+class OzwFirstComponentCardList extends StatelessWidget {
   final category;
-  SixComponentCardList(this.category);
 
-  final categoryNames = {
-    'first':'Zaburzenia elektrolitowe',
-    'second':'Zaburzenie funkcji tarczycy',
-    'third':'Przerost',
-    'fourth':'Opis martwicy',
-    'five':'OZW',
-    'six':'Błędy techniczne'
-  };
+  OzwFirstComponentCardList(
+      this.category,
+
+    );
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +31,7 @@ class SixComponentCardList extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
+
       ),
       body:
       new Container(
@@ -57,7 +47,7 @@ class SixComponentCardList extends StatelessWidget {
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('data_repo/six_component.json'),
+                    .loadString('data_repo/ozw/first_category.json'),
                 builder: (context, snapshot) {
                   if(snapshot.data == null){
                     return Container(
@@ -70,6 +60,7 @@ class SixComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
+                          elevation: 2.0,
                           shape: Border.all(color: Colors.blue[900]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -82,7 +73,7 @@ class SixComponentCardList extends StatelessWidget {
                                     context,
                                      MyCustomRoute(
                                         builder: (context) =>
-                                            SixComponentViewController(
+                                            OzwFirstComponentViewController(
                                                 index, sendedCard)),
                                   );
                                 },
@@ -109,24 +100,6 @@ class SixComponentCardList extends StatelessWidget {
                     );
                   }
                 },
-              ),
-            ),
-            Container(
-              color: Colors.orange[600],
-              child: ExpansionTile(
-                trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.left
-                ),
-                children: <Widget>[
-                  CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.orange[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['second'],'second_nested_six_component_cards'), categoryNames['second'],Colors.orange[400]),
-                  CategoryButtonColor(ThirdNestedSixComponentCardList(categoryNames['third'],'third_nested_six_component_cards'), categoryNames['third'],Colors.orange[400]),
-                  CategoryButtonColor(FourthNestedSixComponentCardList(categoryNames['fourth'],'fourth_nested_six_component_cards'), categoryNames['fourth'],Colors.orange[400]),
-                  CategoryButtonColor(SixNestedCardsList(categoryNames['five']), categoryNames['five'],Colors.orange[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['six'],'second_nested_six_component_cards'), categoryNames['six'],Colors.orange[400]),
-                ],
               ),
             ),
           ],

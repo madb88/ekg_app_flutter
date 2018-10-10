@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../home_page.dart';
-import '../../category_list.dart';
-import './../../customWidgets/category_button.dart';
-import './../../customWidgets/navigator_widget.dart';
-import 'five_component_card_list.dart';
-import 'five_second_component_card_list.dart';
-import 'five_third_component_card_list.dart';
-import 'five_fourth_component_card_list.dart';
-import './../../customWidgets/floating_custom_button.dart';
+import '../../../home_page.dart';
+import '../../../category_list.dart';
+import './../../../customWidgets/category_button.dart';
+import './../../../customWidgets/navigator_widget.dart';
+import './../../../customWidgets/floating_custom_button.dart';
+import 'first_category/ozw_first_component_card_list.dart';
 
 
 
@@ -23,18 +20,16 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class FiveBasicComponentCategoriesList extends StatelessWidget {
+class SixNestedCardsList extends StatelessWidget {
   final componentName;
 
-  FiveBasicComponentCategoriesList(
+  SixNestedCardsList(
     this.componentName
   );
 
   final categoryNames = {
-    'first':'Zaburzenia funkcji węzła zatokowego',
-    'second':'Przewodzenie Przedsionkowo-komorowe',
-    'third':'Zaburzenia przewodzenia śródkomorowego',
-    'fourth':'Stymulator'
+    'first':'Ściana przednia',
+    'second':'Ściana boczna',
   };
 
   @override
@@ -82,22 +77,14 @@ class FiveBasicComponentCategoriesList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                CategoryButton(FiveComponentCardList(categoryNames['first']), categoryNames['first']),
+                CategoryButton(OzwFirstComponentCardList(categoryNames['first']), categoryNames['first']),
                 Divider(
                   height: 5.0,
                 ),
-                CategoryButton(FiveSecondComponentCardList(categoryNames['second']), categoryNames['second']),
+                CategoryButton(OzwFirstComponentCardList(categoryNames['second']), categoryNames['second']),
                 Divider(
                   height: 5.0,
                 ),
-                CategoryButton(FiveThirdComponentCardList(categoryNames['third']), categoryNames['third']),
-                Divider(
-                  height: 5.0,
-                ),
-                CategoryButton(FiveFourthComponentCardList(categoryNames['fourth']), categoryNames['fourth']),
-                Divider(
-                  height: 5.0,
-                )
               ],
             )
           ],
