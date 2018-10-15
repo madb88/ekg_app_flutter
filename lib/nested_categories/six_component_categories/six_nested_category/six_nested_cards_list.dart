@@ -5,8 +5,7 @@ import './../../../customWidgets/category_button.dart';
 import './../../../customWidgets/navigator_widget.dart';
 import './../../../customWidgets/floating_custom_button.dart';
 import 'first_category/ozw_first_component_card_list.dart';
-
-
+import 'second_category/ozw_second_component_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -81,7 +80,7 @@ class SixNestedCardsList extends StatelessWidget {
                 Divider(
                   height: 5.0,
                 ),
-                CategoryButton(OzwFirstComponentCardList(categoryNames['second']), categoryNames['second']),
+                CategoryButton(OzwSecondComponentCardList(categoryNames['second']), categoryNames['second']),
                 Divider(
                   height: 5.0,
                 ),
