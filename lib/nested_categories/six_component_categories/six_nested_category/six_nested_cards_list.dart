@@ -7,6 +7,7 @@ import './../../../customWidgets/floating_custom_button.dart';
 import 'first_category/ozw_first_component_card_list.dart';
 import 'second_category/ozw_second_component_card_list.dart';
 import 'third_category/ozw_third_component_card_list.dart';
+import 'fourth_category/ozw_fourth_component_card_list.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -31,6 +32,7 @@ class SixNestedCardsList extends StatelessWidget {
     'first':'Ściana przednia',
     'second':'Ściana boczna',
     'third':'Ściana dolna',
+    'fourth':'Ściana dolno-podstawna',
   };
 
   @override
@@ -87,6 +89,10 @@ class SixNestedCardsList extends StatelessWidget {
                   height: 5.0,
                 ),
                 CategoryButton(OzwThirdComponentCardList(categoryNames['third']), categoryNames['third']),
+                Divider(
+                  height: 5.0,
+                ),
+                CategoryButton(OzwFourthComponentCardList(categoryNames['fourth']), categoryNames['fourth']),
                 Divider(
                   height: 5.0,
                 ),

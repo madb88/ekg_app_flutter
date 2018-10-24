@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../detail_views/six_component/ozw/second_list/ozw_fourth_card_detail_page.dart';
+import '../../../../detail_views/six_component/ozw/third_list/ozw_five_card_detail_page.dart';
+import '../../../../detail_views/six_component/ozw/third_list/ozw_six_card_detail_page.dart';
+import '../../../../detail_views/six_component/ozw/third_list/ozw_seven_card_detail_page.dart';
 
 class OzwThirdComponentViewController extends StatelessWidget {
   final index;
@@ -18,10 +20,9 @@ class OzwThirdComponentViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-            OzwFourthCardDetailPage(cardsCollection[0]),
-            OzwFourthCardDetailPage(cardsCollection[1]),
-            OzwFourthCardDetailPage(cardsCollection[2]),
-
+            OzwFiveCardDetailPage(cardsCollection[0]),
+            OzwSixCardDetailPage(cardsCollection[1]),
+            OzwSevenCardDetailPage(cardsCollection[2]),
           ],
         ),
       ),
