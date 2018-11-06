@@ -80,6 +80,8 @@ flutter:
    - data_repo/ozw/second_category.json
    - data_repo/ozw/third_category.json
    - data_repo/ozw/fourth_category.json
+   - data_repo/ozw/ozw_cards.json
+   - data_repo/ozw/seven_category.json
    - images/logo3.png
    - images/body.jpg
    - images/ekg_images/

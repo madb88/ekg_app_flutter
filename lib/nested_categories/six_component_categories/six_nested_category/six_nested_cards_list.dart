@@ -4,10 +4,16 @@ import '../../../category_list.dart';
 import './../../../customWidgets/category_button.dart';
 import './../../../customWidgets/navigator_widget.dart';
 import './../../../customWidgets/floating_custom_button.dart';
+import './../../../customWidgets/card.dart';
 import 'first_category/ozw_first_component_card_list.dart';
 import 'second_category/ozw_second_component_card_list.dart';
 import 'third_category/ozw_third_component_card_list.dart';
 import 'fourth_category/ozw_fourth_component_card_list.dart';
+import 'seven_category/ozw_seven_component_card_list.dart';
+import './../../../detail_views/six_component/ozw/ozw_cards/ozw_fist_wc_detail_page.dart';
+import './../../../detail_views/six_component/ozw/ozw_cards/ozw_second_wc_detail_page.dart';
+
+
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -33,6 +39,9 @@ class SixNestedCardsList extends StatelessWidget {
     'second':'Ściana boczna',
     'third':'Ściana dolna',
     'fourth':'Ściana dolno-podstawna',
+    'five':'Zawał prawej komory',
+    'six':'Ostry zespół wieńcowy w ewolucjach przewiedzionych z blokiem śródkomorowym',
+    'seven':'Stymulator',
   };
 
   @override
@@ -96,6 +105,15 @@ class SixNestedCardsList extends StatelessWidget {
                 Divider(
                   height: 5.0,
                 ),
+                NewCard(OzwFirstWcDetailPage(categoryNames['five'], 0), categoryNames['five'],''),
+                Divider(
+                  height: 5.0,
+                ),
+                NewCard(OzwSecondWcDetailPage(categoryNames['six'], 1), categoryNames['six'],''),
+                Divider(
+                  height: 5.0,
+                ),
+                CategoryButton(OzwSevenComponentCardList(categoryNames['seven']), categoryNames['seven']),
               ],
             )
           ],
