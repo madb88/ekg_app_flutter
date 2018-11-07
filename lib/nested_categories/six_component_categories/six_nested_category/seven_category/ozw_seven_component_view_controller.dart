@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../detail_views/six_component/ozw/seven_list/ozw_nine_card_detail_page.dart';
+import '../../../../detail_views/six_component/ozw/seven_list/ozw_ten_card_detail_page.dart';
 
 class OzwSevenComponentViewController extends StatelessWidget {
   final index;
@@ -18,7 +19,8 @@ class OzwSevenComponentViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-            OzwNineCardDetailPage(cardsCollection[0])
+            OzwNineCardDetailPage(cardsCollection[0]),
+            OzwTenCardDetailPage(cardsCollection[1]),
 
           ],
         ),
