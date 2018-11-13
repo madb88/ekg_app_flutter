@@ -13,6 +13,7 @@ import 'seven_category/ozw_seven_component_card_list.dart';
 import './../../../detail_views/six_component/ozw/ozw_cards/ozw_fist_wc_detail_page.dart';
 import './../../../detail_views/six_component/ozw/ozw_cards/ozw_second_wc_detail_page.dart';
 import './../../../detail_views/six_component/ozw/ozw_cards/ozw_three_wc_detail_page.dart';
+import './../../../detail_views/six_component/ozw/ozw_cards/ozw_fourth_wc_detail_page.dart';
 
 
 
@@ -44,6 +45,7 @@ class SixNestedCardsList extends StatelessWidget {
     'six':'Ostry zespół wieńcowy w ewolucjach przewiedzionych z blokiem śródkomorowym',
     'seven':'Stymulator',
     'eight':'Ewolucja zmian  podczas OZW',
+    'nine':'Dorzut Zawału',
   };
 
   @override
@@ -120,6 +122,10 @@ class SixNestedCardsList extends StatelessWidget {
                   height: 5.0,
                 ),
                 NewCard(OzwThreeWcDetailPage(categoryNames['eight'], 2), categoryNames['eight'],''),
+                Divider(
+                  height: 5.0,
+                ),
+                NewCard(OzwFourthWcDetailPage(categoryNames['nine'], 3), categoryNames['nine'],''),
               ],
             )
           ],
