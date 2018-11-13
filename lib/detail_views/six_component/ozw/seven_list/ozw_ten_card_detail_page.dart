@@ -85,59 +85,6 @@ class OzwTenCardDetailPage extends StatelessWidget {
                         ],
                       ),
                     ),
-
-
-//                    Text(
-//                      sendedCard['textOne'],
-//                      style: TextStyle(fontSize: 20.0),
-//                      textAlign: TextAlign.justify,
-//                    ),
-//                    Divider(),
-//                    Visibility(
-//                      child: Text(
-//                        sendedCard['headTwo'],
-//                        style: TextStyle(fontSize: 20.0,  fontWeight: FontWeight.bold),
-//                        textAlign: TextAlign.justify,
-//                      ),
-//                      visible: sendedCard['headTwo'] != '' ? true : false,
-//                    ),
-//                    Divider(
-//                        color: Colors.white
-//                    ),
-//                    Text(
-//                      sendedCard['textTwo'],
-//                      style: TextStyle(fontSize: 20.0),
-//                      textAlign: TextAlign.justify,
-//                    ),
-//                    Divider(),
-//                    Visibility(
-//                      child: Text(
-//                        sendedCard['headThree'],
-//                        style: TextStyle(fontSize: 20.0,  fontWeight: FontWeight.bold),
-//                        textAlign: TextAlign.justify,
-//                      ),
-//                      visible: sendedCard['headThree'] != '' ? true : false,
-//                    ),
-//                    Divider(
-//                        color: Colors.white
-//                    ),
-//                    Text(
-//                      sendedCard['textThree'],
-//                      style: TextStyle(fontSize: 20.0),
-//                      textAlign: TextAlign.justify,
-//                    ),
-//                    Divider(),
-//                    Visibility(
-//                      child: Text(
-//                        sendedCard['headFour'],
-//                        style: TextStyle(fontSize: 20.0,  fontWeight: FontWeight.bold),
-//                        textAlign: TextAlign.justify,
-//                      ),
-//                      visible: sendedCard['headThree'] != '' ? true : false,
-//                    ),
-//                    Divider(
-//                      color: Colors.white,
-//                    ),
                   ],
                 ),
               );

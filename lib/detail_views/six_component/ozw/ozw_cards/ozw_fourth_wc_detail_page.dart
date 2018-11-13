@@ -6,11 +6,11 @@ import '../../../../customWidgets/list_builder.dart';
 import '../../../../customWidgets/nested_list_builder.dart';
 import '../../../../customWidgets/info_container.dart';
 
-class OzwThreeWcDetailPage extends StatelessWidget {
+class OzwFourthWcDetailPage extends StatelessWidget {
   final category;
   final cardNumber;
 
-  OzwThreeWcDetailPage(this.category, this.cardNumber);
+  OzwFourthWcDetailPage(this.category, this.cardNumber);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class OzwThreeWcDetailPage extends StatelessWidget {
         new SliverAppBar(
           backgroundColor: Colors.blue[900],
           pinned: true,
-          title: new Text('Ewolucja zmian  podczas OZW'),
+          title: new Text('Dorzut Zawału'),
         ),
         new SliverList(
           delegate: new SliverChildBuilderDelegate(
@@ -60,53 +60,26 @@ class OzwThreeWcDetailPage extends StatelessWidget {
                                 Divider(
                                   color: Colors.white,
                                 ),
-                                InfoContainer(Colors.blue[900], Colors.blue[100], newItem[cardNumber]['headOne'], 18.0, false, FontWeight.bold),
-                                Divider(
-                                  color: Colors.white,
-                                ),
                                 ListTile(
                                   leading: Icon(Icons.chevron_right),
                                   title: Text(newItem[cardNumber]["firstListTile"],
                                       style: TextStyle(
-                                          fontSize: 20.0, fontWeight: FontWeight.normal)),
+                                          fontSize: 20.0, fontWeight: FontWeight.bold)),
                                 ),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                InfoContainer(Colors.blue[900], Colors.blue[100], newItem[cardNumber]['headTwo'], 18.0, false, FontWeight.bold),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                ListBuilder(newItem[cardNumber]["secondList"]),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                InfoContainer(Colors.blue[900], Colors.blue[100], newItem[cardNumber]['headThree'], 18.0, false, FontWeight.bold),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                ListBuilder(newItem[cardNumber]["thirdList"]),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                InfoContainer(Colors.blue[900], Colors.blue[100], newItem[cardNumber]['headFourth'], 18.0, false, FontWeight.bold),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                ListBuilder(newItem[cardNumber]["fourthList"]),
-                                Divider(
-                                  color: Colors.white,
-                                ),
-                                InfoContainer(Colors.blue[900], Colors.blue[100], newItem[cardNumber]['headFive'], 18.0, false, FontWeight.bold),
+                                  NestedListBuilder(newItem[cardNumber]["nestedList"]),
                                 Divider(
                                   color: Colors.white,
                                 ),
                                 ListTile(
                                   leading: Icon(Icons.chevron_right),
-                                  title: Text(newItem[cardNumber]["fiveListTile"],
+                                  title: Text(newItem[cardNumber]["secondListTile"],
                                       style: TextStyle(
-                                          fontSize: 20.0, fontWeight: FontWeight.normal)),
+                                          fontSize: 20.0, fontWeight: FontWeight.bold)),
                                 ),
+                                Divider(
+                                  color: Colors.white,
+                                ),
+                                InfoContainer(Colors.red[900], Colors.red[100], newItem[cardNumber]['redText'], 18.0, false, FontWeight.bold),
                               ],
                             ),
                           );
