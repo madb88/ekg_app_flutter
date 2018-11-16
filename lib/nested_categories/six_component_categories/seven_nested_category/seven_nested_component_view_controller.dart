@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../detail_views/six_component/second_nested/second_nested_card_detail_page.dart';
+import '../../../detail_views/six_component/five_nested/five_nested_card_detail_page.dart';
+import '../../../detail_views/six_component/five_nested/five_nested_second_card_detail_page.dart';
 
 class SevenNestedComponentViewController extends StatelessWidget {
   final index;
@@ -18,8 +19,8 @@ class SevenNestedComponentViewController extends StatelessWidget {
             viewportFraction: 1.0,
           ),
           children: [
-            SecondNestedCardDetailPage(cardsCollection[0]),
-            SecondNestedCardDetailPage(cardsCollection[1])
+            FiveNestedCardDetailPage(cardsCollection[0]),
+            FiveNestedSecondCardDetailPage(cardsCollection[1])
           ],
         ),
       ),
