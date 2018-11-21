@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/floating_custom_button.dart';
-import '../stSection/st_section_lowering_card_list.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'second_component_view_controller.dart';
 import 'tachycardia/tachycardia_card_list.dart';
@@ -60,6 +58,8 @@ class SecondComponentCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

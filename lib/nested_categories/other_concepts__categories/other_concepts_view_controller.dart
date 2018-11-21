@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../detail_page.dart';
 import '../../detail_views/other_concepts_cards/other_concepts_second_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class OtherConceptsViewController extends StatelessWidget {
 

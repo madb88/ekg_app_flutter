@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../detail_views/five_component_cards/first_nested_cards/five_component_first_nested_card_detail_page.dart';
 import '../../../detail_views/five_component_cards/first_nested_cards/five_component_second_nested_card_detail_page.dart';
-import '../../../customWidgets/floating_custom_button.dart';
 
 class FirstNestedComponentViewController extends StatelessWidget {
   final index;

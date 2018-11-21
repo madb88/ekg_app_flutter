@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../detail_views/feature_cards/feature_first_card_detail_page.dart';
 import '../../detail_views/feature_cards/feature_second_card_detail_page.dart';
 import '../../detail_views/feature_cards/feature_third_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class FeatureViewController extends StatelessWidget {
 

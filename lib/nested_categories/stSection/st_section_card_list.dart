@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/floating_custom_button.dart';
 import 'st_section_view_controller.dart';
 import '../stSection/st_section_elevation_card_list.dart';
 import '../stSection/st_section_lowering_card_list.dart';
@@ -59,6 +58,8 @@ class StSectionCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

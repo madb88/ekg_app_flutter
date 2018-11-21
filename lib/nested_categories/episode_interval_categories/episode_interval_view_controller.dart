@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/episodes_interval_cards/episode_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class EpisodeIntervalViewController extends StatelessWidget {
 

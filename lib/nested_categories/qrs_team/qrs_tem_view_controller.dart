@@ -3,7 +3,6 @@ import '../../detail_views/qrs_team_cards/qrs_first_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_second_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_third_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_five_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class QrsTeamViewController extends StatelessWidget {
 

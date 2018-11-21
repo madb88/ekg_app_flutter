@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/wavelengthU/wavelengthU_first_card_detail_page.dart';
 import '../../detail_views/wavelengthU/wavelengthU_second_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 
 class WaveLengthUViewController extends StatelessWidget {

@@ -15,12 +15,169 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5566bcb-75f8-4961-9595-6596f1b5788f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_card_detail_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_second_card_detail_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/customWidgets/navigation_calculator_element.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/calculator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/calculator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/customWidgets/navigator_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customWidgets/navigator_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/axis_cards/axis_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/axis_cards/axis_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/axis_cards/axis_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/axis_cards/axis_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/discharging_adjacent_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/discharging_adjacent_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_fourth_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_fourth_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_six_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_six_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/ekg_incorrect_wavelength_cards/iw_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/episodes_interval_cards/episode_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/episodes_interval_cards/episode_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/feature_cards/feature_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/fourth_component_cards/fourth_component_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/fourth_component_cards/fourth_component_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/fourth_component_cards/fourth_component_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/fourth_component_cards/fourth_component_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/other_concepts_cards/other_concepts_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/other_concepts_cards/other_concepts_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/incorrect_wave_r/first_r_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/incorrect_wave_r/first_r_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/incorrect_wave_r/last_r_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/incorrect_wave_r/last_r_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_nested/qrs_first_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_nested/qrs_first_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_nested/qrs_list_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_nested/qrs_list_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_nested/qrs_list_with_route_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_first_nested/qrs_list_with_route_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_five_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_five_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/qrs_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/wave_r/wave_r_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qrs_team_cards/wave_r/wave_r_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/qt_space/qt_space_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/second_component_cards/arrhythmia_cards/arrhytmia_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/second_component_cards/arrhythmia_cards/arrhytmia_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/second_component_cards/second_component_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/second_component_cards/second_component_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/second_component_cards/second_component_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/second_component_cards/second_component_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/second_component_cards/tachycardia_cards/tachycardia_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/second_component_cards/tachycardia_cards/tachycardia_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/first_nested/six_component_fist_nestedcard_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/first_nested/six_component_fist_nestedcard_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/first_nested/six_component_second_nestedcard_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/first_nested/six_component_second_nestedcard_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/fourth_nested/fourth_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/fourth_nested/fourth_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/fourth_nested/fourth_nested_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/fourth_nested/fourth_nested_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/fourth_nested/fourth_nested_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/fourth_nested/fourth_nested_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/fourth_list/ozw_seven_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/fourth_list/ozw_seven_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_fourth_wc_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_fourth_wc_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_three_wc_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_three_wc_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_fist_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_fist_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_third_card_detail_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/second_list/ozw_fourth_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/second_list/ozw_fourth_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/seven_list/ozw_nine_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/seven_list/ozw_nine_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_five_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_five_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_six_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_six_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/second_nested/second_nested_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/second_nested/second_nested_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/six_component/third_nested/third_nested_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/six_component/third_nested/third_nested_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/special_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/special_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_fourth_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_fourth_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_elevation_cards/st_section_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_lowering_cards/st_lowering_firt_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_lowering_cards/st_lowering_firt_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_lowering_cards/st_lowering_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_lowering_cards/st_lowering_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_lowering_cards/st_lowering_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_lowering_cards/st_lowering_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_section_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/st_section_cards/st_section_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_third_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/shortcuts/shortcuts_third_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/supraventricular_stimulation/supraventricular_stimulation_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/supraventricular_stimulation/supraventricular_stimulation_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/third_component_cards/third_component_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/third_component_cards/third_component_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/wavelengthT/wavelengthT_list_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/wavelengthT/wavelengthT_list_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/wavelengthT/wavelengthT_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/wavelengthT/wavelengthT_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/wavelengthU/wavelengthU_first_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/wavelengthU/wavelengthU_first_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/wavelengthU/wavelengthU_second_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/wavelengthU/wavelengthU_second_card_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/detail_views/wavelength_cards/wavelength_normal_card_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/detail_views/wavelength_cards/wavelength_normal_card_detail_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/ekg_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/ekg_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/incorrect_wavelength_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/incorrect_wavelength_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/iw_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/iw_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/episode_interval_categories/episode_interval_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/episode_interval_categories/episode_interval_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/episode_interval_categories/episode_interval_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/episode_interval_categories/episode_interval_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/first_nested_five_component_category/first_nested_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/first_nested_five_component_category/first_nested_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/first_nested_five_component_category/first_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/first_nested_five_component_category/first_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_fourth_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_fourth_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_fourth_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_fourth_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_nested_five_component_category/five_nested_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_nested_five_component_category/five_nested_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_nested_five_component_category/five_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_nested_five_component_category/five_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_second_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_second_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_second_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_second_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_third_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_third_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_third_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/five_third_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/fourth_nested_five_component_category/fourth_nested_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/fourth_nested_five_component_category/fourth_nested_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/fourth_nested_five_component_category/fourth_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/fourth_nested_five_component_category/fourth_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/second_nested_five_component_category/second_nested_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/second_nested_five_component_category/second_nested_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/second_nested_five_component_category/second_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/second_nested_five_component_category/second_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/third_nested_five_component_category/third_nested_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/third_nested_five_component_category/third_nested_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/third_nested_five_component_category/third_nested_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/five_component_categories/third_nested_five_component_category/third_nested_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/additional_ventricular/additional_ventricular _view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/additional_ventricular/additional_ventricular _view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/additional_ventricular/additional_ventricular_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/additional_ventricular/additional_ventricular_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/sinus_rhythm/sinus_rhythm_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/sinus_rhythm/sinus_rhythm_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/sinus_rhythm/sinus_rhythm_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/sinus_rhythm/sinus_rhythm_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_tem_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_tem_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/firs_nested_six_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/firs_nested_six_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/first_nested_six_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/first_nested_six_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/fourth_nested_category/fourth_nested_six_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/fourth_nested_category/fourth_nested_six_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/second_nested_category/second_nested_six_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/second_nested_category/second_nested_six_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/second_category/ozw_second_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/second_category/ozw_second_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelengthT_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelengthT_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelength_t_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelength_t_view_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelengthU_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelengthU_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelength_u_view_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelength_u_view_controller.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -38,11 +195,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home_page.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
+      <file leaf-file-name="category_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/category_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="six_component_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="128" column="50" lean-forward="true" selection-start-line="128" selection-start-column="50" selection-end-line="128" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seven_nested_component_card_list.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="six_nested_cards_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/six_nested_cards_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-624">
+              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fourth_nested_six_component_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/fourth_nested_category/fourth_nested_six_component_card_list.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
-              <caret line="100" column="55" lean-forward="true" selection-start-line="100" selection-start-column="55" selection-end-line="100" selection-end-column="55" />
+              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="66" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="third_nested_six_component_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="second_nested_six_component_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/second_nested_category/second_nested_six_component_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="first_nested_six_component_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/first_nested_six_component_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qrs_r_nested_categories.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_r_nested_categories.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="74" column="46" lean-forward="true" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="incorrect_wave_r_card_list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_card_list.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="719">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -51,18 +307,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Icons.</find>
-      <find>Boxdec</find>
-      <find>Przerost lewego przed</find>
-      <find>third_nested</find>
-      <find>third_nested_compo</find>
-      <find>Przerost lewego przedsionka</find>
-      <find>InfoC</find>
-      <find>Przerost</find>
-      <find>padding</find>
-      <find>margin</find>
-      <find>Zaburzenia funkcji</find>
-      <find>Float</find>
       <find>Zaburzenia f</find>
       <find>FiveComponentCardList</find>
       <find>FiveSecondComponentCardList</find>
@@ -81,6 +325,18 @@
       <find>import 'package:flutter_html_view/flutter_html_view.dart';</find>
       <find>Container</find>
       <find>InfoContainer</find>
+      <find>Wysokie za</find>
+      <find>Załamek P</find>
+      <find>ekg_component_categories</find>
+      <find>ListTile\(\n                  onTap\: \(\) \{</find>
+      <find>MyCustomRoute</find>
+      <find>leading</find>
+      <find>RaisedButton</find>
+      <find>Zespół QRS</find>
+      <find>EpisodeIntervalCardList;</find>
+      <find>EpisodeIntervalCardList</find>
+      <find>ComponentCategoriesList</find>
+      <find>return new Card</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -97,63 +353,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data_repo/ozw/first_category.json" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_third_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_fist_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_second_card_detail_page.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/five_component_categories/third_nested_five_component_category/third_nested_component_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qtSpace/qt_space_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_tem_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/firs_nested_six_component_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/second_category/ozw_second_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_view_controller.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/category_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/second_category/ozw_second_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/second_category/ozw_second_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/data_repo/ozw/second_category.json" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_five_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_six_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/data_repo/ozw/third_category.json" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_seven_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/fourth_category/ozw_third_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/fourth_category/ozw_third_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/fourth_category/ozw_fourth_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/fourth_list/ozw_seven_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/fourth_category/ozw_fourth_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/data_repo/ozw/fourth_category.json" />
-        <option value="$PROJECT_DIR$/lib/main_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/fourth_list/ozw_eight_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_fist_wc_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/customWidgets/card.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_second_wc_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/seven_list/ozw_nine_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/data_repo/ozw/seven_category.json" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/seven_list/ozw_ten_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_three_wc_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/six_nested_cards_list.dart" />
-        <option value="$PROJECT_DIR$/data_repo/ozw/ozw_cards.json" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_fourth_wc_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_six_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_six_component_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelength_t_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelengthT_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelengthU_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelength_u_view_controller.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/incorrect_wavelength_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/first_nested_six_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/second_nested_category/second_nested_six_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart" />
+        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/fourth_nested_category/fourth_nested_six_component_card_list.dart" />
         <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_card_list.dart" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/ozw/second_list/ozw_fourth_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_view_controller.dart" />
-        <option value="$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_second_card_detail_page.dart" />
-        <option value="$PROJECT_DIR$/data_repo/seven_nested_six_component_cards.json" />
-        <option value="$PROJECT_DIR$/lib/home_page.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
-    <option name="width" value="1485" />
+    <option name="width" value="1543" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -164,7 +420,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,10 +432,53 @@
               <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="customWidgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="detail_views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="detail_views" type="462c0819:PsiDirectoryNode" />
+              <item name="episodes_interval_cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="detail_views" type="462c0819:PsiDirectoryNode" />
+              <item name="other_concepts_cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="detail_views" type="462c0819:PsiDirectoryNode" />
+              <item name="six_component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ekg_app_flutter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ekg_app_flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="detail_views" type="462c0819:PsiDirectoryNode" />
+              <item name="six_component" type="462c0819:PsiDirectoryNode" />
+              <item name="first_nested" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -201,11 +499,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="info_conta&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/customWidgets/info_container.dart&#10;six_com&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart&#10;detail_pa&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/detail_page.dart&#10;Navi&#9;null&#9;null&#10;third_nested_five_component&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/data_repo/third_nested_five_component_cards.json&#10;second_nested_five_component_cards&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/data_repo/second_nested_five_component_cards.json&#10;component_cardlist&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/ekg_component_categories/component_card_list.dart&#10;SecondCom&#9;null&#9;null&#10;info&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/customWidgets/info_container.dart&#10;Info&#9;null&#9;null&#10;Ax&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/axis_categories/axis_card_list.dart&#10;ignore&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/.gitignore&#10;Axis&#9;null&#9;null&#10;axis_&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/axis_categories/axis_view_controller.dart&#10;Deta&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/detail_page.dart&#10;calc&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/calculator.dart" />
+    <property name="SearchEverywhereHistoryKey" value="c&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/ekg_component_categories/component_categories.dart&#10;calc&#9;null&#9;null&#10;episode_interval&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/data_repo/episode_interval.json&#10;info_conta&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/customWidgets/info_container.dart&#10;six_com&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart&#10;detail_pa&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/detail_page.dart&#10;Navi&#9;null&#9;null&#10;third_nested_five_component&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/data_repo/third_nested_five_component_cards.json&#10;second_nested_five_component_cards&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/data_repo/second_nested_five_component_cards.json&#10;component_cardlist&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/ekg_component_categories/component_card_list.dart&#10;SecondCom&#9;null&#9;null&#10;info&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/customWidgets/info_container.dart&#10;Info&#9;null&#9;null&#10;Ax&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/axis_categories/axis_card_list.dart&#10;ignore&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/.gitignore&#10;Axis&#9;null&#9;null&#10;axis_&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/nested_categories/axis_categories/axis_view_controller.dart&#10;Deta&#9;FILE&#9;file://E:/Projekty/ekg_app_flutter/lib/detail_page.dart" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
@@ -216,17 +513,17 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projekty\ekg_app_flutter\lib\nested_categories\six_component_categories\six_nested_category\ozw_categories\first_category" />
-      <recent name="E:\Projekty\ekg_app_flutter\lib\detail_views\third_component_cards\shortcuts" />
-      <recent name="E:\Projekty\ekg_app_flutter\lib\nested_categories\qtSection" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projekty\ekg_app_flutter\lib\customWidgets" />
       <recent name="E:\Projekty\ekg_app_flutter\lib\detail_views\six_component\five_nested" />
       <recent name="E:\Projekty\ekg_app_flutter\data_repo" />
       <recent name="E:\Projekty\ekg_app_flutter\lib\nested_categories\six_component_categories\seven_nested_category" />
       <recent name="E:\Projekty\ekg_app_flutter\lib\detail_views\six_component\ozw\ozw_cards" />
-      <recent name="E:\Projekty\ekg_app_flutter\lib\detail_views\six_component\ozw\seven_list" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projekty\ekg_app_flutter\lib\nested_categories\six_component_categories\six_nested_category\ozw_categories\first_category" />
+      <recent name="E:\Projekty\ekg_app_flutter\lib\detail_views\third_component_cards\shortcuts" />
+      <recent name="E:\Projekty\ekg_app_flutter\lib\nested_categories\qtSection" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -325,7 +622,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1485" height="1047" extended-state="0" />
+    <frame x="-9" y="0" width="1543" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
@@ -344,7 +641,8 @@
       <window_info id="Captures" order="4" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4943274" visible="true" weight="0.19438596" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4943274" visible="true" weight="0.18678355" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -359,273 +657,413 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Dart Analysis" order="11" weight="0.32893288" />
+      <window_info id="Build Variants" order="3" sideWeight="0.50567263" side_tool="true" weight="0.14712153" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.31573159" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Flutter Inspector" order="8" />
+      <window_info id="Favorites" order="5" sideWeight="0.50567263" side_tool="true" weight="0.14712153" />
+      <window_info id="Captures" order="4" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.31243125" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4943274" visible="true" weight="0.18678355" />
+      <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Flutter Outline" order="7" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.32932165" />
+      <window_info anchor="bottom" id="Logcat" order="10" weight="0.32893288" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32893288" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32893288" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32893288" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32934782" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="42" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/fourth_list/ozw_seven_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/second_component_categories/arrhythmia/arrhythmia_view_controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_repo/ozw/third_category.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_seven_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_repo/ozw/fourth_category.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/fourth_category/ozw_fourth_component_view_controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/fourth_category/ozw_fourth_component_card_list.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="95" column="26" selection-start-line="60" selection-start-column="31" selection-end-line="95" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/category_list.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="57" column="68" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/list_element.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/card_list.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="47" column="56" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="56" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main_card_list.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/free_card_one.dart" />
-    <entry file="file://E:/Programy/flutter/bin/cache/pkg/sky_engine/lib/convert/convert.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_view_controller.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_view_controller.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="9" selection-end-column="68" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/third_list/ozw_five_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/second_component_categories/second_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/card.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/firs_nested_six_component_view_controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_card_list.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/second_component_categories/tachycardia/tachycardia_view_controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_card_list.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_view_controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_categories.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/fourth_list/ozw_eight_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="77" column="12" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="26" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/second_category/ozw_second_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/first_category/ozw_first_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_fist_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/fourth_component_categories/fourth_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/category_button.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="23" selection-start-line="29" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_third_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_second_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="56" column="22" selection-start-line="50" selection-start-column="20" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_repo/ozw/seven_category.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_second_wc_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="106" column="55" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/info_container.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_three_wc_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_fourth_wc_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/customWidgets/list_builder.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_repo/ozw/ozw_cards.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="91" column="12" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="75" column="60" lean-forward="true" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/seven_category/ozw_seven_component_view_controller.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/stSection/st_section_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/ozw_cards/ozw_fist_wc_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/six_component_fist_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/third_category/ozw_third_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/stSection/st_section_elevation_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/six_nested_cards_list.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/stSection/st_section_lowering_view_controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/nested_shortcuts/nested_shortcuts_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelengthT_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelength_u_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/shortcuts/shortcuts_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/supraventricular_stimulation/supraventricular_stimulation_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/third_component_categories/third_component_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/wavelengthT/wavelength_t_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/wavelengthU/wavelengthU_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/drain_categories/drain_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="48" column="67" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/axis_categories/axis_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/other_concepts__categories/other_concepts_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/feature_categories/feature_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_view_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/six_component_fist_card_detail_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/wavelength_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="88" column="43" lean-forward="true" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="90" column="53" selection-start-line="90" selection-start-column="53" selection-end-line="90" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/incorrect_wavelength_component_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/basic_category.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/ekg_component_categories/component_categories.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="97" column="37" lean-forward="true" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_first_nested_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_team_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="103" column="52" lean-forward="true" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/qrs_team/qrs_r_nested_categories.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="74" column="46" lean-forward="true" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/qrs_team/incorrect_wave_r_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/category_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/first_nested_category/first_nested_six_component_card_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -634,112 +1072,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/second_nested_category/second_nested_six_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/seven_list/ozw_nine_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="79" column="22" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/seven_list/ozw_ten_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="78" column="31" lean-forward="true" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+        <state relative-caret-position="578">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/third_nested_category/third_nested_six_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+        <state relative-caret-position="612">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_repo/seven_nested_six_component_cards.json">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/fourth_nested_category/fourth_nested_six_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        <state relative-caret-position="595">
+          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/five_nested/five_nested_second_card_detail_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_nested_category/six_nested_cards_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="67" lean-forward="true" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+        <state relative-caret-position="-624">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/six_component_view_controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/detail_views/six_component/ozw/second_list/ozw_fourth_card_detail_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="731">
+          <caret line="128" column="50" lean-forward="true" selection-start-line="128" selection-start-column="50" selection-end-line="128" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_card_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="459">
+          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nested_categories/six_component_categories/seven_nested_category/seven_nested_component_view_controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="100" column="55" lean-forward="true" selection-start-line="100" selection-start-column="55" selection-end-line="100" selection-end-column="55" />
         </state>
       </provider>
     </entry>

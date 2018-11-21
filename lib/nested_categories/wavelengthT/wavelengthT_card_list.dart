@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/floating_custom_button.dart';
 import 'wavelength_t_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -47,7 +46,9 @@ class WaveLengthTCardList extends StatelessWidget {
                   var newItem = json.decode(snapshot.data.toString());
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
-                      return new Card(
+                      return Card(
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

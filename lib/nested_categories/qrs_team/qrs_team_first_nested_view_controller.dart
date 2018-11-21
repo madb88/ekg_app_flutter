@@ -3,7 +3,6 @@ import '../../detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_first_nested_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_list_nested_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/qrs_first_nested/qrs_list_with_route_nested_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 
 class QrsTeamFirstNestedViewController extends StatelessWidget {

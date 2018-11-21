@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../detail_views/third_component_cards/supraventricular_stimulation/supraventricular_stimulation_first_card_detail_page.dart';
-import '../../../customWidgets/floating_custom_button.dart';
 
 class SupraventricularStimulationViewController extends StatelessWidget {
 

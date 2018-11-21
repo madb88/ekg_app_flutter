@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../../customWidgets/back_category_button.dart';
 import 'fourth_nested_six_component_view_controller.dart';
 
 
@@ -63,7 +62,9 @@ class FourthNestedSixComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
-                          color: Colors.green[100],
+                          shape: Border.all(color: Colors.blue[900]),
+                          elevation: 2.0,
+                          color: Colors.blue[100],
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[

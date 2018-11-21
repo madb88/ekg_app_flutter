@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/third_component_cards/third_component_first_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class ThirdComponentViewController extends StatelessWidget {
 

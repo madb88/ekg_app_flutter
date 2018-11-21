@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html_view/flutter_html_view.dart';
-import 'customWidgets/back_card_button.dart';
 
 class DetailPage extends StatelessWidget {
   final sendedCard;

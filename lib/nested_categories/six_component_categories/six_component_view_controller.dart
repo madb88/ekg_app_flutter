@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/six_component/six_component_fist_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 
 class SixComponentViewController extends StatelessWidget {
