@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/wavelength_cards/wavelength_normal_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class WaveLengthViewController extends StatelessWidget {
 

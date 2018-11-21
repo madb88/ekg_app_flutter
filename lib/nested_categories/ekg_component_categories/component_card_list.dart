@@ -4,7 +4,6 @@ import 'dart:convert';
 import '../../customWidgets/category_button_coloredit.dart';
 import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
 import 'ekg_component_view_controller.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -55,6 +54,8 @@ class ComponentCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../customWidgets/list_builder.dart';
-import '../../../../customWidgets/nested_list_builder.dart';
-import '../../../../customWidgets/info_container.dart';
 import '../../../../customWidgets/normal_text.dart';
 
 class OzwSixCardDetailPage extends StatelessWidget {

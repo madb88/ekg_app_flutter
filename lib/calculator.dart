@@ -19,7 +19,7 @@ class _CalculatorState extends State<Calculator> {
   initState() {
     super.initState();
     transmition = 1;
-    hrColor = Colors.blue;
+    hrColor = Colors.blue[900];
   }
 
   void calculateQt() {
@@ -41,7 +41,7 @@ class _CalculatorState extends State<Calculator> {
       } else if(hr < 0 || hr == 0) {
         hrColor = Colors.red; 
       } else {
-        hrColor = Colors.blue;
+        hrColor = Colors.blue[900];
       }
     });
   }
@@ -70,108 +70,132 @@ class _CalculatorState extends State<Calculator> {
     loadData();
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue[900],
-        title: Text('Kalkulator (wzór Bazetta)'),
+      body: CustomScrollView(
+        slivers: <Widget>[
+      new SliverAppBar(
+      backgroundColor: Colors.blue[900],
+        pinned: true,
+        title: new Text("Kalkulator"),
       ),
-      body: Container(
-        padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Text(
-                "QTc: $sum",
-                style: TextStyle(
-                    fontSize: 35.0,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "HR: $hr",
-                style: TextStyle(
-                  fontSize: 35.0,
-                  color: hrColor,
-                  fontWeight: FontWeight.bold,
+      new SliverList(
+        delegate: new SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+            return Container(
+              padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(15.0),
+                      color: Colors.grey[200],
+                      child:
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children: <Widget>[
+                          Text(
+                            "QTc: $sum",
+                            style: TextStyle(
+                                fontSize: 35.0,
+                                color: Colors.blue[900],
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "HR: $hr",
+                            style: TextStyle(
+                              fontSize: 35.0,
+                              color: hrColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          labelStyle: TextStyle(fontSize: 20.0),
+                          labelText: "QT (ilosc malych kwadratow)"),
+                      controller: t1,
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          labelStyle: TextStyle(fontSize: 20.0),
+                          labelText: "Odstep RR (ilosc malych kwadratow)"),
+                      controller: t2,
+                    ),
+                    Padding(padding: const EdgeInsets.only(top: 20.0)),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        new DropdownButton(
+                          value: transmition,
+                          items: listDrop,
+                          hint: Text("Wybierz predkosc przesylu"),
+                          onChanged: (value) => this.setState(() {
+                            transmition = value;
+                          },
+                          ),
+                        ),
+                        Divider(
+                          color: Colors.white,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Material(
+                              color: Colors.blue[900],
+                              child:
+                              InkWell(
+                                onTap: calculateQt,
+                                child: new Container(
+                                  height: 50.0,
+                                  width: 150.0,
+                                  child: new Center(
+                                    child: new Text(
+                                      'Oblicz',
+                                      style: new TextStyle(
+                                          fontSize: 18.0, color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Material(
+                              color: Colors.blue[900],
+                              child: InkWell(
+                                onTap: clearCalculator,
+                                child: new Container(
+                                  padding: EdgeInsets.all(2.0),
+
+                                  height: 50.0,
+                                  width: 150.0,
+                                  child: new Center(
+                                    child: new Text(
+                                      'Wyczyść',
+                                      style: new TextStyle(
+                                          fontSize: 18.0, color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )
+
+                          ],
+                        ),
+                      ],
+                    )
+                  ],
                 ),
               ),
-              Divider(),
-              TextField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelStyle: TextStyle(fontSize: 15.0),
-                    labelText: "QT (ilosc malych kwadratow)"),
-                controller: t1,
-              ),
-              TextField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelStyle: TextStyle(fontSize: 15.0),
-                    labelText: "Odstep RR (ilosc malych kwadratow)"),
-                controller: t2,
-              ),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new DropdownButton(
-                    value: transmition,
-                    items: listDrop,
-                    hint: Text("Wybierz predkosc przesylu"),
-                    onChanged: (value) => this.setState(() {
-                          transmition = value;
-                    },
-                    ),
-   
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      new InkWell(
-                        onTap: calculateQt,
-                        child: new Container(
-                          height: 50.0,
-                          width: 150.0,
-                          decoration: new BoxDecoration(
-                            color: Colors.blueAccent,
-                            border: new Border.all(color: Colors.white),
-                            borderRadius: new BorderRadius.circular(10.0),
-                          ),
-                          child: new Center(
-                            child: new Text(
-                              'Oblicz',
-                              style: new TextStyle(
-                                  fontSize: 18.0, color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ),
-                      new InkWell(
-                        onTap: clearCalculator,
-                        child: new Container(
-                          height: 50.0,
-                          width: 150.0,
-                          decoration: new BoxDecoration(
-                            color: Colors.blueAccent,
-                            border: new Border.all(color: Colors.white),
-                            borderRadius: new BorderRadius.circular(10.0),
-                          ),
-                          child: new Center(
-                            child: new Text(
-                              'Wyczysc',
-                              style: new TextStyle(
-                                  fontSize: 18.0, color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              )
-            ],
-          ),
+            );
+          },
+          childCount: 1,
         ),
       ),
-    );
+],
+      ) );
   }
 }

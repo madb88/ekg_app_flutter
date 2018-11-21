@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/flexible_row_normal_text.dart';
-import '../../customWidgets/back_card_button.dart';
 
 class FeatureFirstCardDetailPage extends StatelessWidget {
   final sendedCard;

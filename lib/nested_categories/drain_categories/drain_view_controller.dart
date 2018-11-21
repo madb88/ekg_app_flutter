@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/special_detail_page.dart';
 import '../../detail_views/discharging_adjacent_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class DrainViewController extends StatelessWidget {
 

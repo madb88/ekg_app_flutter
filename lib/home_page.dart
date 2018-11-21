@@ -25,7 +25,6 @@ class HomePageList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _onTap;
     return new Scaffold(
       drawer: NavigatorWidget(),
       appBar: new AppBar(

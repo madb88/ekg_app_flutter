@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../detail_page.dart';
 import '../.././detail_views/axis_cards/axis_first_card_detail_page.dart';
 import '../.././detail_views/axis_cards/axis_third_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class AxisViewController extends StatefulWidget {
 

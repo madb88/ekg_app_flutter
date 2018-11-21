@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
 import 'wavelength_view_controller.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'component_card_list.dart';
@@ -55,7 +54,8 @@ class WaveLengthCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
-                        shape: Border(),
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

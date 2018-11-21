@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/ekg_incorrect_wavelength_cards/iw_nested_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class IwNestedComponentViewController extends StatelessWidget {
   final index;

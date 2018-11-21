@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/qrs_team_cards/incorrect_wave_r/first_r_card_detail_page.dart';
 import '../../detail_views/qrs_team_cards/incorrect_wave_r/last_r_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 
 class IncorrectWaveRViewController extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../customWidgets/color_text.dart';
 import '../customWidgets/normal_text.dart';
-import '../customWidgets/back_card_button.dart';
 
 class SpecialDetailPage extends StatelessWidget {
   final sendedCard;

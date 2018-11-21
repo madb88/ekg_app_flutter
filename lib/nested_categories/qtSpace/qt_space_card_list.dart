@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../customWidgets/back_category_button.dart';
 import 'qt_space_view_controller.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -49,7 +48,8 @@ class QtSpaceCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
-
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

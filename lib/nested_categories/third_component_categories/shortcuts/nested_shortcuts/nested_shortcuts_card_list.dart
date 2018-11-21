@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../../../customWidgets/floating_custom_button.dart';
 import 'nested_shortcuts_view_controller.dart';
 
 
@@ -55,6 +54,8 @@ class NestedShortcutsCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[

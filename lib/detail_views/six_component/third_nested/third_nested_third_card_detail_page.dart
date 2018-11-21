@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../customWidgets/list_builder.dart';
 import '../../../customWidgets/info_container.dart';
 import 'package:flutter_html_view/flutter_html_view.dart';
-import '../../../customWidgets/nested_list_builder.dart';
 
 class ThirdNestedThirdCardDetailPage extends StatelessWidget {
   final sendedCard;

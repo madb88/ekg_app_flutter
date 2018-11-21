@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_first_card_detail_page.dart';
 import '../../../../detail_views/third_component_cards/shortcuts/nestesd_shortcuts_cards/nested_shortcut_second_card_detail_page.dart';
-import '../../../../customWidgets/floating_custom_button.dart';
 
 
 class NestedShortcutsViewController extends StatelessWidget {

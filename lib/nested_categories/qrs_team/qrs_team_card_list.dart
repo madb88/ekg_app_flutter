@@ -5,7 +5,6 @@ import '../../customWidgets/category_button_coloredit.dart';
 import 'qrs_tem_view_controller.dart';
 import 'qrs_r_nested_categories.dart';
 import 'qrs_team_first_nested_card_list.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -58,10 +57,11 @@ class QrsTeamCardList extends StatelessWidget {
                   return new ListView.builder(
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
+                        shape: Border.all(color: Colors.blue[900]),
+                        elevation: 2.0,
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-
                             new ListTile(
                               onTap: () {
                                 final sendedCard = newItem;

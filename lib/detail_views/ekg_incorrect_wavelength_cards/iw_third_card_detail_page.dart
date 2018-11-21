@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/back_card_button.dart';
 import '../../customWidgets/list_builder.dart';
 
 class IwThirdCardDetailPage extends StatelessWidget {

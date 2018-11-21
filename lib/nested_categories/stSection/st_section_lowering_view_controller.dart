@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../detail_views/st_section_cards/st_lowering_cards/st_lowering_firt_card_detail_page.dart';
 import '../../detail_views/st_section_cards/st_lowering_cards/st_lowering_second_card_detail_page.dart';
 import '../../detail_views/st_section_cards/st_lowering_cards/st_lowering_third_card_detail_page.dart';
-import '../../customWidgets/floating_custom_button.dart';
 
 
 class StSectionLoweringViewController extends StatelessWidget {

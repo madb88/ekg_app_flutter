@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
-import '../../../customWidgets/back_category_button.dart';
-import '../../../customWidgets/floating_custom_button.dart';
 import 'first_nested_component_view_controller.dart';
 
 
