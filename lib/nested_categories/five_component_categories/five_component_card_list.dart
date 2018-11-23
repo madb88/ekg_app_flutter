@@ -63,7 +63,8 @@ class FiveComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
-                          color: Colors.green[100],
+                          elevation: 2.0,
+                          shape: Border.all(color: Colors.blue[900]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
@@ -80,7 +81,7 @@ class FiveComponentCardList extends StatelessWidget {
                                   );
                                 },
                                 trailing: Icon(
-                                    Icons.description, color: Colors.black),
+                                    Icons.description, color: Colors.blue[900]),
                                 title: Text(
                                   newItem[index]['title'],
                                   style:
@@ -104,7 +105,7 @@ class FiveComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(FirstNestedComponentCardList(categoryNames['first'],'first_nested_five_component'), categoryNames['first'],Colors.green[400]),
+            CategoryButtonColor(FirstNestedComponentCardList(categoryNames['first'],'first_nested_five_component'), categoryNames['first'],Colors.orange[400]),
           ],
         ),
       ),

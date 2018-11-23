@@ -36,7 +36,7 @@ class FiveComponentFirstCardDetailPage extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             child: NormalText(sendedCard['secondHead'], FontWeight.bold),
-                            padding: EdgeInsets.all(5.0),
+                            padding: EdgeInsets.all(10.0),
                           ),
                           ListBuilder(sendedCard['secondList']),
                       ],
@@ -75,7 +75,7 @@ class FiveComponentFirstCardDetailPage extends StatelessWidget {
                             child: ListBuilder(sendedCard['infoList2']),
                           ),
                           Container(
-                            padding: EdgeInsets.all(5.0),
+                            padding: EdgeInsets.all(10.0),
                             decoration: BoxDecoration(
                               border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
                               color: Colors.yellow[100],

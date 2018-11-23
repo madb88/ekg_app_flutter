@@ -26,13 +26,13 @@ class CategoryButton extends StatelessWidget {
                 height: 80.0,
                 decoration: BoxDecoration(
                   color: Colors.blue[900],
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(15.0),
+                  border: Border.all(color: Colors.black, width: 1.0),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: Center(
                   child: Text(
                     buttonText,
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22.0, color: Colors.white),textAlign: TextAlign.center,
                   ),
                 ),
               ),

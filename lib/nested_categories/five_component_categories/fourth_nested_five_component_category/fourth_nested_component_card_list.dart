@@ -61,7 +61,8 @@ class FourthNestedComponentCardList extends StatelessWidget {
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
-                          color: Colors.green[100],
+                          elevation: 2.0,
+                          shape: Border.all(color: Colors.blue[900]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
@@ -78,7 +79,7 @@ class FourthNestedComponentCardList extends StatelessWidget {
                                   );
                                 },
                                 trailing: Icon(
-                                    Icons.description, color: Colors.black),
+                                    Icons.description, color: Colors.blue[900]),
                                 title: Text(
                                   newItem[index]['title'],
                                   style:

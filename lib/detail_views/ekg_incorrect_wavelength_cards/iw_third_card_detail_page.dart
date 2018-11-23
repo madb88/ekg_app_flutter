@@ -54,7 +54,7 @@ class IwThirdCardDetailPage extends StatelessWidget {
                     Divider(color: Colors.white),
                     Divider(height: 15.0, color: Colors.white),
                     Container(
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         border: Border(
                             left: BorderSide(

@@ -53,7 +53,7 @@ class FiveComponentSecondNestedCardDetailPage extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             child: NormalText(sendedCard['secondHead'], FontWeight.bold),
-                            padding: EdgeInsets.all(5.0),
+                            padding: EdgeInsets.all(10.0),
                           ),
                           ListBuilder(sendedCard['secondList']),
                         ],

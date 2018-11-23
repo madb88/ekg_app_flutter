@@ -96,7 +96,7 @@ class ShortcutsCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(NestedShortcutsCardList(categoryNames['first'],'nested_shortcuts_cards'), categoryNames['first'],Colors.orange[900]),
+            CategoryButtonColor(NestedShortcutsCardList(categoryNames['first'],'nested_shortcuts_cards'), categoryNames['first'],Colors.orange[400]),
           ],
         ),
       ),

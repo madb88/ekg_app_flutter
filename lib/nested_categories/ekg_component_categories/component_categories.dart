@@ -79,7 +79,7 @@ class ComponentCategoriesList extends StatelessWidget {
         ],
       ),
       body:  Container(
-        padding: const EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(10.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[
@@ -89,27 +89,21 @@ class ComponentCategoriesList extends StatelessWidget {
               children: <Widget>[
                 CategoryButton(WaveLengthCardList(categoryNames['wavelength'],'components'), categoryNames['wavelength']),
                 Divider(
-                  height: 5.0,
                 ),
                 CategoryButton(EpisodeIntervalCardList(categoryNames['episodeAndInterval'], 'episode_interval'), categoryNames['episodeAndInterval']),
                 Divider(
-                  height: 5.0,
                 ),
                 CategoryButton(QrsTeamCardList(categoryNames['qrsTeam'], 'qrs_team'), categoryNames['qrsTeam']),
                 Divider(
-                  height: 5.0,
                 ),
                 CategoryButton(StSectionCardList(categoryNames['stSection'], 'stFsection'), categoryNames['stSection']),
                 Divider(
-                  height: 5.0,
                 ),
                 CategoryButton(WaveLengthTCardList(categoryNames['wavelengthT'], 'wavelengthT'), categoryNames['wavelengthT']),
                 Divider(
-                  height: 5.0,
                 ),
                 CategoryButton(QtSpaceCardList(categoryNames['qtSpace'], 'qtSpace'), categoryNames['qtSpace']),
                 Divider(
-                  height: 5.0,
                 ),
                 CategoryButton(WaveLengthUCardList(categoryNames['wavelengthU'], 'wavelengthU'), categoryNames['wavelengthU']),
               ],

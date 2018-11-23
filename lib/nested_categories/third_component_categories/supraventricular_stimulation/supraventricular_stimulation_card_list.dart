@@ -46,6 +46,7 @@ class SupraventricularStimulationCardList extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       return Card(
                         elevation: 2.0,
+                        shape: Border.all(color: Colors.blue[900]),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
@@ -60,8 +61,7 @@ class SupraventricularStimulationCardList extends StatelessWidget {
                                               index, sendedCard)),
                                 );
                               },
-                              trailing: Icon(Icons.description,
-                                  color: Colors.blue[900]),
+                              trailing: Icon(Icons.description, color: Colors.blue[900]),
                               title: Text(
                                 newItem[index]['title'],
                                 style: TextStyle(

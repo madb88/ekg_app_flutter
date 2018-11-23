@@ -86,7 +86,7 @@ class WaveLengthCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(ComponentCardList(categoryNames['incorrectWave'],'components_incorrect'), categoryNames['incorrectWave'],Colors.orange[900]),
+            CategoryButtonColor(ComponentCardList(categoryNames['incorrectWave'],'components_incorrect'), categoryNames['incorrectWave'],Colors.orange[400]),
           ],
         ),
       ),

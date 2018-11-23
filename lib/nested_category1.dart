@@ -84,7 +84,7 @@ class NestedCategoryList extends StatelessWidget {
         ],
       ),
       body: new Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
         child: ListView(
           children: <Widget>[

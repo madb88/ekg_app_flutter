@@ -9,7 +9,7 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget descriptionSection = Container(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(10.0),
       child:
       sendedCard['useHtmlTags'] == true? HtmlView(data: sendedCard['description']): Text(sendedCard['description'], style: TextStyle(fontSize: 18.0),)
     );
