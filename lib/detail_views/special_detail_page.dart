@@ -10,7 +10,7 @@ class SpecialDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget imageSection = Container(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(10.0),
       margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
       child: sendedCard['image'].length > 0
           ? Image.asset("images/${sendedCard['image']}", width: 450.0,)

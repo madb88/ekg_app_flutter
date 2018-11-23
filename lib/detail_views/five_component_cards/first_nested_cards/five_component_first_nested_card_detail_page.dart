@@ -28,7 +28,7 @@ class FiveComponentFirstNestedCardDetailPage extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       child:  Text(sendedCard['text'], style: TextStyle(fontSize: 25.0)),
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(10.0),
                     )
                   ],
                 ),

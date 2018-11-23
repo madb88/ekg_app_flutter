@@ -21,7 +21,7 @@ class QrsThirdCardDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(5.0),
+                padding: EdgeInsets.all(10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,

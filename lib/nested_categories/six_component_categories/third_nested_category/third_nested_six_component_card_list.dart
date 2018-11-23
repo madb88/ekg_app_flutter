@@ -80,7 +80,7 @@ class ThirdNestedSixComponentCardList extends StatelessWidget {
                                   );
                                 },
                                 trailing: Icon(
-                                    Icons.description, color: Colors.black),
+                                    Icons.description, color: Colors.blue[900]),
                                 title: Text(
                                   newItem[index]['title'],
                                   style:

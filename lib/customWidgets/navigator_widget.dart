@@ -87,10 +87,11 @@ class NavigatorWidget extends StatelessWidget {
                   ),
                 ),
                 ExpansionTile(
+                  backgroundColor: Colors.blue[100],
                   title: Text(
                     mainCategories[0],
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue[900]),
                   ),
                   children: <Widget>[
                     NavigationListElement(
@@ -115,10 +116,11 @@ class NavigatorWidget extends StatelessWidget {
                   ],
                 ),
                 ExpansionTile(
+                  backgroundColor: Colors.blue[100],
                   title: Text(
                     mainCategories[1],
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue[900]),
                   ),
                   children: <Widget>[
                     NavigationListElement(
@@ -163,10 +165,11 @@ class NavigatorWidget extends StatelessWidget {
                     mainCategories[4],
                     18.0),
                 ExpansionTile(
+                  backgroundColor: Colors.blue[100],
                   title: Text(
                     mainCategories[5],
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0,color: Colors.blue[900]),
                   ),
                   children: <Widget>[
                     NavigationListElement(
