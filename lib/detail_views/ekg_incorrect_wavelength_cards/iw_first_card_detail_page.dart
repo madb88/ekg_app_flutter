@@ -7,6 +7,12 @@ class IwFirstCardDetailPage extends StatelessWidget {
 
   IwFirstCardDetailPage(this.sendedCard);
 
+  Widget imageSection = Container(
+    padding: const EdgeInsets.all(10.0),
+    margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+    child: Image.asset("images/ekg_images/niskizalP.jpg", width: 200.0,)
+  );
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -41,7 +47,8 @@ class IwFirstCardDetailPage extends StatelessWidget {
                       height: 15.0,
                       color: Colors.white
                     ),
-                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal)
+                    InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal),
+                    imageSection,
                   ],
                 ),
               );
