@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/image_widget.dart';
+import 'package:photo_view/photo_view.dart';
 
 class IwFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
 
   IwFirstCardDetailPage(this.sendedCard);
-
-  Widget imageSection = Container(
-    padding: const EdgeInsets.all(10.0),
-    margin: new EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-    child: Image.asset("images/ekg_images/niskizalP.jpg", width: 200.0,)
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +44,8 @@ class IwFirstCardDetailPage extends StatelessWidget {
                       color: Colors.white
                     ),
                     InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['textOne'], 19.0, false,FontWeight.normal),
-                    imageSection,
+
+                ImageWidget('niskizalP'),
                   ],
                 ),
               );

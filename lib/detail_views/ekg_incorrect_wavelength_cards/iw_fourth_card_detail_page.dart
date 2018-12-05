@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../customWidgets/image_widget.dart';
 import '../../customWidgets/list_builder.dart';
 
 class IwFourthCardDetailPage extends StatelessWidget {
@@ -8,7 +10,6 @@ class IwFourthCardDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return new Scaffold(
         body: CustomScrollView(
       slivers: <Widget>[
@@ -21,20 +22,23 @@ class IwFourthCardDetailPage extends StatelessWidget {
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
               return Container(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: Text(sendedCard['description'],
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0))),
-                      ],
+                    Visibility(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Flexible(
+                              child: Text(sendedCard['description'],
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0))),
+                        ],
+                      ),
+                      visible: sendedCard['description'] != '' ? true : false,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +50,12 @@ class IwFourthCardDetailPage extends StatelessWidget {
                                     fontSize: 20.0))),
                       ],
                     ),
-                    ListBuilder(sendedCard['list'])
+                    Divider(color: Colors.white),
+                    ListBuilder(sendedCard['list']),
+                    Visibility(
+                      child: ImageWidget(sendedCard['image']),
+                      visible: sendedCard['image'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );
