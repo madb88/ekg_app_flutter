@@ -52,8 +52,25 @@ class EpisodeCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead3'], FontWeight.bold))
                       ],
                     ),
-                    ListBuilder(sendedCard['listThree']),
-
+                    ListTile(
+                      leading: Icon(Icons.chevron_right),
+                      title: Text(sendedCard['extraListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.blue[900])),
+                      subtitle:Text(sendedCard['extraListTileSubtitle'], style: TextStyle(fontSize: 20.0, color: Colors.black))
+                    ),
+                    ListView.builder(
+                      physics: ScrollPhysics(),
+                      padding: EdgeInsets.all(1.0),
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: index == 0?Text(sendedCard['listThree'][index],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.blue[900])):
+                          Text(sendedCard['listThree'][index],style: TextStyle(fontSize: 20.0)),
+                          subtitle: index == 0?Text(sendedCard['extraTextOne'], style: TextStyle(fontSize: 20.0, color: Colors.black)):Text(''),
+                        );
+                      },
+                      itemCount: sendedCard['listThree'] == null ? 0 : sendedCard['listThree'].length,
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[

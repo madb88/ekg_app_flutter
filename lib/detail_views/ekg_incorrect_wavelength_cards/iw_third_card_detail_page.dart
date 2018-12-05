@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/image_widget.dart';
 
 class IwThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -66,10 +67,24 @@ class IwThirdCardDetailPage extends StatelessWidget {
                           Text(sendedCard['titleHead'],
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20.0)),
-                          ListBuilder(sendedCard['secondList']),
+                        ListView.builder(
+                          physics: ScrollPhysics(),
+                          padding: EdgeInsets.all(1.0),
+                          shrinkWrap: true,
+                          itemBuilder: (BuildContext context, int index) {
+                            return ListTile(
+                              leading: Icon(Icons.chevron_right),
+                              title: index == 2 || index == 1 ?Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0, color: Colors.blue[900]))
+                                  :Text(sendedCard['secondList'][index],style: TextStyle(fontSize: 20.0)),
+                            );
+                          },
+                          itemCount: sendedCard['secondList'] == null ? 0 : sendedCard['secondList'].length,
+                        ),
                         ],
                       ),
-                    )
+                    ),
+                    ImageWidget('zalProznoN'),
+
                   ],
                 ),
               );

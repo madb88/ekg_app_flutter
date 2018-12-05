@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/image_widget.dart';
 
 class IwSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
 
   IwSecondCardDetailPage(this.sendedCard);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,8 @@ class IwSecondCardDetailPage extends StatelessWidget {
                                     fontSize: 20.0))),
                       ],
                     ),
-                    ListBuilder(sendedCard['list'])
+                    ListBuilder(sendedCard['list']),
+                    ImageWidget('wysokieZalP'),
                   ],
                 ),
               );
