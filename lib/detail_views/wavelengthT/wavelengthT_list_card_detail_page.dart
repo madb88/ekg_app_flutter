@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../customWidgets/normal_text.dart';
+
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/normal_text.dart';
 
 class WavelengthTListCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -26,6 +27,19 @@ class WavelengthTListCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    Visibility(
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              sendedCard['listHead4'],
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20.0, fontWeight: FontWeight.bold),
+                            ),
+                          ]),
+                      visible: sendedCard['listHead4'] != '' ? true : false,
+                    ),
                     sendedCard['listHead'] != null
                         ? Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +62,38 @@ class WavelengthTListCardDetailPage extends StatelessWidget {
                                       FontWeight.bold)),
                             ],
                           )
-                        : Container()
+                        : Container(),
+                    Visibility(
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Divider(color: Colors.blue[900]),
+                            Text(
+                              sendedCard['listHead2'],
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20.0, fontWeight: FontWeight.bold),
+                            ),
+                          ]),
+                      visible: sendedCard['listHead2'] != '' ? true : false,
+                    ),
+                    Visibility(
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              sendedCard['listHead3'],
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20.0, fontWeight: FontWeight.bold),
+                            ),
+                          ]),
+                      visible: sendedCard['listHead3'] != '' ? true : false,
+                    ),
+                    Visibility(
+                      child: ListBuilder(sendedCard['newList']),
+                      visible: sendedCard['newList'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );

@@ -25,7 +25,7 @@ class QrsTeamCardList extends StatelessWidget {
   QrsTeamCardList(this.category, this.categoryName);
 
   final categoryNames = {
-    'qrsTeamFirstNested':'Załamek Q i zespół Qs',
+    'qrsTeamFirstNested':'Załamek Q i zespół QS',
     'qrsTeamSecondNested':'Załamek R',
   };
 
@@ -95,7 +95,7 @@ class QrsTeamCardList extends StatelessWidget {
               color: Colors.orange[600],
               child: ExpansionTile(
                 trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
+                title: Text('Pozostałe (' + categoryNames['qrsTeamFirstNested'] + ' | ' + categoryNames['qrsTeamSecondNested'] + ")",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
                     textAlign: TextAlign.left
                 ),

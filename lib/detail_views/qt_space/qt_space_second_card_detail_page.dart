@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/nested_list_builder.dart';
 
 class QtSpaceSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -27,6 +28,7 @@ class QtSpaceSecondCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     ListBuilder(sendedCard['listOne']),
+                    NestedListBuilder(sendedCard['nestedList']),
                     Divider(height: 10.0, color: Colors.white),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,

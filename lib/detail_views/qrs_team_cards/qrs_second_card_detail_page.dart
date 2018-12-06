@@ -26,6 +26,14 @@ class QrsSecondCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Flexible(
+                            child: NormalText(
+                                sendedCard['headText'], FontWeight.bold)),
+                      ],
+                    ),
                     ListBuilder(sendedCard['listOne']),
                     Divider(height: 10.0, color: Colors.white),
                     Row(
@@ -36,7 +44,7 @@ class QrsSecondCardDetailPage extends StatelessWidget {
                                 sendedCard['listTwoHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['listTwo'])
+                    ListBuilder(sendedCard['listTwo']),
                   ],
                 ),
               );

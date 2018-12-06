@@ -68,7 +68,7 @@ class QrsListWithRouteNestedCardDetailPage extends StatelessWidget {
                       child: Container(
                         height: 45.0,
                         decoration: new BoxDecoration(
-                          color: Colors.yellow[900],
+                          color: Colors.yellow[200],
                           border: new Border.all(color: Colors.white, width: 2.0),
                           borderRadius: new BorderRadius.circular(10.0),
                         ),
@@ -81,7 +81,7 @@ class QrsListWithRouteNestedCardDetailPage extends StatelessWidget {
                                 child: Icon(Icons.arrow_right, color: Colors.blue[900],),
                               ),
 
-                              Text('Pozostałe przyczyny (patologiczny zespół  QS)', style:  TextStyle(fontSize: 16.0, color: Colors.white), textAlign: TextAlign.end,)
+                              Text('Pozostałe przyczyny (patologiczny zespół  QS)', style:  TextStyle(fontSize: 16.0, color: Colors.blue[900]), textAlign: TextAlign.end,)
                             ],
                           ),
 

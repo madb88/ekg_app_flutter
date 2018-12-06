@@ -28,7 +28,7 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     ListBuilder(sendedCard['list']),
-                    Divider(color: Colors.white),
+                    Divider(color: Colors.blue[900]),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -38,6 +38,7 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     ListBuilder(sendedCard['secondList']),
+                    Divider(color: Colors.blue[900]),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -47,6 +48,9 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     ListBuilder(sendedCard['thirdList']),
+                    Divider(
+                      color: Colors.blue[900]
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -57,17 +61,16 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                     ),
                     ListBuilder(sendedCard['fourthList']),
                     Divider(color: Colors.white),
-                    InfoContainer(Colors.blue[900], Colors.blue[100],
-                        sendedCard['infoText'], 18.0, false, FontWeight.normal),
-                    Divider(color: Colors.white),
                     InfoContainer(
                         Colors.yellow[900],
                         Colors.yellow[100],
                         sendedCard['infoText2'],
                         18.0,
                         false,
-                        FontWeight.normal)
-
+                        FontWeight.normal),
+                    Divider(color: Colors.white),
+                    InfoContainer(Colors.blue[900], Colors.blue[100],
+                        sendedCard['infoText'], 18.0, false, FontWeight.normal),
                   ],
                 ),
               );

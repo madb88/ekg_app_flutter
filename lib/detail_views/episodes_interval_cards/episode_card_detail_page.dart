@@ -52,10 +52,13 @@ class EpisodeCardDetailPage extends StatelessWidget {
                                 sendedCard['listHead3'], FontWeight.bold))
                       ],
                     ),
-                    ListTile(
-                      leading: Icon(Icons.chevron_right),
-                      title: Text(sendedCard['extraListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.blue[900])),
-                      subtitle:Text(sendedCard['extraListTileSubtitle'], style: TextStyle(fontSize: 20.0, color: Colors.black))
+                    Visibility(
+                      child:  ListTile(
+                          leading: Icon(Icons.chevron_right),
+                          title: Text(sendedCard['extraListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.blue[900])),
+                          subtitle: Text(sendedCard['extraListTileSubtitle'], style: TextStyle(fontSize: 20.0, color: Colors.black))
+                      ),
+                      visible: sendedCard['extraListTile'] != '' ? true : false,
                     ),
                     ListView.builder(
                       physics: ScrollPhysics(),

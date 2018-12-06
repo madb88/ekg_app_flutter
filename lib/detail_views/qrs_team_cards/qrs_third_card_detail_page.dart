@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/info_container.dart';
+
 
 class QrsThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -32,7 +34,19 @@ class QrsThirdCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['listOneHead'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['list'])
+                    ListBuilder(sendedCard['list']),
+                    Divider(
+                      color:
+                        Colors.white
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[100], sendedCard['infoHead'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['infoHead'] != '' ? true : false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[100], sendedCard['infoText'], 18.0, false, FontWeight.normal),
+                      visible: sendedCard['infoText'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );

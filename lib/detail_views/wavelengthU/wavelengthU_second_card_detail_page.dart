@@ -42,7 +42,7 @@ class WavelengthUSecondCardDetailPage extends StatelessWidget {
                     Divider(color: Colors.white),
                     ListTile(
                       leading: Icon(Icons.chevron_right),
-                      title: Text(sendedCard['list'][3],
+                      title: Text(sendedCard['extraText'],
                           style: TextStyle(
                               fontSize: 20.0, fontWeight: FontWeight.normal)),
                     )

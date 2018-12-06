@@ -27,6 +27,11 @@ class QtSpaceFirstCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    Visibility(
+                      child: InfoContainer(Colors.orange[900], Colors.orange[100], sendedCard['secondInfoBox'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['secondInfoBox'] != '' ? true : false,
+                    ),
+                    Divider(color: Colors.white),
                     ListBuilder(sendedCard['listOne']),
                     Divider(
                         height: 10.0,
