@@ -66,6 +66,7 @@ class OzwSevenComponentCardList extends StatelessWidget {
                             children: <Widget>[
 
                               new ListTile(
+                                contentPadding: EdgeInsets.all(1.0),
                                 onTap: () {
                                   final sendedCard = newItem;
                                   Navigator.push(

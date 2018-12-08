@@ -30,7 +30,6 @@ class QrsTeamViewController extends StatelessWidget {
             QrsThirdCardDetailPage(cardsCollection[2]),
             QrsThirdCardDetailPage(cardsCollection[3]),
             QrsFiveCardDetailPage(cardsCollection[4]),
-
           ],
         ),
       ),

@@ -38,11 +38,13 @@ class FeatureSecondCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
                           sendedCard['listOne'][0], FontWeight.normal),
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
                           sendedCard['listOne'][1], FontWeight.normal),
@@ -62,11 +64,13 @@ class FeatureSecondCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
                           sendedCard['secondList'][0], FontWeight.normal),
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: NormalText(
                           sendedCard['secondList'][1], FontWeight.normal),

@@ -37,6 +37,7 @@ class OzwSevenCardDetailPage extends StatelessWidget {
                     ),
                       Divider(),
                       ListTile(
+                        contentPadding: EdgeInsets.all(1.0),
                         leading: Icon(Icons.chevron_right),
                         title: Text(sendedCard['firstListTile'],
                             style: TextStyle(
@@ -50,6 +51,7 @@ class OzwSevenCardDetailPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['secondListTile'],
                           style: TextStyle(
@@ -63,6 +65,7 @@ class OzwSevenCardDetailPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['thirdListTile'],
                           style: TextStyle(

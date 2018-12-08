@@ -29,8 +29,7 @@ class IncorrectWaveRViewController extends StatelessWidget {
             FirstRCardDetailPage(cardsCollection[2]),
             FirstRCardDetailPage(cardsCollection[3]),
             LastRCardDetailPage(cardsCollection[4]),
-
-
+            FirstRCardDetailPage(cardsCollection[5]),
           ],
         ),
       ),

@@ -68,12 +68,14 @@ class OzwSecondWcDetailPage extends StatelessWidget {
                                 ),
                                 ListBuilder(newItem[cardNumber]["list"]),
                                 ListTile(
+                                  contentPadding: EdgeInsets.all(1.0),
                                   leading: Icon(Icons.info, color: Colors.red[600],),
                                   title: Text(newItem[cardNumber]["listTileOne"],
                                       style: TextStyle(
                                           fontSize: 25.0, fontWeight: FontWeight.normal, color: Colors.red[600] )),
                                 ),
                                 ListTile(
+                                  contentPadding: EdgeInsets.all(1.0),
                                   leading: Icon(Icons.info, color: Colors.red[600],),
                                   title: Text(newItem[cardNumber]["listTileTwo"],
                                       style: TextStyle(
@@ -83,6 +85,7 @@ class OzwSecondWcDetailPage extends StatelessWidget {
                                   color: Colors.white
                                 ),
                                 ListTile(
+                                  contentPadding: EdgeInsets.all(1.0),
                                   leading: Icon(Icons.chevron_right),
                                   title: Text(newItem[cardNumber]["listTileThree"],
                                       style: TextStyle(
@@ -95,6 +98,7 @@ class OzwSecondWcDetailPage extends StatelessWidget {
                                   textAlign: TextAlign.left,
                                 ),
                                 ListTile(
+                                  contentPadding: EdgeInsets.all(1.0),
                                   leading: Icon(Icons.chevron_right),
                                   title: Text(newItem[cardNumber]["listTileFour"],
                                       style: TextStyle(
@@ -102,6 +106,7 @@ class OzwSecondWcDetailPage extends StatelessWidget {
                                 ),
                                 NestedListBuilder(newItem[cardNumber]['nestedList']),
                                 ListTile(
+                                  contentPadding: EdgeInsets.all(1.0),
                                   leading: Icon(Icons.chevron_right),
                                   title: Text(newItem[cardNumber]["listTileFive"],
                                       style: TextStyle(

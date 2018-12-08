@@ -28,14 +28,24 @@ class CategoryButtonColor extends StatelessWidget {
                 height: 65.0,
                 decoration: BoxDecoration(
                   color: buttonColor,
-                  border: Border.all(color: Colors.black, width: 1.0),
-                  borderRadius: BorderRadius.circular(5.0),
+                  borderRadius: BorderRadius.circular(0.0),
                 ),
-                child: Center(
-                  child: Text(
-                    buttonText,
-                    style: TextStyle(fontSize: 25.0, color: Colors.black),textAlign: TextAlign.center,
-                  ),
+                child:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Center(
+                      child: Text(
+                        buttonText,
+                        style: TextStyle(fontSize: 25.0, color: Colors.black),textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Icon(Icons.arrow_forward_ios, color: Colors.blue[900],),
+                    ),
+
+                  ],
                 ),
               ),
             );

@@ -35,6 +35,7 @@ class OzwSixCardDetailPage extends StatelessWidget {
                     ),
                       Divider(),
                       ListTile(
+                        contentPadding: EdgeInsets.all(1.0),
                         leading: Icon(Icons.chevron_right),
                         title: Text(sendedCard['firstListTile'],
                             style: TextStyle(
@@ -48,6 +49,7 @@ class OzwSixCardDetailPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.subdirectory_arrow_right),
                       title: Text(sendedCard['secondListTile'],
                           style: TextStyle(
@@ -61,6 +63,7 @@ class OzwSixCardDetailPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.subdirectory_arrow_right),
                       title: Text(sendedCard['thirdListTile'],
                           style: TextStyle(
@@ -70,6 +73,7 @@ class OzwSixCardDetailPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['fourthListTile'],
                           style: TextStyle(

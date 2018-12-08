@@ -57,18 +57,21 @@ class OzwFiveCardDetailPage extends StatelessWidget {
                       visible: sendedCard['extraInfo2'] != ''?true:false,
                     ),
                     ListTile(
-                        leading: Icon(Icons.chevron_right),
+                      contentPadding: EdgeInsets.all(1.0),
+                      leading: Icon(Icons.chevron_right),
                         title: Text(sendedCard['firstListTile'],
                             style: TextStyle(
                                 fontSize: 20.0, fontWeight: FontWeight.bold)),
                       ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.subdirectory_arrow_right),
                       title: Text(sendedCard['secondListTile'],
                           style: TextStyle(
                               fontSize: 20.0, fontWeight: FontWeight.normal)),
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
                       title: Text(sendedCard['thirdListTile'],
                           style: TextStyle(

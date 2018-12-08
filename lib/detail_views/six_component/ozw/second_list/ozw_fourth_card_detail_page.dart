@@ -49,6 +49,7 @@ class OzwFourthCardDetailPage extends StatelessWidget {
                     ),
                     Visibility(
                       child:ListTile(
+                        contentPadding: EdgeInsets.all(1.0),
                         leading: Icon(Icons.chevron_right),
                         title: Text(sendedCard['firstListTile'],
                             style: TextStyle(
@@ -63,6 +64,7 @@ class OzwFourthCardDetailPage extends StatelessWidget {
                     ),
                     Visibility(
                       child: ListTile(
+                        contentPadding: EdgeInsets.all(1.0),
                         leading: Icon(Icons.chevron_right),
                         title: Text(sendedCard['secondListTile'],
                             style: TextStyle(

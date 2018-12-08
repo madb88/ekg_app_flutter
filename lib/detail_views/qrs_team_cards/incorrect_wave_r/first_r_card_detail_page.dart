@@ -46,7 +46,12 @@ class FirstRCardDetailPage extends StatelessWidget {
                         Flexible(child: NormalText(sendedCard['subTitle'], FontWeight.bold)),
                       ],
                     ),
-                    ListBuilder(sendedCard['list'])
+                    ListBuilder(sendedCard['list']),
+                    Divider(color: Colors.blue[900]),
+                    Visibility(
+                      child: ListBuilder(sendedCard['secondList']),
+                      visible: sendedCard['secondList'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );

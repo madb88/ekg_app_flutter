@@ -11,10 +11,11 @@ class ListBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     ListView listBuilder = ListView.builder(
       physics: ScrollPhysics(),
-      padding: EdgeInsets.all(1.0),
+      padding: EdgeInsets.all(0.5),
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
+          contentPadding: EdgeInsets.all(1.0),
           leading: Icon(Icons.chevron_right),
           title: Text(list[index],style: TextStyle(fontSize: 20.0)),
         );

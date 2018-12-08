@@ -40,12 +40,31 @@ class QrsFiveCardDetailPage extends StatelessWidget {
                     Divider(
                         color: Colors.white
                     ),
+
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Flexible(child: NormalText(sendedCard['secondInfoContainer'], FontWeight.normal)),
                       ],
-                    ),                    Divider(
+                    ),
+                    Divider(
+                        color: Colors.white
+                    ),
+                    Visibility(
+                      child:
+                          Card(
+                            elevation: 2.0,
+                            shape: Border.all(color: Colors.blue[900]),
+                            color: Colors.grey[200],
+                            child:
+                            Padding(
+                              padding: EdgeInsets.all(5.5),
+                              child: Text(sendedCard['extraText'], style: TextStyle(fontSize: 18.0),textAlign: TextAlign.center,),
+                            ),
+                          ),
+                      visible: sendedCard['extraText'] != '' ? true : false,
+                    ),
+                    Divider(
                         color: Colors.white
                     ),
                     Row(

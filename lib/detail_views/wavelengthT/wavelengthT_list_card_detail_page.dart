@@ -67,16 +67,19 @@ class WavelengthTListCardDetailPage extends StatelessWidget {
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Divider(color: Colors.blue[900]),
-                            Text(
-                              sendedCard['listHead2'],
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  fontSize: 20.0, fontWeight: FontWeight.bold),
+                            Expanded(
+                              child: Text(
+                                sendedCard['listHead2'],
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    fontSize: 20.0, fontWeight: FontWeight.bold),
+                              ),
                             ),
+
                           ]),
                       visible: sendedCard['listHead2'] != '' ? true : false,
                     ),
+                    Divider(color: Colors.white),
                     Visibility(
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,

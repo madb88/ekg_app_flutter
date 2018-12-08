@@ -38,6 +38,24 @@ class StSectionCardList extends StatelessWidget {
         title: new Text(category),
 
       ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child: Container(
+          color: Colors.orange[600],
+          child: ExpansionTile(
+            trailing: Icon(Icons.list, color: Colors.black),
+            title: Text('Pozostałe (' + categoryNames['stSectionElevation'] + ' | ' + categoryNames['stSectionReduction'] + ")",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                textAlign: TextAlign.left
+            ),
+            children: <Widget>[
+              Divider(height: 0.5),
+              CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[400]),
+              CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[400]),
+            ],
+          ),
+        ),
+      ),
       body:
       new Container(
 
@@ -93,20 +111,6 @@ class StSectionCardList extends StatelessWidget {
                     itemCount: newItem == null ? 0 : newItem.length,
                   );
                 },
-              ),
-            ),
-            Container(
-              color: Colors.orange[600],
-              child: ExpansionTile(
-                trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.left
-                ),
-                children: <Widget>[
-                  CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[400]),
-                  CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[400]),
-                ],
               ),
             ),
           ],

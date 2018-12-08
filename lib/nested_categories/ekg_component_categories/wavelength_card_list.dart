@@ -31,8 +31,14 @@ class WaveLengthCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
+
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child: CategoryButtonColor(ComponentCardList(categoryNames['incorrectWave'],'components_incorrect'), categoryNames['incorrectWave'],Colors.orange[400]),
 
       ),
       body:
@@ -86,7 +92,6 @@ class WaveLengthCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(ComponentCardList(categoryNames['incorrectWave'],'components_incorrect'), categoryNames['incorrectWave'],Colors.orange[400]),
           ],
         ),
       ),
