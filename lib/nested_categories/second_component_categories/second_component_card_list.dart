@@ -27,16 +27,39 @@ class SecondComponentCardList extends StatelessWidget {
   final categoryNames = {
     'first':'Tachykardie zatokowe',
     'second':'Niemiarowość zatokowa',
-    'third':'Blok zatokowo-przedsionkowy',
+    'third':'Blok zatokowo - przedsionkowy',
   };
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child:
+        Container(
+          color: Colors.orange[600],
+          child: ExpansionTile(
+            trailing: Icon(Icons.list, color: Colors.black),
+            title: Container(
+              child: Text('Pozostałe (' + categoryNames['first'] + ' | ' + categoryNames['second'] + ' | ' + categoryNames['third'] + ")",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                        textAlign: TextAlign.left
+                    ),
+            ),
 
+            children: <Widget>[
+              CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[400]),
+              Divider(height: 0.5),
+              CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[400]),
+              Divider(height: 0.5),
+              CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[400]),            ],
+          ),
+        ),
       ),
       body:
       new Container(
@@ -95,22 +118,6 @@ class SecondComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            Container(
-              color: Colors.orange[600],
-              child: ExpansionTile(
-                trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.left
-                ),
-                children: <Widget>[
-                  CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[400]),
-                  CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[400]),
-                  CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[400]),
-                ],
-              ),
-            ),
-
           ],
         ),
       ),

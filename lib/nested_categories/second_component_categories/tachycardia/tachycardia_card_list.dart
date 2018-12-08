@@ -89,7 +89,6 @@ class TachycardiaCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

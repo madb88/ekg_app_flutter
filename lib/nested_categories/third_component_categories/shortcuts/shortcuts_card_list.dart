@@ -36,9 +36,18 @@ class ShortcutsCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
 
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child:
+        Container(
+          color: Colors.orange[600],
+          child: CategoryButtonColor(NestedShortcutsCardList(categoryNames['first'],'nested_shortcuts_cards'), categoryNames['first'],Colors.orange[400]),
+        ),
       ),
       body:
       new Container(
@@ -96,7 +105,6 @@ class ShortcutsCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(NestedShortcutsCardList(categoryNames['first'],'nested_shortcuts_cards'), categoryNames['first'],Colors.orange[400]),
           ],
         ),
       ),

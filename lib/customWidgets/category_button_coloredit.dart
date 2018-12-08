@@ -32,16 +32,16 @@ class CategoryButtonColor extends StatelessWidget {
                 ),
                 child:
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Center(
+                    Expanded(
                       child: Text(
                         buttonText,
                         style: TextStyle(fontSize: 25.0, color: Colors.black),textAlign: TextAlign.center,
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15.0),
+                    Container(
+                      padding: EdgeInsets.only(right: 10.0),
                       child: Icon(Icons.arrow_forward_ios, color: Colors.blue[900],),
                     ),
 
