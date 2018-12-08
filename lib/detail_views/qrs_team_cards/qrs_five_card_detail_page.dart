@@ -108,7 +108,7 @@ class QrsFiveCardDetailPage extends StatelessWidget {
                     Divider(
                         color: Colors.white
                     ),
-                    InfoContainer(Colors.red[900], Colors.red[100], sendedCard['boldText'], 18.0, false,FontWeight.bold)
+                    InfoContainer(Colors.blue[900], Colors.grey[100], sendedCard['boldText'], 18.0, false,FontWeight.bold)
                   ],
                 ),
               );
