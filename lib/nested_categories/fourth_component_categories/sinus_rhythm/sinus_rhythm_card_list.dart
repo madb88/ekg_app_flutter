@@ -92,7 +92,6 @@ class SinusRhythmCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

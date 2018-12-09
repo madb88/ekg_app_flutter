@@ -28,9 +28,8 @@ class HomePageList extends StatelessWidget {
     return new Scaffold(
       drawer: NavigatorWidget(),
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
-
-
         title: new Text("EKG Vademecum")
         ),
         
@@ -56,7 +55,7 @@ class HomePageList extends StatelessWidget {
                 height: 100.0,
                 decoration: new BoxDecoration(
                   color: Colors.blue[800],
-                  border: new Border.all(color: Colors.white, width: 2.0),
+                  border: new Border.all(color: Colors.white, width: 0.5),
                   borderRadius: new BorderRadius.circular(10.0),
                 ),
                 child: Center(
@@ -82,7 +81,7 @@ class HomePageList extends StatelessWidget {
                 height: 100.0,
                 decoration: new BoxDecoration(
                   color: Colors.red[700],
-                  border: new Border.all(color: Colors.white, width: 2.0),
+                  border: new Border.all(color: Colors.white, width: 0.5),
                   borderRadius: new BorderRadius.circular(10.0),
                 ),
                 child: Center(

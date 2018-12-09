@@ -90,7 +90,6 @@ class AdditionalVentricularCardList extends StatelessWidget {
                 },
               ),
             ),
-            BackCategoryButton("Wróc"),
           ],
         ),
       ),

@@ -48,6 +48,7 @@ class FiveThirdComponentCardList extends StatelessWidget {
           children: <Widget>[
             Container(
               color: Colors.orange[600],
+              width: MediaQuery.of(context).size.width,
               child: ExpansionTile(
                 trailing: Icon(Icons.list, color: Colors.black),
                 title: Text('Blok lewej i prawej odnogi (HISSA)',

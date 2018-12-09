@@ -42,7 +42,7 @@ class CategoryButtonColor extends StatelessWidget {
                     ),
                     Container(
                       padding: EdgeInsets.only(right: 10.0),
-                      child: Icon(Icons.arrow_forward_ios, color: Colors.blue[900],),
+                      child: Icon(Icons.arrow_forward_ios, color: Colors.orange[900],),
                     ),
 
                   ],

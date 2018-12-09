@@ -23,7 +23,7 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
     // return new FadeTransition(opacity: animation, child: child);
   }
 }
-
+const _test = Colors.white;
 class SixComponentCardList extends StatelessWidget {
   final category;
   SixComponentCardList(this.category);
@@ -41,8 +41,46 @@ class SixComponentCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child:
+            Container(
+              color: Colors.blue[900],
+              child:  ExpansionTile(
+                  backgroundColor: Colors.orange[900],
+                  trailing: Icon(Icons.list, color: Colors.white),
+                  title: Text('Pozostałe', style: TextStyle(fontSize:25.00, color: Colors.white),textAlign: TextAlign.center,),
+                  children: <Widget>[
+                    Container(
+                      height: 250.00,
+                      color: Colors.orange[600],
+                      child:
+                          Scrollbar(
+                            child: ListView(
+                              children: <Widget>[
+                                CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.orange[300]),
+                                Divider(height: 0.1),
+                                CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['second'],'second_nested_six_component_cards'), categoryNames['second'],Colors.orange[300]),
+                                Divider(height: 0.1),
+                                CategoryButtonColor(ThirdNestedSixComponentCardList(categoryNames['third'],'third_nested_six_component_cards'), categoryNames['third'],Colors.orange[300]),
+                                Divider(height: 0.1),
+                                CategoryButtonColor(FourthNestedSixComponentCardList(categoryNames['fourth'],'fourth_nested_six_component_cards'), categoryNames['fourth'],Colors.orange[300]),
+                                Divider(height: 0.1),
+                                CategoryButtonColor(SixNestedCardsList(categoryNames['five']), categoryNames['five'],Colors.orange[300]),
+                                Divider(height: 0.1),
+                                CategoryButtonColor(SevenNestedComponentCardList(categoryNames['six'],'seven_nested_six_component_cards'), categoryNames['six'],Colors.orange[300]),
+                              ],
+                            ),
+                          ),
+                    ),
+                  ]),
+            ),
+
+
       ),
       body:
       new Container(
@@ -53,7 +91,6 @@ class SixComponentCardList extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
             new Flexible(
               child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -68,66 +105,52 @@ class SixComponentCardList extends StatelessWidget {
                     );
                   } else {
                     var newItem = json.decode(snapshot.data.toString());
-                    return new ListView.builder(
-                      itemBuilder: (BuildContext context, int index) {
-                        return Card(
-                          shape: Border.all(color: Colors.blue[900]),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: <Widget>[
+                    return
+                      Scrollbar(
+                        child: ListView.builder(
+                          itemBuilder: (BuildContext context, int index) {
+                            return Card(
+                              shape: Border.all(color: Colors.blue[900]),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: <Widget>[
 
-                              new ListTile(
-                                onTap: () {
-                                  final sendedCard = newItem;
-                                  Navigator.push(
-                                    context,
-                                     MyCustomRoute(
-                                        builder: (context) =>
-                                            SixComponentViewController(
-                                                index, sendedCard)),
-                                  );
-                                },
-                                trailing: Icon(
-                                    Icons.description, color: Colors.blue[900]),
-                                title: Text(
-                                  newItem[index]['title'],
-                                  style:
-                                   TextStyle(fontWeight: FontWeight.bold,
-                                      fontSize: 22.0),
-                                ),
-                                subtitle: Text(newItem[index]['subtitle'],
-                                  style: TextStyle(fontSize: 15.0),),
+                                  new ListTile(
+                                    onTap: () {
+                                      final sendedCard = newItem;
+                                      Navigator.push(
+                                        context,
+                                        MyCustomRoute(
+                                            builder: (context) =>
+                                                SixComponentViewController(
+                                                    index, sendedCard)),
+                                      );
+                                    },
+                                    trailing: Icon(
+                                        Icons.description, color: Colors.blue[900]),
+                                    title: Text(
+                                      newItem[index]['title'],
+                                      style:
+                                      TextStyle(fontWeight: FontWeight.bold,
+                                          fontSize: 22.0),
+                                    ),
+                                    subtitle: Text(newItem[index]['subtitle'],
+                                      style: TextStyle(fontSize: 15.0),),
 // ...
+                                  ),
+                                  Divider(
+                                    height: 2.0,
+                                  ),
+                                ],
                               ),
-                               Divider(
-                                height: 2.0,
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                      itemCount: newItem == null ? 0 : newItem.length,
-                    );
+                            );
+                          },
+                          itemCount: newItem == null ? 0 : newItem.length,
+                        ),
+                      );
+
                   }
                 },
-              ),
-            ),
-            Container(
-              color: Colors.orange[600],
-              child: ExpansionTile(
-                trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.left
-                ),
-                children: <Widget>[
-                  CategoryButtonColor(FirstNestedSixComponentCardList(categoryNames['first'],'first_nested_six_component_cards'), categoryNames['first'],Colors.orange[400]),
-                  CategoryButtonColor(SecondNestedSixComponentCardList(categoryNames['second'],'second_nested_six_component_cards'), categoryNames['second'],Colors.orange[400]),
-                  CategoryButtonColor(ThirdNestedSixComponentCardList(categoryNames['third'],'third_nested_six_component_cards'), categoryNames['third'],Colors.orange[400]),
-                  CategoryButtonColor(FourthNestedSixComponentCardList(categoryNames['fourth'],'fourth_nested_six_component_cards'), categoryNames['fourth'],Colors.orange[400]),
-                  CategoryButtonColor(SixNestedCardsList(categoryNames['five']), categoryNames['five'],Colors.orange[400]),
-                  CategoryButtonColor(SevenNestedComponentCardList(categoryNames['six'],'seven_nested_six_component_cards'), categoryNames['six'],Colors.orange[400]),
-                ],
               ),
             ),
           ],

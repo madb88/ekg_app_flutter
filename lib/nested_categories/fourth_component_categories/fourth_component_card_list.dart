@@ -33,9 +33,30 @@ class FourthComponentCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child:
+        Container(
+          color: Colors.orange[600],
+          child: ExpansionTile(
+            trailing: Icon(Icons.list, color: Colors.black),
+            title: Container(
+              child: Text('Pozostałe (' + categoryNames['first'] + ' | ' + categoryNames['second'] + ")",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+                  textAlign: TextAlign.left
+              ),
+            ),
+            children: <Widget>[
+              CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.orange[400]),
+              Divider(height: 0.5),
+              CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.orange[400]),
+            ],
+          ),
+        ),
       ),
       body:
       new Container(
@@ -59,63 +80,53 @@ class FourthComponentCardList extends StatelessWidget {
                     );
                   } else {
                     var newItem = json.decode(snapshot.data.toString());
-                    return new ListView.builder(
-                      itemBuilder: (BuildContext context, int index) {
-                        return Card(
-                          elevation: 2.0,
-                          shape: Border.all(color: Colors.blue[900]),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: <Widget>[
+                    return
+                      Scrollbar(
+                        child:
+                        ListView.builder(
+                          itemBuilder: (BuildContext context, int index) {
+                            return Card(
+                              elevation: 2.0,
+                              shape: Border.all(color: Colors.blue[900]),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: <Widget>[
 
-                              new ListTile(
-                                onTap: () {
-                                  final sendedCard = newItem;
-                                  Navigator.push(
-                                    context,
-                                     MyCustomRoute(
-                                        builder: (context) =>
-                                            FourthComponentViewController(
-                                                index, sendedCard)),
-                                  );
-                                },
-                                trailing: Icon(
-                                    Icons.description, color: Colors.blue[900]),
-                                title: Text(
-                                  newItem[index]['title'],
-                                  style:
-                                   TextStyle(fontWeight: FontWeight.bold,
-                                      fontSize: 22.0),
-                                ),
-                                subtitle: Text(newItem[index]['subtitle'],
-                                  style: TextStyle(fontSize: 15.0),),
+                                  new ListTile(
+                                    onTap: () {
+                                      final sendedCard = newItem;
+                                      Navigator.push(
+                                        context,
+                                        MyCustomRoute(
+                                            builder: (context) =>
+                                                FourthComponentViewController(
+                                                    index, sendedCard)),
+                                      );
+                                    },
+                                    trailing: Icon(
+                                        Icons.description, color: Colors.blue[900]),
+                                    title: Text(
+                                      newItem[index]['title'],
+                                      style:
+                                      TextStyle(fontWeight: FontWeight.bold,
+                                          fontSize: 22.0),
+                                    ),
+                                    subtitle: Text(newItem[index]['subtitle'],
+                                      style: TextStyle(fontSize: 15.0),),
 // ...
+                                  ),
+                                  Divider(
+                                    height: 2.0,
+                                  ),
+                                ],
                               ),
-                               Divider(
-                                height: 2.0,
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                      itemCount: newItem == null ? 0 : newItem.length,
-                    );
+                            );
+                          },
+                          itemCount: newItem == null ? 0 : newItem.length,
+                        )
+                      );
                   }
                 },
-              ),
-            ),
-            Container(
-              color: Colors.orange[600],
-              child: ExpansionTile(
-                trailing: Icon(Icons.list, color: Colors.black),
-                title: Text('Podkategorie',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                    textAlign: TextAlign.left
-                ),
-                children: <Widget>[
-                  CategoryButtonColor(AdditionalVentricularCardList(categoryNames['first'],'additional_ventricular'), categoryNames['first'],Colors.orange[400]),
-                  CategoryButtonColor(SinusRhythmCardList(categoryNames['second'],'sinus_rhythm'), categoryNames['second'],Colors.orange[400]),
-                ],
               ),
             ),
           ],

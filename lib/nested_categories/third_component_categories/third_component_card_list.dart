@@ -36,7 +36,6 @@ class ThirdComponentCardList extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[900],

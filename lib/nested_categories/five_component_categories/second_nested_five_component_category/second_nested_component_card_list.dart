@@ -38,7 +38,15 @@ class SecondNestedComponentCardList extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-
+        elevation: 0.0,
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue[900],
+        child:
+        Container(
+          color: Colors.orange[600],
+          child: CategoryButtonColor(ThirdNestedComponentCardList(categoryNames['first'],'third_nested_five_component_cards'), categoryNames['first'],Colors.orange[400]),
+        ),
       ),
       body:
       new Container(
@@ -109,7 +117,6 @@ class SecondNestedComponentCardList extends StatelessWidget {
                 },
               ),
             ),
-            CategoryButtonColor(ThirdNestedComponentCardList(categoryNames['first'],'third_nested_five_component_cards'), categoryNames['first'],Colors.orange[400]),
           ],
         ),
       ),
