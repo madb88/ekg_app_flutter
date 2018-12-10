@@ -69,22 +69,25 @@ class BasicCategoryList extends StatelessWidget {
       body:  Container(
         padding: const EdgeInsets.all(10.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-        child: ListView(
-
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                CategoryButton(DrainCardList(categoriesName['drain'], 'odprowadzenia'), categoriesName['drain']),
-                Divider(),
-                CategoryButton(AxisCardList(categoriesName['axis'],'axis_cards'), categoriesName['axis']),
-                Divider(),
-                CategoryButton(FeatureCardList(categoriesName['feature'],'feature_cards'), categoriesName['feature']),
-                Divider(),
-                CategoryButton(OtherConceptsCardList(categoriesName['basic_concepts'],'other_concepts'), categoriesName['basic_concepts']),
-              ],
-            )
-          ],
+        child:
+        Scrollbar(
+          child:ListView(
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  CategoryButton(DrainCardList(categoriesName['drain'], 'odprowadzenia'), categoriesName['drain']),
+                  Divider(),
+                  CategoryButton(AxisCardList(categoriesName['axis'],'axis_cards'), categoriesName['axis']),
+                  Divider(),
+                  CategoryButton(FeatureCardList(categoriesName['feature'],'feature_cards'), categoriesName['feature']),
+                  Divider(),
+                  CategoryButton(OtherConceptsCardList(categoriesName['basic_concepts'],'other_concepts'), categoriesName['basic_concepts']),
+                ],
+              )
+            ],
+          ),
         ),
+
       ),
     );
   }

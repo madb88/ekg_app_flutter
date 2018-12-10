@@ -32,29 +32,57 @@ class StSectionCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppBar appBar = AppBar(
+      elevation: 0.0,
+      backgroundColor: Colors.blue[900],
+      title: new Text(category),
+    );
+    double appHeight = appBar.preferredSize.height;
     return new Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Colors.blue[900],
-        title: new Text(category),
-
-      ),
+      appBar: appBar,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[900],
-        child: Container(
-          color: Colors.orange[600],
-          child: ExpansionTile(
-            trailing: Icon(Icons.list, color: Colors.black),
-            title: Text('Pozostałe (' + categoryNames['stSectionElevation'] + ' | ' + categoryNames['stSectionReduction'] + ")",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                textAlign: TextAlign.left
-            ),
-            children: <Widget>[
-              Divider(height: 0.5),
-              CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[400]),
-              CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[400]),
-            ],
-          ),
+        child:
+        Container(
+          color: Colors.blue[900],
+          child:  ExpansionTile(
+              backgroundColor: Colors.orange[900],
+              trailing: Icon(Icons.list, color: Colors.white),
+              title: Text('Pozostałe (' + categoryNames['stSectionElevation'] + ' | ' + categoryNames['stSectionReduction'] + ")", style: TextStyle(fontSize:25.00, color: Colors.white),textAlign: TextAlign.center,),
+              children: <Widget>[
+                Container(
+                  height: 190.00 - appHeight,
+                  color: Colors.orange[600],
+                  child:
+                  Scrollbar(
+                    child: ListView(
+                      children: <Widget>[
+                        CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[400]),
+                        Divider(height: 0.5),
+                        CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[400]),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
         ),
+
+
+//        Container(
+//          color: Colors.orange[600],
+//          child: ExpansionTile(
+//            trailing: Icon(Icons.list, color: Colors.black),
+//            title: Text('Pozostałe (' + categoryNames['stSectionElevation'] + ' | ' + categoryNames['stSectionReduction'] + ")",
+//                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+//                textAlign: TextAlign.left
+//            ),
+//            children: <Widget>[
+//              Divider(height: 0.5),
+//              CategoryButtonColor(StSectionElevationCardList(categoryNames['stSectionElevation'],'st_section_elevation'), categoryNames['stSectionElevation'],Colors.orange[400]),
+//              CategoryButtonColor(StSectionLoweringCardList(categoryNames['stSectionReduction'], 'st_lowering'), categoryNames['stSectionReduction'],Colors.orange[400]),
+//            ],
+//          ),
+//        ),
       ),
       body:
       new Container(

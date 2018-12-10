@@ -96,63 +96,89 @@ class _CalculatorState extends State<Calculator> {
                     children: <Widget>[
                       Container(
                         padding: EdgeInsets.all(15.0),
-                        color: Colors.grey[200],
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue[900]),
+                          color: Colors.grey[200]
+                        ),
+                        child: Wrap(
                           children: <Widget>[
-                            Text(
-                              "QTc: $sum",
-                              style: TextStyle(
-                                  fontSize: 35.0,
-                                  color: Colors.blue[900],
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "HR: $hr",
-                              style: TextStyle(
-                                fontSize: 35.0,
-                                color: hrColor,
-                                fontWeight: FontWeight.bold,
+                            Center(
+                              child: Text(
+                                "QTc: $sum",
+                                style: TextStyle(
+                                    fontSize: 35.0,
+                                    color: Colors.blue[900],
+                                    fontWeight: FontWeight.bold),
                               ),
+                            ),
+                            Center(
+                              child: Text(
+                                "HR: $hr",
+                                style: TextStyle(
+                                  fontSize: 35.0,
+                                  color: hrColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+
                             ),
                           ],
                         ),
                       ),
                       Divider(),
                       TextField(
+                        style: TextStyle(fontSize:25.00, color: Colors.blue[900]),
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
-                            labelStyle: TextStyle(fontSize: 20.0),
-                            labelText: "QT (ilość małych kwadratów)"),
+                            labelStyle: TextStyle(fontSize: 15.0, color: Colors.blue[900]),
+                            border: InputBorder.none,
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(0.2)),
+                                borderSide: BorderSide(color: Colors.blue[900])),
+                          suffixIcon: Icon(Icons.arrow_back, color: Colors.blue[900],),
+                            hintStyle: TextStyle(fontSize:15.00, color: Colors.blue[900]),
+                            hintText: "(podaj  ilość małych kwadratów)",
+                            labelText: "QT"),
+
                         controller: t1,
                       ),
                       TextField(
+                        style: TextStyle(fontSize:25.00, color: Colors.blue[900]),
                         keyboardType: TextInputType.number,
+
+
                         decoration: InputDecoration(
-                            labelStyle: TextStyle(fontSize: 20.0),
-                            labelText: "Odstep RR (ilość małych kwadratów)"),
+                            labelStyle: TextStyle(fontSize: 15.0, color: Colors.blue[900]),
+                            border: InputBorder.none,
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(0.2)),
+                                borderSide: BorderSide(color: Colors.blue[900])),
+                            suffixIcon: Icon(Icons.arrow_back,color: Colors.blue[900]),
+                            hintStyle: TextStyle(fontSize:15.00, color: Colors.blue[900]),
+                            hintText: "(podaj ilość małych kwadratów)",
+                            labelText: "Odstęp RR"),
                         controller: t2,
+
                       ),
+
                       Padding(padding: const EdgeInsets.only(top: 20.0)),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          new DropdownButton(
-                            value: transmition,
-                            items: listDrop,
-                            hint: Text("Wybierz predkosc przesylu"),
-                            onChanged: (value) => this.setState(
-                                  () {
+                          Wrap(
+                            children: <Widget>[
+                              DropdownButton(
+                                value: transmition,
+                                items: listDrop,
+                                hint: Text("Wybierz predkosc przesylu"),
+                                onChanged: (value) => this.setState(
+                                      () {
                                     transmition = value;
                                   },
                                 ),
-                          ),
-                          Divider(
-                            color: Colors.white,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
+                              ),
                               Material(
                                 color: Colors.blue[900],
                                 child: ButtonTheme(
@@ -160,7 +186,6 @@ class _CalculatorState extends State<Calculator> {
                                     onTap: calculateQt,
                                     child: new Container(
                                       height: 50.0,
-                                      width: 150.0,
                                       child: new Center(
                                         child: new Text(
                                           'Oblicz',
@@ -173,6 +198,9 @@ class _CalculatorState extends State<Calculator> {
                                   ),
                                 ),
                               ),
+                              Divider(
+                                color: Colors.white,
+                              ),
                               Material(
                                 color: Colors.blue[900],
                                 child: ButtonTheme(
@@ -181,7 +209,6 @@ class _CalculatorState extends State<Calculator> {
                                     child: new Container(
                                       padding: EdgeInsets.all(2.0),
                                       height: 50.0,
-                                      width: 150.0,
                                       child: new Center(
                                         child: new Text(
                                           'Wyczyść',

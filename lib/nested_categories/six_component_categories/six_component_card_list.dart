@@ -37,14 +37,17 @@ class SixComponentCardList extends StatelessWidget {
     'six':'Błędy techniczne'
   };
 
+
   @override
   Widget build(BuildContext context) {
+    AppBar appBar = AppBar(
+      elevation: 0.0,
+      backgroundColor: Colors.blue[900],
+      title: new Text(category),
+    );
+    double appHeight = appBar.preferredSize.height;
     return new Scaffold(
-      appBar: new AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.blue[900],
-        title: new Text(category),
-      ),
+     appBar: appBar,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[900],
         child:
@@ -56,7 +59,7 @@ class SixComponentCardList extends StatelessWidget {
                   title: Text('Pozostałe', style: TextStyle(fontSize:25.00, color: Colors.white),textAlign: TextAlign.center,),
                   children: <Widget>[
                     Container(
-                      height: 250.00,
+                      height: 312.00 - appHeight,
                       color: Colors.orange[600],
                       child:
                           Scrollbar(
@@ -84,7 +87,7 @@ class SixComponentCardList extends StatelessWidget {
       ),
       body:
       new Container(
-
+          height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.all(2.0),
         // margin: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         child: Column(

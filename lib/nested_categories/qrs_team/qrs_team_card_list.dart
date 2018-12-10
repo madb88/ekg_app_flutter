@@ -31,30 +31,56 @@ class QrsTeamCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppBar appBar = AppBar(
+      elevation: 0.0,
+      backgroundColor: Colors.blue[900],
+      title: new Text(category),
+    );
+    double appHeight = appBar.preferredSize.height;
     return new Scaffold(
-      appBar: new AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.blue[900],
-        title: new Text(category),
-
-      ),
+      appBar: appBar,
       bottomNavigationBar: BottomAppBar(
           color: Colors.blue[900],
-          child: Container(
-            color: Colors.orange[600],
-            child: ExpansionTile(
-              trailing: Icon(Icons.list, color: Colors.black),
-              title: Text('Pozostałe (' + categoryNames['qrsTeamFirstNested'] + ' | ' + categoryNames['qrsTeamSecondNested'] + ")",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                  textAlign: TextAlign.left
-              ),
-              children: <Widget>[
-                CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[400]),
-                Divider(height: 0.5),
-                CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[400]),
-              ],
-            ),
+          child:
+          Container(
+            color: Colors.blue[900],
+            child:  ExpansionTile(
+                backgroundColor: Colors.orange[900],
+                trailing: Icon(Icons.list, color: Colors.white),
+                title: Text('Pozostałe', style: TextStyle(fontSize:25.00, color: Colors.white),textAlign: TextAlign.center,),
+                children: <Widget>[
+                  Container(
+                    height: 190.00 - appHeight,
+                    color: Colors.orange[600],
+                    child:
+                    Scrollbar(
+                      child: ListView(
+                        children: <Widget>[
+                          CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[400]),
+                            Divider(height: 0.5),
+                            CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[400]),
+                        ],
+                      ),
+                    ),
+                  ),
+                ]),
           ),
+
+//          Container(
+//            color: Colors.orange[600],
+//            child: ExpansionTile(
+//              trailing: Icon(Icons.list, color: Colors.black),
+//              title: Text('Pozostałe (' + categoryNames['qrsTeamFirstNested'] + ' | ' + categoryNames['qrsTeamSecondNested'] + ")",
+//                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+//                  textAlign: TextAlign.left
+//              ),
+//              children: <Widget>[
+//                CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[400]),
+//                Divider(height: 0.5),
+//                CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[400]),
+//              ],
+//            ),
+//          ),
       ),
       body:
       new Container(

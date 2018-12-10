@@ -65,7 +65,8 @@ class StudyCategoriesList extends StatelessWidget {
       body:  Container(
         padding: const EdgeInsets.all(5.0),
         margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-        child: ListView(
+        child:
+        ListView(
           children: <Widget>[
             CategoryButton(BasicCategoryList(), 'Podstawy'),
             Divider(),
