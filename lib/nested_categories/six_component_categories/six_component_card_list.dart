@@ -82,8 +82,6 @@ class SixComponentCardList extends StatelessWidget {
                     ),
                   ]),
             ),
-
-
       ),
       body:
       new Container(

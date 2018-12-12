@@ -41,15 +41,15 @@ class StElevationSecondCardDetailPage extends StatelessWidget {
                     Divider(
                       color: Colors.white,
                     ),
-                    FlexibleRowNormalText(sendedCard['infoText2'], 20.0, FontWeight.bold),
                     Divider(
                       color: Colors.white,
                     ),
                     FlexibleRowNormalText(sendedCard['listHead'], 20.0, FontWeight.bold),
                     ListBuilder(sendedCard['secondList']),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
                       leading: Icon(Icons.chevron_right),
-                      title: Text(sendedCard['secondList'][2],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+                      title: Text(sendedCard['extraListTile'],style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
                     )
                   ],
                 ),

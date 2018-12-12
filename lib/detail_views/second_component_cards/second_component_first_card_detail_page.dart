@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/nested_list_builder.dart';
 
 class SecondComponentFirstCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -29,6 +30,11 @@ class SecondComponentFirstCardDetailPage extends StatelessWidget {
                   children: <Widget>[
                     ListBuilder(sendedCard['list']),
                     Divider(height: 10.0, color: Colors.white),
+                    Visibility(
+                      child: NestedListBuilder(sendedCard['nestedList']),
+                      visible: sendedCard['nestedList'] != '' ? true : false,
+                    ),
+                    Divider(color: Colors.white),
                     sendedCard['infoBox'] != ''?InfoContainer(Colors.blue[900], Colors.blue[100], sendedCard['infoBox'], 20.0, false, FontWeight.normal):Container(),
 
                   ],

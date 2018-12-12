@@ -30,7 +30,6 @@ class OzwFourthComponentCardList extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-
       ),
       body:
       new Container(

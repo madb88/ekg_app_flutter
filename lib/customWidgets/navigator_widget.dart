@@ -50,7 +50,7 @@ class NavigatorWidget extends StatelessWidget {
   final ekgCategories = [
     "Załmek P",
     "Odcinek i odstęp PQ",
-    "Zespół QRS",
+    "Zespół QRS oraz Punkt J",
     "Odcinek ST",
     "Załamek T",
     "Odstęp QT",

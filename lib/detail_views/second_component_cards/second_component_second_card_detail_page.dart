@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/normal_text.dart';
+import '../../customWidgets/info_container.dart';
 
 class SecondComponentSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -58,8 +59,12 @@ class SecondComponentSecondCardDetailPage extends StatelessWidget {
                             ),
                             ListBuilder(sendedCard['thirdList']),
                           ],
-                        )
-                    )
+                        ),
+                    ),
+                    Divider(color: Colors.white),
+                    InfoContainer(Colors.red[900],Colors.red[100],sendedCard['infoExtraContainer'],18.0,false,FontWeight.bold),
+                    InfoContainer(Colors.red[900],Colors.red[100],sendedCard['infoExtraContainerText'],18.0,false,FontWeight.normal),
+
                   ],
                 ),
               );

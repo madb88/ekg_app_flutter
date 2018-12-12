@@ -35,7 +35,7 @@ class ComponentCategoriesList extends StatelessWidget {
   final categoryNames = {
     'wavelength':'Załamek P',
     'episodeAndInterval': 'Odcinek i odstęp PQ',
-    'qrsTeam' : 'Zespół QRS',
+    'qrsTeam' : 'Zespół QRS oraz Punkt J',
     'stSection': 'Odcinek ST',
     'wavelengthT' : 'Załamek T',
     'qtSpace' : "Odstęp QT",

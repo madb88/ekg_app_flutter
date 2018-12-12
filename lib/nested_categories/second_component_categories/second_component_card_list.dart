@@ -6,6 +6,11 @@ import 'second_component_view_controller.dart';
 import 'tachycardia/tachycardia_card_list.dart';
 import 'arrhythmia/arrhythmia_card_list.dart';
 import '../five_component_categories/first_nested_five_component_category/first_nested_component_card_list.dart';
+import '../../detail_views/five_component_cards/five_component_first_card_detail_page.dart';
+import 'dart:async';
+import 'package:flutter/services.dart' show rootBundle;
+
+
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
   MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
@@ -21,45 +26,106 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 }
 
 class SecondComponentCardList extends StatelessWidget {
+
   final category;
   SecondComponentCardList(this.category);
 
   final categoryNames = {
-    'first':'Tachykardie zatokowe',
+    'first':'Tachyarytmie zatokowe',
     'second':'Niemiarowość zatokowa',
     'third':'Blok zatokowo - przedsionkowy',
+    'fourth':'Zahamowanie zatokowe',
   };
 
   @override
   Widget build(BuildContext context) {
+    AppBar appBar = AppBar(
+      elevation: 0.0,
+      backgroundColor: Colors.blue[900],
+      title: new Text(category),
+    );
+    double appHeight = appBar.preferredSize.height;
     return new Scaffold(
-      appBar: new AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.blue[900],
-        title: new Text(category),
-      ),
+      appBar: appBar,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[900],
         child:
-        Container(
-          color: Colors.orange[600],
-          child: ExpansionTile(
-            trailing: Icon(Icons.list, color: Colors.black),
-            title: Container(
-              child: Text('Pozostałe (' + categoryNames['first'] + ' | ' + categoryNames['second'] + ' | ' + categoryNames['third'] + ")",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                        textAlign: TextAlign.left
-                    ),
-            ),
 
-            children: <Widget>[
-              CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[400]),
-              Divider(height: 0.5),
-              CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[400]),
-              Divider(height: 0.5),
-              CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[400]),            ],
-          ),
+        Container(
+          color: Colors.blue[900],
+          child:  ExpansionTile(
+              backgroundColor: Colors.orange[900],
+              trailing: Icon(Icons.list, color: Colors.white),
+              title: Text('Pozostałe (' + categoryNames['first'] + ' | ' + categoryNames['second'] + ' | ' + categoryNames['third'] + ' | ' + categoryNames['fourth'] + ")", style: TextStyle(fontSize:20.00, color: Colors.white),textAlign: TextAlign.center,),
+              children: <Widget>[
+                Container(
+                  height: 320.00 - appHeight,
+                  color: Colors.orange[600],
+                  child:
+                  Scrollbar(
+                    child: ListView(
+                      children: <Widget>[
+                        CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[400]),
+                        Divider(height: 0.5),
+                        CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[400]),
+                        Divider(height: 0.5),
+                        CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[400]),
+                        Divider(height: 0.5),
+                        FutureBuilder(
+                            future: DefaultAssetBundle
+                                .of(context)
+                                .loadString('data_repo/five_component_cards.json'),
+                            builder: (context, snapshot) {
+                              var card = json.decode(snapshot.data.toString());
+                                if(snapshot.data == null) {
+                                  return Container(
+                                    child: Center(
+                                        child: CircularProgressIndicator()
+                                    ),
+                                  );
+                                } else  {
+                                  return CategoryButtonColor(
+                                      FiveComponentFirstCardDetailPage(card[3]), categoryNames['fourth'],
+                                      Colors.orange[400]);
+                                }
+                            }),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
         ),
+//        Container(
+//          color: Colors.orange[600],
+//          child: ExpansionTile(
+//            trailing: Icon(Icons.list, color: Colors.black),
+//            title: Container(
+//              child: Text('Pozostałe (' + categoryNames['first'] + ' | ' + categoryNames['second'] + ' | ' + categoryNames['third'] + ' | ' + categoryNames['fourth'] + ")",
+//                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
+//                        textAlign: TextAlign.left
+//                    ),
+//            ),
+//
+//            children: <Widget>[
+//              CategoryButtonColor(TachycardiaCardList(categoryNames['first'],'tachycardia_cards'), categoryNames['first'],Colors.orange[400]),
+//              Divider(height: 0.5),
+//              CategoryButtonColor(ArrhythmiaCardList(categoryNames['second'], 'arrhythmia_cards'), categoryNames['second'],Colors.orange[400]),
+//              Divider(height: 0.5),
+//              CategoryButtonColor(FirstNestedComponentCardList(categoryNames['third'],'first_nested_five_component'), categoryNames['third'],Colors.orange[400]),
+//              Divider(height: 0.5),
+//              FutureBuilder(
+//                  future: DefaultAssetBundle
+//                      .of(context)
+//                      .loadString('data_repo/five_component_cards.json'),
+//                  builder: (context, snapshot) {
+//                    var data = json.decode(snapshot.data.toString());
+//                    return CategoryButtonColor(FiveComponentFirstCardDetailPage(data[3]), categoryNames['fourth'], Colors.orange[400]);
+//
+//                  }),
+//            ],
+//
+//          ),
+//        ),
       ),
       body:
       new Container(

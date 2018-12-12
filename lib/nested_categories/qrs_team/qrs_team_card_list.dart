@@ -65,22 +65,6 @@ class QrsTeamCardList extends StatelessWidget {
                   ),
                 ]),
           ),
-
-//          Container(
-//            color: Colors.orange[600],
-//            child: ExpansionTile(
-//              trailing: Icon(Icons.list, color: Colors.black),
-//              title: Text('Pozostałe (' + categoryNames['qrsTeamFirstNested'] + ' | ' + categoryNames['qrsTeamSecondNested'] + ")",
-//                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-//                  textAlign: TextAlign.left
-//              ),
-//              children: <Widget>[
-//                CategoryButtonColor(QrsTeamFirstNestedCardList(categoryNames['qrsTeamFirstNested'],'qrs_team_first_nested'), categoryNames['qrsTeamFirstNested'],Colors.orange[400]),
-//                Divider(height: 0.5),
-//                CategoryButtonColor(QrsRNestedCategoriesList(categoryNames['qrsTeamSecondNested']), categoryNames['qrsTeamSecondNested'],Colors.orange[400]),
-//              ],
-//            ),
-//          ),
       ),
       body:
       new Container(

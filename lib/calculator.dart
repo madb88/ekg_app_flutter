@@ -132,13 +132,14 @@ class _CalculatorState extends State<Calculator> {
                         style: TextStyle(fontSize:25.00, color: Colors.blue[900]),
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(15.0),
+
                             labelStyle: TextStyle(fontSize: 15.0, color: Colors.blue[900]),
                             border: InputBorder.none,
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(0.2)),
                                 borderSide: BorderSide(color: Colors.blue[900])),
-                          suffixIcon: Icon(Icons.arrow_back, color: Colors.blue[900],),
-                            hintStyle: TextStyle(fontSize:15.00, color: Colors.blue[900]),
+                            hintStyle: TextStyle(fontSize:15.00, color: Colors.grey[400]),
                             hintText: "(podaj  ilość małych kwadratów)",
                             labelText: "QT"),
 
@@ -147,16 +148,14 @@ class _CalculatorState extends State<Calculator> {
                       TextField(
                         style: TextStyle(fontSize:25.00, color: Colors.blue[900]),
                         keyboardType: TextInputType.number,
-
-
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(15.0),
                             labelStyle: TextStyle(fontSize: 15.0, color: Colors.blue[900]),
                             border: InputBorder.none,
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(0.2)),
                                 borderSide: BorderSide(color: Colors.blue[900])),
-                            suffixIcon: Icon(Icons.arrow_back,color: Colors.blue[900]),
-                            hintStyle: TextStyle(fontSize:15.00, color: Colors.blue[900]),
+                            hintStyle: TextStyle(fontSize:15.00, color: Colors.grey[400]),
                             hintText: "(podaj ilość małych kwadratów)",
                             labelText: "Odstęp RR"),
                         controller: t2,
@@ -202,7 +201,7 @@ class _CalculatorState extends State<Calculator> {
                                 color: Colors.white,
                               ),
                               Material(
-                                color: Colors.blue[900],
+                                color: Colors.red[900],
                                 child: ButtonTheme(
                                   child: InkWell(
                                     onTap: clearCalculator,

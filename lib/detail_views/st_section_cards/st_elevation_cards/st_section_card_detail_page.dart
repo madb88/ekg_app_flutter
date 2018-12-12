@@ -42,8 +42,21 @@ class StElevationFirstCardDetailPage extends StatelessWidget {
                       shrinkWrap: true,
                     ),
                     ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
+
                       leading: Icon(Icons.chevron_right),
-                      title: Text(sendedCard['list'][2],style: TextStyle(fontSize: 20.0)),
+                      title: Text(sendedCard['listTileExtra'],style: TextStyle(fontSize: 20.0)),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
+
+                      leading: Icon(Icons.chevron_right),
+                      title: Text(sendedCard['secondListTileExtra'],style: TextStyle(fontSize: 20.0)),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.all(1.0),
+                      leading: Icon(Icons.chevron_right),
+                      title: Text(sendedCard['thirdListTileExtra'],style: TextStyle(fontSize: 20.0)),
                     )
                   ],
                 ),
