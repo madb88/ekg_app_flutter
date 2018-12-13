@@ -177,7 +177,29 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                           padding: EdgeInsets.only(bottom: 15.0),
                       ),
                       visible:  sendedCard['sevenList'] != ''?true:false,
-                    )
+                    ),
+                    Visibility(
+                      child:  Divider(
+                        color: Colors.blue[900],
+                      ),
+                      visible: sendedCard['sevenHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                          sendedCard['elevenHead'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['elevenHead'] != ''?true:false,
+                    ),
+                    Visibility(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                          color: Colors.yellow[100],
+                        ),
+                        child: ListBuilder(sendedCard['elevenList']),
+                        padding: EdgeInsets.only(bottom: 15.0),
+                      ),
+                      visible:  sendedCard['elevenList'] != ''?true:false,
+                    ),
                   ],
                 ),
               );
