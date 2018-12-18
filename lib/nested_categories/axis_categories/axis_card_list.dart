@@ -68,7 +68,9 @@ class AxisCardList extends StatelessWidget {
                                 newItem[index]['title'],
                                 style:
                                     new TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
-                              ), // ...
+                              ),
+                              subtitle: Text(newItem[index]['subtitle'],
+                                style: TextStyle(fontSize: 15.0),),// ...
                             ),
                             new Divider(
                               height: 2.0,

@@ -29,6 +29,10 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Visibility(
+                      child: NormalText(sendedCard['extraHeadNew1'], FontWeight.bold),
+                      visible: sendedCard['extraHeadNew1'] != ""?true:false,
+                    ),
+                    Visibility(
                       child: InfoContainer(Colors.blue[900], Colors.white,
                           sendedCard['infoWithButton'], 18.0, false, FontWeight.bold),
                       visible: sendedCard['infoWithButton'] != ""?true:false,
@@ -73,7 +77,14 @@ class ThirdComponentFirstCardDetailPage extends StatelessWidget {
                           sendedCard['redTextWithButton'], 18.0, false, FontWeight.bold),
                       visible: sendedCard['redTextWithButton'] != ""?true:false,
                     ),
-
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Visibility(
+                      child: InfoContainer(Colors.red[900], Colors.red[200],
+                          sendedCard['redTextWithButton2'], 18.0, false, FontWeight.bold),
+                      visible: sendedCard['redTextWithButton2'] != ""?true:false,
+                    ),
                     Visibility(
                       child:
                       Column(

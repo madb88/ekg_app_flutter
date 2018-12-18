@@ -59,7 +59,6 @@ class SpecialDetailPage extends StatelessWidget {
               return Container(
                 padding: EdgeInsets.all(15.0),
                 child:
-
                 Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -69,139 +68,104 @@ class SpecialDetailPage extends StatelessWidget {
                       height: 15.0,
                       color: Colors.white,
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.red, sendedCard['redTitle']),
-                        Flexible(child: NormalText(sendedCard['redText'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                   Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.yellow[800], sendedCard['yellowTitle']),
-                        Flexible(child: NormalText(sendedCard['yellowText'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.green, sendedCard['greenTitle']),
-                        Flexible(child: NormalText(sendedCard['greenText'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.black, sendedCard['blackTitle']),
-                        Flexible(child: NormalText(sendedCard['blackText'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
+                    Container(
+                      child: Table(
+                        border: TableBorder(horizontalInside: BorderSide(color: Colors.blue[300], width: 0.5,)),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+
+                        children: [
+                          TableRow(
+                              children: [
+                                ColoredText(Colors.red, sendedCard['redTitle']),
+                                Text(sendedCard['redText'], style: TextStyle(fontSize: 18.0),),
+                              ]
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.yellow[800], sendedCard['yellowTitle']),
+                              Text(sendedCard['yellowText'], style: TextStyle(fontSize: 18.0),),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.green[800], sendedCard['greenTitle']),
+                              Text(sendedCard['greenText'], style: TextStyle(fontSize: 18.0),),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.black, sendedCard['blackTitle']),
+                              Text(sendedCard['blackText'], style: TextStyle(fontSize: 18.0),),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                     normalText,
                     subtitlTwoSection,
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.red, sendedCard['redTitle2']),
-                        Flexible(child: NormalText(sendedCard['redText2'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.yellow[800], sendedCard['yellowTitle2']),
-                        Flexible(child: NormalText(sendedCard['yellowText2'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.green, sendedCard['greenTitle2']),
-                        Flexible(child: NormalText(sendedCard['greenText2'], FontWeight.normal)),
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.brown, sendedCard['brownTitle']),
-                        Flexible(child: NormalText(sendedCard['brownText'], FontWeight.normal),)
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                   Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.black, sendedCard['blackTitle2']),
-                        Flexible(child: NormalText(sendedCard['blackText2'], FontWeight.normal),)
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.purple, sendedCard['purpleTitle']),
-                        Flexible(child: NormalText(sendedCard['purpleText'], FontWeight.normal),)
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.grey[500], sendedCard['greyTitle']),
-                        Flexible(child: NormalText(sendedCard['greyText'], FontWeight.normal),)
-                      ],
-                    ),
-                    Divider(
-                      height: 15.0,
-                      color: Colors.white,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        ColoredText(Colors.grey[300], sendedCard['lightGreyTitle']),
-                        Flexible(child: NormalText(sendedCard['lightGreyText'], FontWeight.normal),)
-                      ],
+                    Container(
+                      child: Table(
+                        border: TableBorder(horizontalInside: BorderSide(color: Colors.black, width: 0.5,)),
+                        columnWidths: {1: FractionColumnWidth(0.85)},
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: [
+                          TableRow(
+                            decoration: BoxDecoration(color: Colors.grey[100]),
+                              children: [
+                                ColoredText(Colors.red, sendedCard['redTitle2']),
+                                Text(sendedCard['redText2'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                              ]
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.yellow[800], sendedCard['yellowTitle2']),
+                              Text(sendedCard['yellowText2'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          ),
+                          TableRow(
+                            decoration: BoxDecoration(color: Colors.grey[100]),
+
+                            children: [
+                              ColoredText(Colors.green[800], sendedCard['greenTitle2']),
+                              Text(sendedCard['greenText2'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.black, sendedCard['brownTitle']),
+                              Text(sendedCard['brownText'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          ),
+                          TableRow(
+                            decoration: BoxDecoration(color: Colors.grey[100]),
+
+                            children: [
+                              ColoredText(Colors.black, sendedCard['blackTitle2']),
+                              Text(sendedCard['blackText2'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.purple, sendedCard['purpleTitle']),
+                              Text(sendedCard['purpleText'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          ),
+                          TableRow(
+                            decoration: BoxDecoration(color: Colors.grey[100]),
+
+                            children: [
+                              ColoredText(Colors.grey[500], sendedCard['greyTitle']),
+                              Text(sendedCard['greyText'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              ColoredText(Colors.grey[300], sendedCard['lightGreyTitle']),
+                              Text(sendedCard['lightGreyText'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                     Divider(
                       height: 15.0,

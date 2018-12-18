@@ -83,28 +83,22 @@ class AxisFirstCardDetailPage extends StatelessWidget {
                       height: 15.0,
                       color: Colors.white,
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Wrap(
                       children: <Widget>[
                         NormalText(sendedCard['text3'], FontWeight.bold),
-                        Flexible(
-                          child: NormalText(
+                        NormalText(
                               sendedCard['text3a'], FontWeight.normal),
-                        ),
                       ],
                     ),
                     Divider(
                       height: 15.0,
                       color: Colors.white,
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Wrap(
                       children: <Widget>[
                         NormalText(sendedCard['text4'], FontWeight.bold),
-                        Flexible(
-                          child: NormalText(
+                        NormalText(
                               sendedCard['text4a'], FontWeight.normal),
-                        ),
                       ],
                     ),
                     Divider(
