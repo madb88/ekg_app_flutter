@@ -30,6 +30,7 @@ class EkgFirstNestedCategoryList extends StatelessWidget {
     return new Scaffold(
       drawer: NavigatorWidget(),
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: Text("EKG"),
         actions: <Widget>[

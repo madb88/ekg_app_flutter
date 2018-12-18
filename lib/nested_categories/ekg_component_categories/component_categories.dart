@@ -53,6 +53,7 @@ class ComponentCategoriesList extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       drawer: NavigatorWidget(),
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: Text(componentName),
         actions: <Widget>[

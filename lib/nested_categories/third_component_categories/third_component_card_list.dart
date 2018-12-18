@@ -31,32 +31,39 @@ class ThirdComponentCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppBar appBar = AppBar(
+      elevation: 0.0,
+      backgroundColor: Colors.blue[900],
+      title: new Text(category),
+    );
+    double appHeight = appBar.preferredSize.height;
+
     return new Scaffold(
-      appBar: new AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.blue[900],
-        title: new Text(category),
-      ),
+      appBar: appBar,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[900],
         child:
         Container(
-          color: Colors.orange[600],
-          child: ExpansionTile(
-            trailing: Icon(Icons.list, color: Colors.black),
-            title: Container(
-              child: Text('Pozostałe (' + categoryNames['first'] + ' | ' + categoryNames['second'] + ")",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.black),
-                  textAlign: TextAlign.left
-              ),
-            ),
-
-            children: <Widget>[
-              CategoryButtonColor(ShortcutsCardList(categoryNames['first'],'shortcuts_cards'), categoryNames['first'],Colors.orange[400]),
-              Divider(height: 0.5),
-              CategoryButtonColor(SupraventricularStimulationCardList(categoryNames['second'], 'supraventricular_stimulation_cards'), categoryNames['second'],Colors.orange[400]),
-            ],
-          ),
+          color: Colors.blue[900],
+          child:  ExpansionTile(
+              backgroundColor: Colors.orange[900],
+              trailing: Icon(Icons.list, color: Colors.white),
+              title: Text('Pozostałe', style: TextStyle(fontSize:25.00, color: Colors.white),textAlign: TextAlign.center,),
+              children: <Widget>[
+                Container(
+                  height: 200.00 - appHeight,
+                  color: Colors.orange[600],
+                  child:
+                  Scrollbar(
+                    child: ListView(
+                      children: <Widget>[
+                        CategoryButtonColor(ShortcutsCardList(categoryNames['first'],'shortcuts_cards'), categoryNames['first'],Colors.orange[300]),
+                        CategoryButtonColor(SupraventricularStimulationCardList(categoryNames['second'], 'supraventricular_stimulation_cards'), categoryNames['second'],Colors.orange[300]),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
         ),
       ),
       body:

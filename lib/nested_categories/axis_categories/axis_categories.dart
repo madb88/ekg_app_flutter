@@ -35,6 +35,7 @@ class AxisCategoriesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Text(axisName),
         actions: <Widget>[
           IconButton(

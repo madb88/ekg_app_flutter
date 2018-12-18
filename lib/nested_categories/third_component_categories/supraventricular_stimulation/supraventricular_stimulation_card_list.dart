@@ -26,6 +26,7 @@ class SupraventricularStimulationCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: Text(category),
       ),

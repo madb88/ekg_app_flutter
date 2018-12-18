@@ -32,6 +32,7 @@ class EpisodesIntervalCategoriesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: Text(componentName),
         actions: <Widget>[

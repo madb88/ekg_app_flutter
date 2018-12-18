@@ -22,8 +22,9 @@ class FiveFourthComponentCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.blue[900],
         title: new Text(category),
 

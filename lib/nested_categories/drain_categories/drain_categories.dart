@@ -39,6 +39,7 @@ class DrainCategoriesList extends StatelessWidget {
     
     return new Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Text(drainName),
         actions: <Widget>[
           IconButton(
