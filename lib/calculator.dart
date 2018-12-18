@@ -82,6 +82,7 @@ class _CalculatorState extends State<Calculator> {
         body: CustomScrollView(
       slivers: <Widget>[
         new SliverAppBar(
+          elevation: 0.0,
           backgroundColor: Colors.blue[900],
           pinned: true,
           title: new Text("Kalkulator (wzór Bazzeta)"),
