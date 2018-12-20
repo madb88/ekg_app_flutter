@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../detail_views/fourth_component_cards/fourth_component_first_card_detail_page.dart';
+import '../../../detail_views/fourth_component_cards/fourth_component_third_card_detail_page.dart';
 
 
 
@@ -27,7 +28,11 @@ class AdditionalVentricularViewController extends StatelessWidget {
             FourthComponentFirstCardDetailPage(cardsCollection[0]),
             FourthComponentFirstCardDetailPage(cardsCollection[1]),
             FourthComponentFirstCardDetailPage(cardsCollection[2]),
-            FourthComponentFirstCardDetailPage(cardsCollection[3])
+            FourthComponentFirstCardDetailPage(cardsCollection[3]),
+            FourthComponentThirdCardDetailPage(cardsCollection[4]),
+            FourthComponentFirstCardDetailPage(cardsCollection[5])
+
+
           ],
         ),
       ),
