@@ -82,6 +82,7 @@ flutter:
    - data_repo/ozw/ozw_cards.json
    - data_repo/ozw/seven_category.json
    - data_repo/seven_nested_six_component_cards.json
+   - data_repo/uklad.json
    - images/logo3.png
    - images/body.jpg
    - images/ekg_images/

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../../customWidgets/info_container.dart';
+import '../../../customWidgets/list_builder.dart';
 
 
 class FiveComponentFirstNestedCardDetailPage extends StatelessWidget {
@@ -27,9 +29,27 @@ class FiveComponentFirstNestedCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      child:  Text(sendedCard['text'], style: TextStyle(fontSize: 25.0)),
+                      child:  Text(sendedCard['text'], style: TextStyle(fontSize: 25.0), textAlign: TextAlign.justify),
                       padding: EdgeInsets.all(10.0),
-                    )
+                    ),
+                    Divider(height: 10.0, color: Colors.white),
+                    Visibility(
+                      child:
+                      Column(
+                        children: <Widget>[
+                          InfoContainer(Colors.yellow[900], Colors.yellow[200],
+                              sendedCard['infoHead'], 18.0, false, FontWeight.bold),
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                              color: Colors.yellow[100],
+                            ),
+                            child: ListBuilder(sendedCard['infoList']),
+                          ),
+                        ],
+                      ),
+                      visible: sendedCard['infoHead'] != ''?true:false,
+                    ),
                   ],
                 ),
               );

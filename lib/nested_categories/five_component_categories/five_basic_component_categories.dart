@@ -8,7 +8,8 @@ import 'five_second_component_card_list.dart';
 import 'five_third_component_card_list.dart';
 import 'five_fourth_component_card_list.dart';
 import './../../customWidgets/floating_custom_button.dart';
-
+import 'dart:convert';
+import '../../detail_views/five_component_cards/five_component_first_card_detail_page.dart';
 
 
 class MyCustomRoute<T> extends MaterialPageRoute<T> {
@@ -34,7 +35,9 @@ class FiveBasicComponentCategoriesList extends StatelessWidget {
     'first':'Zaburzenia funkcji węzła zatokowego',
     'second':'Przewodzenie Przedsionkowo-komorowe',
     'third':'Zaburzenia przewodzenia śródkomorowego',
-    'fourth':'Stymulator'
+    'fourth':'Stymulator',
+    'five': "Układ przewodzący serca"
+
   };
 
   @override
@@ -83,6 +86,25 @@ class FiveBasicComponentCategoriesList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                FutureBuilder(
+                    future: DefaultAssetBundle
+                        .of(context)
+                        .loadString('data_repo/uklad.json'),
+                    builder: (context, snapshot) {
+                      var card = json.decode(snapshot.data.toString());
+                      if(snapshot.data == null) {
+                        return Container(
+                          child: Center(
+                              child: CircularProgressIndicator()
+                          ),
+                        );
+                      } else  {
+                        return CategoryButton(FiveComponentFirstCardDetailPage(card[0]), card[0]['title']);
+                      }
+                    }),
+                Divider(
+                  height: 5.0,
+                ),
                 CategoryButton(FiveComponentCardList(categoryNames['first']), categoryNames['first']),
                 Divider(
                   height: 5.0,
@@ -98,9 +120,10 @@ class FiveBasicComponentCategoriesList extends StatelessWidget {
                 CategoryButton(FiveFourthComponentCardList(categoryNames['fourth']), categoryNames['fourth']),
                 Divider(
                   height: 5.0,
-                )
+                ),
+
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -40,14 +40,14 @@ class SecondNestedComponentCardList extends StatelessWidget {
         title: new Text(category),
         elevation: 0.0,
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.blue[900],
-        child:
-        Container(
-          color: Colors.orange[600],
-          child: CategoryButtonColor(ThirdNestedComponentCardList(categoryNames['first'],'third_nested_five_component_cards'), categoryNames['first'],Colors.orange[400]),
-        ),
-      ),
+//      bottomNavigationBar: BottomAppBar(
+//        color: Colors.blue[900],
+//        child:
+//        Container(
+//          color: Colors.orange[600],
+//          child: CategoryButtonColor(ThirdNestedComponentCardList(categoryNames['first'],'third_nested_five_component_cards'), categoryNames['first'],Colors.orange[400]),
+//        ),
+//      ),
       body:
       new Container(
 
@@ -56,9 +56,10 @@ class SecondNestedComponentCardList extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
 
+          children: <Widget>[
             new Flexible(
+
               child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
@@ -74,8 +75,10 @@ class SecondNestedComponentCardList extends StatelessWidget {
                     var newItem = json.decode(snapshot.data.toString());
                     return new ListView.builder(
                       itemBuilder: (BuildContext context, int index) {
+
                         return Card(
                           elevation: 2.0,
+                          color: index == 1?Colors.orange[400]:Colors.white,
                           shape: Border.all(color: Colors.blue[900]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -105,18 +108,27 @@ class SecondNestedComponentCardList extends StatelessWidget {
 // ...
                               ),
                                Divider(
-                                height: 2.0,
+                                height: 5.0,
                               ),
                             ],
                           ),
+
                         );
+
                       },
                       itemCount: newItem == null ? 0 : newItem.length,
                     );
+
                   }
                 },
               ),
+
             ),
+
+//            Expanded(
+//              flex: 1,
+//              child: CategoryButtonColor(ThirdNestedComponentCardList(categoryNames['first'],'third_nested_five_component_cards'), categoryNames['first'],Colors.orange[400]),
+//            ),
           ],
         ),
       ),
