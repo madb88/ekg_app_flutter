@@ -29,8 +29,6 @@ class FiveComponentFourthNestedCardDetailPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    NormalText(sendedCard['listHead'], FontWeight.bold),
-                    Divider(height: 15.0, color: Colors.white),
                     ListBuilder(sendedCard['list']),
                     Divider(height: 15.0, color: Colors.white),
                     Visibility(
