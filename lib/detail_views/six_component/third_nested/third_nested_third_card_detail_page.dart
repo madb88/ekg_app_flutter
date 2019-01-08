@@ -38,6 +38,17 @@ class ThirdNestedThirdCardDetailPage extends StatelessWidget {
 
                     HtmlView(data: sendedCard['titleSecond']),
                     Divider(color: Colors.white),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.info_outline, color: Colors.yellow[900]),
+                        Flexible(
+                          child: Text(sendedCard['addedInfo'],
+                              style: TextStyle(fontSize: 15.0)),
+                        ),
+                      ],
+                    ),
+                    Divider(color: Colors.white),
                     Text(
                       sendedCard['head'],
                       style: TextStyle(fontSize: 18.0),

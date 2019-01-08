@@ -31,7 +31,7 @@ class SixComponentCardList extends StatelessWidget {
   final categoryNames = {
     'first':'Zaburzenia elektrolitowe',
     'second':'Zaburzenie funkcji tarczycy',
-    'third':'Przerost',
+    'third':'Przerost komór i przedsionków',
     'fourth':'Opis martwicy',
     'five':'OZW',
     'six':'Błędy techniczne'

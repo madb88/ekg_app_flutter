@@ -28,14 +28,14 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Visibility(
-                      child: NormalText(sendedCard['text'], FontWeight.normal),
+                      child: NormalText(sendedCard['text'], FontWeight.bold),
                       visible: sendedCard['text'] != "" ? true : false,
                     ),
                     Divider(color: Colors.white),
                     ListBuilder(sendedCard['list']),
                     Divider(color: Colors.white),
                     Visibility(
-                      child: NormalText(sendedCard['text2'], FontWeight.normal),
+                      child: NormalText(sendedCard['text2'], FontWeight.bold),
                       visible: sendedCard['text2'] != "" ? true : false,
                     ),
                     Divider(color: Colors.white),
@@ -107,6 +107,49 @@ class SixComponentFirstCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['infoTextHead2'] != "" || sendedCard['infoText2'] != ''? true : false,
+                    ),
+                    Divider(color: Colors.white),
+                    Visibility(
+                      child: Column(
+                        children: <Widget>[
+                          InfoContainer(
+                              Colors.red[900],
+                              Colors.red[100],
+                              sendedCard['redTextHead2'],
+                              18.0,
+                              false,
+                              FontWeight.bold),
+                          InfoContainer(
+                              Colors.red[900],
+                              Colors.red[100],
+                              sendedCard['redText2'],
+                              18.0,
+                              false,
+                              FontWeight.normal),
+                        ],
+                      ),
+                      visible: sendedCard['redTextHead2'] != "" || sendedCard['redText2'] != ''? true : false,
+                    ),
+                    Visibility(
+                      child: Column(
+                        children: <Widget>[
+                          InfoContainer(
+                              Colors.yellow[900],
+                              Colors.yellow[100],
+                              sendedCard['extraInfo'],
+                              18.0,
+                              false,
+                              FontWeight.bold),
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(left: BorderSide(color:  Colors.yellow[900], width: 5.0)),
+                              color: Colors.yellow[100],
+                            ),
+                            child: ListBuilder(sendedCard['extraInfoList']),
+                          ),
+                        ],
+                      ),
+                      visible: sendedCard['extraInfo'] != "" || sendedCard['extraInfoList'] != ''? true : false,
                     ),
                     Divider(color: Colors.white),
                   ],

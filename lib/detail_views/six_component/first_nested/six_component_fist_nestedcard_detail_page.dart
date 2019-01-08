@@ -99,7 +99,28 @@ class SixComponentFirstNestedCardDetailPage extends StatelessWidget {
                     Visibility(
                       child: ListBuilder(sendedCard['list2']),
                       visible: sendedCard['list2'] != "" ? true : false,
-                    )
+                    ),
+                    Visibility(
+                      child: Column(
+                        children: <Widget>[
+                          InfoContainer(
+                              Colors.yellow[900],
+                              Colors.yellow[100],
+                              sendedCard['infoText4Head'],
+                              18.0,
+                              false,
+                              FontWeight.bold),
+                          InfoContainer(
+                              Colors.yellow[900],
+                              Colors.yellow[100],
+                              sendedCard['infoText4'],
+                              18.0,
+                              false,
+                              FontWeight.normal),
+                        ],
+                      ),
+                      visible: sendedCard['infoText4Head'] != "" || sendedCard['infoText4'] != ''? true : false,
+                    ),
                   ],
                 ),
               );

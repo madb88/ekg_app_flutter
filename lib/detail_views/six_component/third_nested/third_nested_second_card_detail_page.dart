@@ -59,16 +59,6 @@ class ThirdNestedSecondCardDetailPage extends StatelessWidget {
                           ],
                         ),
                         Divider(color: Colors.white),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(Icons.info_outline, color: Colors.yellow[900]),
-                            Flexible(
-                              child: Text(sendedCard['addedInfo'],
-                                  style: TextStyle(fontSize: 15.0)),
-                            ),
-                          ],
-                        ),
                       ],
                     ),
                     Divider(color: Colors.white),
@@ -76,6 +66,17 @@ class ThirdNestedSecondCardDetailPage extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 18.0, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center),
+                    Divider(color: Colors.white),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.info_outline, color: Colors.yellow[900]),
+                        Flexible(
+                          child: Text(sendedCard['addedInfo'],
+                              style: TextStyle(fontSize: 15.0)),
+                        ),
+                      ],
+                    ),
                     Divider(color: Colors.white),
                     ListBuilder(sendedCard['list']),
                     Divider(color: Colors.white),

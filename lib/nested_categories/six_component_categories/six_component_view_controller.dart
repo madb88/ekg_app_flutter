@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../detail_views/six_component/six_component_fist_card_detail_page.dart';
+import '../../detail_views/six_component/six_component_special_card_detail_page.dart';
 
 
 class SixComponentViewController extends StatelessWidget {
@@ -29,7 +30,8 @@ class SixComponentViewController extends StatelessWidget {
             SixComponentFirstCardDetailPage(cardsCollection[7]),
             SixComponentFirstCardDetailPage(cardsCollection[8]),
             SixComponentFirstCardDetailPage(cardsCollection[9]),
-            SixComponentFirstCardDetailPage(cardsCollection[10])
+            SixComponentSpecialCardDetailPage(cardsCollection[10]),
+            SixComponentFirstCardDetailPage(cardsCollection[11]),
           ],
         ),
       ),
