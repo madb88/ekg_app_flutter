@@ -68,6 +68,12 @@ class OzwThreeWcDetailPage extends StatelessWidget {
                                       style: TextStyle(
                                           fontSize: 20.0, fontWeight: FontWeight.normal)),
                                 ),
+                                ListTile(
+                                  leading: Icon(Icons.chevron_right),
+                                  title: Text(newItem[cardNumber]["secondListTile"],
+                                      style: TextStyle(
+                                          fontSize: 20.0, fontWeight: FontWeight.normal)),
+                                ),
                                 Divider(
                                   color: Colors.white,
                                 ),
@@ -99,12 +105,8 @@ class OzwThreeWcDetailPage extends StatelessWidget {
                                 Divider(
                                   color: Colors.white,
                                 ),
-                                ListTile(
-                                  leading: Icon(Icons.chevron_right),
-                                  title: Text(newItem[cardNumber]["fiveListTile"],
-                                      style: TextStyle(
-                                          fontSize: 20.0, fontWeight: FontWeight.normal)),
-                                ),
+                                ListBuilder(newItem[cardNumber]["fiveListTile"]),
+
                               ],
                             ),
                           );

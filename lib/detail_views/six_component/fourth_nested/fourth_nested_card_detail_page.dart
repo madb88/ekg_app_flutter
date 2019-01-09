@@ -59,13 +59,13 @@ class FourthNestedCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                          child: InfoContainer(Colors.red[900], Colors.red[100], sendedCard['redInfo'], 18.0, false,FontWeight.normal),
-                        ),
-                      ],
+
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border(left: BorderSide(color:  Colors.red[900], width: 5.0)),
+                            color: Colors.red[100],
+                          ),
+                          child: ListBuilder(sendedCard['redInfo']),
                     ),
                     Column(
                       children: <Widget>[

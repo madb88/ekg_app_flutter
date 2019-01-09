@@ -33,10 +33,6 @@ class OzwThirdCardDetailPage extends StatelessWidget {
                     ),
                     Divider(color: Colors.white),
                     InfoContainer(Colors.yellow[900], Colors.yellow[100],
-                        sendedCard['infoHead'], 18.0, false, FontWeight.bold),
-                    InfoContainer(Colors.yellow[900], Colors.yellow[100],
-                        sendedCard['infoText'], 18.0, false, FontWeight.normal),
-                    InfoContainer(Colors.yellow[900], Colors.yellow[100],
                         sendedCard['infoHead2'], 18.0, false, FontWeight.bold),
                     Container(
                       decoration: BoxDecoration(
@@ -47,6 +43,11 @@ class OzwThirdCardDetailPage extends StatelessWidget {
                       ),
                       child: ListBuilder(sendedCard['list']),
                     ),
+                    Divider(color: Colors.white),
+                    InfoContainer(Colors.yellow[900], Colors.yellow[100],
+                        sendedCard['infoHead'], 18.0, false, FontWeight.bold),
+                    InfoContainer(Colors.yellow[900], Colors.yellow[100],
+                        sendedCard['infoText'], 18.0, false, FontWeight.normal),
                     Divider(color: Colors.white),
                   ],
                 ),

@@ -44,6 +44,9 @@ class OzwFiveCardDetailPage extends StatelessWidget {
 
                     ),
                     Divider(color: Colors.white),
+                    InfoContainer(Colors.red[900],Colors.red[100],sendedCard["redInfoExtra"],18.0,false,FontWeight.normal),
+                    Divider(color: Colors.white),
+
                     Visibility(
                       child: InfoContainer(Colors.yellow[900], Colors.yellow[100], sendedCard['extraInfo'],18.0,false,FontWeight.bold),
                       visible: sendedCard['extraInfo'] != ''?true:false,

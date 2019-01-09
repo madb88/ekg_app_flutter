@@ -21,7 +21,7 @@ class OzwSecondWcDetailPage extends StatelessWidget {
           elevation: 0.0,
           backgroundColor: Colors.blue[900],
           pinned: true,
-          title: new Text('Ostry zespół wieńcowy w powudzeniach przewiedzionych z blokiem lewej odnogi pęczka Hisa'),
+          title: new Text('Ostry zespół wieńcowy w pobudzeniach przewiedzionych z blokiem śródkomorowym'),
         ),
         new SliverList(
           delegate: new SliverChildBuilderDelegate(
@@ -68,20 +68,8 @@ class OzwSecondWcDetailPage extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 ListBuilder(newItem[cardNumber]["list"]),
-                                ListTile(
-                                  contentPadding: EdgeInsets.all(1.0),
-                                  leading: Icon(Icons.info, color: Colors.red[600],),
-                                  title: Text(newItem[cardNumber]["listTileOne"],
-                                      style: TextStyle(
-                                          fontSize: 25.0, fontWeight: FontWeight.normal, color: Colors.red[600] )),
-                                ),
-                                ListTile(
-                                  contentPadding: EdgeInsets.all(1.0),
-                                  leading: Icon(Icons.info, color: Colors.red[600],),
-                                  title: Text(newItem[cardNumber]["listTileTwo"],
-                                      style: TextStyle(
-                                          fontSize: 25.0, fontWeight: FontWeight.normal, color: Colors.red[600] )),
-                                ),
+                                InfoContainer(Colors.red[900],Colors.red[100],newItem[cardNumber]["listTileOne"],18.0,false,FontWeight.normal),
+                                InfoContainer(Colors.red[900],Colors.red[100],newItem[cardNumber]["listTileTwo"],18.0,false,FontWeight.normal),
                                 Divider(
                                   color: Colors.white
                                 ),

@@ -21,7 +21,7 @@ class OzwFirstWcDetailPage extends StatelessWidget {
           elevation: 0.0,
           backgroundColor: Colors.blue[900],
           pinned: true,
-          title: new Text('Zawał prwej komory'),
+          title: new Text('Zawał prawej komory'),
         ),
         new SliverList(
           delegate: new SliverChildBuilderDelegate(

@@ -107,7 +107,7 @@ class _CalculatorState extends State<Calculator> {
                           children: <Widget>[
                             Center(
                               child: Text(
-                                "QTc: $sum",
+                                "QTc: $sum /msc",
                                 style: TextStyle(
                                     fontSize: 35.0,
                                     color: Colors.blue[900],
@@ -116,7 +116,7 @@ class _CalculatorState extends State<Calculator> {
                             ),
                             Center(
                               child: Text(
-                                "HR: $hr",
+                                "HR: $hr /min",
                                 style: TextStyle(
                                   fontSize: 35.0,
                                   color: hrColor,

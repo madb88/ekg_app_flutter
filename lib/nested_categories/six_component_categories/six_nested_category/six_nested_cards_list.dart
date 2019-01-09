@@ -42,9 +42,9 @@ class SixNestedCardsList extends StatelessWidget {
     'third':'Ściana dolna',
     'fourth':'Ściana dolno-podstawna',
     'five':'Zawał prawej komory',
-    'six':'Ostry zespół wieńcowy w ewolucjach przewiedzionych z blokiem śródkomorowym',
+    'six':'Ostry zespół wieńcowy w pobudzeniach przewiedzionych z blokiem  śródkomorowym',
     'seven':'Stymulator',
-    'eight':'Ewolucja zmian  podczas OZW',
+    'eight':'Ewolucja zmian podczas OZW',
     'nine':'Dorzut Zawału',
   };
 

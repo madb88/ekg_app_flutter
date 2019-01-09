@@ -59,6 +59,18 @@ class OzwTenCardDetailPage extends StatelessWidget {
                       ),
                       child: ListTile(
                         leading: Icon(Icons.chevron_right),
+                        title: Text(sendedCard['listTile2'],
+                            style: TextStyle(
+                                fontSize: 18.0, fontWeight: FontWeight.normal)),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border(left: BorderSide(color:  Colors.red[900], width: 5.0)),
+                        color: Colors.red[100],
+                      ),
+                      child: ListTile(
+                        leading: Icon(Icons.chevron_right),
                         title: Text(sendedCard['listTile'],
                             style: TextStyle(
                                 fontSize: 18.0, fontWeight: FontWeight.normal)),

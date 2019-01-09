@@ -77,14 +77,8 @@ class FourthNestedThirdCardDetailPage extends StatelessWidget {
                       ],
                     ),
                     Divider(color: Colors.blue[900]),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Flexible(
-                            child: NormalText(
-                                sendedCard['textTwo'], FontWeight.normal)),
-                      ],
-                    ),
+                    ListBuilder(sendedCard['textTwo']),
+
                   ],
                 ),
               );
