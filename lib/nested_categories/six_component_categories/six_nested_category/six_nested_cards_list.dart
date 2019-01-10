@@ -14,20 +14,7 @@ import './../../../detail_views/six_component/ozw/ozw_cards/ozw_fist_wc_detail_p
 import './../../../detail_views/six_component/ozw/ozw_cards/ozw_second_wc_detail_page.dart';
 import './../../../detail_views/six_component/ozw/ozw_cards/ozw_three_wc_detail_page.dart';
 import './../../../detail_views/six_component/ozw/ozw_cards/ozw_fourth_wc_detail_page.dart';
-
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class SixNestedCardsList extends StatelessWidget {
   final componentName;

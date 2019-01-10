@@ -4,20 +4,7 @@ import 'dart:convert';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'five_second_component_view_controller.dart';
 import 'second_nested_five_component_category/second_nested_component_card_list.dart';
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class FiveSecondComponentCardList extends StatelessWidget {
   final category;

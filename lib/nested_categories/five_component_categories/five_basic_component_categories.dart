@@ -10,19 +10,7 @@ import 'five_fourth_component_card_list.dart';
 import './../../customWidgets/floating_custom_button.dart';
 import 'dart:convert';
 import '../../detail_views/five_component_cards/five_component_first_card_detail_page.dart';
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class FiveBasicComponentCategoriesList extends StatelessWidget {
   final componentName;

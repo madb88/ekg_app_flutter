@@ -5,18 +5,7 @@ import './../../customWidgets/category_button.dart';
 import './../../detail_views/wavelength_cards/wavelength_normal_card_detail_page.dart';
 import 'dart:convert';
 import 'component_card_list.dart';
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class WavelengthCategoriesList extends StatelessWidget {
   final componentName;

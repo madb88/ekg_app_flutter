@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../card_list.dart';
 import '../calculator.dart';
+import 'package:ekg_cards_app/customRoute.dart';
 
 class CalculatorButton extends StatelessWidget {
 

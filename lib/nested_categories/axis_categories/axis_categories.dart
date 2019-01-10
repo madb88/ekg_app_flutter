@@ -3,33 +3,19 @@ import '../../home_page.dart';
 import '../../card_list.dart';
 import '../../category_list.dart';
 import './../../customWidgets/category_button.dart';
+import 'package:ekg_cards_app/customRoute.dart';
 
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
 
 class AxisCategoriesList extends StatelessWidget {
   final axisName;
 
   AxisCategoriesList(this.axisName);
 
-
   final categoryNames = {
     'axisOne' : 'II, III dodatnie',
     'axisTwo': 'I, III oba skierowane w dół',
     'axisThree': 'I i III zwrócone do siebie'
   };
-   
-  
 
   @override
   Widget build(BuildContext context) {

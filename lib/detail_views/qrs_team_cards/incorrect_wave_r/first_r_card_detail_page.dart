@@ -2,18 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../customWidgets/normal_text.dart';
 import '../../../customWidgets/list_builder.dart';
 
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
-
 class FirstRCardDetailPage extends StatelessWidget {
   final sendedCard;
 

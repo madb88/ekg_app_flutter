@@ -5,20 +5,7 @@ import '../../customWidgets/category_button_coloredit.dart';
 import 'third_component_view_controller.dart';
 import 'shortcuts/shortcuts_card_list.dart';
 import 'supraventricular_stimulation/supraventricular_stimulation_card_list.dart';
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class ThirdComponentCardList extends StatelessWidget {
   final category;

@@ -4,19 +4,8 @@ import 'dart:convert';
 import 'wavelength_view_controller.dart';
 import '../../customWidgets/category_button_coloredit.dart';
 import 'component_card_list.dart';
+import '../../customRoute.dart';
 
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
 
 class WaveLengthCardList extends StatelessWidget {
   final category;
@@ -71,7 +60,7 @@ class WaveLengthCardList extends StatelessWidget {
                                 final sendedCard = newItem;
                                 Navigator.push(
                                   context,
-                                  new MyCustomRoute(
+                                  MyCustomRoute(
                                       builder: (context) =>
                                           WaveLengthViewController(index, sendedCard)),
                                 );

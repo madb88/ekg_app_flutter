@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../customWidgets/list_builder.dart';
 import '../../../customWidgets/normal_text.dart';
+import 'dart:convert';
+import '../../../detail_views/six_component/six_component_fist_card_detail_page.dart';
+import 'package:ekg_cards_app/customRoute.dart';
+
 
 class FourthNestedThirdCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -46,6 +50,48 @@ class FourthNestedThirdCardDetailPage extends StatelessWidget {
                               sendedCard['chapter2'], FontWeight.bold),
                         ),
                       ],
+                    ),
+                    Container(
+                      child:
+                      FutureBuilder(
+                        future: DefaultAssetBundle
+                            .of(context)
+                            .loadString('data_repo/six_component.json'),
+                        builder: (context, snapshot) {
+                          var newItem = json.decode(snapshot.data.toString());
+                          return new ListView.builder(
+                            itemBuilder: (BuildContext context, int index) {
+                              return
+                                Material(
+                                  color: Colors.orange[300],
+                                  child: ButtonTheme(
+                                    child: InkWell(
+                                    onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MyCustomRoute(builder: (context) => SixComponentFirstCardDetailPage(newItem[7])),
+                                    );
+                                  },
+                                      child: new Container(
+                                        height: 50.0,
+                                        child: new Center(
+                                          child: new Text(
+                                            'Przejdź do zsapalenia osierdzia',
+                                            style: new TextStyle(
+                                                fontSize: 18.0,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                            },
+                            itemCount: 1,
+                            shrinkWrap: true,
+                          );
+                        },
+                      ),
                     ),
                     Divider(color: Colors.blue[900]),
                     Row(

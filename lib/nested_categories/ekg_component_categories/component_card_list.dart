@@ -4,19 +4,8 @@ import 'dart:convert';
 import '../../customWidgets/category_button_coloredit.dart';
 import '../ekg_component_categories/incorrect_wavelength_component_card_list.dart';
 import 'ekg_component_view_controller.dart';
+import 'package:ekg_cards_app/customRoute.dart';
 
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
 
 class ComponentCardList extends StatelessWidget {
   final category;

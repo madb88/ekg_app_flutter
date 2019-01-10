@@ -2,18 +2,7 @@ import 'package:flutter/material.dart';
 import 'category_list.dart';
 import 'calculator.dart';
 import 'customWidgets/navigator_widget.dart';
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class HomePageList extends StatelessWidget {
  
@@ -98,7 +87,7 @@ class HomePageList extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text('Wersja: 0.9.0'),
+                Text('Wersja: 0.10.0'),
               ],
             ))
           ],

@@ -4,19 +4,7 @@ import '../category_list.dart';
 import '../customWidgets/category_button.dart';
 import '../customWidgets/navigator_widget.dart';
 import '../nested_categories/ekg_component_categories/component_categories.dart';
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class EkgFirstNestedCategoryList extends StatelessWidget {
   

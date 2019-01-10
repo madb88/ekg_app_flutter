@@ -5,18 +5,7 @@ import './../../customWidgets/category_button.dart';
 import 'dart:convert';
 import 'incorrect_wave_r_card_list.dart';
 import '../../detail_views/qrs_team_cards/wave_r/wave_r_card_detail_page.dart';
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class QrsRNestedCategoriesList extends StatelessWidget {
   final componentName;

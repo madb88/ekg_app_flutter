@@ -2,20 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';
 import 'seven_nested_component_view_controller.dart';
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class SevenNestedComponentCardList extends StatelessWidget {
   final category;
@@ -26,14 +13,13 @@ class SevenNestedComponentCardList extends StatelessWidget {
       this.categoryName
       );
 
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Text(category),
-
+        elevation: 0.0,
       ),
       body:
       new Container(
@@ -64,7 +50,6 @@ class SevenNestedComponentCardList extends StatelessWidget {
                         return Card(
                           shape: Border.all(color: Colors.blue[900]),
                           elevation: 2.0,
-                          color: Colors.blue[100],
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[

@@ -11,19 +11,8 @@ import './../../customWidgets/navigator_widget.dart';
 import '../wavelengthT/wavelengthT_card_list.dart';
 import '../qtSpace/qt_space_card_list.dart';
 import '../wavelengthU/wavelengthU_card_list.dart';
+import 'package:ekg_cards_app/customRoute.dart';
 
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
 
 class ComponentCategoriesList extends StatelessWidget {
   final componentName;

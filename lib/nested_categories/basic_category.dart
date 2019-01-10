@@ -8,18 +8,7 @@ import '../customWidgets/navigator_widget.dart';
 import 'axis_categories/axis_card_list.dart';
 import 'feature_categories/feature_card_list.dart';
 import 'other_concepts__categories/other_concepts_card_list.dart';
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class BasicCategoryList extends StatelessWidget {
   

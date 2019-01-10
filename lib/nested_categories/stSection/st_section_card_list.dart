@@ -5,20 +5,7 @@ import 'st_section_view_controller.dart';
 import '../stSection/st_section_elevation_card_list.dart';
 import '../stSection/st_section_lowering_card_list.dart';
 import '../../customWidgets/category_button_coloredit.dart';
-
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
+import 'package:ekg_cards_app/customRoute.dart';
 
 class StSectionCardList extends StatelessWidget {
   final category;

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/image_widget.dart';
-import 'package:photo_view/photo_view.dart';
 
 class IwFirstCardDetailPage extends StatelessWidget {
   final sendedCard;

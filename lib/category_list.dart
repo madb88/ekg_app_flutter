@@ -10,19 +10,7 @@ import './nested_categories/third_component_categories/third_component_card_list
 import './nested_categories/fourth_component_categories/fourth_component_card_list.dart';
 import './nested_categories/five_component_categories/five_basic_component_categories.dart';
 import './nested_categories/six_component_categories/six_component_card_list.dart';
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
+import 'customRoute.dart';
 
 class StudyCategoriesList extends StatelessWidget {
 

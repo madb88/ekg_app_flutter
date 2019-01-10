@@ -9,21 +9,8 @@ import 'third_nested_category/third_nested_six_component_card_list.dart';
 import 'fourth_nested_category/fourth_nested_six_component_card_list.dart';
 import 'six_nested_category/six_nested_cards_list.dart';
 import 'seven_nested_category/seven_nested_component_card_list.dart';
+import 'package:ekg_cards_app/customRoute.dart';
 
-
-class MyCustomRoute<T> extends MaterialPageRoute<T> {
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings})
-      : super(builder: builder, settings: settings);
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return child;
-    // return new FadeTransition(opacity: animation, child: child);
-  }
-}
-const _test = Colors.white;
 class SixComponentCardList extends StatelessWidget {
   final category;
   SixComponentCardList(this.category);

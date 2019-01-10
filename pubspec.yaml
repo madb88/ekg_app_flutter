@@ -1,5 +1,5 @@
 name: ekg_cards_app
-description: A new Flutter project.
+description: EKG vademecum project.
 
 dependencies:
   flutter:
@@ -13,6 +13,7 @@ dependencies:
   firebase_admob: ^0.5.6
   flutter_html_view: ^0.5.8
   photo_view: ^0.1.0
+
 
 
 dev_dependencies:
