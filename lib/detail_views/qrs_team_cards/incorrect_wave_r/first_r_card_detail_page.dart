@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../customWidgets/normal_text.dart';
 import '../../../customWidgets/list_builder.dart';
+import '../../../customWidgets/image_widget.dart';
 
 class FirstRCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -39,6 +40,12 @@ class FirstRCardDetailPage extends StatelessWidget {
                     Visibility(
                       child: ListBuilder(sendedCard['secondList']),
                       visible: sendedCard['secondList'] != '' ? true : false,
+                    ),
+                    Visibility(
+                        child:
+                           ImageWidget(sendedCard['image']),
+
+                      visible: sendedCard['image'] != '' ? true : false,
                     ),
                   ],
                 ),
