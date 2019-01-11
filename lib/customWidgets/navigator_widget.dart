@@ -20,6 +20,7 @@ import './../nested_categories/five_component_categories/five_fourth_component_c
 import './../nested_categories/six_component_categories/six_component_card_list.dart';
 import '../customWidgets/navigation_calculator_element.dart';
 import '../customWidgets/navigation_list_element.dart';
+import './../nested_categories/second_component_categories/tachycardia/tachycardia_card_list.dart';
 
 class NavigatorWidget extends StatelessWidget {
   final mainCategories = [
@@ -30,6 +31,11 @@ class NavigatorWidget extends StatelessWidget {
     'Komorowe zaburzenia rytmu',
     'Zaburzenia automatyzmu i przewodzenia/stymulator',
     'Choroby'
+  ];
+
+  final nestedMain = [
+    "Tachyarytmie zatokowe",
+    "Tachyarytmie zatokowe"
   ];
 
   final basicNestedCategories = [

@@ -65,13 +65,13 @@ class _CalculatorState extends State<Calculator> {
       listDrop.add(new DropdownMenuItem(
           child: Text(
             "Przesuw 25 ms",
-            style: TextStyle(fontSize: 18.0),
+            style: TextStyle(fontSize: 20.0), textAlign: TextAlign.center,
           ),
           value: 1));
       listDrop.add(new DropdownMenuItem(
           child: Text(
             "Przesuw 50 ms",
-            style: TextStyle(fontSize: 18.0),
+            style: TextStyle(fontSize: 20.0), textAlign: TextAlign.center,
           ),
           value: 2));
     }
@@ -168,6 +168,7 @@ class _CalculatorState extends State<Calculator> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Wrap(
+                            alignment: WrapAlignment.center,
                             children: <Widget>[
                               DropdownButton(
                                 value: transmition,
