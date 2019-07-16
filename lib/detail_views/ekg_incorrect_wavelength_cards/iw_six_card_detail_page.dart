@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/image_widget.dart';
 
 class IwSixCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -39,7 +40,17 @@ class IwSixCardDetailPage extends StatelessWidget {
                                     fontSize: 20.0))),
                       ],
                     ),
-                    ListBuilder(sendedCard['secondList'])
+                    ListBuilder(sendedCard['secondList']),
+                    Visibility(
+                      child: Container(
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: ImageWidget(sendedCard['image']),
+                        ),
+                        padding: EdgeInsets.all(15.0),
+                      ),
+                      visible: sendedCard['image'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );

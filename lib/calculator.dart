@@ -37,13 +37,13 @@ class _CalculatorState extends State<Calculator> {
         hr = (300 / rr * 10).round();
       }
 
-      if (hr > 200) {
-        hrColor = Colors.red;
-      } else if (hr < 0 || hr == 0) {
-        hrColor = Colors.red;
-      } else {
-        hrColor = Colors.blue[900];
-      }
+//      if (hr > 200) {
+//        hrColor = Colors.red;
+//      } else if (hr < 0 || hr == 0) {
+//        hrColor = Colors.red;
+//      } else {
+//        hrColor = Colors.blue[900];
+//      }
     });
   }
 

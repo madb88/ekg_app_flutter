@@ -53,7 +53,13 @@ class IwFourthCardDetailPage extends StatelessWidget {
                     Divider(color: Colors.white),
                     ListBuilder(sendedCard['list']),
                     Visibility(
-                      child: ImageWidget(sendedCard['image']),
+                      child: Container(
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: ImageWidget(sendedCard['image']),
+                        ),
+                        padding: EdgeInsets.all(15.0),
+                      ),
                       visible: sendedCard['image'] != '' ? true : false,
                     ),
                   ],

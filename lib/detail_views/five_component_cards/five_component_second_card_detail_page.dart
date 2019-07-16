@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/info_container.dart';
+import '../../customWidgets/image_widget.dart';
 
 
 class FiveComponentSecondCardDetailPage extends StatelessWidget {
@@ -98,7 +99,17 @@ class FiveComponentSecondCardDetailPage extends StatelessWidget {
                         ],
                       ),
                       visible: sendedCard['list5'] != ''?true:false,
-                    )
+                    ),
+                    Visibility(
+                      child: Container(
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: ImageWidget(sendedCard['image']),
+                        ),
+                        padding: EdgeInsets.all(15.0),
+                      ),
+                      visible: sendedCard['image'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );

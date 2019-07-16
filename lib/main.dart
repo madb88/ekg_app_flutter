@@ -1,21 +1,9 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import './home_page.dart';
-//import 'package:firebase_admob/firebase_admob.dart';
+
 
 void main() => runApp(EkgApp());
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return new MaterialApp(
-//       theme: new ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: new MyHomePage(),
-//     );
-//   }
-// }
 
 class EkgApp extends StatefulWidget {
   @override
@@ -26,7 +14,6 @@ class _EkgAppState extends State<EkgApp> {
 
   @override
   void initState() {
-    // FirebaseAdMob.instance.initialize(appId: appId);
     super.initState();
   }
 

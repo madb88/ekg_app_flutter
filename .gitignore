@@ -11,3 +11,6 @@ build/
 google-services.json
 data_repo/
 .idea/
+
+key.properties
+proguard-rules.pro

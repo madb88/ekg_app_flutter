@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../customWidgets/normal_text.dart';
 import '../../customWidgets/info_container.dart';
 import '../../customWidgets/list_builder.dart';
+import '../../customWidgets/image_widget.dart';
 
 class WavelengthTSecondCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -71,6 +72,16 @@ class WavelengthTSecondCardDetailPage extends StatelessWidget {
                     Divider(color: Colors.white),
                     InfoContainer(Colors.blue[900], Colors.blue[100],
                         sendedCard['infoText'], 18.0, false, FontWeight.normal),
+                    Visibility(
+                      child: Container(
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: ImageWidget(sendedCard['image']),
+                        ),
+                        padding: EdgeInsets.all(15.0),
+                      ),
+                      visible: sendedCard['image'] != '' ? true : false,
+                    ),
                   ],
                 ),
               );

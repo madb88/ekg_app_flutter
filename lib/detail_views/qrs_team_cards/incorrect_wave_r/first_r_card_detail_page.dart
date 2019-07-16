@@ -42,9 +42,13 @@ class FirstRCardDetailPage extends StatelessWidget {
                       visible: sendedCard['secondList'] != '' ? true : false,
                     ),
                     Visibility(
-                        child:
-                           ImageWidget(sendedCard['image']),
-
+                      child: Container(
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: ImageWidget(sendedCard['image']),
+                        ),
+                        padding: EdgeInsets.all(15.0),
+                      ),
                       visible: sendedCard['image'] != '' ? true : false,
                     ),
                   ],

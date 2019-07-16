@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../../customWidgets/list_builder.dart';
 import '../../customWidgets/normal_text.dart';
+import '../../customWidgets/image_widget.dart';
 
 class WavelengthTListCardDetailPage extends StatelessWidget {
   final sendedCard;
@@ -96,6 +96,16 @@ class WavelengthTListCardDetailPage extends StatelessWidget {
                     Visibility(
                       child: ListBuilder(sendedCard['newList']),
                       visible: sendedCard['newList'] != '' ? true : false,
+                    ),
+                    Visibility(
+                      child: Container(
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: ImageWidget(sendedCard['image']),
+                        ),
+                        padding: EdgeInsets.all(15.0),
+                      ),
+                      visible: sendedCard['image'] != '' ? true : false,
                     ),
                   ],
                 ),

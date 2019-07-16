@@ -132,7 +132,7 @@ class SpecialDetailPage extends StatelessWidget {
                           ),
                           TableRow(
                             children: [
-                              ColoredText(Colors.black, sendedCard['brownTitle']),
+                              ColoredText(Colors.brown, sendedCard['brownTitle']),
                               Text(sendedCard['brownText'], style: TextStyle(fontSize: 20.0),textAlign: TextAlign.justify,),
                             ],
                           ),
