@@ -1,12 +1,6 @@
 <component name="libraryTable">
   <library name="Flutter Plugins">
-    <CLASSES>
-      <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1" />
-      <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.4.3" />
-      <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-3.0.3" />
-      <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_custom_tabs-0.4.0" />
-      <root url="file://E:/Programy/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-0.7.2" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>
