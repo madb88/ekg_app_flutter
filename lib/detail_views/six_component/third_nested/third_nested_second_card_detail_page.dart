@@ -30,7 +30,7 @@ class ThirdNestedSecondCardDetailPage extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
-                        HtmlView(data: sendedCard['titleOne']),
+                        HtmlView(data: sendedCard['titleOne'],scrollable: false),
                         Text(
                           sendedCard['textOne'],
                           style: TextStyle(fontSize: 18.0),
@@ -45,7 +45,7 @@ class ThirdNestedSecondCardDetailPage extends StatelessWidget {
                           children: <Widget>[
                             Flexible(
                                 child:
-                                    HtmlView(data: sendedCard['titleSecond'])),
+                                    HtmlView(data: sendedCard['titleSecond'],scrollable: false)),
                           ],
                         ),
                         Divider(color: Colors.white),
@@ -135,7 +135,7 @@ class ThirdNestedSecondCardDetailPage extends StatelessWidget {
                     ),
                     ListBuilder(sendedCard['lastList']),
                     Divider(color: Colors.white),
-                    HtmlView(data: sendedCard['titleThird']),
+                    HtmlView(data: sendedCard['titleThird'],scrollable: false),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -145,7 +145,7 @@ class ThirdNestedSecondCardDetailPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    HtmlView(data: sendedCard['titleFourth']),
+                    HtmlView(data: sendedCard['titleFourth'],scrollable: false),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
